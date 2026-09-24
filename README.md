@@ -192,6 +192,7 @@ Major later-stage items include:
 - corrosion protection
 - complete airframe attachment definition
 - certification / regulatory load mapping
+- Develop the finalized landing-gear assembly and detailed component geometry in CATIA V5
 - optional retraction-mechanism development
 
 ## Project Notes
