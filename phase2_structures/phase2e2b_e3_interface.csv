@@ -1,0 +1,7 @@
+quantity,value,units,classification
+pressure_closure_inner_face_above_U,502.0868876513672,mm,E2_WORKING_METERING_CANDIDATE
+calculated_structural_minimum_closure_thickness,5.5399768248562,mm,PLATE_SCREEN_MINIMUM_NOT_CAD_LOCK
+first_0p5mm_sweep_thickness_passing_limit_and_ultimate,6.0,mm,SCREENING_GRID_NOT_CAD_LOCK
+structural_minimum_outer_face_above_U,507.6268644762234,mm,MINIMUM_E2_TO_E3_INTERFACE_BEFORE_SEALS_RETAINER
+sweep_first_pass_outer_face_above_U,508.0868876513672,mm,WORKING_SCREENING_INTERFACE
+E3_location_rule,Place trunnion / upper attachment load path in solid head at or above the final pressure-closure outer face unless a pressure-penetrating boss is deliberately designed.,-,ARCHITECTURE_RULE

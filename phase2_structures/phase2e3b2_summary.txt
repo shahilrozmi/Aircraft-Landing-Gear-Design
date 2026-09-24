@@ -1,0 +1,15 @@
+============================================================================================================================
+ PHASE 2E3-B2 — COUPLED TRUNNION JOURNAL / BEARING / Kt SIZING V0.1
+============================================================================================================================
+
+300M yield: 1517.000 MPa (Sy_Pa)
+300M ultimate: 1862.000 MPa (Su_Pa)
+AMS 4640 static bearing screen: 413.685 MPa
+Kt sweep: [1.0, 1.5, 2.0, 2.5, 3.0]
+
+Total coupled designs evaluated: 1800
+Robust-within-screen geometries: 158
+
+No final trunnion dimension is frozen by this script.
+Next step: select/review one practical geometry and audit solid-head/lug architecture around it.
+============================================================================================================================

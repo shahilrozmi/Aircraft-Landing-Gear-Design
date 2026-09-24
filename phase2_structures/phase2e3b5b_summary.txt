@@ -1,0 +1,18 @@
+============================================================================================================================
+ PHASE 2E3-B5B — 7075 UPPER-BARREL / SOLID-HEAD REINFORCEMENT PROFILE V0.1
+============================================================================================================================
+
+7075 screen: 503.0 / 572.0 MPa
+Pressure screen: 9.292 / 13.938 MPa
+Frozen internal bore retained: 64.0 mm
+
+Profile summary:
+  Kt=1.0: first 74-mm fail A=440.0, required OD at E2=80.0 mm
+  Kt=1.5: first 74-mm fail A=250.0, required OD at E2=86.5 mm
+  Kt=2.0: first 74-mm fail A=250.0, required OD at E2=92.0 mm
+  Kt=2.5: first 74-mm fail A=250.0, required OD at E2=97.0 mm
+  Kt=3.0: first 74-mm fail A=250.0, required OD at E2=101.5 mm
+
+No taper / shoulder / fillet is frozen by this script.
+Next: practical reinforcement-profile selection + transition Kt screening.
+============================================================================================================================

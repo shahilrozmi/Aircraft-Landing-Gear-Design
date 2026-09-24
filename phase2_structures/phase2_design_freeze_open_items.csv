@@ -1,0 +1,10 @@
+priority,item,reason,resolution_gate
+HIGH,Axle-to-piston lower-end architecture,Define the local boss/forging/yoke that connects the 50 mm axle-root baseline to the 58 x 4 mm piston tube. The current smooth-section analyses do not define this joint.,Detailed lower-strut CAD + local stress/FEA
+HIGH,Upper barrel / piston cavity above equivalent datum U,Preferred D4 package requires 190.0 mm piston-top intrusion above U at physical stroke.,Full strut packaging CAD
+HIGH,Physical trunnion / brace airframe fitting coordinates,"120 mm trunnion span, 250 mm effective brace arm, and 350 mm brace free length are analytically viable but not yet tied to airframe hardpoints.",Airframe-interface CAD / structural arrangement
+MEDIUM,Gland production thread / lock / seal definition,"70 x 2 mm / 12 mm engagement is a non-governing envelope, not a final thread standard or locking/sealing definition.",Detailed gland design
+MEDIUM,Actual fillet radii and stress concentrations,"Piston root, barrel boss transition, axle root, trunnion shoulders, and brace end fittings need real CAD geometry before Kt/fatigue closure.",Detailed CAD + FEA/fatigue
+MEDIUM,Wheel bearing seats / brake flange / wheel-retention spindle detail,D8 sizes only the smooth axle root. The stepped spindle detail remains open.,Wheel/brake interface design
+MEDIUM,Brace clevis/lug/pin bending details,"D10 assumes ideal double shear; actual lug thickness, gap, pin bending, net section, and shear-out are not yet defined.",Detailed upper-joint design
+LATER,Fatigue / fracture / fretting / corrosion / surface treatment,"Static preliminary sizing is complete enough to establish a baseline, but durability/certification-oriented checks are intentionally later.",Later structural substantiation phase
+LATER,Retraction mechanism,"Explicitly deferred by project scope. Current brace is only the structural Mx reaction path, not a retraction linkage design.",Optional later extension

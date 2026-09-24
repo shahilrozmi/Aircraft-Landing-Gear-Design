@@ -1,0 +1,197 @@
+======================================================================================================================
+ PHASE 2 — HISTORICAL VS CURRENT AXLE REGRESSION AUDIT
+======================================================================================================================
+
+Current load source: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase1_loads\phase1_load_envelope.csv
+Historic hand-summary target: 610.3 MPa limit / 915.4 MPa ultimate
+Known current E1 regression reference: 320.8 / 481.2 MPa
+
+CASE / LOAD COMPARISON
+----------------------------------------------------------------------------------------------------------------------
+historic_case current_case       mapping_status  historic_Fx_kN  historic_Fy_kN  historic_Fz_kN  current_Fx_kN  current_Fy_kN  current_Fz_kN  Fx_change_pct  Fy_change_pct  Fz_change_pct  diagnostic_vm_current_Kt1p0_MPa  diagnostic_vm_current_Kt1p2_MPa  diagnostic_vm_current_Kt1p5_MPa
+          LC0          LC0                EXACT           0.000           0.000           8.338        0.00000            0.0       7.452766       0.000000            0.0     -10.616863                        92.696510                       111.235812                       139.044765
+          LC1          LC1                EXACT           0.000           0.000          25.020        0.00000            0.0      25.020000       0.000000            0.0       0.000000                       311.195426                       373.434512                       466.793140
+          LC2              AMBIGUOUS_OR_MISSING           7.506           0.000          25.020            NaN            NaN            NaN            NaN            NaN            NaN                              NaN                              NaN                              NaN
+          LC3          LC3                EXACT           0.000          10.008          25.020        0.00000            0.0      25.020000       0.000000         -100.0       0.000000                       311.195426                       373.434512                       466.793140
+          LC4              AMBIGUOUS_OR_MISSING           7.506          10.008          25.020            NaN            NaN            NaN            NaN            NaN            NaN                              NaN                              NaN                              NaN
+          LC5          LC5                EXACT          -7.506           0.000          25.020       -8.87376            0.0      11.092200     -18.222222            0.0     -55.666667                       176.679237                       212.015085                       265.018856
+
+AUTHORITATIVE AXLE SOURCE CONTEXT
+----------------------------------------------------------------------------------------------------------------------
+   15: --------------------
+   16: - Axle axis: +y
+   17: - Root at the lower-strut / axle intersection A
+   18: - Wheel center located e = 120 mm outboard of A
+   19: - Tire loaded radius r_t = 175 mm
+   20: - Hollow circular 300M-steel root section is used for preliminary screening
+   21: - Bearing seats, brake flange, shoulders, threads/nut, fillets, and wheel-bearing
+   22:   spacing are NOT yet defined
+   23: 
+   26:     N_y = F_y
+   27:     V_x = F_x
+   28:     V_z = F_z
+   29: 
+   30:     M_x = e*F_z + r_t*F_y
+   31:     M_z = -e*F_x
+   32: 
+   33:     M_b = sqrt(M_x^2 + M_z^2)
+   34: 
+   35: The contact-patch geometric moment about the axle axis is
+   36: 
+   37:     T_y,geom = -r_t*F_x
+   38: 
+   39: Important torsion rule
+   40: ----------------------
+   41: LC5 braking:
+   42:     T_y,geom is treated as CONFIRMED structural brake torque because the brake
+   43:     system transfers wheel torque into the axle/strut.
+   44: 
+   45: LC2A / LC2B spin-up:
+   46:     T_y,geom is reported, but is NOT automatically applied as shaft structural
+   47:     torsion in the baseline stress calculation. During wheel spin-up, this moment
+   48:     participates in wheel angular acceleration and requires a wheel/bearing
+   49:     rotational FBD before it can be assigned as axle torsion.
+   50: 
+   51: A separate LC2 torsion-sensitivity result is reported for the working axle so
+   52: that the design consequence is visible without silently changing the load case.
+   53: 
+   54: Stress screen
+   55: -------------
+   84: 
+   85:     delta_x = F_x*e^3/(3EI)
+   86: 
+   87:     delta_z = F_z*e^3/(3EI)
+   88:               + (r_t*F_y)*e^2/(2EI)
+   89: 
+   90: LC5 torsional twist:
+   91:     theta_y = T*e/(GJ)
+   92: 
+  127: 
+  128: OD_values_mm = [
+  129:     40.0,
+  130:     45.0,
+  131:     50.0,
+  132:     55.0,
+  133:     60.0,
+  134: ]
+  135: 
+  136: wall_min_mm = 1.50
+  137: wall_max_mm = 10.00
+  138: wall_step_mm = 0.25
+  139: 
+  140: # Preliminary working ROOT section only.
+  141: working_OD_mm = 50.0
+  142: working_wall_mm = 8.0
+  143: 
+  144: 
+  145: # =============================================================================
+  239: 
+  240:     elif (
+  241:         force_spinup_torsion
+  242:         and case_name in (
+  243:             "LC2A",
+  244:             "LC2B",
+  245:         )
+  246:     ):
+  247:         Ty_structural_kNm = Ty_geom_kNm
+  248: 
+  832:     * section_check["I_m4"]
+  833: ) < 1e-20
+  834: 
+  835: # Confirm Phase 2C geometry identity at LC5:
+  836: # brake torque = r_t * |Fx|.
+  837: lc5_limit = axle_resultants(
+  838:     loads["limit"]["LC5"],
+  839:     "LC5",
+  840: )
+  852:         ]["Fx_kN"]
+  853:     )
+  854: ) < 1e-12
+  855: 
+  856: # Confirm LC2 torsion is excluded in the baseline model.
+  857: lc2_baseline = axle_resultants(
+  858:     loads["limit"]["LC2A"],
+  859:     "LC2A",
+  860:     force_spinup_torsion=False,
+  861: )
+  862: 
+  863: assert abs(
+  864:     lc2_baseline[
+  865:         "Ty_structural_kNm"
+  866:     ]
+  867: ) < 1e-15
+  868: 
+  935: 
+  936: print()
+  937: print("--- FROZEN AXLE GEOMETRY ---")
+  938: print(
+  939:     f"Root-to-wheel-center offset e:    "
+  940:     f"{e_m*1000:.1f} mm"
+  941: )
+  942: print(
+  943:     f"Loaded tire radius r_t:           "
+  944:     f"{rt_m*1000:.1f} mm"
+  945: )
+  946: print(
+  947:     "LC5 geometric tire torque is treated as confirmed axle brake torque."
+  948: )
+  949: print(
+  950:     "LC2A/B geometric spin-up torque is reported but excluded from baseline shaft torsion."
+  951: )
+  952: 
+  953: print()
+  954: print("--- HOLLOW ROOT-SECTION SWEEP ---")
+ 1094:         f"{row['vm_MPa']:>10.1f}"
+ 1095:     )
+ 1096: 
+ 1097: print()
+ 1098: print("--- LC2 SPIN-UP TORSION SENSITIVITY ---")
+ 1099: 
+ 1100: baseline_lc2 = max(
+ 1101:     [
+ 1102:         row
+ 1103:         for row in working_ultimate_cases
+ 1104:         if row["case"] in (
+ 1105:             "LC2A",
+ 1106:             "LC2B",
+ 1107:         )
+ 1108:     ],
+ 1109:     key=lambda row:
+ 1110:         row["vm_MPa"],
+ 1111: )
+ 1112: 
+ 1113: sensitivity_lc2 = max(
+ 1114:     [
+ 1115:         row
+ 1116:         for row
+ 1117:         in working_ultimate_spinup_sensitivity
+ 1118:         if row["case"] in (
+ 1119:             "LC2A",
+ 1120:             "LC2B",
+ 1121:         )
+ 1122:     ],
+ 1123:     key=lambda row:
+ 1124:         row["vm_MPa"],
+ 1125: )
+ 1126: 
+ 1127: print(
+ 1128:     f"LC2 baseline VM, spin-up torsion excluded: "
+ 1129:     f"{baseline_lc2['vm_MPa']:.1f} MPa"
+ 1130: )
+ 1131: print(
+ 1132:     f"LC2 sensitivity VM, if Tgeom were imposed: "
+ 1133:     f"{sensitivity_lc2['vm_MPa']:.1f} MPa"
+ 1134: )
+ 1135: print(
+ 1136:     f"LC2 geometric spin-up moment magnitude:     "
+ 1137:     f"{abs(sensitivity_lc2['Ty_geom_kNm']):.3f} kN*m"
+ 1138: )
+ 1139: print(
+ 1140:     "Sensitivity only — NOT promoted to a structural torsion load case."
+ 1141: )
+
+AUTOMATED DISPOSITION
+----------------------------------------------------------------------------------------------------------------------
+Historic LC4 could not be uniquely mapped to a current case.
+
+IMPORTANT: diagnostic von-Mises columns above are transparent common-formula reconstructions only. The authoritative Phase 2 axle script remains the source for the actual design result.

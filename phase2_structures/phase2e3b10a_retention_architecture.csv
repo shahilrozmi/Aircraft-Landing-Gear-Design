@@ -1,0 +1,7 @@
+item,classification,result
+Concept_A_central_keeper_pin,SCREENED_NOT_SELECTED,"Keeper pin shear was feasible in B10 V0.1, but the central cross-hole creates an avoidable stress concentration in the main shaft/head region."
+Concept_B_outboard_positive_retention,WORKING_B10A_SELECTION,Uniform 38 mm working shaft through loaded span; integral flange/head at one outboard end; threaded tail with castellated/slotted nut and cotter/positive secondary lock beyond the opposite support bearing.
+axial_Fx_load_path,WORKING_B10A_SELECTION,Dedicated thrust washer/spacer between upper head and airframe support; conservatively one side reacts full |Fx|.
+Mx_load_path,FROZEN_ARCHITECTURE_RULE,Mx is not credited to shaft retention hardware; it remains on the independent upper brace / lock-link path.
+journal_discontinuity_rule,WORKING_B10A_RULE,"No thread, retaining groove, or keeper cross-hole in the working journal/root span. Locking feature stays outboard of the bearing support plane."
+thread_size,NOT_YET_FROZEN,"Select from a real standard only after airframe fitting, preload/torque, fatigue and manufacturing checks. B10A only shows that direct axial strength is not the driver."

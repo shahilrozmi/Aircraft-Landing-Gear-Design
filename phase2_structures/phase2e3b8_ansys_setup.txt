@@ -1,0 +1,94 @@
+============================================================================================================================
+ PHASE 2E3-B8 — ANSYS LOCAL TRANSITION SUBMODEL SETUP V0.1
+============================================================================================================================
+
+MODEL GEOMETRY
+----------------------------------------------------------------------------------------------------------------------------
+Primary profile:                 74/64 -> 106/64 mm
+Full taper start:                275.000 mm above A
+Full taper end / E2 closure:     973.780357 mm above A
+Local model bottom:              50.000 mm above A
+Local model top:                 700.000 mm above A
+Target/reference station:        375.000 mm above A
+Target OD / wall:                75.778 mm / 5.889 mm
+Top OD / wall:                   95.113 mm / 15.556 mm
+Distance target -> bottom:       325.000 mm
+Distance target -> top:          325.000 mm
+
+COORDINATE SYSTEM
+----------------------------------------------------------------------------------------------------------------------------
++x forward
++y inboard
++z upward along the strut/barrel axis
+
+MATERIAL
+----------------------------------------------------------------------------------------------------------------------------
+7075-T6 project elastic baseline:
+  E  = 71.7 GPa
+  nu = 0.33
+Preliminary yield / ultimate screens = 503.0 / 572.0 MPa
+Use linear elastic material for this local Kt/amplification study.
+
+BOUNDARY CONDITIONS
+----------------------------------------------------------------------------------------------------------------------------
+Bottom cut face:
+  Fixed Support for the first local run.
+
+Top cut face:
+  Remote point at section center.
+  Use deformable/distributed coupling if available; avoid a locally rigid face if possible.
+  Apply the six structural section resultants from phase2e3b8_fea_load_cards.csv.
+  Add the listed closed-end pressure thrust to +Fz at the remote point.
+
+Inner 64-mm bore:
+  Apply the corresponding differential pressure over the complete internal bore of the local model.
+
+Pressure caution:
+  Do NOT both model an explicit pressurized end-cap and also add the equivalent pressure thrust.
+  The B8 load card assumes NO explicit end-cap in the local cut model.
+
+INITIAL MESH PLAN
+----------------------------------------------------------------------------------------------------------------------------
+Remote/coarse body sizing target: about 6.0 mm.
+Local transition sizing first run: about 2.0 mm.
+Refined comparison run:           about 1.0 mm.
+At the thin-wall governing region (~5.89 mm wall), aim for multiple quadratic-element layers through thickness.
+Use quadratic solid elements if available.
+
+MESH-CONVERGENCE RULE
+----------------------------------------------------------------------------------------------------------------------------
+At minimum compare three successively refined local meshes.
+Track:
+  1. peak von Mises stress in the smooth transition region,
+  2. nominal von Mises stress away from the local peak,
+  3. peak location,
+  4. total deformation / reaction equilibrium.
+Treat a moving/diverging peak at a constraint, remote coupling edge, or geometric singularity as a modelling artifact until resolved.
+
+POST-PROCESSING TERMINOLOGY
+----------------------------------------------------------------------------------------------------------------------------
+For combined loading, report peak von Mises directly against the preliminary material screen.
+If you calculate peak_VM / nominal_VM, call it K_VM or local VM amplification, not classical Kt.
+For a classical Kt, compare a specific stress component under a specific load mode to its corresponding nominal component.
+
+FIRST FEA CASES TO RUN
+----------------------------------------------------------------------------------------------------------------------------
+  Ultimate rank 1: LC4+  nominal VM=440.009 MPa, Mb=8.877 kN*m, Mz=-0.000 kN*m
+  Ultimate rank 2: LC5  nominal VM=384.944 MPa, Mb=7.588 kN*m, Mz=1.597 kN*m
+  Ultimate rank 3: LC2B  nominal VM=363.434 MPa, Mb=6.849 kN*m, Mz=-1.126 kN*m
+
+ACCEPTANCE FOR THIS LOCAL STUDY
+----------------------------------------------------------------------------------------------------------------------------
+No certification claim is made. For the preliminary static screen, compare LIMIT peak elastic VM to the 503 MPa project yield screen and ULTIMATE peak elastic VM to the 572 MPa project ultimate screen.
+If the real primary geometry does not provide adequate margin, revise the profile/radius/head envelope and rerun. Do not force-fit the old arbitrary Kt>=2 sensitivity gate.
+
+OPEN ITEMS NOT SOLVED BY THIS SUBMODEL
+----------------------------------------------------------------------------------------------------------------------------
+Pressure-closure plate/retainer local stress
+Trunnion transverse hole and positive shaft-lock detail
+Steel/aluminum fretting/contact
+Fatigue / spectrum / crack initiation
+Corrosion / surface treatment
+Fits / tolerances
+Final certification allowables and fitting factors
+============================================================================================================================

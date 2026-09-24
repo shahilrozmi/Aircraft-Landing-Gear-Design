@@ -1,0 +1,8 @@
+quantity,value,units,classification
+phase2d_nominal_compression,206.33800000000008,mm,SOURCE_RECONSTRUCTION
+physical_stroke,230.0,mm,SOURCE_PHASE1
+nominal_remaining_stroke,23.66199999999992,mm,DERIVED
+nominal_stroke_utilization,89.71217391304351,percent,DERIVED
+LC0_vertical_load,7.452765957446808,kN,SOURCE_PHASE1_LOAD_CSV
+gas_only_static_equilibrium_compression,55.368378326996535,mm,DERIVED_FROM_PHASE1_GAS_AND_LC0
+phase2d_nominal_minus_gas_static,150.96962167300353,mm,DIAGNOSTIC

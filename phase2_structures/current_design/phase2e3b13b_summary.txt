@@ -1,0 +1,70 @@
+============================================================================================================
+ PHASE 2E3-B13B — SHAFT / HEAD BUSHING INTERFACE PRELIMINARY SIZING V0.1
+============================================================================================================
+
+--- INPUT / ARCHITECTURE BASIS ---
+300M shaft nominal diameter:                38.000 mm
+7075 head OD, working CAD input:           106.000 mm
+AMS 4640 static bearing screen:            413.685 MPa
+B2 recovered reference reaction:           112.640 kN
+B12 conservative per-bushing envelope:     166.160 kN
+Load note: B12 reaction is intentionally used as a conservative per-bushing screen;
+           B13C contact FEA will resolve the actual bushing load distribution.
+
+--- STATIC-BEARING MINIMUM LENGTHS ---
+Length required at B2 reference reaction:    7.165 mm
+Length required at B12 envelope:            10.570 mm
+Interpretation: static projected bearing capacity alone does NOT control a 25–30 mm bushing length.
+
+--- PRACTICAL SHORTLIST FILTERS (NON-CERTIFICATION / PACKAGING ONLY) ---
+Minimum candidate length retained:          25.000 mm
+Minimum bronze radial wall retained:         5.000 mm
+Minimum head radial ligament retained:      25.000 mm
+
+--- PRACTICAL SHORTLIST ---
+    L    OD    wall  head lig      gap      p_ID    MS_brg      p_OD
+----------------------------------------------------------------------------
+   25    48    5.00     29.00    56.00     174.9     1.365     138.5
+   25    50    6.00     28.00    56.00     174.9     1.365     132.9
+   25    52    7.00     27.00    56.00     174.9     1.365     127.8
+   25    54    8.00     26.00    56.00     174.9     1.365     123.1
+   25    56    9.00     25.00    56.00     174.9     1.365     118.7
+   30    48    5.00     29.00    46.00     145.8     1.838     115.4
+   30    50    6.00     28.00    46.00     145.8     1.838     110.8
+   30    52    7.00     27.00    46.00     145.8     1.838     106.5
+   30    54    8.00     26.00    46.00     145.8     1.838     102.6
+   30    56    9.00     25.00    46.00     145.8     1.838      98.9
+   35    48    5.00     29.00    36.00     124.9     2.311      98.9
+   35    50    6.00     28.00    36.00     124.9     2.311      94.9
+   35    52    7.00     27.00    36.00     124.9     2.311      91.3
+   35    54    8.00     26.00    36.00     124.9     2.311      87.9
+   35    56    9.00     25.00    36.00     124.9     2.311      84.8
+
+--- WORKING CANDIDATE FOR B13B/B13C DEVELOPMENT ---
+Nominal shaft / bushing ID:                 38.000 mm
+Bushing OD:                                 50.000 mm
+Bushing length, each side:                  30.000 mm
+Bronze radial wall:                          6.000 mm
+Remaining head radial ligament:             28.000 mm
+Central unbushed gap:                       46.000 mm
+Shaft-side projected p @ B12 envelope:     145.754 MPa
+AMS 4640 static bearing MS:                 +1.838
+Housing-side projected p, descriptive:     110.773 MPa
+
+SELECTION REASON
+- Ø50 x 30 mm gives a 6 mm bronze wall and 28 mm current-CAD head radial ligament.
+- Its 30 mm length is far above the static-capacity mathematical minimum.
+- It preserves a practical, round geometry for the next interference-fit/contact study.
+- This is a WORKING candidate, not a final certified bushing dimension.
+
+--- OPEN ITEMS BEFORE GEOMETRY FREEZE ---
+1. Bronze-to-7075 interference/retention fit: DEFERRED to B13B V0.2.
+2. Shaft-to-bushing running clearance:       TBD from fit/lubrication/wear basis.
+3. 7075 bearing/net-section/shear-out:        requires local head mechanics / FEA.
+4. Fretting, wear, lubrication, fatigue:      OPEN.
+5. Actual bushing reaction split:             resolve in B13C nonlinear contact FEA.
+
+OUTPUT FILES
+Full candidate sweep: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\current_design\phase2e3b13b_bushing_trade.csv
+Summary:              C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\current_design\phase2e3b13b_summary.txt
+============================================================================================================

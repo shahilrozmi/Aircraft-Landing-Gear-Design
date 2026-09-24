@@ -1,0 +1,14 @@
+============================================================================================================================
+ PHASE 2E3-B3 — PRACTICAL TRUNNION SHORTLIST / HEAD-INTEGRATION AUDIT V0.1
+============================================================================================================================
+
+Frozen barrel OD: 74.000 mm (phase2e2_v1_baseline.csv)
+Required Kt sweep: [1.0, 1.5, 2.0, 2.5, 3.0]
+Required ligament sensitivities: [5.0, 10.0, 15.0, 20.0] mm
+
+Disposition:
+  PASS for practical shortlist.
+  HOLD final trunnion freeze until the 300M-journal / 7075-head interface is defined.
+
+The current B2 journal strengths do not themselves validate the local 7075-T6 upper head.
+============================================================================================================================

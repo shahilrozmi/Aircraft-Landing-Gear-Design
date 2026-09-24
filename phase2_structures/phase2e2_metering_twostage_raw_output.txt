@@ -1,0 +1,67 @@
+
+========================================================================
+ PHASE 1 — 2-DOF DYNAMIC LANDING MODEL V0.4
+========================================================================
+
+--- MASS MODEL ---
+Equivalent mass per main:           850.00 kg
+Sprung mass:                        820.00 kg
+Unsprung mass:                      30.00 kg
+Touchdown sink speed:               3.0480 m/s
+
+--- NONLINEAR TIRE MODEL ---
+Design tire deflection:             47.00 mm
+Tire energy efficiency target:      0.470
+Tire exponent p:                    1.1277
+Tire coefficient k:                 786518.37 N/m^p
+
+--- EXTENSION-STOP PHASE ---
+Gas preload at full extension:      5.904 kN
+Stop release time:                  0.004550 s
+Tire deflection at release:         13.880 mm
+Tire force at release:              6.324 kN
+Vertical speed at release:          3.0470 m/s
+
+--- PEAK DYNAMIC RESULTS ---
+Peak oleo compression:              206.268 mm
+Available oleo stroke:              230.000 mm
+Stroke margin:                      23.732 mm
+Peak tire deflection:               44.898 mm
+Peak tire / runway reaction:        23.762 kN
+Peak internal strut force:          24.654 kN
+Peak gas force:                     19.361 kN
+Peak hydraulic force:               17.380 kN
+Peak upward sprung acceleration:    2.757 g
+
+--- ENERGY RESULTS ---
+Initial touchdown KE:               3.948 kJ
+Gas work:                           2.148 kJ
+Hydraulic energy dissipated:        2.065 kJ
+Max tire strain energy:             0.501 kJ
+Tire strain energy at final state:  0.353 kJ
+External gravity/lift work:         0.618 kJ
+Final kinetic energy:               0.0046 J
+Energy balance residual:            -0.000138 J
+
+--- CHECKS ---
+Oleo bottoming:                      PASS
+LC1 ground-reaction limit:           PASS
+LC1 internal-strut limit:            PASS
+LC1 ultimate ground reaction:        PASS
+
+========================================================================
+
+UNSPRUNG-MASS SENSITIVITY
+------------------------------------------------------------------------
+ m_u    x_oleo,max    tire defl.    F_tire,max    F_strut,max
+ (kg)      (mm)          (mm)          (kN)           (kN)
+------------------------------------------------------------------------
+ 20.0      208.893        43.853        23.139         23.709
+ 30.0      206.268        44.898        23.762         24.654
+ 40.0      203.635        46.513        24.728         25.645
+------------------------------------------------------------------------
+
+
+--- STDERR ---
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\phase2e2_metering_twostage_q8kgsczb\landing_dynamic_v04_2dof_twostage.py:1763: UserWarning: FigureCanvasAgg is non-interactive, and thus cannot be shown
+  plt.show()

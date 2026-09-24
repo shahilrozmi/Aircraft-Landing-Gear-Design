@@ -1,0 +1,15 @@
+============================================================================================================================
+ PHASE 2E3-B5A — BARREL MATERIAL / UPPER-NECK STRUCTURAL AUDIT V0.1
+============================================================================================================================
+
+Historical 74/64 limit VM / MS: 398.397402 MPa / +2.807756
+Historical implied limit allowable: 1517.000000 MPa
+Historical 74/64 ultimate VM / MS: 595.204681 MPa / +2.128336
+Historical implied ultimate allowable: 1862.000000 MPa
+Historical implied material convention: IMPLIED_300M_ALLOWABLES
+
+Current E2/E3 boundary: 498.780357 mm above U
+Frozen section: 74.000 OD / 64.000 ID mm
+
+No redesign is frozen by this audit.
+============================================================================================================================

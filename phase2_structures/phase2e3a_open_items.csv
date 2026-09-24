@@ -1,0 +1,4 @@
+item_id,status,item,why_it_matters,close_condition
+E3A-004,REVIEW,Upper brace/link external-interface semantics not automatically proven,A member called 'upper brace' is not automatically an airframe trunnion reaction.,Review phase2e3a_source_snippets.txt and identify the brace/link endpoints and FBD explicitly.
+E3A-006,EXPECTED,Do not equate guide-bushing reaction with airframe reaction,The upper/lower guide reactions are internal piston-barrel load transfer unless an assembly FBD proves otherwise.,Use guide reactions only for barrel/guide/local-head design unless explicitly carried into an external attachment FBD.
+E3A-007,EXPECTED,"E2 +498.780 mm interface is a packaging minimum, not a trunnion station",It only says the external attachment must be in solid head outside the pressure cavity.,E3 architecture will choose the actual attachment station after the load path and local head geometry are defined.

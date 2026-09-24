@@ -1,0 +1,15 @@
+============================================================================================================================
+ PHASE 2E3-B1 — TRUNNION CENTERLINE GEOMETRY / LOAD TRADE STUDY V0.1
+============================================================================================================================
+
+E2 minimum solid-head boundary: 498.780357 mm above U
+
+Geometry rule:
+    z_CL = z_E2_boundary + d_journal/2 + t_ligament
+
+Ligament values are NON-FROZEN geometry sensitivities only.
+
+Disposition:
+    Proceed to E3-B2 coupled journal/root strength + bearing + Kt sizing.
+    Do not freeze a centerline station from geometry alone.
+============================================================================================================================

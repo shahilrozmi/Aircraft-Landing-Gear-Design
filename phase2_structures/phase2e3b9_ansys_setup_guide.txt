@@ -1,0 +1,131 @@
+PHASE 2E3-B9 — FIRST ANSYS LOCAL TRANSITION RUN
+================================================
+
+MODEL
+-----
+Import:
+    phase2e3b9_primary106_submodel.step
+
+Geometry mapping:
+    Global +z = strut axis upward
+    A = 50 mm   -> bottom cut face
+    A = 700 mm  -> top cut face
+    taper starts at A = 275 mm
+    target analytical region is near A = 375 mm
+
+OD / ID:
+    bottom OD = 74.000 mm
+    target OD = 75.778 mm
+    top OD    = 95.113 mm
+    ID        = 64.000 mm
+
+MATERIAL — PRELIMINARY PROJECT BASELINE
+---------------------------------------
+7075-T6 linear elastic:
+    E   = 71700.0 MPa
+    nu  = 0.330
+    rho = 2810.0 kg/m^3
+
+Static screen only:
+    yield screen    = 503.0 MPa
+    ultimate screen = 572.0 MPa
+
+FIRST LOAD CASE
+---------------
+LC4+ ULTIMATE
+
+Internal bore pressure:
+    p = 13.938000 MPa
+
+Because this STEP has OPEN bore ends and no explicit pressure end-cap,
+include the equivalent closed-end pressure thrust in the top remote force.
+
+Top-face remote force, global components:
+    Fx = 0.000 N
+    Fy = 12510.000 N
+    Fz = 61476.719 N
+
+Breakdown of Fz:
+    structural Fz      = 16638.300 N
+    pressure thrust +z = 44838.419 N
+
+Top-face remote moment:
+    Mx = 12942846.000 N*mm
+    My = 0.000 N*mm
+    Mz = 0.000 N*mm
+
+BOUNDARY CONDITIONS
+-------------------
+Bottom annular cut face at A = 50 mm:
+    Fixed Support for the first local run.
+
+Top annular cut face at A = 700 mm:
+    Remote Force + Remote Moment.
+    Use Deformable/Distributed behavior where Mechanical provides that option.
+
+Inner cylindrical bore:
+    Pressure = 13.938000 MPa.
+
+CHECK THE PRESSURE DIRECTION:
+    Under internal pressure the bore should tend to expand radially.
+    If it contracts, the pressure sign/orientation is wrong.
+
+DO NOT:
+    add pressure thrust if you later explicitly model a pressurized end cap.
+    That would double-count the closed-end pressure load.
+
+MESH — FIRST PASS
+-----------------
+Use quadratic solid elements.
+
+Suggested starting mesh:
+    general body size: ~6 mm
+    transition refinement: ~2 mm
+
+Then refine transition region to ~1 mm.
+
+Near target A ~ 375 mm:
+    wall thickness is about 5.889 mm.
+
+Aim for multiple quadratic element layers through the wall.
+Do not accept a peak located at the fixed face or remote coupling edge
+as a transition stress result.
+
+RESULTS TO INSERT
+-----------------
+Equivalent (von-Mises) Stress
+Total Deformation
+
+For the first run, also add:
+    Normal Stress X
+    Normal Stress Y
+    Normal Stress Z
+    Shear Stress XY
+    Shear Stress XZ
+    Shear Stress YZ
+
+FIRST RESULT WE NEED
+--------------------
+For LC4+ ultimate, report:
+    1. maximum equivalent stress,
+    2. its A/z coordinate,
+    3. whether it is in the smooth transition or at a boundary,
+    4. element size at the peak,
+    5. total deformation.
+
+Then repeat the transition mesh at about 1 mm and compare the peak.
+
+Preliminary ultimate screening reference:
+    7075-T6 project UTS screen = 572.0 MPa
+
+B8 nominal Kt=1 reference at A=375 mm, LC4+ ultimate:
+    about 440 MPa.
+
+For combined loading, if you divide FEA peak VM by nominal VM,
+call it a local VM amplification K_VM, not classical Kt.
+
+IMPORTANT
+---------
+This is a preliminary local elastic stress study, not certification evidence.
+The pressure closure, transverse trunnion hole, shaft lock, fretting/contact,
+fatigue, tolerances, corrosion, and final material allowables remain open.

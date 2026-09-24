@@ -1,0 +1,22 @@
+============================================================================================================================
+PHASE 2E3-B10A — RETENTION ARCHITECTURE CLOSEOUT V0.1
+============================================================================================================================
+
+Head OD = 106.000 mm
+Span = 150.000 mm
+Shaft = 38.000 mm
+Side gap = 9.500 mm
+Ultimate |Fx| = 13.31064 kN (LC5)
+
+Concept A central keeper pin: screened, NOT selected.
+Reason: avoid a transverse cross-hole in the main loaded shaft/head region.
+
+Concept B selected:
+- uniform main shaft through loaded span
+- dedicated thrust washer/spacer for Fx
+- integral outboard flange/head at one end
+- threaded outboard tail + castellated/slotted nut at the other
+- positive secondary nut lock outboard of support bearing
+- no Mx credit; Mx remains on independent upper brace
+
+Final thread/nut/washer dimensions remain open pending B11/B12.

@@ -1,0 +1,4 @@
+support_span_mm,journal_diameter_mm,bearing_width_mm,root_to_root_head_width_mm,boss_extension_each_side_vs_barrel_mm,nominal_side_ligament_if_74mm_head_mm,worst_MS_ultimate_strength_over_ligaments,worst_bearing_pressure_MPa,worst_MS_ultimate_bearing_over_ligaments,max_Kt_checked,status
+120.0,34.0,20.0,90.0,8.0,20.0,0.1264691508958215,206.58867391250223,1.002459427012501,3.0,SPAN_ANCHOR_ONLY_NOT_FINAL
+150.0,32.0,20.0,120.0,23.0,21.0,0.1561327444206852,178.05053501896714,1.3234158636256446,3.0,SPAN_ANCHOR_ONLY_NOT_FINAL
+180.0,30.0,20.0,150.0,38.0,22.0,0.1263595121605165,160.44532828952646,1.57835763746015,3.0,SPAN_ANCHOR_ONLY_NOT_FINAL

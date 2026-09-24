@@ -1,0 +1,22 @@
+============================================================================================================================
+PHASE 2E3-B11 — UPPER-HEAD LOCAL ANALYTICAL SCREENS V0.1
+============================================================================================================================
+
+Head OD = 106.000 mm
+Shaft diameter = 38.000 mm
+Span = 150.000 mm
+Lower/upper ligament = 20.000 / 20.000 mm
+Trunnion center = 537.780 mm above U
+
+Governing vertical nominal screens:
+  Ultimate bearing = 56.465 MPa, MS=+9.130, LC5 LEFT
+  Ultimate net section = 53.641 MPa, MS=+9.663, LC5 LEFT
+  Ultimate shear-out = 53.641 MPa, MS=+5.157, LC5 LEFT
+
+B11 nominal static screen = PASS
+
+Interpretation:
+- simple bore bearing/net/shear-out screens are pre-FEA checks only
+- 20 mm edge ligaments remain working geometry, not a fatigue freeze
+- thrust-face average pressure is screened but hardware geometry is open
+- B12 must resolve real 3-D contact and local stress concentration

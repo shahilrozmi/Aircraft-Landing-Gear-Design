@@ -1,0 +1,21 @@
+parameter,value,units,classification
+architecture,two-chamber metering-pin oleo; lower hydraulic chamber; upper gas/oil chamber; relative metering pin/orifice motion; no separator piston in V0.3,-,PHASE2E2_WORKING
+barrel_ID,64.0,mm,LOCKED_BASELINE
+barrel_OD,74.0,mm,LOCKED_BASELINE
+lower_boss_envelope,84.0,mm,LOCKED_BASELINE
+bushing_length,20.0,mm,SOURCE_PHASE2D_CSV
+required_A_to_piston_top_length,460.0,mm,SOURCE_PHASE2D_CSV
+piston_OD,58.0,mm,SOURCE_PHASE2E1_CSV
+piston_ID,50.0,mm,SOURCE_PHASE2E1_CSV
+piston_bore_blind_end_from_A,40.0,mm above A,SOURCE_PHASE2E1_CSV
+piston_internal_bore_length,420.00000000000006,mm,DERIVED_PHASE2E2
+piston_internal_bore_volume,824.6680715673208,cm^3,DERIVED_PHASE2E2
+barrel_piston_radial_clearance,2.999999999999999,mm per side,DERIVED_PHASE2E2
+barrel_minus_piston_annulus_area,574.9114556069316,mm^2,DERIVED_PHASE2E2
+phase1_effective_piston_area,2642.0794216690165,mm^2,DERIVED_FROM_PHASE1_PISTON_DIAMETER
+physical_barrel_area,3216.990877275948,mm^2,DERIVED_LOCKED_BASELINE
+phase1_effective_area_to_barrel_area_ratio,0.8212890625000002,-,PHASE2E2_MODEL_MAPPING
+phase1_initial_gas_volume,924.7277975841557,cm^3,DERIVED_PHASE2E2
+phase1_initial_gas_length,350.0,mm,SOURCE_PHASE1_PY
+phase1_precharge_abs,2.336,MPa,SOURCE_PHASE1_PY
+phase1_polytropic_exponent,1.3,-,SOURCE_PHASE1_PY

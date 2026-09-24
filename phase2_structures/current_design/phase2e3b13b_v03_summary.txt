@@ -1,0 +1,82 @@
+================================================================================================================
+ PHASE 2E3-B13B V0.3 — FLANGED-BUSHING AXIAL THRUST-PATH PRELIMINARY SIZING
+================================================================================================================
+
+--- FROZEN / WORKING INPUTS ---
+LC5 limit |Fx|:                           8.87376 kN
+LC5 ultimate |Fx|:                       13.31064 kN
+Shaft / bushing nominal ID:                38.000 mm
+Sleeve OD:                                 50.000 mm
+Sleeve length each side:                   30.000 mm
+Head face -> bearing inner edge gap:        9.500 mm
+AMS 4640 preliminary static screen:       413.685 MPa
+
+--- ARCHITECTURE RULE ---
+One flanged bushing may conservatively carry the full axial |Fx| in either direction.
+Mx remains on the independent brace path; flange/shaft retention is NOT credited for Mx.
+
+--- CANDIDATE TRADE ---
+   Df    tf   seat_w    pBr_ult     MS_Br    pAl_ult   gap_rem    pkg
+----------------------------------------------------------------------------------
+   52   2.0     1.00      13.45    29.756      83.08      7.50   OPEN
+   52   3.0     1.00      13.45    29.756      83.08      6.50   OPEN
+   52   4.0     1.00      13.45    29.756      83.08      5.50   OPEN
+   52   5.0     1.00      13.45    29.756      83.08      4.50   OPEN
+   54   2.0     2.00      11.51    34.931      40.74      7.50   OPEN
+   54   3.0     2.00      11.51    34.931      40.74      6.50   OPEN
+   54   4.0     2.00      11.51    34.931      40.74      5.50   OPEN
+   54   5.0     2.00      11.51    34.931      40.74      4.50   OPEN
+   56   2.0     3.00      10.02    40.301      26.65      7.50   OPEN
+   56   3.0     3.00      10.02    40.301      26.65      6.50   OPEN
+   56   4.0     3.00      10.02    40.301      26.65      5.50   OPEN
+   56   5.0     3.00      10.02    40.301      26.65      4.50   OPEN
+   58   2.0     4.00       8.83    45.866      19.62      7.50   PASS
+   58   3.0     4.00       8.83    45.866      19.62      6.50   PASS
+   58   4.0     4.00       8.83    45.866      19.62      5.50   PASS
+   58   5.0     4.00       8.83    45.866      19.62      4.50   PASS
+   60   2.0     5.00       7.86    51.627      15.41      7.50   PASS
+   60   3.0     5.00       7.86    51.627      15.41      6.50   PASS
+   60   4.0     5.00       7.86    51.627      15.41      5.50   PASS
+   60   5.0     5.00       7.86    51.627      15.41      4.50   PASS
+   62   2.0     6.00       7.06    57.583      12.61      7.50   PASS
+   62   3.0     6.00       7.06    57.583      12.61      6.50   PASS
+   62   4.0     6.00       7.06    57.583      12.61      5.50   PASS
+   62   5.0     6.00       7.06    57.583      12.61      4.50   PASS
+   64   2.0     7.00       6.39    63.734      10.62      7.50   PASS
+   64   3.0     7.00       6.39    63.734      10.62      6.50   PASS
+   64   4.0     7.00       6.39    63.734      10.62      5.50   PASS
+   64   5.0     7.00       6.39    63.734      10.62      4.50   PASS
+
+--- WORKING FLANGE FOR B13C CAD/FEA ---
+Flange OD:                                 60.000 mm
+Flange thickness:                           3.000 mm
+Positive radial seat on 7075 face:          5.000 mm
+Bronze thrust pressure, ultimate:           7.861 MPa
+Bronze static-screen margin:              +51.627
+7075 head-face avg pressure, ultimate:     15.407 MPa
+Gap remaining before bearing inner edge:    6.500 mm
+
+SELECTION REASON
+- Static axial thrust pressure is extremely low relative to the preliminary bronze screen.
+- Ø60 gives a 5 mm radial positive seat outside the Ø50 sleeve bore.
+- 3 mm flange thickness leaves 6.5 mm of the current 9.5 mm external gap.
+- Thickness is a PROVISIONAL packaging/FEA starting value; static face pressure does not size it.
+- Flange-root bending, local 7075 face stress, washer detail, wear and fatigue remain for FEA/detail design.
+
+--- RESULTING B13C GEOMETRY INTENT ---
+Per side bronze bushing: sleeve Ø50 OD x Ø38 nominal ID x 30 mm long
+                         integral flange Ø60 OD x 3 mm thick
+Two bushings are inserted from opposite sides of the head.
+The flange is the positive axial seat; the shaft shoulder/thrust washer acts on the bronze flange.
+The center of the head must NOT retain an exposed Ø38 aluminum land that can touch the shaft.
+
+--- IMPORTANT OPEN ITEM FOR CAD ---
+Central shaft clearance/relief diameter is NOT frozen in V0.3.
+For B13C geometry, either keep the full head passage relieved to the Ø50 bushing OD,
+or deliberately size a smaller central relief bore > Ø38 after a clearance/tolerance study.
+Do NOT leave the old Ø38 7075 bore exposed between the two bushings.
+
+OUTPUT FILES
+Trade CSV: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\current_design\phase2e3b13b_v03_thrust_flange_trade.csv
+Summary:   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\current_design\phase2e3b13b_v03_summary.txt
+================================================================================================================

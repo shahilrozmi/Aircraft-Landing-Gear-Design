@@ -1,0 +1,9 @@
+item,status,value,interpretation
+large_deflection,PASS,ON,Geometric nonlinearity was explicitly enabled.
+automatic_substepping,PASS,10 initial / 1 min / 100 max,Nonlinear load application was incremented automatically.
+end_time_reached,PASS,1.0,Full LC4+ ultimate load step reached time 1.0.
+solver_errors,PASS,0,No solver errors reported.
+pcg_iteration_performance,INFO,>1000 internal PCG iterations during loadstep,Performance issue only; ANSYS recommended direct/SPARSE solver for efficiency.
+reduced_integration_pcg_warning,OPEN_NOTE,SOLID186 reduced integration + PCG,ANSYS requests multiple elements through thickness or SPARSE solver. Current mesh was intentionally built with multiple through-thickness elements; retain note in report.
+reference_moment_convergence_warning,OPEN_NOTE,zero calculated reference moment,ANSYS used an internal reference moment threshold. Force and displacement convergence were achieved; retain warning as solver-audit note.
+remote_point_load_path,PASS,single explicit pilot node,Force and APDL MX moment act on the same explicit remote-point pilot node; previous overlapping-MPC issue removed.

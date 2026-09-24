@@ -1,0 +1,34 @@
+============================================================================================================================
+ PHASE 2E2 — V1 RELEASE / FREEZE AUDIT
+============================================================================================================================
+
+Release status:               PASS
+Release level:                PRELIMINARY ARCHITECTURE / STRUCTURAL SCREEN
+
+Barrel:                       64.000 mm ID / 74.000 mm OD
+Piston:                       58.000 mm OD / 50.000 mm ID
+Physical stroke:              230.000 mm
+Stroke reserve at P2D ref.:   23.662 mm
+
+Metering law:                 SMOOTH_CLAMPED_LINEAR
+Equivalent orifice:           10.3010 -> 9.7420 mm over 205.000 mm
+Fixed metering bore:          14.000 mm
+
+Closure inner face:           492.780 mm above U
+Theoretical closure minimum:  5.582 mm
+Preliminary closure screen:   6.000 mm
+Preliminary E3 interface:     498.780 mm above U
+
+Reservoir remaining @230 mm:  234.358 cm^3
+
+Freeze boundary:
+  The Phase 2E2 hydraulic architecture, working barrel/piston geometry,
+  metering law, 14 mm metering-bore baseline, continuity-derived cavity
+  closure station, and preliminary 6 mm closure screen are released for
+  Phase 2E3 integration.
+  Detailed seals, gland/retainer/thread geometry, ports, local fillets,
+  manufacturing tolerances, metering-pin support dynamics and local 3D
+  FEA remain later-detail items and are NOT claimed frozen here.
+
+Checks passed:                22/22
+============================================================================================================================

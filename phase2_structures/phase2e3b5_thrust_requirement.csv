@@ -1,0 +1,9 @@
+level,ligament_mm,governing_thrust_case,shaft_diameter_mm,axial_thrust_kN,screen_allowable_MPa,minimum_annular_thrust_area_mm2,equivalent_minimum_shoulder_OD_mm,interpretation
+limit,5.0,LC5,36.0,8.87376,503.0,17.641669980119286,36.310633041216114,"Zero-margin uniform projected normal-stress requirement only; actual thrust-face geometry, contact, Kt and retention remain open."
+ultimate,5.0,LC5,36.0,13.31064,572.0,23.27034965034965,36.40918468456331,"Zero-margin uniform projected normal-stress requirement only; actual thrust-face geometry, contact, Kt and retention remain open."
+limit,10.0,LC5,36.0,8.87376,503.0,17.641669980119286,36.310633041216114,"Zero-margin uniform projected normal-stress requirement only; actual thrust-face geometry, contact, Kt and retention remain open."
+ultimate,10.0,LC5,36.0,13.31064,572.0,23.27034965034965,36.40918468456331,"Zero-margin uniform projected normal-stress requirement only; actual thrust-face geometry, contact, Kt and retention remain open."
+limit,15.0,LC5,36.0,8.87376,503.0,17.641669980119286,36.310633041216114,"Zero-margin uniform projected normal-stress requirement only; actual thrust-face geometry, contact, Kt and retention remain open."
+ultimate,15.0,LC5,36.0,13.31064,572.0,23.27034965034965,36.40918468456331,"Zero-margin uniform projected normal-stress requirement only; actual thrust-face geometry, contact, Kt and retention remain open."
+limit,20.0,LC5,36.0,8.87376,503.0,17.641669980119286,36.310633041216114,"Zero-margin uniform projected normal-stress requirement only; actual thrust-face geometry, contact, Kt and retention remain open."
+ultimate,20.0,LC5,36.0,13.31064,572.0,23.27034965034965,36.40918468456331,"Zero-margin uniform projected normal-stress requirement only; actual thrust-face geometry, contact, Kt and retention remain open."

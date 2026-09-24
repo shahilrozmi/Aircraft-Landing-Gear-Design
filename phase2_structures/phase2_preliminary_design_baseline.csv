@@ -1,0 +1,44 @@
+subsystem,parameter,value,unit,status,source,rationale
+Project / frozen input,Aircraft mass,1700.0,kg,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Project / frozen input,Screening weight used in Phase 1,16.68,kN,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Project / frozen input,Wheelbase,2.35,m,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Project / frozen input,Main-gear track,3.2,m,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Project / frozen input,Wheel/strut lateral offset e,120.0,mm,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Project / frozen input,Static loaded tire radius,175.0,mm,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Project / frozen input,Physical oleo stroke,230.0,mm,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Project / frozen input,Static oleo sag,50.0,mm,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Project / frozen input,Full-extension U-to-A length,525.0,mm,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Project / frozen input,Static U-to-A length,475.0,mm,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Project / frozen input,Ultimate factor,1.5,-,FROZEN,Phase 0 / Phase 1 / Phase 2B,Earlier baseline input; do not change without reopening upstream work.
+Lower piston,Structural OD,58.0,mm,LOCK_PRELIMINARY,phase2_piston_sizing.csv,Working 58 x 4 mm piston passes strength and buckling screens.
+Lower piston,Wall thickness,4.0,mm,LOCK_PRELIMINARY,phase2_piston_sizing.csv,Use as the Phase 2 structural baseline; local root/detail checks remain.
+Outer barrel,Bore / ID,64.0,mm,LOCK_PRELIMINARY,phase2_barrel_sizing.csv,Matches the 64 mm bushing OD and preserves the current radial stack.
+Outer barrel,Smooth wall thickness,5.0,mm,LOCK_PRELIMINARY,phase2_barrel_sizing.csv,Smooth-barrel strength and pressure margins are comfortable.
+Outer barrel,Smooth OD,74.0,mm,LOCK_PRELIMINARY,phase2_barrel_sizing.csv,Derived from selected 64 mm ID and 5 mm wall.
+Guide system,Lower bushing static station h_L,250.0,mm above axle,LOCK_PRELIMINARY,phase2_packaging_overlap.csv,Preferred D3/D4 compromise between guide reserve and reaction load.
+Guide system,Bushing spacing,150.0,mm,LOCK_PRELIMINARY,phase2_packaging_overlap.csv,150 mm materially reduces reaction load and remains packageable.
+Guide system,Upper bushing static station h_U,400.0,mm above axle,LOCK_PRELIMINARY,phase2_packaging_overlap.csv,Follows h_L + spacing.
+Guide system,Bushing axial length,30.0,mm,LOCK_PRELIMINARY,phase2_bushing_material_gland_requirements.csv,Not static-strength-driven; retained for load distribution/wear/stiffness.
+Guide system,Bushing material,C63000 / AMS 4640 Ni-Al bronze,,LOCK_PRELIMINARY,phase2_bushing_material_gland_requirements.csv,Primary preliminary guide-bearing material.
+Guide system,Bushing radial wall,3.0,mm,LOCK_PRELIMINARY,phase2_bushing_material_gland_requirements.csv,Geometrically tied to 58 mm piston OD and 64 mm barrel bore.
+Guide / packaging,Top guide-surface overrun,20.0,mm,KEEP_PARAMETRIC,phase2_packaging_overlap.csv,"Convenient packaging allowance, not a structural or regulatory requirement."
+Guide / packaging,Required piston guide-surface length,485.0,mm,KEEP_PARAMETRIC,phase2_packaging_overlap.csv,Depends directly on the still-parametric top overrun and upper package.
+Gland,Architecture,Integral shoulder + bronze guide/seal carrier + threaded gland nut,,LOCK_PRELIMINARY,phase2_gland_retainer_sizing.csv,Provides separate radial and axial pressure-retention load paths.
+Gland,Thread envelope,M70 x 2 equivalent 60-deg envelope,,KEEP_PARAMETRIC,phase2_gland_retainer_sizing.csv,"Strength is non-governing; exact standard, tolerance, locking, and seal detail remain open."
+Gland,Thread engagement,12.0,mm,KEEP_PARAMETRIC,phase2_gland_retainer_sizing.csv,Preliminary packaging value; not strength-driven.
+Lower barrel boss,Local boss OD,84.0,mm,LOCK_PRELIMINARY,phase2_gland_retainer_sizing.csv,Adopt as local Phase 2 envelope around gland/bushing region.
+Lower barrel boss,Boss-to-smooth-barrel transition land,15.0,mm,KEEP_PARAMETRIC,phase2_lower_barrel_boss_sizing.csv,Current analytical screen is comfortable; actual fillet/root CAD will set final land.
+Lower barrel boss,Actual fillet radius / local Kt,OPEN,,DEFER_DETAIL_FEA,phase2_lower_barrel_boss_sizing.csv,Do not invent Kt; resolve with actual transition geometry and FEA/detail analysis.
+Axle / spindle,Smooth root OD,50.0,mm,LOCK_PRELIMINARY,phase2_axle_sizing.csv,Conservative root baseline; local bearing-seat/spindle detail remains open.
+Axle / spindle,Smooth root wall,8.0,mm,LOCK_PRELIMINARY,phase2_axle_sizing.csv,Use for Phase 2 baseline before stepped spindle detailing.
+Axle / spindle,Axle-to-piston local transition,OPEN,,DEFER_DETAIL_FEA,phase2_axle_sizing.csv,Needs a real lower forging/boss/fillet architecture; smooth sections alone do not define this junction.
+Upper attachment,Trunnion architecture,Two bearings on +x axis + independent Mx brace path,,LOCK_PRELIMINARY,phase2_upper_trunnion_sizing.csv,Statically complete upper load path established.
+Upper attachment,Trunnion journal diameter,32.0,mm,LOCK_PRELIMINARY,phase2_upper_trunnion_sizing.csv,Working journal has margin through Kt sensitivity.
+Upper attachment,Trunnion bearing width,25.0,mm,LOCK_PRELIMINARY,phase2_upper_trunnion_sizing.csv,Reasonable bearing-pressure/root-bending compromise.
+Upper attachment,Trunnion support span,120.0,mm,KEEP_PARAMETRIC,phase2_upper_trunnion_sizing.csv,"120 mm is conservative; actual airframe fitting width may permit a larger, beneficial span."
+Upper brace,Tube OD,25.0,mm,LOCK_PRELIMINARY,phase2_upper_brace_sizing.csv,Current tube has comfortable strength and buckling margins.
+Upper brace,Tube wall,3.0,mm,LOCK_PRELIMINARY,phase2_upper_brace_sizing.csv,Retains room for end-fitting and fatigue detail.
+Upper brace,Pin diameter,18.0,mm,LOCK_PRELIMINARY,phase2_upper_brace_sizing.csv,Comfortable shear/bearing screen; real clevis pin bending remains open.
+Upper brace,Pin-bushing projected width,20.0,mm,LOCK_PRELIMINARY,phase2_upper_brace_sizing.csv,Current bronze bearing screen is comfortable.
+Upper brace,Effective perpendicular moment arm,250.0,mm,KEEP_PARAMETRIC,phase2_upper_brace_sizing.csv,Must be achieved by actual airframe/brace geometry; not yet a physical coordinate.
+Upper brace,Pin-to-pin free length,350.0,mm,KEEP_PARAMETRIC,phase2_upper_brace_sizing.csv,Buckling is acceptable over the current sensitivity range; final length comes from CAD.

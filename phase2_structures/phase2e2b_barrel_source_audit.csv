@@ -1,0 +1,5 @@
+quantity,source_value_mm,e2_carried_value_mm,difference_e2_minus_source_mm,status,source
+barrel_source_ID,64.0,64.0,0.0,PASS,C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\phase2_barrel_sizing.csv
+barrel_source_OD,74.0,74.0,0.0,PASS,C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\phase2_barrel_sizing.csv
+barrel_source_wall,5.0,5.0,0.0,PASS,C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\phase2_barrel_sizing.csv
+source_barrel_to_piston_radial_clearance,3.0,,,PASS,phase2_barrel_sizing.csv + phase2e2_architecture_inputs.csv

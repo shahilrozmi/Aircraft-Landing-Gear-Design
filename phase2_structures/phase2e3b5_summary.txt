@@ -1,0 +1,21 @@
+============================================================================================================================
+ PHASE 2E3-B5 — 7075 SOLID-HEAD / 300M CROSS-TRUNNION LOCAL SCREEN V0.1
+============================================================================================================================
+
+Working candidate:
+  span = 120.0 mm
+  journal = 36.0 mm
+  bearing width = 25.0 mm
+  half-head engagement = 42.5 mm
+
+First discrete simple-screen passing ligament = 5.0
+
+Worst ultimate lower-ligament simple shear-out screen:
+  ligament = 5.0 mm
+  VM proxy = 566.215375 MPa
+  MS vs project UTS = +0.010216
+
+No final 7075 local-head PASS is claimed.
+No fit/retention architecture is frozen.
+Next: boss-to-barrel transition + positive shaft-lock concept.
+============================================================================================================================

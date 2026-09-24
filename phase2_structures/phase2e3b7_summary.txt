@@ -1,0 +1,19 @@
+============================================================================================================================
+ PHASE 2E3-B7 — UPPER-BARREL -> SOLID-HEAD TRANSITION / Kt-BUDGET TRADE V0.2
+============================================================================================================================
+
+Lower barrel: 74.0/64.0 mm
+Closure outer face: 973.780357 mm above A
+Head width: 115.0 mm
+
+Working profile — NOT FROZEN:
+  upper OD = 102.0 mm
+  taper start = 300.0 mm above A
+  taper end = 973.780357 mm above A
+  added mass = 3.514107 kg
+  head reserve/side = 6.500000 mm
+  closure Kt3 MSu = +0.018982
+  solid-neck Kt3 MSu = +0.199276
+
+Actual geometry-derived Kt remains OPEN and must be verified later.
+============================================================================================================================

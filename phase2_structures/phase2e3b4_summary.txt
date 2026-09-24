@@ -1,0 +1,23 @@
+============================================================================================================================
+ PHASE 2E3-B4 — 300M CROSS-TRUNNION / 7075 HEAD INTERFACE REQUIREMENTS V0.1
+============================================================================================================================
+
+Architecture A selected FOR DETAILED SCREENING ONLY.
+
+Working interface-study candidate:
+  span = 120 mm
+  journal = 36 mm 300M
+  bearing width = 25 mm
+  head root-to-root width = 85.0 mm
+  boss growth vs 74-mm barrel = 5.5 mm/side
+
+Ultimate highest-station interface requirements:
+  per-journal radial reaction = 140.590722 kN
+  journal-root moment = 2.460338 kN*m
+  moment-transfer force couple = 57.890297 kN
+  locating-journal thrust = 13.310640 kN
+  brace force at 250 mm arm = 67.372873 kN
+
+No local 7075-T6 head PASS is claimed by this script.
+Next: local solid-head boss / shaft-capture structural screen.
+============================================================================================================================

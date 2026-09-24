@@ -1,0 +1,3 @@
+item_id,issue,resolution,current_design_effect
+P2D-460,460 mm piston / guide-surface semantics,CLOSED — confirmed source-derived required cylindrical piston guide-surface length from axle/shoulder datum.,No E2 geometry change required.
+P2-007,Historic vs current axle regression,CLOSED — historical result belongs to older load/methodology version; current source-driven nominal axle screen is authoritative.,No current axle geometry change required by the regression audit. Final local-detail validation remains open.

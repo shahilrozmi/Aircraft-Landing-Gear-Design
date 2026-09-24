@@ -1,0 +1,2 @@
+status,upper_OD_mm,taper_start_A_mm,taper_end_A_mm,lower_barrel_OD_mm,retained_internal_ID_mm,head_root_to_root_width_mm,head_reserve_each_side_mm,added_annular_mass_kg_vs_74mm,passes_Kt_peak_1p5,passes_Kt_peak_2p0,annular_closure_Kt3_MS_ultimate,solid_neck_Kt3_MS_ultimate,interpretation
+WORKING_PROFILE_NOT_FROZEN,102.0,300.0,973.780356685791,74.0,64.0,115.0,6.5,3.514107373536636,True,False,0.018981677643556294,0.19927591407717493,Selected only within the smoothstep / Kt-sensitivity model. Actual transition Kt must be verified by detailed geometry/FEA.

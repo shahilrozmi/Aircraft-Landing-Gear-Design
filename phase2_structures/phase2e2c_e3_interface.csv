@@ -1,0 +1,8 @@
+quantity,value,units,classification
+fixed_orifice_plane_above_U,179.99999999999994,mm,E2_WORKING_GEOMETRY
+continuity_based_pressure_closure_inner_face_above_U,492.780356685791,mm,E2_CONTINUITY_DERIVED_WORKING_CLOSURE
+closure_theoretical_structural_minimum_thickness,5.582042552839526,mm,PLATE_SCREEN_MINIMUM_NOT_FINAL_CAD
+closure_first_0p5mm_grid_pass_thickness,6.0,mm,PRELIMINARY_STRUCTURAL_SCREEN
+theoretical_minimum_outer_face_above_U,498.36239923863053,mm,MINIMUM_BEFORE_SEALS_RETAINER_PORTS
+six_mm_screen_outer_face_above_U,498.780356685791,mm,PRELIMINARY_E2_TO_E3_INTERFACE
+E3_architecture_rule,Place trunnion / airframe attachment load path in solid head at or above the final pressure-closure outer face; do not pass the attachment through the live pressure cavity unless a pressure-penetrating boss is deliberately designed.,-,ARCHITECTURE_RULE

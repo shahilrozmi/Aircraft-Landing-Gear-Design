@@ -1,0 +1,11 @@
+metric,current_smooth,historical_two_stage,two_stage_minus_smooth,delta_percent_vs_smooth
+peak_oleo_stroke_mm,206.338,206.268,-0.06999999999999318,-0.03392491930715292
+peak_tire_deflection_mm,44.961,44.898,-0.06299999999999528,-0.14012143858009227
+peak_ground_reaction_kN,,,,
+peak_internal_strut_force_kN,23.038,24.654,1.6159999999999997,7.014497786266167
+peak_gas_force_kN,19.373,19.361,-0.012000000000000455,-0.06194187787126647
+peak_hydraulic_force_kN,15.542,17.38,1.8379999999999992,11.82601981726933
+gas_work_kJ,2.15,2.148,-0.0019999999999997797,-0.09302325581394325
+hydraulic_energy_kJ,2.063,2.065,0.0019999999999997797,0.09694619486184099
+energy_residual_J,,,,
+time_to_peak_s,,,,

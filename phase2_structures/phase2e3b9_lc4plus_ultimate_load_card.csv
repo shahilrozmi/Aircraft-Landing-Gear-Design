@@ -1,0 +1,2 @@
+case,level,top_station_A_mm,Fx_remote_N,Fy_remote_N,Fz_structural_N,pressure_MPa,pressure_thrust_plus_z_N,Fz_remote_total_N,Mx_remote_Nmm,My_remote_Nmm,Mz_remote_Nmm
+LC4+,ultimate,700.000000,0.000000,12510.000000,16638.300000,13.938000,44838.418847,61476.718847,12942846.000000,0.000000,0.000000

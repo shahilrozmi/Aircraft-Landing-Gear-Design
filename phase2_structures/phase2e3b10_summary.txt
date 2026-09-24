@@ -1,0 +1,19 @@
+============================================================================================================================
+PHASE 2E3-B10 — UPPER HEAD / 300M CROSS-TRUNNION INTEGRATION V0.1
+============================================================================================================================
+
+Load source: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase1_loads\phase1_load_envelope.csv
+E3 boundary: 498.780 mm above U | source=C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\phase2e3a2_summary.txt
+Material source: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\phase2e3b2_summary.txt
+
+Decision chain: requirement -> equation/constraint -> trade -> working value -> validation status
+
+Packaging minimum span = 141.000 mm.
+120 mm rejected for geometric overlap with the 106 mm B9 head.
+150 mm retained over 180 mm after recoupling the REAL head-face-to-bearing-center journal lever.
+Mathematical minimum shaft diameter at Kt=3: 36 mm.
+Working shaft diameter: 38 mm.
+Working result: LC=LC5, Rult=114.217 kN, Mroot=2.513 kN*m, VMult=1411.084 MPa, MSu=+0.320.
+Working keeper pin: 8 mm 300M; ultimate double-shear stress=132.403 MPa; MS=+7.119.
+
+OPEN: head-bore bearing, head net section/shear-out, real shoulder fillet, keeper cross-hole SCF, contact/fretting, fits, fatigue, fracture mechanics and final airframe fitting.

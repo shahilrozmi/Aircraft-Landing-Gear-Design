@@ -1,0 +1,7 @@
+component,reaction_or_load,role,status,note
+Upper trunnion pair,Fx,Axial/thrust load through locating journal / thrust face,ARCHITECTURE_RETAINED,Full |Fx| remains a conservative thrust requirement until detailed locating/floating bearing arrangement is defined.
+Upper trunnion pair,"Fy, Fz",Radial bearing reactions,ARCHITECTURE_RETAINED,Distributed between left/right support planes by force and moment equilibrium.
+Upper trunnion pair,"My, Mz",Differential radial reaction couples across support span,ARCHITECTURE_RETAINED,Numerical reaction magnitudes must be recomputed at the physical E3 station.
+Brace / anti-rotation link,Mx,Separate two-force path reacting moment about trunnion axis,ARCHITECTURE_RETAINED,"Exact brace endpoints, angle, airframe fitting and retraction kinematics remain open."
+Guide bushings,Internal RL/RU,Internal piston-to-barrel radial load transfer,NOT_EXTERNAL_ATTACHMENT_REACTION,Do not substitute guide-bushing reaction directly for trunnion/airframe reaction.
+E2 solid-head boundary,geometry only,Minimum preliminary location outside live pressure cavity,PACKAGING_BOUNDARY,Not a trunnion centerline. E3 station remains to be selected.

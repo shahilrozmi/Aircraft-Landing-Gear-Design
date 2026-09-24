@@ -1,0 +1,4 @@
+run,local_mesh_label,peak_VM_MPa,peak_A_mm,peak_X_mm,peak_Y_mm,total_deformation_mm,local_OD_at_peak_mm,local_wall_at_peak_mm,deformation_over_model_length_percent,stress_change_from_previous_percent,peak_A_shift_from_previous_mm
+RUN0_BASELINE,baseline/coarse local mesh,469.23,314.078599,-1e-06,32.168623,28.043,74.28904576854366,5.144522884271829,4.314307692307692,,
+RUN1_LOCAL_2p5MM,local refinement ~2.5 mm,469.18,316.222675,-1e-06,32.093131,28.043,74.3209498915938,5.160474945796899,4.314307692307692,0.0106568907455585,2.144075999999984
+RUN2_LOCAL_2p0MM,local refinement ~2.0 mm,469.18,315.278277,-1e-06,32.126392,28.043,74.3067000078869,5.153350003943451,4.314307692307692,0.0,0.9443979999999783

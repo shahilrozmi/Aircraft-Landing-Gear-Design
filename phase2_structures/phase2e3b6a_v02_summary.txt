@@ -1,0 +1,19 @@
+============================================================================================================================
+ PHASE 2E3-B6A — WORKING 150-mm TRUNNION LOCAL-HEAD REFRESH V0.2
+============================================================================================================================
+
+e = 17.500000 mm
+L = 57.500000 mm
+e/L = 0.304347826
+Contact regime = PARTIAL_ROOT_TRIANGULAR
+Contact length = 52.500000 mm
+Separation length = 5.000000 mm
+
+First corrected simple-screen passing ligament = 5.0
+10-mm ultimate p_peak = 126.786805 MPa
+10-mm ultimate contact-proxy MS = +3.511510
+10-mm ultimate lower shear-out MS = +2.356224
+10-mm ultimate side-ligament MS = +9.404295
+
+No final contact fit / local FEA / fatigue validation is claimed.
+============================================================================================================================

@@ -1,0 +1,52 @@
+================================================================================================================
+ PHASE 2E3-B13B V0.4 — CENTRAL SHAFT RELIEF / HEAD-SECTION TRADE
+================================================================================================================
+
+--- BASELINE ---
+Head cross-section:                    106.0 x 78.0 mm
+Original bore:                         Ø38.0 mm
+Original upper/lower ligament:         20.0 mm
+Original side ligament:                34.0 mm
+
+--- RELIEF TRADE ---
+  Drel   clr_r   v_lig   s_lig      dA%     dIy%     dIz%   sig_sens    MSsens
+--------------------------------------------------------------------------------------
+    40    1.00   19.00   33.00    -1.72    -0.57    -0.31      56.46     7.908
+    42    2.00   18.00   32.00    -3.52    -1.23    -0.66      59.60     7.439
+    44    3.00   17.00   31.00    -5.42    -2.00    -1.07      63.11     6.971
+    46    4.00   16.00   30.00    -7.40    -2.87    -1.54      67.05     6.502
+    48    5.00   15.00   29.00    -9.47    -3.87    -2.07      71.52     6.033
+    50    6.00   14.00   28.00   -11.63    -5.00    -2.68      76.63     5.564
+
+--- WORKING B13C CENTRAL RELIEF ---
+Selected working relief:              Ø50.0 mm THROUGH
+Shaft-to-aluminum radial clearance:    6.00 mm
+Minimum vertical ligament:             14.00 mm
+Side ligament:                         28.00 mm
+Net-area change vs Ø38 bore:           -11.63 %
+Iy change vs Ø38 bore:                 -5.00 %
+Iz change vs Ø38 bore:                 -2.68 %
+B11 scaled nominal stress sensitivity: 76.63 MPa
+Yield margin on that sensitivity only: +5.564
+
+SELECTION REASON
+- Ø50 through-bore matches the bronze sleeve OD and eliminates exposed Ø38 aluminum.
+- It avoids an internal bore shoulder at the bushing ends.
+- It gives 6 mm radial clearance between the Ø38 shaft and 7075 center passage.
+- Relative to the old Ø38 bore, the centered-section area falls about 11.6%,
+  Iy about 5.0%, and Iz about 2.7%; these are acceptable to TAKE TO FEA, not final approval.
+- The minimum vertical ligament becomes 14 mm, so B13C local head/contact FEA is mandatory.
+
+B13C CAD INTENT
+- Machine/model one Ø50 passage through the head.
+- Install one 30 mm-long flanged bronze bushing from each side.
+- Leave the center 46 mm of the Ø50 passage unoccupied.
+- Shaft is Ø38 nominal; it contacts bronze ID surfaces only, never 7075.
+- Keep the Ø60 x 3 mm flange working geometry from B13B V0.3.
+- Do not add a central keeper hole/keyway through the Ø38 shaft.
+- Mx remains on the independent brace path.
+
+OUTPUT FILES
+Trade CSV: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\current_design\phase2e3b13b_v04_central_relief_trade.csv
+Summary:   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\current_design\phase2e3b13b_v04_summary.txt
+================================================================================================================

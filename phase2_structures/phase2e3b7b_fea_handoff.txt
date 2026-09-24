@@ -1,0 +1,67 @@
+============================================================================================================================
+ PHASE 2E3-B7B — TRANSITION GEOMETRY / LOCAL-FEA HANDOFF V0.1
+============================================================================================================================
+
+PURPOSE
+----------------------------------------------------------------------------------------------------------------------------
+Replace the artificial Kt>=2 screening gate with a geometry-specific local analysis of an explicit transition.
+
+PRIMARY ANALYSIS CANDIDATE — NOT FROZEN
+----------------------------------------------------------------------------------------------------------------------------
+Lower barrel:                    74.0 OD / 64.0 ID mm
+Upper annulus:                   106.0 OD / 64.0 ID mm
+Taper start:                     275.0 mm above A
+Taper end / closure outer face: 973.780357 mm above A
+Transition length:               698.780 mm
+Maximum geometric half-angle:    1.967 deg
+B7A Kt_peak capacity:            1.640
+Closure annulus Kt=3 MSu:        +0.173
+Solid neck Kt=3 MSu:             +0.346
+Head reserve each side:          4.5 mm
+Added annular 7075 mass:         4.238 kg
+
+MASS-LEAN COMPARATOR
+----------------------------------------------------------------------------------------------------------------------------
+Upper annulus:                   104.0 OD / 64.0 ID mm
+B7A Kt_peak capacity:            1.610
+Closure annulus Kt=3 MSu:        +0.095
+Head reserve each side:          5.5 mm
+Added annular 7075 mass:         3.939 kg
+
+CURRENT HEAD / TRUNNION GEOMETRY
+----------------------------------------------------------------------------------------------------------------------------
+Root-to-root head width:         115.0 mm
+300M trunnion journal diameter:  34.0 mm
+Lower ligament:                  10.0 mm
+Shaft-hole bottom:               983.780357 mm above A
+Trunnion centerline:             1000.780357 mm above A
+
+PRIMARY CAPACITY-GOVERNING POINT
+----------------------------------------------------------------------------------------------------------------------------
+Ultimate governing station:      375.000 mm above A
+Local OD:                        75.778 mm
+Local sensitivity Kt:            1.314022
+Governing load case:             LC4+
+VM stress at capacity:           571.892 MPa
+Margin at capacity:              +0.000188
+
+PRESSURE STATES
+----------------------------------------------------------------------------------------------------------------------------
+Limit differential pressure:     9.292 MPa
+Ultimate differential pressure:  13.938 MPa
+Pressure applies to the live 64 mm bore only up to the E2 pressure closure; the solid head above the closure is not internally pressurized.
+
+LOCAL-ANALYSIS REQUIREMENTS
+----------------------------------------------------------------------------------------------------------------------------
+1. Use the profile coordinate CSV as the exact preliminary outer generatrix for the primary/comparator geometry.
+2. Include the 64 mm internal bore and the pressure closure / solid head transition.
+3. Evaluate at least LC4+, LC5, and any additional cases identified from the exported section-resultant table.
+4. Run both limit and ultimate load levels with their corresponding pressure state.
+5. Report nominal section stress away from the transition and peak local stress at the transition, then calculate Kt_local = sigma_peak / sigma_nominal on a consistent stress basis.
+6. Mesh-converge the local peak. Do not accept a single-element singularity or sharp-corner stress.
+7. If primary 106 mm geometry produces a real local Kt below its B7A capacity, retain it for further detail; otherwise compare 104 mm only as a mass reference and revise geometry/profile.
+
+OPEN ITEMS
+----------------------------------------------------------------------------------------------------------------------------
+Actual fillet/tangent radii, pressure-closure retainer geometry, transverse trunnion hole, shaft/head capture, fretting/contact, fatigue, tolerances and corrosion remain open.
+============================================================================================================================

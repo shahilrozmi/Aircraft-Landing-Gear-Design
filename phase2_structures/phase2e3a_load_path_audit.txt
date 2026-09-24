@@ -1,0 +1,22 @@
+============================================================================================================================
+ PHASE 2E3-A — UPPER ATTACHMENT LOAD-PATH / SOURCE AUDIT V0.1
+============================================================================================================================
+
+E2 preliminary solid-head boundary: 498.780356685791 mm above U
+This is a pressure-cavity packaging boundary, not automatically the trunnion centerline.
+
+Internal-load source present:       True
+Upper brace/link source present:    True
+Brace/link airframe semantics:      False
+Explicit trunnion semantics:        True
+
+Blocking items: 0
+Review items:   1
+
+DISPOSITION:
+SOURCE REVIEW REQUIRED — all key files exist, but the external upper-attachment FBD is not yet proven. Review the generated source snippets before selecting hardware geometry.
+
+ENGINEERING RULE:
+Do not use internal guide-bushing reactions as trunnion/airframe reactions without an explicit assembly free-body diagram.
+Do not choose pin/lug/bearing dimensions from the E2 498.780 mm boundary; it is an axial packaging minimum only.
+============================================================================================================================

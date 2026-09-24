@@ -1,0 +1,307 @@
+PHASE 2E3-B12 — INTEGRATED UPPER-HEAD / Ø38 CROSS-TRUNNION FEA SETUP GUIDE V0.1
+====================================================================================================
+
+PURPOSE
+-------
+Validate the B10/B11 working upper attachment with a 3-D local model before any final freeze.
+
+This first B12 run is intentionally a STRUCTURAL-EQUIVALENT BASELINE:
+    • real PRIMARY_106 curved transition/head geometry
+    • 7075-T6 upper head/barrel
+    • Ø38 mm 300M cross-shaft
+    • 150 mm support-center span
+    • 25 mm left/right journal support bands
+    • LC5 ultimate structural load
+    • 13.938 MPa ultimate pressure
+    • bonded head/shaft interface as the first approximation of a rigidly integrated shaft/head joint
+
+The exact shaft-to-head interference fit is NOT frozen yet. Do not invent an interference value for this run.
+
+IMPORTANT GEOMETRY CLARIFICATION
+--------------------------------
+PRIMARY_106 means the transition reaches 106.000 mm OD at A = 973.780 mm.
+
+The previous B9 local model ended at A = 700 mm, where the same exact smoothstep profile has:
+    OD(A=700) = 95.112661 mm
+
+So 95.113 mm and 106 mm are not contradictory:
+    95.113 mm = intermediate B9 cut diameter
+    106.000 mm = PRIMARY_106 transition/head target at the pressure-closure boundary
+
+B12 continues that same exact cubic-smoothstep profile to A = 973.780 mm.
+
+MODEL FILE
+----------
+Import:
+    phase2e3b12_integrated_head_trunnion.step
+
+Expected bodies:
+    1. HEAD_BARREL_7075
+    2. SHAFT_JOURNAL_LEFT_300M
+    3. SHAFT_CENTER_300M
+    4. SHAFT_JOURNAL_RIGHT_300M
+
+Global coordinates:
+    +x = trunnion / aircraft longitudinal axis
+    +y = lateral
+    +z = strut axis upward
+
+Key stations:
+    lower model cut A                   = 700.000 mm
+    OD at lower model cut              = 95.112661 mm
+    pressure closure / solid head A    = 973.780 mm
+    trunnion center A                  = 1012.780 mm
+    head top A                         = 1051.780 mm
+
+Head:
+    OD                                 = 106.000 mm
+    lower solid ligament               = 20.000 mm
+    upper solid ligament               = 20.000 mm
+    transverse bore                    = 38.000 mm
+
+Shaft:
+    diameter                           = 38.000 mm
+    left journal                       = x -87.500 to -62.500 mm
+    center shaft                       = x -62.500 to 62.500 mm
+    right journal                      = x 62.500 to 87.500 mm
+
+MATERIALS
+---------
+HEAD_BARREL_7075:
+    7075-T6 linear elastic project baseline
+    E                                  = 71,700 MPa
+    nu                                 = 0.330
+    rho                                = 2810 kg/m^3
+    preliminary yield screen           = 503 MPa
+    preliminary ultimate screen        = 572 MPa
+
+All three shaft bodies:
+    300M steel
+
+If you already created a 300M Engineering Data card, use that same card.
+If not, for THIS linear-elastic sensitivity only use:
+    E                                  = 205,000 MPa   [WORKING ELASTIC ASSUMPTION]
+    nu                                 = 0.29          [WORKING ELASTIC ASSUMPTION]
+    rho                                = 7850 kg/m^3   [WORKING MASS ASSUMPTION]
+
+Do not treat those three elastic constants as certification allowables.
+Use the existing project strength screens only for result comparison:
+    300M yield screen                  = 1517 MPa
+    300M ultimate screen               = 1862 MPa
+
+GEOMETRY / CONNECTION PREP
+--------------------------
+1. Import the STEP into Static Structural.
+
+2. Confirm the four bodies and global orientation before assigning anything.
+
+3. Shaft segment interfaces:
+       LEFT_JOURNAL <-> CENTER_SHAFT
+       CENTER_SHAFT <-> RIGHT_JOURNAL
+
+   Preferred:
+       shared topology / conformal connection if your Geometry editor makes that straightforward.
+
+   Otherwise:
+       create Bonded contacts at those two planar interfaces.
+
+4. Head <-> CENTER_SHAFT interface:
+       set BONDED for B12 V0.1.
+
+   This is deliberate. B10 sized the cross-trunnion as structurally fixed to the head.
+   Bonded contact is the first structural-equivalent representation of that assumption.
+
+   Do NOT switch this to frictionless for the baseline.
+   A free/sliding shaft would be a different mechanism and would invalidate the B10 cantilever-root model.
+
+5. No flange, nut, cotter pin or thrust washer is included in this first local model.
+   B10A already established that direct axial retention strength is not governing.
+   The exact retention hardware geometry stays open until the local head/shaft stress field is understood.
+
+SUPPORTS
+--------
+LEFT JOURNAL = locating support:
+    Apply Cylindrical Support to the Ø38 mm cylindrical face of SHAFT_JOURNAL_LEFT_300M.
+
+    Radial     = FIXED
+    Axial      = FIXED
+    Tangential = FREE
+
+RIGHT JOURNAL = floating support:
+    Apply Cylindrical Support to the Ø38 mm cylindrical face of SHAFT_JOURNAL_RIGHT_300M.
+
+    Radial     = FIXED
+    Axial      = FREE
+    Tangential = FREE
+
+This represents the B10 locating/floating support concept without fixing the lower barrel cut.
+
+LOADS — LC5 ULTIMATE
+--------------------
+Apply the structural load to the LOWER ANNULAR CUT FACE at A = 700.000 mm.
+
+Use Remote Force / Remote Moment with DEFORMABLE coupling.
+
+Structural force:
+    Fx = -13310.640 N
+    Fy = 0.000 N
+    Fz = 16638.300 N
+
+Structural remote moment about the lower-cut centroid:
+    Mx = 1996596.000 N*mm
+    My = 11646810.000 N*mm
+    Mz = 1597276.800 N*mm
+
+Internal pressure:
+    p  = 13.938000 MPa
+
+Pressure faces:
+    A. full 64 mm cylindrical internal bore from A=700 to A=973.780
+    B. circular pressure-closure face at A=973.780
+
+The explicit closure area is:
+    A = pi/4 * 64^2 = 3216.991 mm^2
+
+and its pressure thrust is:
+    p*A = 44.838419 kN
+
+CRITICAL PRESSURE RULE:
+    Do NOT add 44.838419 kN again to the Remote Force Fz.
+
+B9 had an OPEN upper bore, so its missing end-cap pressure thrust had to be inserted into the remote force.
+B12 contains the REAL CLOSED pressure face, so the pressure boundary condition produces that thrust itself.
+
+ANALYSIS SETTINGS — FIRST RUN
+-----------------------------
+Analysis:
+    Static Structural
+
+Large Deflection:
+    OFF for the first converged linear baseline.
+
+Solver:
+    Program Controlled is fine initially.
+
+Weak Springs:
+    OFF unless the solver proves they are required.
+    If weak springs become necessary, stop and check support/contact definitions first.
+
+MESH
+----
+Use quadratic solid elements.
+
+Suggested first mesh:
+    transition/body general size         ~4 mm
+    solid head                           ~2.5 to 3 mm
+    300M shaft                           ~2.5 to 3 mm
+    head transverse-bore region          ~1.5 mm
+    shaft surface inside the head        ~1.5 mm
+    shaft/head interface contact region  ~1.5 mm
+    support journal cylindrical faces    ~2 mm
+
+The 20 mm lower/upper ligaments should have many elements through them.
+Do not judge B12 from a coarse 4–6 mm mesh around the Ø38 bore.
+
+MESH CONVERGENCE
+----------------
+Run at least:
+
+    Run 1: bore/interface ~1.50 mm
+    Run 2: bore/interface ~1.00 mm
+    Run 3: bore/interface ~0.75 mm
+
+Keep the rest of the model reasonably similar.
+
+Record separately:
+    • peak 7075 VM stress
+    • peak 300M VM stress
+    • peak 7075 maximum principal stress
+    • total deformation
+    • peak locations
+    • support reactions
+    • element size at each peak
+
+Do NOT use a peak sitting exactly on:
+    • the lower remote-coupling cut edge
+    • a shaft-segment bonded seam
+    • a cylindrical-support edge
+
+as the local head/trunnion design stress without examining whether it is a numerical boundary singularity.
+
+RESULTS TO INSERT
+-----------------
+At minimum:
+
+HEAD_BARREL_7075 scoped results:
+    Equivalent (von-Mises) Stress
+    Maximum Principal Stress
+    Total Deformation
+
+300M shaft scoped results:
+    Equivalent (von-Mises) Stress
+    Total Deformation
+
+Global:
+    Equivalent Stress
+    Total Deformation
+    Reaction Force / support-probe results
+
+Also inspect:
+    stress around the Ø38 bore at the lower and upper ligament
+    stress at x ≈ +/-53 mm head/shaft exit regions
+    stress immediately inboard of each 25 mm support journal
+
+FIRST VALIDATION TARGETS
+------------------------
+B11 nominal analytical values were intentionally low:
+    ultimate vertical projected bore bearing ~56.5 MPa
+    ultimate vertical net section            ~53.6 MPa
+    ultimate vertical shear-out              ~53.6 MPa
+
+Do NOT expect the FEA local peak to equal those values.
+The whole purpose of B12 is to resolve the 3-D concentration missed by the nominal B11 screens.
+
+For the 7075 head:
+    project yield reference                   = 503 MPa
+    project ultimate screen                   = 572 MPa
+
+If the converged linear-elastic local peak exceeds 503 MPa:
+    flag it even if it remains below 572 MPa,
+    because a purely linear-elastic interpretation would then be questionable.
+
+For the 300M shaft:
+    B10 Kt=3 analytical ultimate root screen  = ~1411 MPa
+    project yield screen                      = 1517 MPa
+    project ultimate screen                   = 1862 MPa
+
+REACTION AUDIT
+--------------
+Structural-only B10 LC5 reactions were approximately:
+    left radial resultant                     = 114.217 kN
+    right radial resultant                    = 97.664 kN
+
+Because B12 explicitly applies the 13.938 MPa closure pressure, the TOTAL vertical support reaction in the FEA will also contain the closure-pressure thrust.
+
+With the same D9 statics and pressure thrust included, the approximate total radial support resultants are:
+    left                                      = 136.555 kN
+    right                                     = 75.418 kN
+
+Treat these only as a reaction sanity check; the 3-D elastic model can redistribute locally.
+
+B12 V0.1 STATUS RULE
+--------------------
+Do not close B12 after a single solve.
+
+We close the baseline only after:
+    1. model equilibrium/reaction audit is sensible,
+    2. peak locations are physical,
+    3. bore/interface mesh is converged,
+    4. 7075 and 300M peaks are recorded separately,
+    5. no support/contact setup artifact controls the reported peak.
+
+After that:
+    B12A = bonded structural-equivalent baseline closeout.
+
+Then, only if useful:
+    B12B = shaft/head fit/contact sensitivity.
+Do not invent a press-fit interference or friction coefficient before we have a source/design basis for it.

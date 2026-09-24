@@ -1,0 +1,12 @@
+parameter,value,units,classification,derivation,status
+B9_upper_head_OD,106.0,mm,FROZEN_B9_GEOMETRY,Retained B9/B9A upper-head envelope.,FROZEN_FOR_B10_INTEGRATION
+E3_pressure_cavity_boundary_above_U,498.780357,mm,SOURCE_E3A_E2_INTERFACE,C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\phase2e3a2_summary.txt,FROZEN_PACKAGING_BOUNDARY
+minimum_support_span_from_packaging,141.0,mm,DERIVED_B10,s_min = D_head + L_bearing + 2*g_min,DERIVED_REQUIREMENT
+working_bearing_center_span,150.0,mm,WORKING_B10_SELECTION,120 mm fails B9 head packaging; 150 mm clears head and gives shorter real journal cantilever than 180 mm.,PRELIMINARY_NOT_AIRFRAME_FREEZE
+mathematical_min_shaft_diameter_Kt3,36.0,mm,DERIVED_B10,"Minimum diameter passing limit/ultimate VM, bearing, shear and packaging at Kt=3.",DO_NOT_FREEZE_AT_MATHEMATICAL_MINIMUM
+working_300M_cross_shaft_diameter,38.0,mm,WORKING_B10_SELECTION,One nominal step above mathematical minimum; verified through Kt=3 integrated static screen.,PRELIMINARY_PENDING_LOCAL_FEA
+working_lower_solid_head_ligament,20.0,mm,WORKING_B10_GEOMETRY,Packaging choice above pressure boundary; sensitivity reported separately. Not yet local-strength validated.,PRELIMINARY_PENDING_B11_B12
+working_upper_solid_head_ligament,20.0,mm,WORKING_B10_GEOMETRY,Initial symmetric solid-head cap allowance above shaft.,PRELIMINARY_PENDING_B11_B12
+working_solid_head_axial_height,78.0,mm,DERIVED_B10,lower_ligament + shaft_diameter + upper_ligament,PRELIMINARY_PENDING_B11_B12
+working_trunnion_center_above_U,537.780357,mm,DERIVED_B10,E3_boundary + lower_ligament + shaft_diameter/2,PRELIMINARY_PENDING_HEAD_VALIDATION
+working_keeper_pin_diameter,8.0,mm,WORKING_B10_RETENTION,"300M transverse keeper, double-shear static retention screen for axial Fx only.",PRELIMINARY_PENDING_CROSS_HOLE_FEA

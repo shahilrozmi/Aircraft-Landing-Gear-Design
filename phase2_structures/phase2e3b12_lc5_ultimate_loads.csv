@@ -1,0 +1,3 @@
+load_case,application,Fx_N,Fy_N,Fz_N,Mx_Nmm,My_Nmm,Mz_Nmm,pressure_MPa,note
+LC5_ULTIMATE,LOWER_CUT_REMOTE_FORCE_STRUCTURAL_ONLY,-13310.64,0.0,16638.3,1996596.0,11646809.999999998,1597276.8,0.0,Apply to A=700 mm lower annular cut face via deformable remote coupling.
+LC5_ULTIMATE,INTERNAL_PRESSURE,0,0,0,0,0,0,13.938,Apply to 64 mm bore AND explicit closure face at A=973.780 mm; do not add closure thrust again to remote Fz.

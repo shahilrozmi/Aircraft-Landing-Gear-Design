@@ -1,0 +1,24 @@
+==============================================================================================================================
+ PHASE 2E3-B9 — LOCAL TRANSITION FEA CONVERGENCE CLOSEOUT V0.1
+==============================================================================================================================
+
+Converged ultimate FEA peak VM: 469.180000 MPa
+Peak station A: 315.278277 mm
+Peak Y: 32.126392 mm
+Local OD: 74.306700 mm
+Local wall: 5.153350 mm
+Total deformation: 28.043000 mm
+
+Final refinement stress change: 0.000000000 %
+Final refinement station shift: 0.944398 mm
+Mesh convergence: PASS
+
+Same-station ultimate nominal VM: 468.862633 MPa
+K_VM: 1.000676888
+
+Ultimate FEA margin: +0.219148
+Scaled limit FEA peak: 312.786667 MPa
+Limit FEA margin: +0.608125
+
+Next recommended sensitivity: Large Deflection ON using the final mesh.
+==============================================================================================================================

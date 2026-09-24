@@ -1,0 +1,46 @@
+============================================================================================================
+ PHASE 2E3-B13C — GENERATED BUSHED UPPER-HEAD GEOMETRY VALIDATION
+============================================================================================================
+Source STEP:                         phase2e3b12_integrated_head_trunnion(1).step
+Output STEP:                         phase2e3b13c_bushed_head_trunnion.step
+Imported B12 solid count:            4
+Exported/re-imported solid count:    4
+
+--- WORKING GEOMETRY ---
+Upper-head outer boss:               Ø106.000 mm x 78.000 mm high
+Head passage:                        Ø50.000 mm THROUGH
+Continuous 300M shaft:               Ø38.000 mm x 175.000 mm
+Bronze sleeve, each side:            Ø50.000/Ø38.000 x 30.000 mm
+Bronze flange, each side:            Ø60.000/Ø38.000 x 3.000 mm
+
+--- CURVED-HEAD FLANGE SEAT CORRECTION ---
+The source head exterior at the trunnion is a Ø106 cylinder about global Z,
+not a planar ±X face. A real flange therefore needs planar spotfaces.
+Full-Ø60 tangent-safe spotface plane: X = ±43.692105 mm
+Spotface depth at Y=0 from Ø106 tangent: 9.307895 mm
+Bushing sleeve inner ends:            X = ±13.692105 mm
+Unoccupied central Ø50 passage:       27.384209 mm
+Shaft-to-7075 radial clearance there: 6.000 mm
+
+--- BODY BOUNDING BOXES / VOLUMES ---
+HEAD_BARREL_7075              V= 1837596.560 mm^3  X[  -53.000,   53.000] Y[  -53.000,   53.000] Z[  700.000, 1051.780]
+SHAFT_300M_CONTINUOUS         V=  198470.116 mm^3  X[  -87.500,   87.500] Y[  -19.000,   19.000] Z[  993.780, 1031.780]
+BUSHING_LEFT_AMS4640          V=   29961.369 mm^3  X[  -46.692,  -13.692] Y[  -30.000,   30.000] Z[  982.780, 1042.780]
+BUSHING_RIGHT_AMS4640         V=   29961.369 mm^3  X[   13.692,   46.692] Y[  -30.000,   30.000] Z[  982.780, 1042.780]
+
+--- INTERSECTION VOLUME CHECK ---
+head-shaft                  : 0.000000000 mm^3
+head-left_bushing           : 0.000000000 mm^3
+head-right_bushing          : 0.000000000 mm^3
+shaft-left_bushing          : 0.000000000 mm^3
+shaft-right_bushing         : 0.000000000 mm^3
+left-right_bushing          : 0.000000000 mm^3
+
+INTERPRETATION
+- Four separate physical bodies are delivered: 7075 head, one 300M shaft, two bronze bushings.
+- Ø50 through-cut supersedes the B12C Ø38 bore and its 1.5 mm diagnostic mouth chamfers.
+- Shaft/head direct contact is geometrically impossible in the central relief region (6 mm radial gap).
+- Bronze/head OD and bronze/shaft ID are nominally coincident surfaces for contact definition in ANSYS.
+- The Ø60 flanges now seat on explicit planar Ø60 spotfaces cut into the curved Ø106 head exterior.
+- Spotface root/edge detail is intentionally sharp and remains a local FEA/detail-design sensitivity.
+============================================================================================================

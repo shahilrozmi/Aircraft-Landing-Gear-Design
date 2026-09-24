@@ -1,0 +1,4 @@
+interface_requirement,value,units,classification
+minimum_pressure_closure_inner_face_above_U,502.08688765136714,mm,WORKING_E2_TO_E3_INTERFACE
+E3_attachment_location_rule,"Place trunnion / upper attachment in solid head at or above the pressure closure, unless E3 deliberately designs and checks a pressure-penetrating boss.",-,ARCHITECTURE_RULE
+solid_head_axial_length,"TBD by E3 from trunnion diameter, bearing, edge-distance, local stress and manufacturing requirements.",-,NOT_YET_SIZED

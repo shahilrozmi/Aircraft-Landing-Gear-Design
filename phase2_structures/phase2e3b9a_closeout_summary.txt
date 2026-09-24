@@ -1,0 +1,25 @@
+==============================================================================================================================
+ PHASE 2E3-B9A — LARGE-DEFLECTION SENSITIVITY CLOSEOUT V0.1
+==============================================================================================================================
+
+B9 linear peak VM: 469.180000 MPa
+B9A nonlinear peak VM: 393.390000 MPa
+Stress change: -16.153715 %
+
+B9 linear max deformation: 28.043000 mm
+B9A nonlinear max deformation: 21.401000 mm
+Deformation change: -23.685055 %
+
+B9 linear peak A: 315.278277 mm
+B9A nonlinear peak A: 335.124456 mm
+Peak shift: +19.846179 mm
+
+Nonlinear local OD: 74.669942 mm
+Nonlinear local wall: 5.334971 mm
+
+Ultimate margin: +0.454028
+Yield margin at ultimate load: +0.278629
+
+Disposition: preliminary static nonlinear sensitivity passes.
+Retain B9 linear as conservative reference and B9A as nonlinear sensitivity.
+==============================================================================================================================

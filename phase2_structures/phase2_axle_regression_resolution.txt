@@ -1,0 +1,8 @@
+PHASE 2 — AXLE REGRESSION RESOLUTION AUDIT V0.1
+Historic target limit / ultimate: 610.300 / 915.400 MPa
+Effective historical bending Kt: 1.198061
+Transparent current governing case: LC2A
+Transparent current VM Kt=1.0: 320.772903 MPa
+Transparent current VM Kt=1.2: 384.927484 MPa
+Explicit Kt/SCF tokens in authoritative axle source: 0
+See console / CSV for the complete raw current load envelope and source context.

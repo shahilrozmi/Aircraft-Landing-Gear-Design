@@ -1,0 +1,3 @@
+solution,large_deflection,peak_VM_MPa,peak_A_mm,max_deformation_mm,ultimate_screen_MPa,ultimate_margin,yield_screen_MPa,yield_margin_at_ultimate_load
+B9_LINEAR_FINAL,False,469.18,315.278277,28.043,572.0,0.2191483012916151,503.0,0.0720832090029413
+B9A_LARGE_DEFLECTION,True,393.39,335.124456,21.401,572.0,0.45402780955286115,503.0,0.278629350008897

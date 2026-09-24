@@ -1,0 +1,25 @@
+============================================================================================================================
+ PHASE 2E3-B6 — TRUNNION SPAN / SOLID-HEAD ENVELOPE RE-COUPLING V0.1
+============================================================================================================================
+
+Working lower ligament: 10.0 mm
+Shaft-hole bottom: 508.780357 mm above U
+
+Solid-neck requirement:
+  Kt=1.0: OD >= 74.0 mm
+  Kt=1.5: OD >= 76.5 mm
+  Kt=2.0: OD >= 84.0 mm
+  Kt=2.5: OD >= 90.5 mm
+  Kt=3.0: OD >= 96.0 mm
+
+Working candidate — NOT FROZEN:
+  span = 150 mm
+  journal = 34 mm
+  bearing width = 25 mm
+  head width = 115.0 mm
+  Kt=3 required neck OD = 96.0 mm
+  reserve each side = 9.5 mm
+
+No final trunnion span or head OD is frozen.
+Next: reinforced barrel-to-solid-head transition geometry / Kt screen.
+============================================================================================================================

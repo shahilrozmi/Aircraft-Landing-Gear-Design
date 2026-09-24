@@ -1,0 +1,55 @@
+============================================================================================================================
+ PHASE 2E3-B12 — CURRENT BASELINE GENERATION SUMMARY
+============================================================================================================================
+
+PRIMARY_106 profile:
+    D(A) = 74 + 32 [3 t^2 - 2 t^3] mm
+    t    = (A - 275)/(973.780 - 275)
+
+Regression:
+    A=315.000 mm -> OD=74.302561 mm
+    A=365.000 mm -> OD=75.455748 mm
+    A=375.000 mm -> OD=75.778463 mm
+    A=700.000 mm -> OD=95.112661 mm
+    A=973.780 mm -> OD=106.000000 mm
+
+Geometry:
+    Lower cut A                 = 700.000 mm
+    Pressure closure A          = 973.780 mm
+    Trunnion center A           = 1012.780 mm
+    Head top A                  = 1051.780 mm
+    Head OD                     = 106.000 mm
+    Bore ID                     = 64.000 mm
+    Shaft OD                    = 38.000 mm
+    Bearing centers             = +/-75.000 mm
+    Bearing width               = 25.000 mm
+
+LC5 ultimate structural load at A=700:
+    Fx                          = -13.31064 kN
+    Fy                          = 0.00000 kN
+    Fz                          = 16.63830 kN
+    Mx                          = 1.996596 kN*m
+    My                          = 11.646810 kN*m
+    Mz                          = 1.597277 kN*m
+
+Pressure:
+    p                           = 13.938000 MPa
+    closure thrust              = 44.838419 kN
+
+Important:
+    Closure is explicit in B12. Apply pressure to the 64 mm bore and closure face.
+    Do NOT add closure thrust again to the remote Fz.
+
+Interface baseline:
+    shaft segment seams         = shared topology / bonded
+    head-to-center shaft        = BONDED structural-equivalent baseline
+    exact fit/interference      = OPEN
+
+Generated files:
+    phase2e3b12_integrated_head_trunnion.step
+    phase2e3b12_generate_integrated_model.py
+    phase2e3b12_transition_profile.csv
+    phase2e3b12_geometry_parameters.csv
+    phase2e3b12_lc5_ultimate_loads.csv
+    phase2e3b12_ansys_setup_guide.txt
+============================================================================================================================

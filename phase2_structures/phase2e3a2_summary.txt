@@ -1,0 +1,52 @@
+============================================================================================================================
+ PHASE 2E3-A2 — UPPER ATTACHMENT FBD TRANSPORT / STATION SENSITIVITY V0.1
+============================================================================================================================
+
+SOURCE GEOMETRY
+e = 120.000 mm
+r_t = 175.000 mm
+U above A in static reference = 475.000 mm
+E2 minimum solid-head boundary = 498.780357 mm above U
+
+ARCHITECTURE DISPOSITION
+Retain +x transverse trunnion pair for Fx/Fy/Fz/My/Mz.
+Retain separate brace / anti-rotation two-force path for Mx.
+Do NOT retain the old D9/D10 numerical sizing without station transport.
+Guide-bushing reactions remain internal and are not trunnion reactions.
+
+LIMIT MOMENT TRANSPORT — DATUM U VS E2 BOUNDARY
+  Mx_kNm: U gov LC4+ +6.752064 kN*m ; E2-boundary gov LC4+ +10.911892 kN*m ; change in governing |value| = +61.608%
+  My_kNm: U gov LC5 +5.767944 kN*m ; E2-boundary gov LC5 +10.194001 kN*m ; change in governing |value| = +76.735%
+  Mz_kNm: U gov LC5 +1.064851 kN*m ; E2-boundary gov LC5 +1.064851 kN*m ; change in governing |value| = +0.000%
+
+ULTIMATE MOMENT TRANSPORT — DATUM U VS E2 BOUNDARY
+  Mx_kNm: U gov LC4+ +10.128096 kN*m ; E2-boundary gov LC4+ +16.367838 kN*m ; change in governing |value| = +61.608%
+  My_kNm: U gov LC5 +8.651916 kN*m ; E2-boundary gov LC5 +15.291002 kN*m ; change in governing |value| = +76.735%
+  Mz_kNm: U gov LC5 +1.597277 kN*m ; E2-boundary gov LC5 +1.597277 kN*m ; change in governing |value| = +0.000%
+
+ULTIMATE TRUNNION REACTION SENSITIVITY — E2_BOUNDARY
+  span 120 mm: Rmax = 136.395203 kN (LC5)
+  span 150 mm: Rmax = 110.772170 kN (LC5)
+  span 180 mm: Rmax = 93.690340 kN (LC5)
+
+ULTIMATE TRUNNION REACTION SENSITIVITY — E2_BOUNDARY_PLUS_100MM
+  span 120 mm: Rmax = 147.438432 kN (LC5)
+  span 150 mm: Rmax = 119.607875 kN (LC5)
+  span 180 mm: Rmax = 101.054324 kN (LC5)
+
+ULTIMATE BRACE FORCE SENSITIVITY — E2_BOUNDARY
+  arm 150 mm: |Fbrace| = 109.118922 kN (LC4+)
+  arm 200 mm: |Fbrace| = 81.839191 kN (LC4+)
+  arm 250 mm: |Fbrace| = 65.471353 kN (LC4+)
+  arm 300 mm: |Fbrace| = 54.559461 kN (LC4+)
+
+ULTIMATE BRACE FORCE SENSITIVITY — E2_BOUNDARY_PLUS_100MM
+  arm 150 mm: |Fbrace| = 117.458922 kN (LC4+)
+  arm 200 mm: |Fbrace| = 88.094191 kN (LC4+)
+  arm 250 mm: |Fbrace| = 70.475353 kN (LC4+)
+  arm 300 mm: |Fbrace| = 58.729461 kN (LC4+)
+
+E3-A2 DISPOSITION
+PASS — the old D9/D10 load-path architecture is mechanically compatible with E2, but its numerical sizing at datum U is superseded for E3.
+Next step: select a physically realizable trunnion-centerline station in the solid upper head, then re-size journals/brace/lugs from the transported loads at that frozen station.
+============================================================================================================================

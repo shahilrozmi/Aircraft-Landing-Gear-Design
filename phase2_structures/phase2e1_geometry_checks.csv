@@ -1,0 +1,6 @@
+check,value_mm,criterion,status,note
+PHYSICAL_BUSHING_CLEARANCE,9.999999999999995,> 0 mm,PASS_GEOMETRIC,Transition must finish below the lower-guide surface reserve at full physical stroke.
+PISTON_BORE_TO_AXLE_OD_AXIAL_WEB,15.0,> 0 mm,PASS_GEOMETRIC,Positive axial solid web between the piston blind-bore end and the top of the 50 mm axle branch.
+AXLE_BORE_TO_STRUT_CENTERLINE_SOLID_BRIDGE,12.0,> 0 mm,PASS_GEOMETRIC,Positive solid axial bridge between axle blind-bore end and strut centerline A.
+RADIAL_WALL_AT_PISTON_BORE_BLIND_END,9.500000000000002,> 0 mm,PASS_GEOMETRIC,Radial material between 50 mm piston bore and local external transition envelope at z = piston blind-bore end.
+MIN_BORED_TRANSITION_RADIAL_WALL,4.0,> 0 mm,PASS_GEOMETRIC,Minimum radial wall in the bored transition; occurs at the restored locked 58 x 4 mm piston section.

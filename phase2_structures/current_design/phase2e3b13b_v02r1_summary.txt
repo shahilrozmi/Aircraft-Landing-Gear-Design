@@ -1,0 +1,40 @@
+==========================================================================================================
+ PHASE 2E3-B13B V0.2R1 — INTERFERENCE-FIT MINIMUM-LIGAMENT CORRECTION
+==========================================================================================================
+
+--- CORRECTED GEOMETRY INTERPRETATION ---
+Head lateral width:                     106.000 mm
+Head minimum vertical height:            78.000 mm
+Bushing seat diameter:                   50.000 mm
+Minimum vertical ligament:               14.000 mm
+Side ligament:                           28.000 mm
+V0.2's 28 mm value was the SIDE ligament, not the minimum ligament.
+
+--- CORRECTED FIT SENSITIVITY ---
+  delta_d     p_fit     VM7075     MS7075    VMbronze    MSbronze
+----------------------------------------------------------------------
+    0.005      1.53       4.63    107.738        7.25      56.119
+    0.010      3.06       9.25     53.369       14.50      27.559
+    0.015      4.59      13.88     35.246       21.74      18.040
+    0.020      6.12      18.50     26.184       28.99      13.280
+    0.025      7.65      23.13     20.748       36.24      10.424
+    0.030      9.18      27.75     17.123       43.49       8.520
+    0.040     12.25      37.01     12.592       57.98       6.140
+    0.050     15.31      46.26      9.874       72.48       4.712
+    0.060     18.37      55.51      8.061       86.98       3.760
+    0.080     24.49      74.01      5.796      115.97       2.570
+    0.100     30.62      92.52      4.437      144.96       1.856
+    0.150     45.92     138.77      2.625      217.44       0.904
+    0.200     61.23     185.03      1.718      289.92       0.428
+
+--- LINEAR ELASTIC FIRST SCREEN ---
+7075 yield surrogate:                     0.544 mm diametral interference
+Bronze proof surrogate:                   0.286 mm diametral interference
+First material screen:                    0.286 mm
+Interpretation: the corrected minimum-ligament surrogate still leaves tens-of-micrometre
+fit sensitivities comfortably elastic. This does NOT define the production fit.
+
+OUTPUT FILES
+CSV:     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\current_design\phase2e3b13b_v02r1_interference_sweep.csv
+Summary: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\current_design\phase2e3b13b_v02r1_summary.txt
+==========================================================================================================

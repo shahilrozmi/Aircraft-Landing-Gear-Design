@@ -1,0 +1,8 @@
+# Core numerical / plotting dependencies
+numpy
+scipy
+pandas
+matplotlib
+
+# Required only for STEP/CAD generation scripts in phase2_structures
+cadquery

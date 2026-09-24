@@ -1,0 +1,31 @@
+parameter,value,units,classification
+piston_OD,58.0,mm,LOCKED_BASELINE
+piston_wall,4.0,mm,LOCKED_BASELINE
+piston_ID,50.0,mm,DERIVED_LOCKED_BASELINE
+axle_root_OD,50.0,mm,LOCKED_BASELINE
+axle_root_wall,8.0,mm,LOCKED_BASELINE
+axle_root_ID,34.0,mm,DERIVED_LOCKED_BASELINE
+wheel_offset_e,120.0,mm,LOCKED_BASELINE
+knuckle_max_envelope,80.0,mm,PHASE2E1_WORKING
+knuckle_upper_extent,30.0,mm above A,PHASE2E1_WORKING
+knuckle_lower_extent,40.0,mm below A,PHASE2E1_WORKING
+transition_end,50.0,mm above A,PHASE2E1_WORKING
+transition_length,20.000000000000004,mm,PHASE2E1_WORKING
+axle_knuckle_fillet,10.0,mm,PHASE2E1_WORKING
+piston_blend_fillet,8.0,mm,PHASE2E1_WORKING
+piston_bore_blind_end,40.0,mm above A,PHASE2E1_WORKING
+axle_bore_blind_end,12.0,mm outboard of A,PHASE2E1_WORKING
+exposed_axle_to_wheel_center,79.99999999999999,mm,DERIVED_PHASE2E1
+knuckle_radial_step_over_piston,11.0,mm per side,DERIVED_PHASE2E1
+material_above_axle_OD_before_blend,4.999999999999997,mm,DERIVED_PHASE2E1
+piston_bore_to_axle_OD_web,15.0,mm,DERIVED_PHASE2E1
+axle_bore_solid_bridge,12.0,mm,DERIVED_PHASE2E1
+transition_OD_at_piston_bore_end,69.0,mm,DERIVED_PHASE2E1
+radial_wall_at_piston_bore_end,9.500000000000002,mm,DERIVED_PHASE2E1
+min_bored_transition_radial_wall,4.0,mm,DERIVED_PHASE2E1
+transition_half_angle,28.810793742973058,deg,DERIVED_PHASE2E1_ANALYTICAL_ENVELOPE
+physical_guide_reserve_from_D4,60.0,mm,SOURCE_CSV
+physical_clearance_to_lower_bushing,9.999999999999995,mm,DERIVED_PHASE2E1
+Kt_screen,1.5,-,PHASE2E1_SCREENING
+virtual_guide_reserve_from_D4,49.22100000000003,mm,SOURCE_CSV_DIAGNOSTIC
+virtual_clearance_to_lower_bushing,-0.7789999999999742,mm,DIAGNOSTIC_ONLY

@@ -1,0 +1,229 @@
+======================================================================================================================
+ PHASE 2D / E2 — 460 mm PISTON-LENGTH SEMANTICS AUDIT
+======================================================================================================================
+
+Python source: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\phase2_packaging_overlap.py
+CSV source:    C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\phase2_packaging_overlap.csv
+
+EXACT ASSIGNMENTS TO required_piston_guide_length_mm
+----------------------------------------------------------------------------------------------------------------------
+No direct assignment found by AST.
+SOURCE CONTEXT AROUND PACKAGING VARIABLES
+----------------------------------------------------------------------------------------------------------------------
+    1: """
+    2: Landing_Gear_Design_Project
+    3: Phase 2D4 — Piston / Barrel Packaging and Guide-Overlap Study
+    4: 
+    5: Purpose
+    6: -------
+    7: Take the Phase 2D3 bushing layouts and check whether the sliding piston remains
+    8: geometrically engaged with the two fixed guide bushings throughout the oleo stroke.
+    9: 
+   10: This script does NOT paste reaction loads from chat. It reads the CSV produced by
+   11: phase2_bushing_load_transfer.py and combines those calculated loads with the frozen
+   12: Phase 1 / Phase 2 stroke geometry.
+   13: 
+   14: Architecture used for this preliminary packaging study
+   15: ------------------------------------------------------
+   16: - Both radial guide bushings are treated as fixed in the outer barrel.
+   17: - Bushing stations h_L and h_U from Phase 2D3 are defined relative to the axle in
+   18:   the STATIC condition (x_static = 50 mm).
+   19: - The piston/axle assembly translates upward into the barrel as oleo compression x
+   20:   increases.
+   21: - The piston bearing surface is idealized as a straight cylindrical guide surface
+   22:   extending upward from the axle/shoulder datum.
+   23: 
+   24: For any fixed barrel station:
+   25: 
+   26:     h(x) = h_static + x_static - x
+   35: 
+   36:     lower_surface_reserve
+   37:         = h_L(x) - L_b/2
+   38: 
+   39: A positive value means the whole lower bushing still lies on the idealized
+   40: cylindrical piston guide surface.
+   41: 
+   42: Required piston guide-surface length
+   43: ------------------------------------
+   44: At full extension, the upper bushing is farthest from the axle. If the piston guide
+   45: surface is to extend a chosen overrun distance beyond the upper edge of the upper
+   46: bushing:
+   47: 
+   48:     L_piston,required
+   49:         = h_U(full extension) + L_b/2 + overrun
+   50: 
+   51: The overrun is a packaging design variable, not a regulatory requirement.
+   52: We report 0, 10, 20, and 30 mm cases instead of pretending one value is mandatory.
+   53: 
+   54: Important interpretation
+   55: ------------------------
+   56: U is still an EQUIVALENT STRUCTURAL DATUM, not yet a physical barrel cap.
+   57: If the calculated piston top passes above U at high compression, the script reports
+   58: the required intrusion. This is not automatically a failure; it tells us how much
+   59: physical upper-barrel/cavity packaging would be required if U remains at its current
+   60: structural location.
+   61: """
+   62: 
+  194:         L_UA_m(x_static_m) * 1000.0
+  195:         - h_static_mm
+  196:     )
+  197: 
+  198: 
+  199: def required_piston_length_mm(
+  200:     hU_static_mm,
+  201:     bushing_length_mm,
+  202:     overrun_mm,
+  203: ):
+  204:     hU_full_mm = station_h_mm(
+  216:         + overrun_mm
+  217:     )
+  218: 
+  219: 
+  220: def top_intrusion_above_U_mm(
+  221:     piston_length_mm,
+  222:     x_m,
+  223: ):
+  224:     """
+  225:     Positive result = piston top lies this far ABOVE U.
+  226:     Zero result = piston top is at or below U.
+  227:     """
+  228: 
+  229:     L_UA_mm = (
+  230:         L_UA_m(x_m) * 1000.0
+  231:     )
+  232: 
+  233:     return max(
+  234:         0.0,
+  235:         piston_length_mm - L_UA_mm,
+  236:     )
+  237: 
+  238: 
+  239: def evaluate_layout(
+  240:     row,
+  266:         lower_reserve_by_state[name] = (
+  267:             hL
+  268:             - 0.5 * Lb
+  269:         )
+  270: 
+  271:     piston_length = required_piston_length_mm(
+  272:         hU_static,
+  273:         Lb,
+  274:         overrun_mm,
+  275:     )
+  276: 
+  277:     physical_intrusion = top_intrusion_above_U_mm(
+  278:         piston_length,
+  279:         x_physical_m,
+  280:     )
+  281: 
+  282:     nominal_intrusion = top_intrusion_above_U_mm(
+  283:         piston_length,
+  284:         x_nominal_peak_m,
+  285:     )
+  286: 
+  287:     virtual_intrusion = top_intrusion_above_U_mm(
+  288:         piston_length,
+  289:         x_virtual_m,
+  290:     )
+  291: 
+  292:     # Strict geometry-only engagement checks:
+  293:     # > 0 means the complete lower bushing remains above the axle/shoulder datum.
+  327:             lower_reserve_by_state["PHYSICAL_STROKE"],
+  328: 
+  329:         "virtual_lower_surface_reserve_mm":
+  330:             lower_reserve_by_state["VIRTUAL_DIAGNOSTIC"],
+  331: 
+  332:         "required_piston_guide_length_mm": piston_length,
+  333: 
+  334:         "nominal_top_intrusion_above_U_mm": nominal_intrusion,
+  335:         "physical_top_intrusion_above_U_mm": physical_intrusion,
+  336:         "virtual_top_intrusion_above_U_mm": virtual_intrusion,
+  337: 
+  338:         "physical_full_bushing_engagement": physical_engaged,
+  339:         "virtual_full_bushing_engagement": virtual_engaged,
+  340:     }
+  341: 
+  438: # =============================================================================
+  439: 
+  440: print()
+  441: print("=" * 104)
+  442: print(
+  443:     " PHASE 2D4 — PISTON / BARREL PACKAGING "
+  444:     "+ GUIDE-OVERLAP STUDY"
+  445: )
+  446: print("=" * 104)
+  447: 
+  448: print()
+  449: print("--- INPUT CONNECTION ---")
+  462:     )
+  463: 
+  464: print()
+  465: print("--- PACKAGING MODEL ---")
+  466: print(
+  467:     "Both guide bushings are fixed in the outer barrel."
+  468: )
+  469: print(
+  470:     "Bushing h-values from D3 are interpreted at the 50 mm static-sag state."
+  471: )
+  472: print(
+  473:     "Positive lower-surface reserve means the complete lower bushing remains "
+  474:     "above the axle/shoulder datum."
+  475: )
+  476: print(
+  477:     f"Guide-surface overrun values:     "
+  478:     f"{', '.join(f'{x:.0f}' for x in overrun_cases_mm)} mm"
+  479: )
+  480: 
+  481: def print_layout_block(
+  482:     title,
+  502:         f"Lower / upper station from U:     "
+  503:         f"{row['lower_station_from_U_mm']:.1f} / "
+  504:         f"{row['upper_station_from_U_mm']:.1f} mm downward"
+  505:     )
+  506:     print(
+  507:         f"Required piston guide length:     "
+  508:         f"{row['required_piston_guide_length_mm']:.1f} mm"
+  509:     )
+  510:     print(
+  511:         f"Physical lower-surface reserve:   "
+  512:         f"{row['physical_lower_surface_reserve_mm']:+.1f} mm"
+  513:     )
+  515:         f"Virtual lower-surface reserve:    "
+  516:         f"{row['virtual_lower_surface_reserve_mm']:+.1f} mm"
+  517:     )
+  518:     print(
+  519:         f"Physical top intrusion above U:   "
+  520:         f"{row['physical_top_intrusion_above_U_mm']:.1f} mm"
+  521:     )
+  522:     print(
+  523:         f"Virtual top intrusion above U:    "
+  524:         f"{row['virtual_top_intrusion_above_U_mm']:.1f} mm"
+  525:     )
+  526:     print(
+  527:         f"Max ultimate bushing reaction:    "
+  528:         f"{row['max_ultimate_reaction_kN']:.2f} kN"
+  529:     )
+  592:         f"{row['hU_mm']:>6.0f}"
+  593:         f"{row['max_ultimate_reaction_kN']:>10.2f}"
+  594:         f"{row['max_ultimate_pressure_MPa']:>10.2f}"
+  595:         f"{row['physical_lower_surface_reserve_mm']:>10.1f}"
+  596:         f"{row['virtual_lower_surface_reserve_mm']:>10.1f}"
+  597:         f"{row['required_piston_guide_length_mm']:>10.1f}"
+  598:         f"{row['physical_top_intrusion_above_U_mm']:>10.1f}"
+  599:         f"{status:>8}"
+  600:     )
+  601: 
+  602: print()
+  603: print(
+
+CSV PREFERRED-ROW CROSS-CHECK
+----------------------------------------------------------------------------------------------------------------------
+required_piston_guide_length_mm = 460.000000
+nominal_top_intrusion_above_U_mm = 141.338000
+physical_top_intrusion_above_U_mm = 165.000000
+virtual_top_intrusion_above_U_mm = 175.779000
+
+AUTOMATED DISPOSITION
+----------------------------------------------------------------------------------------------------------------------
+The source contains both the 460 mm required-length variable and explicit piston-top / top-intrusion logic.
+This is strong evidence that E2 did not invent the axial dimension, but the exact assignment context printed above should still be reviewed before marking the semantic issue fully CLOSED.

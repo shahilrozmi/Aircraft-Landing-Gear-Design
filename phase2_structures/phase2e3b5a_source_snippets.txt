@@ -1,0 +1,524 @@
+======================================================================================================================
+
+SOURCE: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project\phase2_structures\phase2_barrel_sizing.py
+
+======================================================================================================================
+
+    1: """
+    2: Landing_Gear_Design_Project
+    3: Phase 2D2 — Outer Oleo Barrel Preliminary Structural + Pressure Sizing
+    4: 
+    5: Purpose
+    6: -------
+    7: Preliminary sizing of the outer oleo barrel using:
+    8: 1) the frozen Phase 2C upper-interface structural resultants, and
+    9: 2) internal oleo pressure from the frozen Phase 1 gas model.
+   10: 
+   11: This is a screening analysis only. It does not yet include:
+   12: - gland-thread / snap-ring / retaining-groove local stresses,
+   13: - bushing bearing pressure,
+   14: - trunnion/lug local geometry,
+   15: - fatigue,
+   16: - fracture mechanics,
+   17: - corrosion / plating effects,
+   18: - detailed FEA.
+   19: 
+   20: Material baseline
+   21: -----------------
+   22: 300M steel screening properties:
+   23:     E   = 205 GPa
+   24:     nu  = 0.28
+   25:     rho = 7870 kg/m^3
+   26:     Sy  = 1517 MPa
+   27:     Su  = 1862 MPa
+   28: 
+   29: Pressure model
+   30: --------------
+   31: Frozen Phase 1 gas law:
+   32: 
+   33:     P_abs(x) = P0_abs * [ L0 / (L0 - x) ]^n
+   34: 
+   35: Gauge pressure:
+   36:     p_g = P_abs - P_atm
+   37: 
+   38: Two pressure levels are reported:
+   39: - Physical-stroke service screen at x = 230 mm
+   40: - V0.5b virtual-stroke diagnostic at x = 240.779 mm
+   41: 
+   42: The physical-stroke pressure is conservatively combined with every Phase 2C
+   43: structural load case. This is intentionally conservative because the side/braking
+   44: loads and maximum oleo pressure are not guaranteed to occur simultaneously.
+   45: 
+   46: The V0.5b virtual pressure is checked separately with the corresponding vertical
+   47: strut force only, so we do not manufacture a nonphysical combined load case.
+   48: 
+   49: Thick-cylinder stress
+   50: ---------------------
+   51: Because the wall may not be "thin" relative to the barrel radius, Lamé stresses
+   52: are used rather than a thin-wall approximation.
+   53: 
+   54: For inner radius a and outer radius b, with gauge internal pressure p and zero
+   55: external pressure:
+   56: 
+   57:     A_L = p*a^2 / (b^2 - a^2)
+   58:     B_L = p*a^2*b^2 / (b^2 - a^2)
+   59: 
+   60:     sigma_r     = A_L - B_L/r^2
+   61:     sigma_theta = A_L + B_L/r^2
+   62: 
+   63: Closed-end pressure axial stress:
+   64: 
+   65:     sigma_z,p = A_L
+   66: 
+   67: The global strut loads add:
+
+   84: from pathlib import Path
+   85: 
+   86: 
+   87: # =============================================================================
+   88: # 1. MATERIAL
+   89: # =============================================================================
+   90: 
+   91: E = 205e9
+   92: nu = 0.28
+   93: rho = 7870.0
+   94: 
+   95: Sy = 1517e6
+   96: Su = 1862e6
+   97: 
+   98: tau_y_allow = Sy / math.sqrt(3.0)
+   99: tau_u_allow = Su / math.sqrt(3.0)
+  100: 
+  101: 
+  102: # =============================================================================
+  103: # 2. FROZEN PHASE 1 GAS MODEL
+
+  118:     / 4.0
+  119: )
+  120: 
+  121: 
+  122: def gas_pressure_gauge(x):
+  123:     if x >= L0_gas:
+  124:         raise ValueError(
+  125:             "Compression exceeds initial gas length."
+  126:         )
+
+  135: 
+  136:     return P_abs - P_atm
+  137: 
+  138: 
+  139: p_physical = gas_pressure_gauge(
+  140:     x_physical
+  141: )
+  142: 
+  143: p_virtual = gas_pressure_gauge(
+  144:     x_virtual
+  145: )
+  146: 
+  147: F_virtual_strut = (
+
+  176: working_wall_mm = 5.0
+  177: 
+  178: 
+  179: # =============================================================================
+  180: # 4. READ PHASE 2C RESULTANTS
+  181: # =============================================================================
+  182: 
+  183: here = Path(__file__).resolve().parent
+  184: 
+
+  200:         "Run phase2_internal_loads.py first."
+  201:     )
+  202: 
+  203: 
+  204: def read_upper_resultants(path):
+  205:     data = {
+  206:         "limit": {},
+  207:         "ultimate": {},
+  208:     }
+  209: 
+  210:     with path.open(
+  211:         "r",
+
+  229: 
+  230:     return data
+  231: 
+  232: 
+  233: upper_loads = read_upper_resultants(
+  234:     phase2_csv
+  235: )
+  236: 
+  237: 
+
+  350:         a,
+  351:         b,
+  352:     )
+  353: 
+  354:     sigma_z_pressure = A_L
+  355: 
+  356:     candidates = []
+  357: 
+  358:     for surface, r in (
+  359:         ("inner", a),
+  360:         ("outer", b),
+  361:     ):
+  362: 
+
+  379:             +1.0,
+  380:         ):
+  381: 
+  382:             sigma_z = (
+  383:                 sigma_z_pressure
+  384:                 - N / A
+  385:                 + bending_side
+  386:                 * M * r / I
+  387:             )
+
+  393:                 tau_torsion,
+  394:             )
+  395: 
+  396:             candidates.append({
+  397:                 "surface": surface,
+  398:                 "bending_side": bending_side,
+  399:                 "sigma_r_Pa": sigma_r,
+  400:                 "sigma_theta_Pa": sigma_theta,
+  401:                 "sigma_z_Pa": sigma_z,
+
+  419:     }
+  420: 
+  421: 
+  422: # =============================================================================
+  423: # 7. V0.5b PRESSURE DIAGNOSTIC
+  424: # =============================================================================
+  425: 
+  426: def evaluate_virtual_diagnostic(
+  427:     section,
+  428: ):
+  429:     """
+  430:     V0.5b diagnostic:
+  431:         pressure = p_virtual
+  432:         axial compression = corresponding peak strut force
+  433:         no artificial side/braking moment is added.
+  434:     """
+  435: 
+
+  464:     rows = []
+  465: 
+  466:     for level in (
+  467:         "limit",
+  468:         "ultimate",
+  469:     ):
+  470: 
+  471:         for case_name, load in upper_loads[level].items():
+  472: 
+
+  487:         for row in rows
+  488:         if row["level"] == "limit"
+  489:     ]
+  490: 
+  491:     ultimate_rows = [
+  492:         row
+  493:         for row in rows
+  494:         if row["level"] == "ultimate"
+  495:     ]
+  496: 
+  497:     worst_limit = max(
+  498:         limit_rows,
+  499:         key=lambda row: row["vm_Pa"],
+  500:     )
+  501: 
+  502:     worst_ultimate = max(
+  503:         ultimate_rows,
+  504:         key=lambda row: row["vm_Pa"],
+  505:     )
+  506: 
+  507:     worst_limit_shear = max(
+
+  510:             "tau_transverse_screen_Pa"
+  511:         ],
+  512:     )
+  513: 
+  514:     worst_ultimate_shear = max(
+  515:         ultimate_rows,
+  516:         key=lambda row: row[
+  517:             "tau_transverse_screen_Pa"
+  518:         ],
+  519:     )
+
+  521:     virtual_state = evaluate_virtual_diagnostic(
+  522:         section
+  523:     )
+  524: 
+  525:     MS_limit_yield = (
+  526:         Sy / worst_limit["vm_Pa"]
+  527:         - 1.0
+  528:     )
+  529: 
+  530:     MS_ultimate = (
+  531:         Su / worst_ultimate["vm_Pa"]
+  532:         - 1.0
+  533:     )
+  534: 
+  535:     MS_limit_shear = (
+
+  539:         ]
+  540:         - 1.0
+  541:     )
+  542: 
+  543:     MS_ultimate_shear = (
+  544:         tau_u_allow
+  545:         / worst_ultimate_shear[
+  546:             "tau_transverse_screen_Pa"
+  547:         ]
+  548:         - 1.0
+  549:     )
+  550: 
+  551:     MS_virtual_vs_yield = (
+  552:         Sy / virtual_state["vm_Pa"]
+  553:         - 1.0
+  554:     )
+  555: 
+  556:     passes = all([
+  557:         MS_limit_yield >= 0.0,
+  558:         MS_ultimate >= 0.0,
+  559:         MS_limit_shear >= 0.0,
+  560:         MS_ultimate_shear >= 0.0,
+  561:         MS_virtual_vs_yield >= 0.0,
+  562:     ])
+  563: 
+  564:     return {
+  565:         "ID_mm": ID_mm,
+
+  581:             * 1e12
+  582:         ),
+  583:         "mass_per_m_kg": section["mass_per_m_kg"],
+  584: 
+  585:         "physical_pressure_MPa": (
+  586:             p_physical / 1e6
+  587:         ),
+  588:         "virtual_pressure_MPa": (
+  589:             p_virtual / 1e6
+  590:         ),
+  591: 
+  592:         "limit_governing_case": worst_limit["case"],
+  593:         "limit_governing_surface": worst_limit["surface"],
+  594:         "limit_vm_MPa": (
+  595:             worst_limit["vm_Pa"]
+  596:             / 1e6
+  597:         ),
+  598:         "MS_limit_yield": MS_limit_yield,
+  599: 
+  600:         "ultimate_governing_case": worst_ultimate["case"],
+  601:         "ultimate_governing_surface": worst_ultimate["surface"],
+  602:         "ultimate_vm_MPa": (
+  603:             worst_ultimate["vm_Pa"]
+  604:             / 1e6
+  605:         ),
+  606:         "MS_ultimate": MS_ultimate,
+  607: 
+  608:         "limit_tau_screen_MPa": (
+  609:             worst_limit_shear[
+  610:                 "tau_transverse_screen_Pa"
+
+  612:             / 1e6
+  613:         ),
+  614:         "MS_limit_shear": MS_limit_shear,
+  615: 
+  616:         "ultimate_tau_screen_MPa": (
+  617:             worst_ultimate_shear[
+  618:                 "tau_transverse_screen_Pa"
+  619:             ]
+  620:             / 1e6
+  621:         ),
+  622:         "MS_ultimate_shear": MS_ultimate_shear,
+  623: 
+  624:         "virtual_vm_MPa": (
+  625:             virtual_state["vm_Pa"]
+  626:             / 1e6
+  627:         ),
+  628:         "virtual_governing_surface": virtual_state["surface"],
+  629:         "MS_virtual_vs_yield": MS_virtual_vs_yield,
+  630: 
+  631:         "PASS": passes,
+  632:     }
+  633: 
+
+  707:     )
+  708: 
+  709: 
+  710: assert_close(
+  711:     "Physical-stroke pressure [MPa]",
+  712:     p_physical / 1e6,
+  713:     9.292136857,
+  714:     1e-6,
+  715: )
+  716: 
+  717: assert_close(
+  718:     "Virtual-stroke pressure [MPa]",
+  719:     p_virtual / 1e6,
+  720:     10.514733500,
+  721:     1e-6,
+  722: )
+
+  728:     1e-3,
+  729: )
+  730: 
+  731: assert_close(
+  732:     "64x5 ultimate VM [MPa]",
+  733:     working["ultimate_vm_MPa"],
+  734:     595.204681,
+  735:     1e-3,
+  736: )
+  737: 
+
+  771: print()
+  772: print("=" * 94)
+  773: print(
+  774:     " PHASE 2D2 — OUTER OLEO BARREL "
+  775:     "PRELIMINARY STRUCTURAL + PRESSURE SIZING"
+  776: )
+  777: print("=" * 94)
+  778: 
+  779: print()
+  780: print("--- INPUT CONNECTION ---")
+  781: print(
+  782:     f"Phase 2C result file:             "
+  783:     f"{phase2_csv}"
+  784: )
+  785: 
+  786: print()
+  787: print("--- PRESSURE BASIS ---")
+  788: print(
+  789:     f"Physical stroke:                  "
+  790:     f"{x_physical*1000:.3f} mm"
+  791: )
+  792: print(
+  793:     f"Gauge pressure at physical stroke:"
+  794:     f" {p_physical/1e6:.3f} MPa"
+  795: )
+  796: print(
+  797:     f"V0.5b virtual stroke:             "
+  798:     f"{x_virtual*1000:.3f} mm"
+  799: )
+  800: print(
+  801:     f"Gauge pressure at virtual stroke: "
+  802:     f"{p_virtual/1e6:.3f} MPa"
+  803: )
+  804: print(
+  805:     f"Corresponding virtual strut force:"
+
+  817:     f"{wall_min_mm:.2f} to "
+  818:     f"{wall_max_mm:.2f} mm"
+  819: )
+  820: print(
+  821:     "Physical-stroke pressure is combined "
+  822:     "conservatively with every structural LC."
+  823: )
+  824: 
+  825: print()
+
+  836: print("-" * 76)
+  837: 
+  838: for ID_mm in barrel_ID_values_mm:
+  839: 
+  840:     subset = [
+  841:         row
+  842:         for row in designs
+  843:         if (
+  844:             abs(
+
+  847:             and row["PASS"]
+  848:         )
+  849:     ]
+  850: 
+  851:     if subset:
+  852: 
+  853:         first = min(
+  854:             subset,
+  855:             key=lambda row: row["wall_mm"],
+  856:         )
+  857: 
+  858:         print(
+  859:             f"{first['ID_mm']:>8.0f}"
+  860:             f"{first['wall_mm']:>10.2f}"
+  861:             f"{first['OD_mm']:>10.1f}"
+  862:             f"{first['limit_vm_MPa']:>12.1f}"
+  863:             f"{first['ultimate_vm_MPa']:>12.1f}"
+  864:             f"{first['virtual_vm_MPa']:>12.1f}"
+  865:             f"{first['ultimate_governing_case']:>10}"
+  866:         )
+  867: 
+  868:     else:
+  869:         print(
+
+  902:     f"Limit governing case:             "
+  903:     f"{working['limit_governing_case']}"
+  904: )
+  905: print(
+  906:     f"Limit governing surface:          "
+  907:     f"{working['limit_governing_surface']}"
+  908: )
+  909: print(
+  910:     f"Limit VM stress:                  "
+  911:     f"{working['limit_vm_MPa']:.1f} MPa"
+  912: )
+  913: print(
+  914:     f"Limit yield margin:               "
+  915:     f"{working['MS_limit_yield']:+.3f}"
+  916: )
+  917: 
+  918: print()
+  919: print(
+  920:     f"Ultimate governing case:          "
+  921:     f"{working['ultimate_governing_case']}"
+  922: )
+  923: print(
+  924:     f"Ultimate governing surface:       "
+  925:     f"{working['ultimate_governing_surface']}"
+  926: )
+  927: print(
+  928:     f"Ultimate VM screening stress:     "
+  929:     f"{working['ultimate_vm_MPa']:.1f} MPa"
+  930: )
+  931: print(
+  932:     f"Ultimate strength margin:         "
+  933:     f"{working['MS_ultimate']:+.3f}"
+  934: )
+  935: 
+  936: print()
+  937: print(
+  938:     f"Limit transverse shear screen:    "
+  939:     f"{working['limit_tau_screen_MPa']:.1f} MPa"
+  940: )
+  941: print(
+  942:     f"Ultimate transverse shear screen: "
+  943:     f"{working['ultimate_tau_screen_MPa']:.1f} MPa"
+  944: )
+  945: 
+  946: print()
+  947: print("--- V0.5b PRESSURE DIAGNOSTIC ---")
+  948: print(
+  949:     f"Virtual diagnostic VM stress:     "
+  950:     f"{working['virtual_vm_MPa']:.1f} MPa"
+  951: )
+  952: print(
+  953:     f"Virtual governing surface:        "
+  954:     f"{working['virtual_governing_surface']}"
+  955: )
+  956: print(
+  957:     f"Margin vs yield:                  "
+  958:     f"{working['MS_virtual_vs_yield']:+.3f}"
+  959: )
+  960: 
+  961: print()
+  962: print(
+
+  965: )
+  966: print()
+  967: print(
+  968:     "NOTE: The 64 mm barrel ID is a provisional packaging "
+  969:     "assumption, not a frozen interface dimension."
+  970: )
+  971: print(
+  972:     "Local gland/bushing/trunnion geometry is expected to "
+  973:     "be more critical than the smooth barrel wall."
