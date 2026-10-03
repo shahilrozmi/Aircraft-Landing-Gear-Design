@@ -1,0 +1,40 @@
+PHASE 2E3-B14B-11E — R8 FILLET CONVERGENCE V0.2
+
+1.5 mm baseline
+  Nodes / elements:              12090 / 6796
+  R8 fillet VM max:              442.62 MPa
+  R8 fillet VM average:          95.227 MPa
+  Hotspot XYZ:                   (39.974671, 41.798669, 994.421519) mm
+  Max total deformation:         0.73252 mm
+
+1.0 mm refinement
+  Nodes / elements:              15362 / 8784
+  R8 fillet VM max:              697.48 MPa
+  R8 fillet VM average:          90.990 MPa
+  Hotspot XYZ:                   (38.979300, 37.892137, 994.198461) mm
+  Max total deformation:         0.73252 mm
+
+Convergence diagnostics
+  Max-stress change:              +57.580 %
+  Stress ratio fine/coarse:       1.57580
+  Hotspot shift:                  4.038 mm
+  Max-deformation change:         +0.000000 %
+
+Preliminary generic 7075 screen at 1.0 mm ONLY
+  Sy =                             505.0 MPa
+  Su =                             572.0 MPa
+  Yield margin =                   -0.2760
+  Ultimate margin =                -0.1799
+
+DISPOSITION
+  NOT CONVERGED.
+  The fillet-scoped maximum increased strongly when the R8 local mesh was
+  refined from 1.5 mm to 1.0 mm, while the global displacement field remained
+  unchanged. The stress maximum also moved by several millimetres along the
+  fillet region.
+
+  Next action:
+  Run the planned 0.75 mm local R8 refinement with geometry, material,
+  parent displacement mapping, global mesh, cut boundaries, and result
+  scoping unchanged. After that run, assess whether the peak is stabilizing
+  or is edge/notch/boundary sensitive.

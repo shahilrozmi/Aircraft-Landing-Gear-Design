@@ -1,0 +1,33 @@
+PHASE 2E3-B14B-11F — R8 ROOT REDESIGN CAD CANDIDATES V0.1
+
+Baseline retained R8 full-head volume: 2813907.058 mm^3
+Local crop: x[-60,60], y[25,120], z[920,992] mm — identical to B14B11E.
+
+F2_BALANCED
+  root section: 95.0 x 115.0 mm
+  fillet radius: R12.0 mm
+  full-head volume: 3032831.399 mm^3
+  added mass vs R8: 0.615 kg
+  local volume: 302082.290 mm^3
+  artificial cut areas y25/y120/z920/z992: 4569.924, 1739.616, 1642.493, 7881.283 mm^2
+
+F3_ROBUST
+  root section: 100.0 x 115.0 mm
+  fillet radius: R15.0 mm
+  full-head volume: 3073694.468 mm^3
+  added mass vs R8: 0.730 kg
+  local volume: 310767.151 mm^3
+  artificial cut areas y25/y120/z920/z992: 4569.924, 1808.254, 1642.493, 8178.782 mm^2
+
+Validation PASS: 28
+Validation FAIL: 0
+Gate: PASS_B14B11F_CANDIDATES_READY_FOR_LOCAL_FEA_SCREEN
+
+FEA SCREEN PLAN
+  Use the existing solved R8 parent displacement field for screening only.
+  Replace local geometry with each candidate local STEP; map the same four cut faces.
+  Use quadratic elements and 1.0 mm local root/fillet sizing for both candidates.
+  Pick the lower-stress practical candidate; run only that winner at 0.75 mm.
+  Then replace the full six-body parent geometry with the winning full STEP and perform one confirmation solve.
+
+STATUS: WORKING CANDIDATES — NOT FROZEN.

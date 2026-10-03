@@ -1,0 +1,30 @@
+check,actual,expected,units,tolerance,status,note
+source_trade_packaging_screen,PASS,PASS,-,1e-06,PASS,
+selected_root_edge_count,4,4,-,1e-06,PASS,
+root_edge_length_1,85.0,85.0,mm,0.0001,PASS,
+root_edge_length_2,85.0,85.0,mm,0.0001,PASS,
+root_edge_length_3,95.0,95.0,mm,0.0001,PASS,
+root_edge_length_4,95.0,95.0,mm,0.0001,PASS,
+horn_single_solid,True,True,-,0,PASS,
+head_single_solid,True,True,-,0,PASS,
+fillet_subtractive_vs_B14B9,True,True,-,0,PASS,
+intersection_head__SHAFT_300M_CONTINUOUS,0.0,0.0,mm^3,1e-06,PASS,
+intersection_head__BUSHING_LEFT_AMS4640,0.0,0.0,mm^3,1e-06,PASS,
+intersection_head__BUSHING_RIGHT_AMS4640,0.0,0.0,mm^3,1e-06,PASS,
+intersection_head__THRUST_COLLAR_LEFT_300M,0.0,0.0,mm^3,1e-06,PASS,
+intersection_head__THRUST_COLLAR_RIGHT_300M,0.0,0.0,mm^3,1e-06,PASS,
+head_bbox_xmin_does_not_expand,True,True,-,0,PASS,B14B9=-53.000000100; R8=-53.000000100
+head_bbox_xmax_does_not_expand,True,True,-,0,PASS,B14B9=53.000000100; R8=53.000000100
+head_bbox_ymin_does_not_expand,True,True,-,0,PASS,B14B9=-53.000000100; R8=-53.000000100
+head_bbox_ymax_does_not_expand,True,True,-,0,PASS,B14B9=290.000000000; R8=290.000000000
+head_bbox_zmin_does_not_expand,True,True,-,0,PASS,B14B9=699.999999900; R8=699.999999900
+head_bbox_zmax_does_not_expand,True,True,-,0,PASS,B14B9=1060.280000100; R8=1059.756886303
+positive_head_horn_overlap,True,True,-,0,PASS,
+source_passage_clearance_positive,True,True,-,0,PASS,
+exported_reimported_solid_count,6,6,-,1e-06,PASS,
+export_body_label_HEAD_BARREL_7075,True,True,-,0,PASS,
+export_body_label_SHAFT_300M_CONTINUOUS,True,True,-,0,PASS,
+export_body_label_BUSHING_LEFT_AMS4640,True,True,-,0,PASS,
+export_body_label_BUSHING_RIGHT_AMS4640,True,True,-,0,PASS,
+export_body_label_THRUST_COLLAR_LEFT_300M,True,True,-,0,PASS,
+export_body_label_THRUST_COLLAR_RIGHT_300M,True,True,-,0,PASS,

@@ -1,0 +1,26 @@
+PHASE 2E3-B14B-10 — BUSHING/HEAD CONTACT GEOMETRY AUDIT V0.1
+Source STEP: /mnt/data/phase2e3b14b9_head_horn_clevis_v01.step
+
+LEFT
+  Bushing OD:              50.000000 mm
+  Head passage ID:         50.000000 mm
+  Diameter difference:     0.000000000 mm
+  Axis offset (YZ):        0.000000000 mm
+  Axis center (Y,Z):       (0.000000, 1012.780000) mm
+  Axial cylinder overlap:  28.500000 mm
+  CAD-kernel min distance: 0.000000000 mm
+
+RIGHT
+  Bushing OD:              50.000000 mm
+  Head passage ID:         50.000000 mm
+  Diameter difference:     0.000000000 mm
+  Axis offset (YZ):        0.000000000 mm
+  Axis center (Y,Z):       (0.000000, 1012.780000) mm
+  Axial cylinder overlap:  30.000000 mm
+  CAD-kernel min distance: 0.000000000 mm
+
+INTERPRETATION
+- The Ø50 bushing OD and Ø50 head passage are exactly nominally coincident in the STEP kernel.
+- Their axes are coaxial (zero YZ axis offset) and parallel to global X.
+- Therefore the ~1.29/1.61 mm ANSYS geometric-penetration values are not literal CAD radial interference.
+- Left cylindrical overlap is 28.5 mm because the final 1.5 mm of the left sleeve OD is replaced by the designed toroidal inner-end relief; right overlap is 30.0 mm.

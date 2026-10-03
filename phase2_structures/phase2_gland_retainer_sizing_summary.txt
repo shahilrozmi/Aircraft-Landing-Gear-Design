@@ -1,0 +1,75 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2_gland_retainer_sizing.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+==========================================================================================================
+ PHASE 2D6 — GLAND / RETAINER ARCHITECTURE + PRELIMINARY THREAD/BOSS SIZING
+==========================================================================================================
+
+--- INPUT CONNECTION ---
+Phase 2D5 result file:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_bushing_material_gland_requirements.csv
+
+--- SELECTED PRELIMINARY ARCHITECTURE ---
+Integral barrel shoulder -> lower bronze guide/seal carrier -> threaded gland nut / wiper retainer.
+Radial bushing load is carried into the barrel shoulder/boss; threads are credited only with axial pressure retention.
+
+--- CALCULATED LOAD REQUIREMENTS FROM D5 ---
+Lower radial reaction, limit:     40.844 kN
+Lower radial reaction, ultimate:  61.266 kN
+Housing bearing pressure, limit:  21.273 MPa
+Housing bearing pressure, ult:    31.909 MPa
+
+Physical full-bore thrust:        29.893 kN
+V0.5b full-bore thrust:           33.826 kN
+
+--- WORKING THREAD ENVELOPE ---
+Major diameter / pitch:           70.0 x 2.0 mm
+Approx pitch diameter:            68.701 mm
+Approx external root diameter:    67.546 mm
+Approx internal minor diameter:   67.835 mm
+
+--- WORKING CANDIDATE: 12 mm ENGAGEMENT / 84 mm BOSS OD ---
+Engaged thread pitches:           6.0
+Local boss root wall:             7.00 mm
+Gland root wall over 59 mm bore:  4.27 mm
+
+--- THREAD STRIPPING ENVELOPE ---
+External strip shear, physical:   23.48 MPa
+External strip shear, V0.5b:      26.57 MPa
+External-thread margin vs yield:  +31.97
+
+Internal strip shear, physical:   22.66 MPa
+Internal strip shear, V0.5b:      25.64 MPa
+Internal-thread margin vs yield:  +33.16
+
+--- GLAND / BOSS NET-SECTION SCREEN ---
+Gland neck stress, physical:      35.19 MPa
+Gland neck stress, V0.5b:         39.82 MPa
+Gland neck margin vs yield:       +37.09
+
+Boss axial stress, V0.5b:         19.98 MPa
+Boss inner hoop stress, V0.5b:    58.31 MPa
+Boss pressure VM stress, V0.5b:   59.60 MPa
+Boss pressure margin vs yield:    +24.45
+
+--- INTERPRETATION ---
+The threaded gland architecture is structurally plausible at the global/preliminary level.
+The thread is NOT currently strength-driven by pressure thrust; manufacturing, fatigue, locking, tolerance, and first-thread load concentration will control the final detail.
+The ~61 kN ultimate radial bushing load remains a separate local shoulder/boss load for detailed geometry/FEA.
+The 70 x 2 mm thread envelope and 84 mm boss OD remain WORKING dimensions only, not frozen production geometry.
+
+Consistency checks:               PASS
+CSV written to:                   phase2_gland_retainer_sizing.csv
+==========================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

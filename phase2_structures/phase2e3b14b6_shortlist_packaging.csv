@@ -1,0 +1,11 @@
+bx_mm,hz_mm,area_mm2,Kt,MS_limit,MS_ultimate,boss_diameter_mm,boss_height_mm,fits_full_rectangular_boss_bounding_box,note
+65.0,120.0,7800.0,3.0,0.5284164819593806,0.15009557058329626,106.0,78.0,False,Bounding-box fit only. Real radial horn root on curved cylindrical boss has less usable local section than this full rectangular envelope.
+75.0,105.0,7875.0,3.0,0.4732804944809528,0.10860710475794466,106.0,78.0,False,Bounding-box fit only. Real radial horn root on curved cylindrical boss has less usable local section than this full rectangular envelope.
+80.0,100.0,8000.0,3.0,0.4704498425011556,0.10647710920879039,106.0,78.0,False,Bounding-box fit only. Real radial horn root on curved cylindrical boss has less usable local section than this full rectangular envelope.
+70.0,115.0,8050.0,3.0,0.5714396253860539,0.18246942108257524,106.0,78.0,False,Bounding-box fit only. Real radial horn root on curved cylindrical boss has less usable local section than this full rectangular envelope.
+75.0,110.0,8250.0,3.0,0.5951310737888549,0.20029664958369242,106.0,78.0,False,Bounding-box fit only. Real radial horn root on curved cylindrical boss has less usable local section than this full rectangular envelope.
+80.0,105.0,8400.0,3.0,0.6000128140471428,0.20397003829289972,106.0,78.0,False,Bounding-box fit only. Real radial horn root on curved cylindrical boss has less usable local section than this full rectangular envelope.
+70.0,120.0,8400.0,3.0,0.6875193136854758,0.2698165132682786,106.0,78.0,False,Bounding-box fit only. Real radial horn root on curved cylindrical boss has less usable local section than this full rectangular envelope.
+75.0,115.0,8625.0,3.0,0.7202396018881578,0.29443772023267356,106.0,78.0,False,Bounding-box fit only. Real radial horn root on curved cylindrical boss has less usable local section than this full rectangular envelope.
+80.0,110.0,8800.0,3.0,0.7333963001101047,0.3043378099838412,106.0,78.0,False,Bounding-box fit only. Real radial horn root on curved cylindrical boss has less usable local section than this full rectangular envelope.
+75.0,120.0,9000.0,3.0,0.8484771277794061,0.39093328426965224,106.0,78.0,False,Bounding-box fit only. Real radial horn root on curved cylindrical boss has less usable local section than this full rectangular envelope.

@@ -1,0 +1,91 @@
+====================================================================================================================================
+ PHASE 2E3-B14B-8 V0.1 — PHYSICAL CLEVIS FRAME / EAR-ROOT TRADE / CAD HANDOFF
+====================================================================================================================================
+
+SOURCE CONNECTION
+------------------------------------------------------------------------------------------------------------------------------------
+B14A freeze:   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14a_freeze_record.csv
+B14B geometry: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b_working_geometry.csv
+B14B-7 root:   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b7_reference_candidate.csv
+
+LOCAL ORTHONORMAL JOINT FRAME
+------------------------------------------------------------------------------------------------------------------------------------
+e_h horn/radial: [+0.000000000, +1.000000000, +0.000000000]
+u_b brace axis:  [+0.274670324, +0.000000000, +0.961538462]
+e_p pin axis:    [+0.961538462, +0.000000000, -0.274670324]
+dot(e_h,u_b):    +0.000e+00
+dot(e_h,e_p):    +0.000e+00
+dot(u_b,e_p):    +0.000e+00
+
+WORKING PHYSICAL CLEVIS REFERENCE — NOT FROZEN
+------------------------------------------------------------------------------------------------------------------------------------
+Ear thickness:                    10.000 mm each
+Plate width along brace axis:     60.000 mm
+Root-to-pin lever:                25.000 mm
+Outboard free extension:          30.000 mm
+Total structural pin grip:        42.000 mm
+Central slot / eye package:       22.000 mm
+Clevis throat y:                  235.000 mm
+Pin center y:                     260.000 mm
+Fork free end y:                  290.000 mm
+Saddle-root to throat taper:      203.334 mm
+
+PACKAGING AGAINST B14B-7 ROOT
+------------------------------------------------------------------------------------------------------------------------------------
+Saddle root:                      85.000 x 95.000 mm
+Rotated clevis-base bbox X:       56.865 mm
+Rotated clevis-base bbox Z:       69.228 mm
+Root X margin each side:          14.068 mm
+Root Z margin each side:          12.886 mm
+
+EYE / HOLE CLEARANCE
+------------------------------------------------------------------------------------------------------------------------------------
+Root-side clearance to eye OD:    3.000 mm
+Outboard clearance to eye OD:     8.000 mm
+Load-direction hole ligament:     21.000 mm
+
+EAR-ROOT SCREEN, Kt=3.0
+------------------------------------------------------------------------------------------------------------------------------------
+VM limit:                         297.312 MPa
+MS limit:                         +0.699
+VM ultimate:                      445.968 MPa
+MS ultimate:                      +0.278
+
+NOMINAL LUG SCREENS
+------------------------------------------------------------------------------------------------------------------------------------
+Net-section ultimate demand:      91.114 MPa
+Net-section ultimate MS:          +5.256
+Shear-out ultimate demand:        80.267 MPa
+Shear-out ultimate MS:            +3.100
+Projected bearing ultimate:       187.289 MPa [ALLOWABLE OPEN]
+
+300M PIN
+------------------------------------------------------------------------------------------------------------------------------------
+Distributed pin VM ultimate:      687.125 MPa
+Conservative-bound VM limit:      646.414 MPa
+Conservative-bound MS limit:      +1.347
+Conservative-bound VM ultimate:   969.621 MPa
+Conservative-bound MS ultimate:   +0.920
+
+PIN AXIS GLOBAL GEOMETRY
+------------------------------------------------------------------------------------------------------------------------------------
+Pin center B:                     [+0.000, +260.000, +0.000] mm
+Pin-axis minus grip endpoint:     [-20.192, +260.000, +5.768] mm
+Pin-axis plus grip endpoint:      [+20.192, +260.000, -5.768] mm
+
+DISPOSITION
+------------------------------------------------------------------------------------------------------------------------------------
+The B14B gear-side joint now has an explicit orthogonal pin orientation, fork stack, throat station and tapered-horn endpoints.
+This is sufficiently defined for a first CAD/FEA geometry build, but it remains WORKING_NOT_FROZEN.
+Lug bearing allowable, slot-root fillet, taper contour, brace-eye tube joint and airframe-side joint remain open.
+Next: build/verify the physical horn + clevis CAD geometry, then replace SUP_BRACE_RX with the physical brace in ANSYS.
+
+OUTPUTS
+------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b8_joint_frame.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b8_clevis_trade.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b8_reference_geometry.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b8_cad_handoff.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b8_open_items.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b8_summary.txt
+====================================================================================================================================

@@ -1,0 +1,42 @@
+======================================================================================================================
+ PHASE 2E3-B14B-5 V0.1 — HORN ROOT ROBUSTNESS SHORTLIST
+======================================================================================================================
+
+SOURCE
+----------------------------------------------------------------------------------------------------------------------
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b4_horn_root_trade.csv
+
+WORKING ROBUSTNESS RULE
+----------------------------------------------------------------------------------------------------------------------
+Kt screen:            3.00
+Minimum limit MS:    +0.200
+Minimum ultimate MS: +0.100
+
+PREVIOUS B14B-4 REFERENCE UNDER Kt=3.0
+----------------------------------------------------------------------------------------------------------------------
+65 x 105 mm -> MS_limit=+0.223, MS_ultimate=-0.080, reserve=FAIL
+
+ROBUST SHORTLIST — SORTED BY GROSS AREA
+----------------------------------------------------------------------------------------------------------------------
+    bx     hz      area      AR     VM_lim    MS_lim     VM_ult    MS_ult
+----------------------------------------------------------------------------------------------------------------------
+  65.0  120.0    7800.0   1.846    330.407    +0.528    495.611    +0.150
+  75.0  105.0    7875.0   1.400    342.772    +0.473    514.159    +0.109
+  80.0  100.0    8000.0   1.250    343.432    +0.470    515.148    +0.106
+  70.0  115.0    8050.0   1.643    321.361    +0.571    482.042    +0.182
+  75.0  110.0    8250.0   1.467    316.588    +0.595    474.883    +0.200
+  80.0  105.0    8400.0   1.312    315.622    +0.600    473.434    +0.204
+  70.0  120.0    8400.0   1.714    299.256    +0.688    448.884    +0.270
+  75.0  115.0    8625.0   1.533    293.564    +0.720    440.346    +0.294
+  80.0  110.0    8800.0   1.375    291.336    +0.733    437.003    +0.304
+  75.0  120.0    9000.0   1.600    273.198    +0.848    409.797    +0.391
+
+INTERPRETATION
+----------------------------------------------------------------------------------------------------------------------
+The 65 x 105 mm B14B-4 reference is NOT robust to the Kt=3.0 screen and must not be frozen.
+The shortlist is intentionally not reduced to one winner because actual head/CAD packaging has not yet been checked.
+Next step: compare these section envelopes against the real B13C head geometry, then select one WORKING CAD candidate.
+
+CSV: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b5_horn_robust_shortlist.csv
+TXT: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b5_horn_robustness_summary.txt
+======================================================================================================================

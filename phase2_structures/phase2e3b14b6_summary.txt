@@ -1,0 +1,62 @@
+==============================================================================================================================
+ PHASE 2E3-B14B-6 V0.1 — B13C HEAD PACKAGING / HORN ENVELOPE GATE
+==============================================================================================================================
+
+SOURCE CONNECTION
+------------------------------------------------------------------------------------------------------------------------------
+B14A freeze:       C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14a_freeze_record.csv
+B14B geometry:     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b_working_geometry.csv
+B14B-5 shortlist:  C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b5_horn_robust_shortlist.csv
+B13C validation:   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\current_design\phase2e3b13c_geometry_validation.txt
+
+B13C REAL HEAD GEOMETRY
+------------------------------------------------------------------------------------------------------------------------------
+Upper-head outer boss: Ø106.000 mm x 78.000 mm high
+Continuous shaft:       Ø38.000 mm x 175.000 mm
+Boss axis: global Z; horn attaches radially to a CURVED cylindrical side.
+
+B14B-5 ROBUST SHORTLIST PACKAGING
+------------------------------------------------------------------------------------------------------------------------------
+Robust candidates checked: 10
+Candidates fitting even the FULL rectangular 106x78 bounding envelope: 0
+  65 x 120 mm -> NO FIT
+  75 x 105 mm -> NO FIT
+  80 x 100 mm -> NO FIT
+  70 x 115 mm -> NO FIT
+  75 x 110 mm -> NO FIT
+  80 x 105 mm -> NO FIT
+  70 x 120 mm -> NO FIT
+  75 x 115 mm -> NO FIT
+  80 x 110 mm -> NO FIT
+  75 x 120 mm -> NO FIT
+
+OPTIMISTIC FULL-BOSS UPPER-BOUND SCREEN
+------------------------------------------------------------------------------------------------------------------------------
+Equivalent rectangle: 106.0 x 78.0 mm (optimistic / nonphysical upper bound)
+Kt:                   3.00
+VM limit:             379.838 MPa
+Limit MS:             +0.330
+VM ultimate:          569.757 MPa
+Ultimate MS:          +0.000
+Reserve rule:         MS_limit >= +0.20, MS_ultimate >= +0.10
+Reserve result:       FAIL
+
+INTERPRETATION
+------------------------------------------------------------------------------------------------------------------------------
+A real radial horn root on the Ø106 curved boss has LESS usable local section than the full 106x78 rectangular upper bound.
+Therefore the upper-bound result is intentionally optimistic.
+Even that optimistic upper bound does not satisfy the current Kt=3.0 reserve target.
+Do NOT freeze a horn inside the existing boss envelope.
+The next design step must add a local reinforced horn/root envelope, or later demonstrate a sufficiently lower actual Kt by detailed CAD/FEA.
+
+DISPOSITION
+------------------------------------------------------------------------------------------------------------------------------
+LOCAL_REINFORCEMENT_OR_LOWER_DEMONSTRATED_KT_REQUIRED
+
+OUTPUTS
+------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b6_shortlist_packaging.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b6_existing_boss_upper_bound.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b6_packaging_gate.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b6_summary.txt
+==============================================================================================================================

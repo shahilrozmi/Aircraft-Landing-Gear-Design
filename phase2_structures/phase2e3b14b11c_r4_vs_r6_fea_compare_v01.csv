@@ -1,0 +1,9 @@
+case,radius_mm,max_vm_MPa,brace_force_N,brace_elongation_mm,max_deformation_mm,x_mm,y_mm,z_mm
+R6_reference,6.0,407.52,-67348.0,-0.56842,5.1478,4.756123,53.219397,965.195576
+R4_trade,4.0,430.71,-67310.0,-0.5681,5.1343,-0.13658,53.429862,965.192475
+
+stress_change_R4_vs_R6_pct,5.690518256772674
+brace_force_magnitude_change_pct,-0.05642335332897785
+brace_elongation_magnitude_change_pct,-0.056296400548887605
+max_deformation_change_pct,-0.26224795058084055
+hotspot_shift_mm,4.8972285814157175

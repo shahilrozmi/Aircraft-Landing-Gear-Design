@@ -1,0 +1,119 @@
+
+PHASE 2E3-B14B-10 — ANSYS PHYSICAL-BRACE FIRST-RUN SETUP
+========================================================================================================================
+
+MODEL BASIS
+-----------
+1. DUPLICATE the already-solved B14A COMBINED governing Static Structural model.
+   Do not reconstruct the applied force/moment/pressure values from chat or memory.
+2. Replace/remap the geometry to:
+      phase2e3b14b9_head_horn_clevis_v01.step
+3. Retain the existing journal/support/contact definitions from the solved B14A model wherever they remain valid.
+4. REMOVE / suppress only:
+      SUP_BRACE_RX
+
+PHYSICAL BRACE IDEALIZATION — FIRST LOAD-PATH RUN
+-------------------------------------------------
+Use a two-force axial-only member between the following GLOBAL points:
+
+Gear-side clevis pin center B:
+      [+0.000000, +260.000000, +1012.780000] mm
+
+Airframe-side ideal anchor A:
+      [+96.134613, +260.000000, +1349.318462] mm
+
+Brace direction u_b:
+      [+0.274670, +0.000000, +0.961538]
+
+Pin axis e_p:
+      [+0.961538, +0.000000, -0.274670]
+
+Pin bore:
+      Ø18.000000 mm
+
+Pin-to-pin length:
+      350.000000 mm
+
+Recommended first-run representation:
+- Create RP_BRACE_B at B.
+- Scope RP_BRACE_B to BOTH cylindrical Ø18 clevis-hole surfaces.
+- Use DEFORMABLE / distributed coupling behavior so the pilot point transfers the resultant
+  without intentionally making the entire clevis rigid.
+- Create RP_BRACE_A at A.
+- Fix translations of RP_BRACE_A.
+- Connect B -> A with an AXIAL-ONLY spring / truss / LINK-type member.
+- Do NOT give the brace bending or torsional stiffness in this first load-path validation.
+
+Source-connected axial stiffness for spring representation:
+      k = EA/L = 118482.922935 N/mm
+
+Source-connected tube area:
+      A = 207.345115 mm^2
+Tube reference:
+      OD = 25.000000 mm
+      wall = 3.000000 mm
+
+LOAD STATE
+----------
+Use the SAME B14A COMBINED governing external load state already present in the duplicated model.
+
+Frozen B14A brace-support moment being physicalized:
+      Mx = -16.856000000 kN*m
+
+Analytical two-force-member prediction:
+      Fbrace = -67.424000 kN
+      F_B    = [-18.519372, -0.000000, -64.830769] kN
+      r_B x F_B = [-16.856000, +0.000000, +4.815037] kN*m
+
+The physical brace reproduces the target Mx analytically, but it ALSO introduces translational
+Fx/Fz at B and a secondary Mz. Therefore journal reactions MUST be re-solved.
+
+RESULTS TO REQUEST
+------------------
+- Axial force in physical brace / spring / LINK member.
+- Reaction at RP_BRACE_A.
+- Resultant force transferred at RP_BRACE_B.
+- Left and right journal/bearing reactions.
+- Total structural force equilibrium.
+- Total structural moment equilibrium about O_global.
+- 7075 head/horn equivalent stress.
+- Stress at saddle/root transition.
+- Stress around both Ø18 clevis holes.
+- Clevis-ear deformation / relative opening.
+- Total deformation of head/horn.
+- Contact/bearing pressure only if the chosen first-run coupling actually resolves it.
+
+FIRST-RUN SANITY TARGET
+-----------------------
+Expected brace axial force from source-connected moment equilibrium:
+      -67.424000 kN
+
+A ±5% band may be used ONLY as an initial modeling diagnostic:
+      [-70.795200,
+       -64.052800] kN
+
+If the solved force is materially outside that band, do not tune the model to force agreement.
+Instead inspect:
+- accidental residual rotational restraint about x,
+- over-constrained journal supports,
+- rigid coupling at the clevis,
+- wrong brace axis / point coordinates,
+- wrong load case,
+- unit errors,
+- brace carrying bending instead of axial load.
+
+MESH
+----
+Do not freeze a new stress result from a single mesh.
+Use the old converged upper-head mesh philosophy as the starting point, then perform NEW local
+refinement/convergence at:
+- saddle/root transition,
+- throat transition,
+- U-slot root,
+- both Ø18 pin bores.
+
+STATUS
+------
+B14B-10 is a PHYSICAL LOAD-PATH VALIDATION stage.
+It is NOT final clevis contact design, final fillet design, fatigue closure, or airframe-fitting design.
+========================================================================================================================

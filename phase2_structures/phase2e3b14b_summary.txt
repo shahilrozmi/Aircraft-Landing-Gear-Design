@@ -1,0 +1,106 @@
+============================================================================================================================
+ PHASE 2E3-B14B V0.1 — PHYSICAL BRACE GEOMETRY / MEMBER / JOINT PRELIMINARY SIZING
+============================================================================================================================
+
+SOURCE CONNECTION
+----------------------------------------------------------------------------------------------------------------------------
+B14A freeze record: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14a_freeze_record.csv
+B14A superposition pass: True
+Frozen governing ultimate Mx: -16.856000000 kN*m
+Ultimate factor: 1.500
+
+WORKING PHYSICAL GEOMETRY — NOT YET FROZEN
+----------------------------------------------------------------------------------------------------------------------------
+Gear pin B [x,y,z]:     [0.000, 260.000, 0.000] mm
+Airframe pin A [x,y,z]: [96.135, 260.000, 336.538] mm
+Pin-to-pin length:       350.000 mm
+Brace unit vector:       [0.274670324, 0.000000000, 0.961538462]
+Physical radial arm:     260.000 mm
+Effective Mx arm:        250.000000 mm
+
+BRACE LOAD
+----------------------------------------------------------------------------------------------------------------------------
+Limit |Mx|:              11.237333 kN*m
+Ultimate |Mx|:           16.856000 kN*m
+Limit |Fbrace|:          44.949333 kN
+Ultimate |Fbrace|:       67.424000 kN
+Signed ultimate Fbrace:  -67.424000 kN
+Physical gear-pin force: Fx=-18.519372, Fy=-0.000000, Fz=-64.830769 kN
+Moment from r_B x F:     Mx=-16.856000, My=+0.000000, Mz=+4.815037 kN*m
+
+IMPORTANT: the physical brace reproduces Mx but also introduces translational reactions
+and a secondary Mz because the working brace line has a nonzero x component.
+Journal/support reactions therefore must be recomputed in the later physical-brace FEA.
+
+300M TUBE
+----------------------------------------------------------------------------------------------------------------------------
+Section:                  25.0 OD x 3.0 wall mm (ID 19.0 mm)
+Area:                     207.345 mm^2
+Radius of gyration:       7.850 mm
+KL/r:                     44.585
+Johnson/Euler transition: 51.014
+Buckling model:           JOHNSON_PARABOLIC
+Critical stress:          937.624 MPa
+Critical load:            194.412 kN
+Limit axial stress:       216.785 MPa  MS=+5.998
+Ultimate axial stress:    325.178 MPa  MS=+4.726
+Ultimate buckling MS:     +1.883
+Approx. tube mass:        0.570 kg
+
+300M PIN
+----------------------------------------------------------------------------------------------------------------------------
+Pin diameter:             18.0 mm
+Double-shear tau, limit:  88.320 MPa
+Double-shear tau, ult:    132.480 MPa
+Distributed lever:        11.000 mm
+Distributed pin VM, lim:  458.083 MPa  MS=+2.312
+Distributed pin VM, ult:  687.125 MPa  MS=+1.710
+Bound pin VM, limit:      646.414 MPa  MS=+1.347
+Bound pin VM, ultimate:   969.621 MPa  MS=+0.920
+
+BUSHING / CLEVIS STACK
+----------------------------------------------------------------------------------------------------------------------------
+Bronze bushing:           24.0 OD x 18.0 ID x 20.0 long mm
+Bushing radial wall:      3.000 mm
+Bronze bearing, limit:    124.859 MPa  MS=+2.313
+Bronze bearing, ultimate: 187.289 MPa  MS=+1.209
+Brace eye:                44.0 OD x 20.0 wide, 24.0 bore mm
+Clevis ears:              2 x 10.0 mm
+Clevis internal gap:      22.0 mm
+Structural pin grip:      42.0 mm
+Ear bearing demand, ult:  187.289 MPa  [ALLOWABLE OPEN]
+Ear net demand, ult:      140.467 MPa  [ALLOWABLE OPEN]
+Ear shear-out, ult:       80.267 MPa  [ALLOWABLE OPEN]
+
+STATIC SCREEN STATUS
+----------------------------------------------------------------------------------------------------------------------------
+Closed static checks:     PASS
+Clevis/lug material checks remain OPEN where a valid lug/bearing allowable is not frozen.
+
+OPEN ITEMS BEFORE CAD FREEZE / PHYSICAL FEA
+----------------------------------------------------------------------------------------------------------------------------
+- GEAR_SIDE_HORN_ROOT: The 260 mm physical radial arm implies a substantial torque arm/horn. Root thickness, width, fillet and local 7075 load path are not yet defined.
+- CLEVIS_EAR_BENDING: Ear root stand-off / root section is not frozen, so clevis-ear bending cannot yet be calculated honestly.
+- 7075_LUG_ALLOWABLES: Product form, temper-specific bearing/net/shear-out allowables are not frozen; tensile yield is not substituted as a bearing allowable.
+- AIRFRAME_SIDE_FITTING: Airframe clevis material, thickness, root geometry and attachment to primary structure are not yet defined.
+- BRACE_END_FITTING_TO_TUBE: The 44 x 20 mm eye cannot simply be assumed to merge into a 25 x 3 mm tube; machined/forged end fitting and joining method must be defined.
+- FIT_WEAR_FRETTING: Pin/bushing fit, lubrication, fretting and wear are detail-design items.
+- FATIGUE_FRACTURE: Static screens do not close fatigue or fracture mechanics.
+- PHYSICAL_FEA_REPLACEMENT: SUP_BRACE_RX must later be removed and replaced by a pin-ended axial brace at the actual B/A pin centers. Journal reactions must then be re-solved.
+
+DISPOSITION
+----------------------------------------------------------------------------------------------------------------------------
+B14B V0.1 establishes a source-connected working physical brace and preliminary member/joint screen.
+Do NOT call the geometry a final freeze yet.
+Next engineering step: B14B-4 physical horn/clevis/root geometry + lug allowables + root bending,
+followed by replacement of SUP_BRACE_RX with the actual pin-ended brace in ANSYS.
+
+OUTPUTS
+----------------------------------------------------------------------------------------------------------------------------
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b_geometry_trade.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b_working_geometry.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b_load_decomposition.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b_member_joint_checks.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b_open_items.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b_summary.txt
+============================================================================================================================

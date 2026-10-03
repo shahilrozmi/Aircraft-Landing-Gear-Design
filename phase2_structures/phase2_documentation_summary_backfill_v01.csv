@@ -1,0 +1,16 @@
+script,returncode,summary,status,note
+phase2_barrel_sizing.py,0,phase2_barrel_sizing_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2_bushing_material_gland.py,0,phase2_bushing_material_gland_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2_gland_retainer_sizing.py,0,phase2_gland_retainer_sizing_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2_internal_loads.py,0,phase2_internal_loads_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2_lower_barrel_boss_sizing.py,0,phase2_lower_barrel_boss_sizing_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2_packaging_overlap.py,0,phase2_packaging_overlap_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2_piston_sizing.py,0,phase2_piston_sizing_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2_upper_brace_sizing.py,0,phase2_upper_brace_sizing_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2_upper_trunnion_sizing.py,0,phase2_upper_trunnion_sizing_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2e1_lower_end_architecture_v04.py,0,phase2e1_lower_end_architecture_v04_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2e2_metering_upper_head_layout_v04.py,0,phase2e2_metering_upper_head_layout_v04_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2e2_oleo_cavity_packaging_v03.py,0,phase2e2_oleo_cavity_packaging_v03_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2e2b_upper_head_closure_audit_v03.py,0,phase2e2b_upper_head_closure_audit_v03_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2e2c_fluid_continuity_closure_finalize_v01.py,0,phase2e2c_fluid_continuity_closure_finalize_v01_summary.txt,PASS,Existing script rerun; own console report captured to TXT.
+phase2e3b7a_expanded_transition_robustness_trade_v01.py,0,phase2e3b7a_expanded_transition_robustness_trade_v01_summary.txt,PASS_B7A_ARTIFACT_RESTORED,Rerun succeeded and phase2e3b7a_working_profile.csv exists.

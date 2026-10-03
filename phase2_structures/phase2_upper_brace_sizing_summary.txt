@@ -1,0 +1,108 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2_upper_brace_sizing.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+==============================================================================================================
+ PHASE 2D10 — UPPER MOMENT-REACTION BRACE / LINK PRELIMINARY SIZING
+==============================================================================================================
+
+--- INPUT CONNECTION ---
+Phase 2C result file:             C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_internal_loads.csv
+Phase 2D5 material file:          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_bushing_material_gland_requirements.csv
+
+--- STRUCTURAL ROLE ---
+Separate pin-jointed two-force brace closes the Mx load path from Phase 2D9.
+This is a structural anti-rotation/load-path member only; retraction kinematics remain deferred.
+Governing absolute brace force is conservatively checked in both tension and compression.
+
+--- GOVERNING Mx / BRACE FORCE AT WORKING ARM ---
+Working effective moment arm:     250 mm
+Limit governing case:             LC4+
+Limit |Mx|:                       6.752 kN*m
+Limit brace force:                27.008 kN
+
+Ultimate governing case:          LC4+
+Ultimate |Mx|:                    10.128 kN*m
+Ultimate brace force:             40.512 kN
+
+--- MOMENT-ARM SENSITIVITY ---
+    Arm mm    F_limit kN      F_ult kN    Gov LC
+--------------------------------------------------
+       150         45.01         67.52      LC4+
+       200         33.76         50.64      LC4+
+       250         27.01         40.51      LC4+
+       300         22.51         33.76      LC4+
+
+--- TUBULAR BRACE MEMBER SWEEP ---
+Working free length:              350 mm
+OD values:                        18, 20, 22, 25, 28, 30, 32 mm
+Wall sweep:                       1.00 to 5.00 mm
+
+--- MINIMUM MATHEMATICAL PASSING WALL BY OD ---
+      OD     t_min        ID     Ult sig      Pcr kN     MS buck
+------------------------------------------------------------------
+      18      1.50      15.0       521.0        44.1       0.088
+      20      1.00      18.0       678.7        44.6       0.101
+      22      1.00      20.0       614.1        58.5       0.444
+      25      1.00      23.0       537.3        78.0       0.924
+      28      1.00      26.0       477.6        96.3       1.377
+      30      1.00      28.0       444.7       108.1       1.667
+      32      1.00      30.0       416.0       119.5       1.950
+
+--- WORKING BRACE: 25 mm OD x 3 mm WALL / 350 mm FREE LENGTH ---
+Inner diameter:                   19.0 mm
+Area:                             207.3 mm^2
+Mass per metre:                   1.632 kg/m
+Approx tube mass over free length: 0.571 kg
+
+Limit axial stress:               130.3 MPa
+Limit yield margin:               +10.646
+Ultimate axial stress:            195.4 MPa
+Ultimate strength margin:         +8.530
+
+Buckling method:                  JOHNSON
+Slenderness KL/r:                 44.59
+Critical buckling load:           197.3 kN
+Buckling margin:                  +3.871
+
+--- FREE-LENGTH EFFECT FOR WORKING 25 x 3 mm TUBE ---
+    Length      Method      KL/r      Pcr kN     MS buck
+------------------------------------------------------------
+     250 mm     JOHNSON     31.85       254.7       5.288
+     300 mm     JOHNSON     38.22       228.4       4.639
+     350 mm     JOHNSON     44.59       197.3       3.871
+     400 mm     JOHNSON     50.95       161.5       2.986
+     450 mm       EULER     57.32       127.7       2.151
+
+--- WORKING DOUBLE-SHEAR PIN / BRONZE-BUSHING INTERFACE ---
+Pin diameter:                     18.0 mm
+Projected bushing width:          20.0 mm
+Ultimate pin double-shear stress: 79.6 MPa
+Pin ultimate shear margin:        +12.505
+Ultimate projected bearing p:     112.5 MPa
+Bronze static-capacity margin:    +2.676
+
+--- MINIMUM MATHEMATICAL PASSING PIN DIAMETER ---
+At 20 mm projected bushing width: 8.0 mm
+
+--- INTERPRETATION ---
+The brace is structurally feasible as a compact pin-jointed 300M tube.
+The mathematical minimum tube/pin sizes are NOT final design dimensions.
+The working 25 x 3 mm tube and 18 mm pin retain substantial room for end fittings, fatigue, fretting, pin bending, and manufacturing detail.
+Retraction-system geometry is still intentionally deferred.
+
+Identity / consistency checks:    PASS
+CSV written to:                   phase2_upper_brace_sizing.csv
+==============================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

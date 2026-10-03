@@ -1,6 +1,6 @@
 # Aircraft Landing Gear Design
 
-Preliminary design and structural analysis of an **oleo-pneumatic main landing gear** for a generic 4–6 seat light aircraft. The project combines aircraft load-case definition, nonlinear landing-dynamics simulation, structural sizing, analytical stress checks, CAD/STEP geometry generation, and FEA preparation using Python-based engineering tools.
+Preliminary design and structural analysis of an **oleo-pneumatic main landing gear** for a generic 4–6 seat light aircraft. The project combines aircraft load-case definition, nonlinear landing-dynamics simulation, structural sizing, CAD/STEP geometry generation, and progressively refined FEA-oriented structural development using Python-based engineering tools.
 
 ## Project Overview
 
@@ -17,13 +17,11 @@ The design focuses on one single-wheel main landing gear leg for a generic low-w
 - Static oleo sag: **50 mm**
 - Structural ultimate factor: **1.5**
 
-The project is being developed progressively from aircraft-level loads to component-level structural sizing and detailed upper-head/trunnion design.
+The project is developed progressively from aircraft-level loads and landing energy to component sizing, physical upper-attachment architecture, CAD geometry, FEA load-path validation, local mesh refinement, and geometry redesign.
 
 ## Engineering Workflow
 
 ### Phase 1 — Aircraft Loads and Landing Dynamics
-
-Phase 1 establishes the design loads and landing-energy model.
 
 The authoritative Phase 1 implementation is contained in:
 
@@ -44,11 +42,9 @@ Selected results:
 | Zero-lift peak ground reaction | **28.284 kN** |
 | Zero-lift peak strut force | **27.781 kN** |
 
-The `phase1_model_development/` directory preserves the model-development history and robustness studies. These files are retained for traceability but are **not** the authoritative frozen Phase 1 model.
+`phase1_model_development/` preserves the development history and robustness studies. Those files are retained for traceability but are **not** the authoritative frozen Phase 1 model.
 
 ### Phase 2 — Structural Design and Oleo Architecture
-
-Phase 2 develops the preliminary structural architecture of the landing gear using the frozen Phase 1 loads.
 
 Released preliminary oleo geometry includes:
 
@@ -58,51 +54,82 @@ Released preliminary oleo geometry includes:
 - Equivalent orifice schedule: **10.301 → 9.742 mm**
 - Fixed metering bore: **14 mm**
 
-The structural work includes:
+Phase 2 includes piston, barrel, bushing/gland, boss, axle, trunnion, brace, overlap/packaging, and traceability work. The repository retains the analytical scripts and associated CSV/TXT engineering records used to develop the architecture.
 
-- piston sizing and buckling
-- barrel pressure and combined-stress sizing
-- bushing and gland load transfer
-- gland/retainer architecture
-- lower barrel boss sizing
-- axle/spindle sizing
-- upper trunnion sizing
-- upper brace/link sizing
-- packaging and overlap checks
-- traceability and design-freeze audits
+### Phase 2E3 — Upper Attachment, Physical Brace, and Horn/Clevis Development
 
-### Phase 2E3 — Upper Head and Trunnion Development
+The upper attachment evolved beyond the earlier B13C four-body baseline. The validated **B13F-3C** parent is now the retained source geometry for the later physical horn/clevis work.
 
-The current detailed design work focuses on the upper attachment and shaft/head interface.
+Current B13F-3C parent highlights:
 
-Current architecture:
-
-**7075-T6 upper head → C63000 / AMS 4640 bronze bushings → removable Ø38 mm 300M cross-pin → external airframe bearings**
-
-Current B13 geometry:
-
-- 7075 upper-head outer boss: **Ø106 mm × 78 mm**
-- Head passage: **Ø50 mm THROUGH**
+- 7075-T6 upper-head outer boss: **Ø106 mm × 78 mm**
 - Continuous 300M shaft: **Ø38 mm × 175 mm**
-- Bronze sleeves: **Ø50 OD / Ø38 ID × 30 mm**
-- Bronze flange: **Ø60 OD / Ø38 ID × 3 mm**
-- Shaft-to-head radial clearance through the central relief: **6 mm**
+- Head side passage: **Ø50 mm**
+- Central passage: **Ø44 mm** over the retained center region
+- Minimum shaft/head radial gap in the central relief: **3 mm**
+- C63000 / AMS 4640 bronze bushings
+- Separate 300M thrust collars
+- **6 physical bodies** in the validated STEP parent
+- Current-parent validation: **54 PASS / 0 FAIL**
 
-The generated B13C STEP model contains **four separate physical bodies** and has been checked for zero solid interference.
+The B14 work then physicalized the brace load path and added the source-connected horn/clevis geometry.
 
-## Structural Analysis Highlights
+Selected B14 milestones:
 
-Selected current structural results include:
+- B14A source-connected combined brace reaction: **Mx = -16.856 kN·m**
+- B14B preliminary physical-brace ultimate force: **67.424 kN**
+- B14B-9 physical head/horn/clevis CAD: **62 PASS / 0 FAIL** geometry checks
+- B14B-10 global physical-brace FEA load path: **closed** for global reaction/load-path validation and large-deflection sensitivity
+- B14B-11: horn/head root transition and local-stress refinement
 
-- Phase 2E2 preliminary architecture release: **PASS — 22/22 checks**
-- B9 mesh-converged local transition FEA: **PASS**
-- B9 ultimate peak von Mises stress: **469.18 MPa**
-- B9 reported margin: **+0.219**
-- B9A large-deflection sensitivity: preliminary nonlinear static sensitivity passed
-- Current integrated trunnion working point: **150 mm span, Ø38 mm 300M shaft**
-- B11 nominal upper-head static screen: **PASS**
+## Current Root-Transition / FEA Status
 
-These are preliminary engineering results and remain subject to later detailed validation, fatigue/fracture substantiation, production tolerancing, and certification-level analysis.
+The current detailed work is the **B14B-11 root transition**.
+
+### R6 development reference
+
+A local R6 root-mesh sequence reached a design-stage result of **407.52 MPa** at 2.0 mm local sizing with stable global response. This was used as an intermediate reference while the radius trade continued.
+
+### R8 local submodel
+
+A later quadratic local-submodel study showed that the R8 peak was substantially more severe than the earlier coarse full-model screens suggested.
+
+Retained R8 local result:
+
+- 1.50 mm: **442.62 MPa**
+- 1.00 mm: **697.48 MPa**
+- 0.75 mm: **732.45 MPa**
+- 1.00 → 0.75 mm peak change: **+5.014%**
+- 0.75 mm fillet-average VM: **91.817 MPa**
+- Maximum deformation: **0.73252 mm**
+
+The 0.75 mm solution is treated as **near-converged / mesh-stabilized**, not as strictly mathematically converged. Under the generic project 7075 static screen, the **732.45 MPa** local peak is unacceptable and requires a geometry response.
+
+### F2 reinforced-root redesign
+
+The first B14B-11F redesign retained the basic root architecture but enlarged the section:
+
+- **F2_BALANCED:** **95 × 115 mm** root section, **R12** blend
+- Added mass versus the R8 head: approximately **0.615 kg**
+
+A 1.0 mm local submodel gave:
+
+- **24,801 nodes / 14,487 elements**
+- Maximum deformation: **0.73252 mm**
+- Fillet-average VM: **77.072 MPa** (**16.1% lower** than the retained R8 average)
+- Fillet-scoped peak VM: **1995.7 MPa**
+
+The extreme peak occurs at the termination of the new blend. Therefore **F2 is rejected as-is**, while the **95 × 115 mm reinforced-section concept is retained**.
+
+## Current Next Step
+
+**B14B-11F / F2B root redesign**:
+
+- retain the **95 × 115 mm** reinforced root concept
+- replace the abrupt constant-radius blend termination with a smoother/tangent transition
+- rerun the **1.0 mm quadratic local screen**
+- only refine to **0.75 mm** after the local peak becomes physically credible and the transition geometry is accepted
+- update the full six-body parent only after the local redesign passes the screening gate
 
 ## Repository Structure
 
@@ -124,13 +151,15 @@ Aircraft-Landing-Gear-Design/
 │   └── historical Phase 1 model revisions
 │
 └── phase2_structures/
-    ├── structural sizing and audit scripts
-    ├── CSV/TXT engineering outputs
-    ├── STEP geometry
+    ├── preliminary component sizing / architecture
+    ├── E2 release and traceability records
+    ├── B13 / B13F upper-head and trunnion development
+    ├── B14 physical-brace / horn-clevis development
+    ├── B14B-10 FEA handoff and closeout records
+    ├── B14B-11 radius trade / local-submodel / convergence work
+    ├── B14B-11F redesign candidates
     └── current_design/
-        ├── B13 trade and sizing records
-        ├── corrected interface analyses
-        └── current B13C geometry generator and STEP model
+        └── retained B13-era interface sizing records
 ```
 
 ## Running the Python Analyses
@@ -148,7 +177,7 @@ Windows:
 pip install -r requirements.txt
 ```
 
-The principal Phase 1 analyses can then be run from the repository root:
+Principal Phase 1 analyses:
 
 ```bash
 python phase1_loads/phase1_loads.py
@@ -157,33 +186,13 @@ python phase1_loads/phase1_dynamics.py
 
 Phase 2 contains multiple design-stage scripts rather than one monolithic program. See `CURRENT_STATE.md` and `UPLOAD_MANIFEST.md` for the current analysis chain and authoritative revisions.
 
-## Current Status
-
-The project has completed:
-
-- aircraft-level landing-gear load cases
-- nonlinear tire/oleo landing dynamics
-- preliminary oleo architecture
-- component-level structural sizing
-- preliminary upper-attachment structural design
-- local transition FEA and convergence work
-- current upper-head / bronze-bushing / 300M-shaft CAD generation
-
-### Current next step
-
-**B13C nonlinear contact FEA** of the:
-
-- 7075-T6 upper head
-- two C63000 bronze bushings
-- continuous 300M shaft
-
-The next analysis will refine bushing reaction distribution, local contact stresses, and interface behavior including fit/interference sensitivity.
-
 ## Remaining Work
 
 Major later-stage items include:
 
-- nonlinear contact FEA
+- F2B root-transition redesign and local FEA screen
+- final horn/head root geometry selection and full-parent confirmation solve
+- local stress convergence of the accepted geometry
 - production fit and running-clearance definition
 - lubrication, wear, and fretting assessment
 - fatigue and fracture analysis
@@ -192,13 +201,13 @@ Major later-stage items include:
 - corrosion protection
 - complete airframe attachment definition
 - certification / regulatory load mapping
-- Develop the finalized landing-gear assembly and detailed component geometry in CATIA V5
+- finalized landing-gear assembly and detailed component geometry in CATIA V5
 - optional retraction-mechanism development
 
 ## Project Notes
 
 `CURRENT_STATE.md` is the recommended starting point for the latest engineering status.
 
-`UPLOAD_MANIFEST.md` identifies the authoritative code revisions and explains which superseded development files were intentionally excluded.
+`UPLOAD_MANIFEST.md` identifies the retained/current analysis chain and explains the curation rules used for GitHub.
 
 This repository represents an **educational preliminary engineering design project**, not a certified aircraft component design.

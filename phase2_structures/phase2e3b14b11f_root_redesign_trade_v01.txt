@@ -1,0 +1,37 @@
+PHASE 2E3-B14B-11F — R8 ROOT REDESIGN TRADE V0.1
+
+SOURCE-CONNECTED LOAD BASIS
+  B14B-7 ultimate |Mx_root|: 14.803054 kN*m
+  B14B-7 ultimate |Mz_root|: 4.228598 kN*m
+  Baseline root section:      85.0 x 95.0 mm
+
+DESIGN RESPONSE TARGET
+  Retained R8 local peak:     732.45 MPa
+  Generic 7075 Sy screen:     505.0 MPa
+  Target yield margin:        +0.10
+  Target stress:              459.091 MPa
+  Required peak ratio:        0.62679
+
+CANDIDATES
+  F2_BALANCED: 95.0 x 115.0 mm, R12.0
+    nominal corner-bending proxy: 95.140 MPa
+    nominal reduction vs 85x95:   37.71 %
+    section-only target screen:   PASS
+    added mass vs R8 head:         0.615 kg
+    hardware interference screen: PASS
+  F3_ROBUST: 100.0 x 115.0 mm, R15.0
+    nominal corner-bending proxy: 89.222 MPa
+    nominal reduction vs 85x95:   41.59 %
+    section-only target screen:   PASS
+    added mass vs R8 head:         0.730 kg
+    hardware interference screen: PASS
+
+INTERPRETATION
+  The scalar section calculation is only a geometry-ranking proxy; it is not an FEA stress prediction.
+  F2 is the minimum reinforced candidate deliberately sized near the required ~37% nominal reduction.
+  F3 adds more section and a larger blend as the robust fallback.
+  Both require the same displacement-driven local submodel screen before any design freeze.
+
+NEXT
+  Screen F2 and F3 using the frozen B14B11E parent-displacement mapping and a 1.0 mm local root mesh.
+  Pick the better candidate, then run only the winner at 0.75 mm and finally update the full six-body parent.

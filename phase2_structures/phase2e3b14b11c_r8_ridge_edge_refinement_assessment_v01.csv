@@ -1,0 +1,6 @@
+quantity,reference_1p25_root,ridge_edge_refined,percent_change
+head_max_vm_MPa,294.96,305.8,3.6750745863846057
+max_deformation_mm,3.5022,3.5179,0.4482896465079043
+brace_force_N,-67391.0,-67391.0,0.0
+nodes,40815,42862,5.0153129976724244
+elements,97824,105894,8.249509322865554

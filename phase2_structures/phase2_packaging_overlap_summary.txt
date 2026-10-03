@@ -1,0 +1,106 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2_packaging_overlap.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+========================================================================================================
+ PHASE 2D4 — PISTON / BARREL PACKAGING + GUIDE-OVERLAP STUDY
+========================================================================================================
+
+--- INPUT CONNECTION ---
+Phase 2D3 result file:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_bushing_load_transfer.csv
+
+--- OLEO STATES ---
+FULL_EXTENSION              x =    0.000 mm    U->A =  525.000 mm
+STATIC                      x =   50.000 mm    U->A =  475.000 mm
+NOMINAL_PEAK                x =  206.338 mm    U->A =  318.662 mm
+PHYSICAL_STROKE             x =  230.000 mm    U->A =  295.000 mm
+VIRTUAL_DIAGNOSTIC          x =  240.779 mm    U->A =  284.221 mm
+
+--- PACKAGING MODEL ---
+Both guide bushings are fixed in the outer barrel.
+Bushing h-values from D3 are interpreted at the 50 mm static-sag state.
+Positive lower-surface reserve means the complete lower bushing remains above the axle/shoulder datum.
+Guide-surface overrun values:     0, 10, 20, 30 mm
+
+--- ORIGINAL WORKING LAYOUT ---
+h_L / spacing / h_U static:       300 / 125 / 425 mm
+Bushing axial length:             30 mm
+Chosen top overrun:               20 mm
+Lower / upper station from U:     175.0 / 50.0 mm downward
+Required piston guide length:     510.0 mm
+Physical lower-surface reserve:   +105.0 mm
+Virtual lower-surface reserve:    +94.2 mm
+Physical top intrusion above U:   215.0 mm
+Virtual top intrusion above U:    225.8 mm
+Max ultimate bushing reaction:    76.02 kN
+Max ultimate projected pressure:  43.69 MPa
+Physical full engagement:         PASS
+Virtual diagnostic engagement:    PASS
+
+--- COMPARISON A: 250 / 125 / 375 mm ---
+h_L / spacing / h_U static:       250 / 125 / 375 mm
+Bushing axial length:             30 mm
+Chosen top overrun:               20 mm
+Lower / upper station from U:     225.0 / 100.0 mm downward
+Required piston guide length:     460.0 mm
+Physical lower-surface reserve:   +55.0 mm
+Virtual lower-surface reserve:    +44.2 mm
+Physical top intrusion above U:   165.0 mm
+Virtual top intrusion above U:    175.8 mm
+Max ultimate bushing reaction:    71.02 kN
+Max ultimate projected pressure:  40.81 MPa
+Physical full engagement:         PASS
+Virtual diagnostic engagement:    PASS
+
+--- COMPARISON B: 250 / 150 / 400 mm ---
+h_L / spacing / h_U static:       250 / 150 / 400 mm
+Bushing axial length:             30 mm
+Chosen top overrun:               20 mm
+Lower / upper station from U:     225.0 / 75.0 mm downward
+Required piston guide length:     485.0 mm
+Physical lower-surface reserve:   +55.0 mm
+Virtual lower-surface reserve:    +44.2 mm
+Physical top intrusion above U:   190.0 mm
+Virtual top intrusion above U:    200.8 mm
+Max ultimate bushing reaction:    61.27 kN
+Max ultimate projected pressure:  35.21 MPa
+Physical full engagement:         PASS
+Virtual diagnostic engagement:    PASS
+
+--- 30 mm BUSHINGS, 20 mm TOP OVERRUN ---
+    hL     b    hU      Rult      pult   PhysRes   VirtRes    Lp req  PhysIntr     P/V
+--------------------------------------------------------------------------------------------
+   200    75   275    101.68     58.44       5.0      -5.8     360.0      65.0     P/F
+   200   100   300     79.39     45.63       5.0      -5.8     385.0      90.0     P/F
+   200   125   325     66.01     37.94       5.0      -5.8     410.0     115.0     P/F
+   200   150   350     57.10     32.81       5.0      -5.8     435.0     140.0     P/F
+   250    75   325    110.02     63.23      55.0      44.2     410.0     115.0     P/P
+   250   100   350     85.64     49.22      55.0      44.2     435.0     140.0     P/P
+   250   125   375     71.02     40.81      55.0      44.2     460.0     165.0     P/P
+   250   150   400     61.27     35.21      55.0      44.2     485.0     190.0     P/P
+   300    75   375    118.36     68.02     105.0      94.2     460.0     165.0     P/P
+   300   100   400     91.90     52.82     105.0      94.2     485.0     190.0     P/P
+   300   125   425     76.02     43.69     105.0      94.2     510.0     215.0     P/P
+   300   150   450     65.44     37.61     105.0      94.2     535.0     240.0     P/P
+   350    75   425    126.70     72.82     155.0     144.2     510.0     215.0     P/P
+   350   100   450     98.15     56.41     155.0     144.2     535.0     240.0     P/P
+   350   125   475     81.02     46.57     155.0     144.2     560.0     265.0     P/P
+
+P/V = physical-stroke engagement / V0.5b virtual-diagnostic engagement.
+No arbitrary shoulder-clearance or cap-clearance allowable has been imposed.
+The reported reserves/intrusions are geometry outputs for the next CAD/package decision.
+
+CSV written to:                   phase2_packaging_overlap.csv
+========================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

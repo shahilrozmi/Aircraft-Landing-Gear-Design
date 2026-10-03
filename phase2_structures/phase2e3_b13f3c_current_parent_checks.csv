@@ -1,0 +1,55 @@
+check,actual,expected,units,difference,status,note
+STEP_product_HEAD_BARREL_7075,1,1,-,0,PASS,Product label must exist in current-parent STEP.
+STEP_product_SHAFT_300M_CONTINUOUS,1,1,-,0,PASS,Product label must exist in current-parent STEP.
+STEP_product_BUSHING_LEFT_AMS4640,1,1,-,0,PASS,Product label must exist in current-parent STEP.
+STEP_product_BUSHING_RIGHT_AMS4640,1,1,-,0,PASS,Product label must exist in current-parent STEP.
+STEP_product_THRUST_COLLAR_LEFT_300M,1,1,-,0,PASS,Product label must exist in current-parent STEP.
+STEP_product_THRUST_COLLAR_RIGHT_300M,1,1,-,0,PASS,Product label must exist in current-parent STEP.
+solid_count,6,6,-,0,PASS,
+upper_head_boss_diameter,106.0,106.0,mm,0.0,PASS,
+upper_head_boss_height,78.00000020000004,78.0,mm,2.0000004496978363e-07,PASS,
+shaft_diameter,38.0,38.0,mm,0.0,PASS,
+shaft_length,175.0,175.0,mm,0.0,PASS,
+right_bushing_sleeve_OD,50.0,50.0,mm,0.0,PASS,
+right_bushing_bore_ID,38.0,38.0,mm,0.0,PASS,
+right_bushing_sleeve_length,30.0,30.0,mm,0.0,PASS,
+right_bushing_flange_OD,60.0,60.0,mm,0.0,PASS,
+right_bushing_flange_thickness,3.0,3.0,mm,0.0,PASS,
+left_bushing_flange_OD,60.0,60.0,mm,0.0,PASS,
+left_bushing_flange_thickness_T3p5,3.5,3.5,mm,0.0,PASS,
+left_bushing_axial_spotface_to_inner_end,30.0,30.0,mm,0.0,PASS,
+left_bushing_inner_blend_R1p5,1.5,1.5,mm,0.0,PASS,
+left_bushing_inner_blend_major_radius,23.5,23.5,mm,0.0,PASS,
+head_side_passage_diameter,50.0,50.0,mm,0.0,PASS,
+head_central_passage_diameter_D44,44.0,44.0,mm,0.0,PASS,
+head_central_D44_straight_length,17.384209099807002,17.3842090998,mm,7.002398660915787e-12,PASS,
+shaft_to_head_min_radial_clearance_current,3.0,3.0,mm,0.0,PASS,
+left_D50_to_D44_transition_length,4.0,4.0,mm,0.0,PASS,
+right_D44_to_D50_transition_length,4.0,4.0,mm,0.0,PASS,
+right_collar_OD,58.0,58.0,mm,0.0,PASS,
+right_collar_ID,38.0,38.0,mm,0.0,PASS,
+right_collar_thickness,3.0,3.0,mm,0.0,PASS,
+right_collar_volume_full_annulus,4523.893421169544,4523.893421169301,mm^3,2.4283508537337184e-10,PASS,
+left_collar_OD,58.0,58.0,mm,0.0,PASS,
+left_collar_overall_thickness,3.0,3.0,mm,0.0,PASS,
+left_collar_relief_min_diameter_D44,44.0,44.0,mm,0.0,PASS,
+left_collar_relief_face_diameter_D46,46.0,46.0,mm,0.0,PASS,
+left_collar_relief_axial_depth,0.11999999999999744,0.12,mm,-2.55351295663786e-15,PASS,
+left_collar_volume_partial_relief,4469.10404529115,4469.104045290696,mm^3,4.538378561846912e-10,PASS,
+trunnion_centerline_y,0.0,0.0,mm,0.0,PASS,
+trunnion_centerline_z,1012.78,1012.78,mm,0.0,PASS,
+intersection_HEAD_BARREL_7075__SHAFT_300M_CONTINUOUS,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_HEAD_BARREL_7075__BUSHING_LEFT_AMS4640,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_HEAD_BARREL_7075__BUSHING_RIGHT_AMS4640,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_HEAD_BARREL_7075__THRUST_COLLAR_LEFT_300M,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_HEAD_BARREL_7075__THRUST_COLLAR_RIGHT_300M,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_SHAFT_300M_CONTINUOUS__BUSHING_LEFT_AMS4640,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_SHAFT_300M_CONTINUOUS__BUSHING_RIGHT_AMS4640,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_SHAFT_300M_CONTINUOUS__THRUST_COLLAR_LEFT_300M,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_SHAFT_300M_CONTINUOUS__THRUST_COLLAR_RIGHT_300M,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_BUSHING_LEFT_AMS4640__BUSHING_RIGHT_AMS4640,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_BUSHING_LEFT_AMS4640__THRUST_COLLAR_LEFT_300M,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_BUSHING_LEFT_AMS4640__THRUST_COLLAR_RIGHT_300M,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_BUSHING_RIGHT_AMS4640__THRUST_COLLAR_LEFT_300M,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_BUSHING_RIGHT_AMS4640__THRUST_COLLAR_RIGHT_300M,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.
+intersection_THRUST_COLLAR_LEFT_300M__THRUST_COLLAR_RIGHT_300M,0.0,0.0,mm^3,0.0,PASS,Separate physical bodies should not have positive common volume.

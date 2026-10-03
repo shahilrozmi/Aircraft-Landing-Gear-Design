@@ -1,0 +1,12 @@
+metric,value,units,note
+f2_nodes,24801,-,quadratic local submodel
+f2_elements,14487,-,quadratic local submodel
+f2_global_vm_peak,2144.2,MPa,all-body result
+f2_fillet_vm_peak,1995.7,MPa,fillet-scoped result
+f2_fillet_vm_average,77.072,MPa,fillet-scoped result
+f2_total_deformation_max,0.73252,mm,same mapped-displacement field
+peak_change_vs_R8_0p75,172.46911051948936,%,F2 fillet peak vs retained R8 peak
+average_change_vs_R8_0p75,-16.059117592602668,%,F2 fillet average vs retained R8 average
+hotspot_shift_vs_R8_0p75,3.710053343354113,mm,3D coordinate shift
+peak_to_average_ratio,25.893969275482664,-,localization diagnostic
+deformation_change_vs_R8_0p75,0.0,%,mapped solution consistency

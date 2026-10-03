@@ -1,0 +1,7 @@
+item,status,reason
+LOCAL_ROOT_FILLET,OPEN,B14B-9 intentionally left the external saddle/root fillet open for local FEA-driven refinement.
+CLEVIS_PIN_CONTACT,SIMPLIFIED_FIRST_RUN,First physical-brace load-path run should use a deformable distributed coupling from both Ø18 bore faces to RP_BRACE_B. Explicit pin/bushing contact is a later refinement.
+AIRFRAME_SIDE_FITTING,IDEALIZED,Point A is treated as a fixed translational anchor for the two-force member. Actual airframe lug/fitting/fasteners remain outside this local landing-gear model.
+JOURNAL_REACTION_REDISTRIBUTION,MUST_BE_RECOMPUTED,"The physical brace introduces Fx/Fz at B and secondary Mz, so journal reactions from the SUP_BRACE_RX model cannot be reused."
+MESH_CONVERGENCE_NEW_HORN,REQUIRED,B14B-9 adds a new horn/root/clevis stress field. Reuse the old model only as the starting mesh philosophy; perform a new local convergence study before freezing stress results.
+FATIGUE_FRETTING_WEAR_FRACTURE,OPEN,B14B-10 is a static physical load-path FEA handoff only.

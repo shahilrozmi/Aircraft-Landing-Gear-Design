@@ -1,0 +1,34 @@
+PHASE 2E3-B14B-11C — R6 LOCAL CONVERGENCE CHECK: 2.0 mm -> 1.5 mm
+
+2.0 mm:
+  nodes            = 38424
+  elements         = 87564
+  max VM stress    = 412.240 MPa
+  max deformation  = 5.143900 mm
+  brace force      = -67.348000 kN
+  elongation       = -0.568420 mm
+
+1.5 mm:
+  nodes            = 39467
+  elements         = 92160
+  max VM stress    = 428.840 MPa
+  max deformation  = 5.157800 mm
+  brace force      = -67.348000 kN
+  elongation       = -0.568420 mm
+  hotspot xyz      = (4.756711, 53.219215, 965.196488) mm
+  hotspot node     = 1971
+
+Changes, 2.0 -> 1.5 mm:
+  stress           = +4.026780 %
+  deformation      = +0.270222 %
+  brace |F|        = +0.000000 %
+  nodes            = +2.714970 %
+  elements         = +5.248094 %
+
+Disposition:
+The global response is stable, but the local peak stress changes by more than 2%.
+R6 is therefore NOT yet converged under the current local-stress criterion.
+
+Recommended next mesh point:
+  1.25 mm on the same local transition faces,
+  with all other mesh controls, loads, contacts, and supports unchanged.

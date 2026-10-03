@@ -1,0 +1,6 @@
+PHASE 2E3-B14B-11C — R4/R8 CAD TRADE BUILD V0.1
+
+R4: PASS | reserve=4.500 mm | STEP=phase2e3b14b11c_r4_root_fillet_candidate_v01.step
+R8: PASS | reserve=0.500 mm | STEP=phase2e3b14b11c_r8_root_fillet_candidate_v01.step
+
+R6 remains the converged FEA reference. R4 and R8 are working variants for same-method ANSYS comparison.

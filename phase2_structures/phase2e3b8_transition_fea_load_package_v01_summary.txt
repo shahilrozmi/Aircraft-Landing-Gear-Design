@@ -1,0 +1,70 @@
+======================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e3b8_transition_fea_load_package_v01.py
+======================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Working directory: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------------
+============================================================================================================================
+ PHASE 2E3-B8 — LOCAL TRANSITION FEA LOAD-CASE / SUBMODEL PACKAGE V0.1
+============================================================================================================================
+
+PRIMARY GEOMETRY
+----------------------------------------------------------------------------------------------------------------------------
+Barrel transition:                74.0/64.0 -> 106.0/64.0 mm
+Full taper start / end:           275.0 / 973.780 mm above A
+B7A sensitivity Kt capacity:      1.640 (NOT geometry-derived)
+
+LOCAL SUBMODEL
+----------------------------------------------------------------------------------------------------------------------------
+Previous target station:          375.0 mm above A
+Local model bottom / top:         50.0 / 700.0 mm above A
+Target distance to boundaries:    325.0 / 325.0 mm
+Target OD / wall:                 75.78 / 5.89 mm
+Top cut OD / wall:                95.11 / 15.56 mm
+
+PRESSURE LOADS
+----------------------------------------------------------------------------------------------------------------------------
+Limit differential pressure:      9.292 MPa
+Limit closed-end thrust:          29.892 kN
+Ultimate differential pressure:   13.938 MPa
+Ultimate closed-end thrust:       44.838 kN
+
+NOMINAL CASE RANKING AT TARGET STATION
+----------------------------------------------------------------------------------------------------------------------------
+      Lvl   Rank      Case      VM Kt1        MS        Mb        Mz
+------------------------------------------------------------------------
+    limit      1      LC4+       293.3     0.715     5.918    -0.000
+    limit      2       LC5       256.6     0.960     5.059     1.065
+    limit      3      LC2B       242.3     1.076     4.566    -0.751
+    limit      4      LC2A       242.3     1.076     4.566     0.751
+ ultimate      1      LC4+       440.0     0.300     8.877    -0.000
+ ultimate      2       LC5       384.9     0.486     7.588     1.597
+ ultimate      3      LC2B       363.4     0.574     6.849    -1.126
+ ultimate      4      LC2A       363.4     0.574     6.849     1.126
+
+B8 DISPOSITION
+----------------------------------------------------------------------------------------------------------------------------
+The primary 106/64 profile is now packaged for geometry-specific local FEA.
+Run LC4+ ultimate first, then the next ranked ultimate cases, followed by the corresponding limit cases.
+Use the explicit pressure thrust in the load card only when the local model does NOT include a pressurized end-cap.
+The result we need next is the mesh-converged local peak stress and its location — not another assumed Kt.
+
+OUTPUT FILES
+----------------------------------------------------------------------------------------------------------------------------
+FEA load cards:                   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b8_fea_load_cards.csv
+Case ranking:                     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b8_case_ranking.csv
+Submodel profile:                 C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b8_submodel_profile.csv
+Nominal reference:                C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b8_nominal_reference.csv
+ANSYS setup note:                 C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b8_ansys_setup.txt
+Summary:                          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b8_summary.txt
+============================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------------
+
+
+======================================================================================================================

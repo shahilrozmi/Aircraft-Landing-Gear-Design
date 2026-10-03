@@ -1,0 +1,12 @@
+metric,R6_previous,R6_corrected,R8_cleaned
+max_vm_MPa,407.52,412.24,266.91
+brace_force_N,-67348.0,-67348.0,-67391.0
+brace_elongation_mm,-0.56842,-0.56842,-0.56878
+max_deformation_mm,5.1478,5.1439,3.4981
+
+R6_stress_change_old_to_corrected_pct,1.1582253631723665
+R6_deformation_change_old_to_corrected_pct,-0.07576051905668038
+R8_vs_corrected_R6_stress_pct,-35.25373568794876
+R8_vs_corrected_R6_force_mag_pct,0.06384747876700125
+R8_vs_corrected_R6_elongation_mag_pct,0.06333345061748635
+R8_vs_corrected_R6_deformation_pct,-31.995178755419047

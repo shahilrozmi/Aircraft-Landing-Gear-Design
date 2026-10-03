@@ -1,0 +1,13 @@
+PHASE 2E3-B14B-11 — R6 FIRST LINEAR SCREEN COMPARISON V0.1
+
+brace_force_N: baseline=-67231, R6=-67348, delta=-117, magnitude_change=+0.174027%
+brace_elongation_mm: baseline=-0.56743, R6=-0.56842, delta=-0.00099, magnitude_change=+0.174471%
+max_deformation_mm: baseline=5.122, R6=5.1384, delta=0.0164, magnitude_change=+0.320187%
+max_vm_MPa: baseline=415.55, R6=433.41, delta=17.86, magnitude_change=+4.297918%
+
+Interpretation:
+- Brace load and total deformation are essentially unchanged, so the global load path is preserved.
+- The reported global maximum von-Mises stress is higher in this first R6 screen.
+- Do not conclude that the R6 fillet is worse until the location of the 433.41 MPa peak is identified.
+- The head-local mesh topology differs from the B14B-10 baseline because several legacy head controls were retired after STEP face-ID remapping.
+- Next action: identify/annotate the exact maximum-stress node/element and then perform a controlled local root mesh comparison.

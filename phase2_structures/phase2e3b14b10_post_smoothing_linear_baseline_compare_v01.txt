@@ -1,0 +1,27 @@
+PHASE 2E3-B14B-10 — POST-SMOOTHING LINEAR BASELINE COMPARISON V0.1
+
+Purpose:
+Compare the linear physical-brace FEA results before and after cylindrical
+contact geometry smoothing and shared-remote-point cleanup.
+
+brace_force_N: baseline=-67229, current=-67231, delta=-2, magnitude_change=0.002975%
+brace_elongation_mm: baseline=-0.56741, current=-0.56743, delta=-2e-05, magnitude_change=0.003525%
+left_Rx_N: baseline=18466, current=18466, delta=0, magnitude_change=0.000000%
+left_Ry_N: baseline=35839, current=35836, delta=-3, magnitude_change=-0.008371%
+left_Rz_N: baseline=1811.2, current=1811.7, delta=0.5, magnitude_change=0.027606%
+left_total_N: baseline=40357, current=40355, delta=-2, magnitude_change=-0.004956%
+right_Rx_N: baseline=2.5492e-12, current=2.5487e-12, delta=-5e-16, magnitude_change=nan%
+right_Ry_N: baseline=-47259, current=-47256, delta=3, magnitude_change=-0.006348%
+right_Rz_N: baseline=2045.5, current=2047.2, delta=1.7, magnitude_change=0.083109%
+right_total_N: baseline=47304, current=47301, delta=-3, magnitude_change=-0.006342%
+max_deformation_mm: baseline=5.1211, current=5.122, delta=0.0009, magnitude_change=0.017574%
+max_vm_MPa: baseline=415.49, current=415.55, delta=0.06, magnitude_change=0.014441%
+
+Largest non-negligible magnitude change: right_Rz_N = 0.083109%
+
+Disposition:
+- Linear global response is effectively unchanged by the cleanup.
+- Shared Remote Point did not materially alter the load path.
+- Cylindrical contact smoothing removed the false geometric-penetration artifact
+  without materially changing brace force, journal reactions, deformation, or peak VM stress.
+- Large-deflection sensitivity may be retried next, while monitoring the remaining solver messages.

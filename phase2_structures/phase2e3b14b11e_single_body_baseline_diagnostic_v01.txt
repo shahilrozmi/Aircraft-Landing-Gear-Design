@@ -1,0 +1,36 @@
+PHASE 2E3-B14B-11E — SINGLE-BODY R8 SUBMODEL BASELINE DIAGNOSTIC V0.1
+
+ANSYS baseline mesh
+  Nodes:                         12090
+  Elements:                      6796
+  Element order:                 Quadratic
+  Local R8 nominal sizing:       1.5 mm
+
+Reported baseline results
+  Global von Mises maximum:      1847.5 MPa
+  Reported max location:         X=45.532908, Y=26.964134, Z=993.636235 mm
+  Maximum total deformation:     0.73252 mm
+
+Diagnostic geometry comparison
+  Frozen R8 reference hotspot:   X=18.702387, Y=49.818011, Z=964.937219 mm
+  Distance max -> R8 reference:  45.451 mm
+  Distance to Y=25 cut:          1.964 mm
+  Distance to Y=120 cut:         93.036 mm
+  Distance to Z=920 cut:         73.636 mm
+  Distance to Z=992 cut:         1.636 mm
+
+ANSYS warnings observed
+  - Multiple imported displacements applied on common boundaries.
+  - Some target nodes lie outside the source-point data boundaries.
+
+DISPOSITION
+  DO NOT use the 1847.5 MPa global maximum as the R8 design stress.
+  The reported maximum is close to the artificial Y=25 cut and far from the
+  frozen R8 reference hotspot. The four separate imported-displacement
+  objects also overlap on common cut-face edges/corners.
+
+  Next action:
+  Replace the four separate imported cut-boundary constraints with ONE
+  imported cut-boundary constraint scoped to all four artificial cut faces.
+  Re-run the same mesh before beginning the 1.5 -> 1.0 -> 0.75 mm R8
+  convergence sequence.

@@ -1,0 +1,17 @@
+PHASE 2E3-B14B-11F — R8 DESIGN RESPONSE TARGETS V0.1
+
+Retained R8 local-FEA peak:          732.45 MPa
+Generic project 7075 yield screen:   505.00 MPa
+
+Reduction required merely to reach yield:
+  31.05 %
+
+Recommended redesign screen:
+  Target yield margin:               +0.10
+  Corresponding stress target:       459.09 MPa
+  Reduction from current peak:       37.32 %
+
+Disposition:
+  Use the +0.10 yield-margin target as the preliminary redesign objective.
+  Geometry changes should be evaluated in a small CAD trade, then confirmed
+  with the same B14B11E submodel workflow and frozen mapping/mesh strategy.

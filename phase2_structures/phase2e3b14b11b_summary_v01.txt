@@ -1,0 +1,56 @@
+========================================================================================================================
+ PHASE 2E3-B14B-11B V0.1 — R6 HORN/HEAD ROOT FILLET CAD BUILD
+========================================================================================================================
+
+SOURCE / STATUS
+------------------------------------------------------------------------------------------------------------------------
+B14B-9 builder reused:                 phase2e3b14b9_build_physical_horn_clevis_v01.py
+B14B-11A working radius:               6.000 mm
+B14B-10 cleaned linear brace force:    -67.231000 kN
+B14B-10 sharp-root VM reference:       415.550 MPa [NOT LOCALLY CONVERGED]
+
+ROOT FEATURE
+------------------------------------------------------------------------------------------------------------------------
+Root plane y:                          31.666228 mm
+Equivalent root:                       85.000 x 95.000 mm
+Selected embedded root edges:          4
+Root-edge lengths:                     85.000, 85.000, 95.000, 95.000 mm
+Applied constant-radius fillet:        R6.000 mm on all four root-perimeter edges
+Fillet application sequence:           B14B-9 horn envelope -> R6 root fillet -> U-slot cut -> Ø18 pin cut -> fuse to head
+
+GEOMETRY CHANGE
+------------------------------------------------------------------------------------------------------------------------
+B14B-9 standalone horn volume:         1078336.305 mm^3
+R6 standalone horn volume:             1074957.125 mm^3
+Horn material removed:                 3379.181 mm^3
+B14B-9 fused head volume:               2816804.625 mm^3
+R6 fused head volume:                  2815157.536 mm^3
+Fused-head volume change:              -1647.090 mm^3
+R6 head/horn overlap:                  106906.357 mm^3
+
+VALIDATION
+------------------------------------------------------------------------------------------------------------------------
+PASS checks:                           36
+FAIL checks:                           0
+Reimported STEP solid count:           6
+
+GATE
+------------------------------------------------------------------------------------------------------------------------
+PASS_B14B11B_R6_GEOMETRY_FOR_LINEAR_FEA_SCREEN
+This is a WORKING R6 CAD/FEA candidate, not a final root-detail freeze.
+
+NEXT
+------------------------------------------------------------------------------------------------------------------------
+Use this STEP in a duplicate of the cleaned B14B-10 linear model. Preserve the shared RP_UPPER_LOAD_U,
+cylindrical contact smoothing, spring definition, supports and LC4 ultimate load package. Compare brace force,
+max deformation and the local horn/head root stress field against the B14B-10 baseline. Final local stress still
+requires focused mesh convergence after the transition geometry is selected.
+
+OUTPUTS
+------------------------------------------------------------------------------------------------------------------------
+/mnt/data/b14b11_work/phase2e3b14b11b_r6_root_fillet_candidate_v01.step
+/mnt/data/b14b11_work/phase2e3b14b11b_geometry_validation_v01.csv
+/mnt/data/b14b11_work/phase2e3b14b11b_geometry_definition_v01.csv
+/mnt/data/b14b11_work/phase2e3b14b11b_open_items_v01.csv
+/mnt/data/b14b11_work/phase2e3b14b11b_summary_v01.txt
+========================================================================================================================

@@ -1,0 +1,24 @@
+PHASE 2E3-B14B-11 — R6 3 MM ROOT REFINEMENT COMPARISON V0.1
+
+REFERENCE RESULTS
+-----------------
+Sharp-root cleaned B14B-10 VM max: 415.550 MPa
+R6 first screen VM max:            433.410 MPa
+R6 + 3 mm root sizing VM max:      411.230 MPa
+
+R6 3 mm vs first R6 screen stress change: -5.117556 %
+R6 3 mm vs sharp-root baseline stress change: -1.039586 %
+
+R6 3 mm brace force: -67.348000 kN
+R6 3 mm max deformation: 5.135400 mm
+
+INTERPRETATION
+--------------
+- The brace force is unchanged from the first R6 screen to displayed precision.
+- Global deformation changes only slightly, so the load path remains stable.
+- The reported VM maximum drops materially when the R6 root is locally refined from the coarse first screen.
+- Therefore the 433.41 MPa coarse-screen peak was mesh-sensitive.
+- The 411.23 MPa result is slightly below the old sharp-root 415.55 MPa reference,
+  but the R6 root is NOT yet mesh-converged.
+- Next step: identify the refined hotspot location and run at least one tighter local root mesh,
+  recommended 2.5 mm first, before accepting any stress comparison or selecting the final fillet radius.

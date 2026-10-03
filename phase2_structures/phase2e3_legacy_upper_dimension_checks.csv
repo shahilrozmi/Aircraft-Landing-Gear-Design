@@ -1,0 +1,15 @@
+check,actual,expected,units,difference,status,source,note
+shaft_diameter_source_vs_B13C,38.0,38.0,mm,0.0,PASS,C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\current_design\phase2e3b13b_v03_summary.txt,
+sleeve_OD_source_vs_B13C,50.0,50.0,mm,0.0,PASS,C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\current_design\phase2e3b13b_v03_summary.txt,
+sleeve_length_source_vs_B13C,30.0,30.0,mm,0.0,PASS,C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\current_design\phase2e3b13b_v03_summary.txt,
+flange_OD_source_vs_B13C,60.0,60.0,mm,0.0,PASS,C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\current_design\phase2e3b13b_v03_summary.txt,
+flange_thickness_source_vs_B13C,3.0,3.0,mm,0.0,PASS,C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\current_design\phase2e3b13b_v03_summary.txt,
+sleeve_ID_matches_shaft_diameter,38.0,38.0,mm,0.0,PASS,,Nominally coincident bronze/shaft contact surface.
+flange_ID_matches_shaft_diameter,38.0,38.0,mm,0.0,PASS,,Nominal flange bore follows shaft diameter.
+passage_diameter_matches_sleeve_OD,50.0,50.0,mm,0.0,PASS,,Ø50 relief carries the bronze sleeve OD and prevents direct shaft/head contact.
+spotface_plane_geometry,43.692105,43.69210454990696,mm,4.500930401718506e-07,PASS,,Recomputed from Ø106 cylindrical head and Ø60 spotface/flange envelope.
+spotface_depth_geometry,9.307895,9.307895450093042,mm,-4.5009304194820743e-07,PASS,,Recomputed from head radius minus tangent-safe spotface plane.
+sleeve_inner_end_geometry,13.692105,13.692104549906958,mm,4.5009304194820743e-07,PASS,,Spotface plane minus 30 mm sleeve length.
+central_unoccupied_gap_geometry,27.384209,27.384209099813916,mm,-9.981391713154153e-08,PASS,,Twice the positive inner-end station.
+shaft_to_head_radial_clearance,6.0,6.0,mm,0.0,PASS,,(Ø50 passage - Ø38 shaft)/2.
+shaft_length_from_validation_bbox,175.0,175.0,mm,0.0,PASS,,B13C validation explicitly reports a 175 mm continuous shaft.

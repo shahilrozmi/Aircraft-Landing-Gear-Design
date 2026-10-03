@@ -1,0 +1,4 @@
+axis,x,y,z,meaning
+horn_radial_e_h,0.0,1.0,0.0,horn centerline / root-to-pin direction
+brace_axis_u_b,0.274670324174725,0.0,0.9615384615384616,two-force member axial-load direction
+pin_axis_e_p,0.9615384615384616,0.0,-0.274670324174725,clevis pin axis = normalize(e_h x u_b)

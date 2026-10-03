@@ -1,0 +1,44 @@
+====================================================================================================================
+ PHASE 2E3-B14A — ANSYS BRACE-REACTION DECOMPOSITION / PYTHON DOCUMENTATION V0.1
+====================================================================================================================
+
+RAW SOURCE
+--------------------------------------------------------------------------------------------------------------------
+Input CSV: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14a_ansys_reactions_raw.csv
+The numeric reactions in this file are raw ANSYS results, not chat-derived values.
+
+BRACE Mx DECOMPOSITION
+--------------------------------------------------------------------------------------------------------------------
+combined      : -16.856000000 kN*m
+force_only    : -3.912800000 kN*m
+moment_only   : -12.943000000 kN*m
+pressure_only :  0.000012312 kN*m
+
+Reconstructed F + M + P: -16.855787688 kN*m
+Combined reaction:       -16.856000000 kN*m
+Residual:                -2.123120000e-04 kN*m
+Residual fraction:        0.001260%
+Superposition check:     PASS
+
+Pressure fraction of |combined Mx|: 0.000073%
+Pressure contribution: small relative to combined brace Mx.
+
+OPTIONAL FORCE-EQUILIBRIUM CHECKS
+--------------------------------------------------------------------------------------------------------------------
+combined      : not evaluated (journal/applied-force fields incomplete)
+force_only    : not evaluated (journal/applied-force fields incomplete)
+moment_only   : not evaluated (journal/applied-force fields incomplete)
+pressure_only : not evaluated (journal/applied-force fields incomplete)
+Populate applied/journal/brace force fields in the raw CSV to enable this check.
+
+B14B HANDOFF
+--------------------------------------------------------------------------------------------------------------------
+B14B source file must read: phase2e3b14a_freeze_record.csv
+Do not paste the B14A brace Mx into B14B source code.
+
+OUTPUTS
+--------------------------------------------------------------------------------------------------------------------
+Decomposition CSV: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14a_reaction_decomposition.csv
+Freeze record CSV: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14a_freeze_record.csv
+Summary TXT:       C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14a_summary.txt
+====================================================================================================================

@@ -1,0 +1,62 @@
+====================================================================================================================================
+ PHASE 2E3-B14B-10 V0.2 — PHYSICAL BRACE FEA HANDOFF
+====================================================================================================================================
+
+SOURCE GATES
+------------------------------------------------------------------------------------------------------------------------------------
+B14A superposition:                  PASS
+B14B-9 persisted validation fails:   0
+Load-path check failures:            0
+
+PHYSICAL BRACE GEOMETRY
+------------------------------------------------------------------------------------------------------------------------------------
+O_global:                            [+0.000000, +0.000000, +1012.780000] mm
+B_global:                            [+0.000000, +260.000000, +1012.780000] mm
+A_global:                            [+96.134613, +260.000000, +1349.318462] mm
+u_b:                                 [+0.274670, +0.000000, +0.961538]
+e_p:                                 [+0.961538, +0.000000, -0.274670]
+Effective Mx arm:                    250.000000 mm
+Pin-to-pin length:                   350.000000 mm
+
+SOURCE-CONNECTED LOAD-PATH PREDICTION
+------------------------------------------------------------------------------------------------------------------------------------
+B14A combined Mx:                    -16.856000000 kN*m
+Expected signed brace force:         -67.424000 kN
+Expected gear-pin force:             [-18.519372, -0.000000, -64.830769] kN
+Moment from physical brace:          [-16.856000, +0.000000, +4.815037] kN*m
+
+BRACE SECTION / STIFFNESS
+------------------------------------------------------------------------------------------------------------------------------------
+Section source:                      phase2e3b14b_working_geometry.csv
+Section/stiffness fully resolved:    True
+Current B14B E:                      200000.000 MPa
+Historical Phase 2D10 E:             205000.000 MPa [TRACE ONLY]
+Modulus disposition:                  USE LATER B14B VALUE
+Tube OD:                             25.000000 mm
+Tube wall:                           3.000000 mm
+Tube area:                           207.345115 mm^2
+E:                                   200000.000 MPa
+EA/L:                                118482.922935 N/mm
+Predicted axial extension:           -0.569061 mm
+Predicted axial stress magnitude:    325.177663 MPa
+
+FEA DISPOSITION
+------------------------------------------------------------------------------------------------------------------------------------
+REMOVE SUP_BRACE_RX.
+Retain the solved B14A combined external load state and journal support architecture.
+Insert an axial-only two-force member from B to A and re-solve the complete reaction distribution.
+Journal reactions from B14A are not reusable after the physical brace is introduced.
+
+GATE
+------------------------------------------------------------------------------------------------------------------------------------
+PASS_B14B10_V02_READY_FOR_FIRST_PHYSICAL_BRACE_FEA
+
+OUTPUTS
+------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b10_material_source_resolution.csv
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b10_fea_handoff.csv
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b10_load_path_checks.csv
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b10_open_items.csv
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b10_ansys_setup.txt
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b10_summary.txt
+====================================================================================================================================

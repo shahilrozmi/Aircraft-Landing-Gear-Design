@@ -1,0 +1,42 @@
+PHASE 2E3-B14B-11C — R8 RIDGE-EDGE REFINEMENT ASSESSMENT V0.1
+
+REFERENCE: 1.25 mm root sizing only
+  nodes            = 40815
+  elements         = 97824
+  head max VM      = 294.960 MPa
+  max deformation  = 3.502200 mm
+  brace force      = -67.391000 kN
+  elongation       = -0.568780 mm
+
+TARGETED REFINEMENT: retain 1.25 mm root sizing + 1.0 mm sizing on three ridge edges
+  nodes            = 42862
+  elements         = 105894
+  head max VM      = 305.800 MPa
+  max deformation  = 3.517900 mm
+  brace force      = -67.391000 kN
+  elongation       = -0.568780 mm
+
+CHANGE
+  head max VM      = +3.675075 %
+  max deformation  = +0.448290 %
+  brace |F|        = +0.000000 %
+  nodes            = +5.015313 %
+  elements         = +8.249509 %
+
+DISPOSITION
+-----------
+FAIL_R8_LOCAL_STRESS_CONVERGENCE
+
+The global load path remains stable (brace force unchanged; deformation changes only slightly),
+but the local head stress rises again under more targeted ridge refinement. This behavior is
+consistent with a non-converged local peak and may indicate a sharp-edge / geometric-discontinuity
+stress singularity or an under-resolved highly localized fillet stress field.
+
+Do not continue interpreting the raw maximum nodal von Mises value as a converged design stress.
+
+Recommended next engineering action:
+1) identify whether the 305.8 MPa maximum lies directly on a sharp CAD edge / face intersection;
+2) if yes, treat the raw peak as singular/non-convergent and use a stress-away-from-edge metric
+   or improve geometry with a physical fillet;
+3) if no, move to a local submodel with quadratic elements and controlled through-thickness
+   refinement around the root ridge.

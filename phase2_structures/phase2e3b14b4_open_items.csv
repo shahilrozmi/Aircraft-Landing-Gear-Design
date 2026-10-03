@@ -1,0 +1,9 @@
+item,status,reason
+ACTUAL_HORN_ROOT_GEOMETRY,OPEN,"Equivalent rectangular root is only a sizing envelope. Actual head radius, local bore cutout, taper and root section must come from CAD."
+HORN_ROOT_FILLET_KT,OPEN,Kt is swept rather than frozen. CAD/FEA must establish the actual local stress concentration.
+7075_LUG_BEARING_ALLOWABLE,OPEN,No product-form/temper-specific bearing allowable has been frozen. Projected bearing demand is reported only.
+CLEVIS_EAR_LOCAL_FEA,OPEN,"Hole/contact stress, ear flexibility, root blending and pin contact require local 3D analysis."
+END_FITTING_JOIN_METHOD,OPEN,18 mm solid 300M spigot is a strength-screen candidate only. The method that transfers axial load into the 25x3 tube is not selected.
+AIRFRAME_SIDE_CLEVIS,OPEN,"Airframe-side material, attachment, local structure, fasteners and load distribution are not yet defined."
+PHYSICAL_BRACE_ANSYS_MODEL,OPEN,SUP_BRACE_RX still must be replaced by the actual pin-ended axial brace. Journal reactions and local head stresses must then be recomputed.
+FATIGUE_FRACTURE_WEAR,OPEN,"Static gross-section screens do not close fatigue, fracture, fretting, lubrication or wear."

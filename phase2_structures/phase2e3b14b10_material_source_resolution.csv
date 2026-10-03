@@ -1,0 +1,4 @@
+quantity,current_value,units,current_source,historical_value,historical_source,disposition,note
+brace_tube_OD,25.0,mm,phase2e3b14b_brace_physicalization_v01.py,,,CURRENT_B14B,Current B14B working tube outer diameter.
+brace_tube_wall,3.0,mm,phase2e3b14b_brace_physicalization_v01.py,,,CURRENT_B14B,Current B14B working tube wall thickness.
+E_300M,200000.0,MPa,phase2e3b14b_brace_physicalization_v01.py,205000.0,phase2_upper_brace_sizing.py,USE_LATER_B14B_VALUE,Later B14B physicalization controls this branch. Earlier Phase 2D10 modulus is retained only for traceability.

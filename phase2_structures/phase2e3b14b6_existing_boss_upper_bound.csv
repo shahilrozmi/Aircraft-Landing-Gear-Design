@@ -1,0 +1,2 @@
+screen,bx_mm,hz_mm,Kt,VM_limit_MPa,MS_limit_generic_7075T6_yield,VM_ultimate_MPa,MS_ultimate_generic_7075T6_strength,reserve_rule_MS_limit_min,reserve_rule_MS_ultimate_min,reserve_pass,interpretation
+OPTIMISTIC_FULL_BOSS_RECTANGLE,106.0,78.0,3.0,379.83808931809915,0.3295138486679854,569.7571339771487,0.00042626236402876216,0.2,0.1,False,Nonphysical optimistic upper bound: assumes the entire boss diameter and height are available as a solid rectangle normal to +y. A real curved-side horn root has less local section.

@@ -1,0 +1,53 @@
+PHASE 2E3-B14B-11C — CORRECTED R4/R6/R8 RADIUS TRADE V0.1
+
+CORRECTED FEA RESULTS
+---------------------
+R4:
+  max VM stress    = 394.960 MPa
+  brace force      = -67.310000 kN
+  elongation       = -0.568100 mm
+  max deformation  = 5.140700 mm
+  hotspot xyz      = (-0.135749, 53.430272, 965.194307) mm
+
+R6:
+  max VM stress    = 412.240 MPa
+  brace force      = -67.348000 kN
+  elongation       = -0.568420 mm
+  max deformation  = 5.143900 mm
+  hotspot xyz      = (-0.136666, 53.430789, 965.193909) mm
+  mesh             = 38424 nodes / 87564 elements
+
+R8:
+  max VM stress    = 266.910 MPa
+  brace force      = -67.391000 kN
+  elongation       = -0.568780 mm
+  max deformation  = 3.498100 mm
+  hotspot xyz      = (19.019775, 49.696504, 964.934807) mm
+
+PAIRWISE COMPARISONS
+--------------------
+R4 vs R6:
+  stress           = -4.191733 %
+  brace |F|        = -0.056423 %
+  elongation       = -0.056296 %
+  deformation      = -0.062210 %
+  hotspot shift    = 0.001125 mm
+
+R8 vs R6:
+  stress           = -35.253736 %
+  brace |F|        = +0.063847 %
+  elongation       = +0.063333 %
+  deformation      = -31.995179 %
+  hotspot shift    = 19.518741 mm
+
+R8 vs R4:
+  stress           = -32.421005 %
+  deformation      = -31.952847 %
+
+DISPOSITION
+-----------
+- The corrected R4 and R6 cases have nearly identical brace load, elongation, and global deformation.
+- R4 now gives a lower local peak stress than R6 by about 4.19%.
+- R8 remains dramatically lower in both local stress and global deformation while carrying essentially the same brace load.
+- Because R8's global deformation is about 32.0% lower than R6, retain R8 as AUDITED / PROVISIONAL until mesh counts and final setup-equivalence records for R4 and R8 are captured.
+- Do not freeze the final radius selection until the R4 and R8 mesh node/element counts are recorded and the three-case setup equivalence is documented.

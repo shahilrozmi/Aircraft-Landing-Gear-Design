@@ -1,0 +1,6 @@
+item,status,next_action
+actual_CAD_fillet_feasibility,OPEN,Build source-connected R6 geometry and validate six-body STEP.
+passage_clearance_after_blend,OPEN,Measure minimum clearance from smooth transition to Ø50 passage.
+local_root_stress,OPEN,Run identical linear FEA screen for R2/R4/R6/R8 or escalate around R6 as needed.
+local_mesh_convergence,OPEN,"After radius winner, perform focused/submodel convergence; do not freeze coarse global peak."
+load_reversal_symmetry,OPEN,Use symmetric upper/lower root treatment so opposite brace-force sign is not disadvantaged.

@@ -1,0 +1,17 @@
+case,radius_mm,max_vm_MPa,brace_force_N,elongation_mm,max_deformation_mm,hotspot_x_mm,hotspot_y_mm,hotspot_z_mm
+R4_corrected,4.0,394.96,-67310.0,-0.5681,5.1407,-0.135749,53.430272,965.194307
+R6_corrected,6.0,412.24,-67348.0,-0.56842,5.1439,-0.136666,53.430789,965.193909
+R8_audited,8.0,266.91,-67391.0,-0.56878,3.4981,19.019775,49.696504,964.934807
+
+R4_vs_R6_stress_pct,-4.191732971084812
+R4_vs_R6_force_mag_pct,-0.05642335332897785
+R4_vs_R6_elong_mag_pct,-0.056296400548887605
+R4_vs_R6_deformation_pct,-0.06220960749626812
+R4_R6_hotspot_shift_mm,0.0011254252529641472
+R8_vs_R6_stress_pct,-35.25373568794876
+R8_vs_R6_force_mag_pct,0.06384747876700125
+R8_vs_R6_elong_mag_pct,0.06333345061748635
+R8_vs_R6_deformation_pct,-31.995178755419047
+R8_R6_hotspot_shift_mm,19.518740996644993
+R8_vs_R4_stress_pct,-32.42100465869961
+R8_vs_R4_deformation_pct,-31.95284688855603

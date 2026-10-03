@@ -1,0 +1,82 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e3b7a_expanded_transition_robustness_trade_v01.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+==============================================================================================================================
+ PHASE 2E3-B7A — EXPANDED TRANSITION ROBUSTNESS / Kt-CAPACITY TRADE V0.1
+==============================================================================================================================
+
+GEOMETRY CONNECTION
+------------------------------------------------------------------------------------------------------------------------------
+Lower barrel retained:            74.0 OD / 64.0 ID mm
+E2 closure outer face:            973.780357 mm above A
+Shaft-hole bottom:                983.780357 mm above A
+B6 root-to-root head width:       115.0 mm
+
+UPPER-OD LOCAL ROBUSTNESS — Kt=3
+------------------------------------------------------------------------------------------------------------------------------
+     OD     Ann MSu   Ann PASS   Solid MSu  Solid PASS    Res/side
+----------------------------------------------------------------------
+    102       0.019       True       0.199        True         6.5
+    104       0.095       True       0.271        True         5.5
+    106       0.173       True       0.346        True         4.5
+    108       0.255       True       0.423        True         3.5
+    110       0.339       True       0.504        True         2.5
+    112       0.426       True       0.587        True         1.5
+
+PROFILE Kt_PEAK CAPACITY
+------------------------------------------------------------------------------------------------------------------------------
+  ODtop  StartA      Len     ang    Kt_cap    >=2?    Ann3    Sol3    Res/s     Mass+    Elig
+---------------------------------------------------------------------------------------------------------
+    102     275    698.8   1.721     1.578   False    True    True      6.5     3.644   False
+    102     300    673.8   1.785     1.506   False    True    True      6.5     3.514   False
+    102     325    648.8   1.854     1.431   False    True    True      6.5     3.384   False
+    102     350    623.8   1.928     1.352   False    True    True      6.5     3.253   False
+    104     275    698.8   1.844     1.610   False    True    True      5.5     3.939   False
+    104     300    673.8   1.913     1.535   False    True    True      5.5     3.798   False
+    104     325    648.8   1.986     1.456   False    True    True      5.5     3.657   False
+    104     350    623.8   2.066     1.373   False    True    True      5.5     3.516   False
+    106     275    698.8   1.967     1.640   False    True    True      4.5     4.238   False
+    106     300    673.8   2.040     1.561   False    True    True      4.5     4.087   False
+    106     325    648.8   2.119     1.480   False    True    True      4.5     3.935   False
+    106     350    623.8   2.203     1.394   False    True    True      4.5     3.784   False
+    108     275    698.8   2.090     1.671   False    True    True      3.5     4.542   False
+    108     300    673.8   2.167     1.587   False    True    True      3.5     4.380   False
+    108     325    648.8   2.251     1.502   False    True    True      3.5     4.217   False
+    108     350    623.8   2.341     1.414   False    True    True      3.5     4.055   False
+    110     275    698.8   2.213     1.699   False    True    True      2.5     4.851   False
+    110     300    673.8   2.295     1.614   False    True    True      2.5     4.677   False
+    110     325    648.8   2.383     1.525   False    True    True      2.5     4.504   False
+    110     350    623.8   2.478     1.432   False    True    True      2.5     4.330   False
+    112     275    698.8   2.336     1.727   False    True    True      1.5     5.164   False
+    112     300    673.8   2.422     1.638   False    True    True      1.5     4.979   False
+    112     325    648.8   2.515     1.547   False    True    True      1.5     4.794   False
+    112     350    623.8   2.616     1.450   False    True    True      1.5     4.610   False
+
+B7A DISPOSITION
+------------------------------------------------------------------------------------------------------------------------------
+No candidate meets the explicit Kt_peak>=2.0 + Kt=3 local robustness gates.
+Do not proceed to detailed CAD yet; architecture/profile expansion is required.
+
+Actual geometry-derived transition Kt is still OPEN.
+Once a working geometry survives this trade, the next task is to define explicit CAD radii/tangent geometry and verify the real stress concentration with local analysis / 3D FEA.
+
+OUTPUT FILES
+------------------------------------------------------------------------------------------------------------------------------
+Expanded trade:                   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b7a_expanded_trade.csv
+Kt capacity summary:              C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b7a_kt_capacity.csv
+Station details:                  C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b7a_station_details.csv
+Working profile:                  C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b7a_working_profile.csv
+Summary:                          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b7a_summary.txt
+==============================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

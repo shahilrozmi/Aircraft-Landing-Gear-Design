@@ -1,0 +1,7 @@
+item,status,reason
+ROOT_FILLET_TAPER,OPEN,Kt=3.0 remains a screening assumption. Actual blended root geometry must be designed and analyzed.
+LOCAL_PASSAGE_LIGAMENT_3D,OPEN,"Root-plane clearance is geometric only. 3D interaction with Ø50 passage, bronze seat and head curvature requires FEA."
+VERTICAL_REINFORCEMENT_PACKAGING,OPEN,Added root height is centered for the first CAD pass only. Actual top/bottom split should follow available head/barrel packaging.
+CLEVIS_INTEGRATION,OPEN,"Equivalent root section does not yet include the two clevis ears, their root blending, or ear bending."
+LUG_BEARING_ALLOWABLE,OPEN,Product-form-specific 7075 lug bearing allowable remains unfrozen.
+PHYSICAL_BRACE_FEA,OPEN,"Final confirmation requires actual horn, clevis, pin, brace and journal reactions in ANSYS after SUP_BRACE_RX is removed."

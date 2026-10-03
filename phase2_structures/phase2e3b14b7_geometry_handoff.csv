@@ -1,0 +1,10 @@
+parameter,value,units,classification,note
+horn_root_equivalent_width_x,85,mm,WORKING_NOT_FROZEN,Equivalent x-width at root chord plane.
+horn_root_equivalent_height_z,95,mm,WORKING_NOT_FROZEN,Equivalent z-height centered about trunnion axis for first CAD pass.
+horn_root_plane_y_from_trunnion_center,31.666228067138025,mm,DERIVED_FROM_B13C_BOSS,Inside curved Ø106 boss; produces requested x chord width.
+horn_root_embed_depth_from_outer_tangent,21.333771932861975,mm,DERIVED_FROM_B13C_BOSS,Outer tangent is y=+53 mm.
+passage_clearance_at_root_plane,6.666228067138025,mm,DERIVED_FROM_B13C_PASSAGE,Clearance in y between root plane and Ø50 passage radius.
+added_height_total,17.0,mm,WORKING_REINFORCEMENT_ENVELOPE,Total root height beyond the existing 78 mm boss.
+added_height_each_side_if_centered,8.5,mm,WORKING_REINFORCEMENT_ENVELOPE,Initial symmetric CAD assumption; may be redistributed after packaging review.
+gear_side_pin_y,260.0,mm,SOURCE_B14B,Existing physical-brace pin center.
+root_to_pin_lever,228.33377193286196,mm,DERIVED,Actual horn cantilever lever from root chord plane to pin center.

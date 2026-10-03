@@ -1,0 +1,31 @@
+PHASE 2E3-B14B-11C — CORRECTED R6 / R8 SANITY COMPARISON V0.1
+
+Corrected R6:
+  max VM stress    = 412.240 MPa
+  brace force      = -67.348000 kN
+  elongation       = -0.568420 mm
+  max deformation  = 5.143900 mm
+  mesh             = 38424 nodes / 87564 elements
+
+Change from previous R6:
+  stress           = +1.158225 %
+  deformation      = -0.075761 %
+
+R8 relative to corrected R6:
+  stress           = -35.253736 %
+  brace |F|        = +0.063847 %
+  elongation       = +0.063333 %
+  deformation      = -31.995179 %
+
+Interpretation:
+The corrected R6 rerun is close to the previous R6 result, so the corrected clevis-ear
+mesh scope does not explain the large R8 response difference.
+
+R8 carries essentially the same brace force and spring elongation as R6, but reports
+about one-third less total deformation and much lower local stress. Because the CAD
+trade changes only the root fillet radius, that global deformation change is too large
+to accept without a setup-equivalence audit.
+
+R8 is therefore HOLD / AUDIT REQUIRED before it is used in the radius trade.
+Check supports, remote load scoping, spring mobile scope, and all head/shaft/bushing
+contacts against corrected R6 before rerunning R4.

@@ -1,0 +1,20 @@
+parameter,value,units,note
+r8_root_fillet_radius_mm,8.0,mm,exact R8 construction retained
+crop_xmin_mm,-60.0,mm,outside local physical width; no x cut
+crop_xmax_mm,60.0,mm,outside local physical width; no x cut
+crop_ymin_mm,25.0,mm,artificial cut boundary
+crop_ymax_mm,120.0,mm,artificial cut boundary
+crop_zmin_mm,920.0,mm,artificial cut boundary
+crop_zmax_mm,992.0,mm,artificial cut boundary
+hotspot_x_mm,18.702387,mm,full-model R8 reference hotspot
+hotspot_y_mm,49.818011,mm,full-model R8 reference hotspot
+hotspot_z_mm,964.937219,mm,full-model R8 reference hotspot
+hotspot_min_distance_to_cut_mm,24.818011,mm,minimum of four artificial-cut distances
+nearest_crop_radius_from_trunnion_center_mm,32.50858963412591,mm,yz-plane minimum
+governing_passage_radius_mm,25.0,mm,Ø50 source passage
+passage_clearance_margin_mm,7.5085896341259115,mm,local crop avoids passage/contact surfaces
+local_volume_mm3,242336.59032547692,mm^3,single 7075 local body
+cut_ymin_area_mm2,4569.924472358989,mm^2,map parent displacement
+cut_ymax_area_mm2,1230.036277874086,mm^2,map parent displacement
+cut_zmin_area_mm2,1642.4928386061235,mm^2,map parent displacement
+cut_zmax_area_mm2,7246.669274514012,mm^2,map parent displacement

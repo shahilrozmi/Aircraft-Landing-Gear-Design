@@ -1,0 +1,91 @@
+======================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e3b5b_upper_barrel_reinforcement_profile_v01.py
+======================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Working directory: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------------
+============================================================================================================================
+ PHASE 2E3-B5B — 7075 UPPER-BARREL / SOLID-HEAD REINFORCEMENT PROFILE V0.1
+============================================================================================================================
+
+MATERIAL / PRESSURE BASIS
+----------------------------------------------------------------------------------------------------------------------------
+7075-T6 yield / ultimate screen:  503.0 / 572.0 MPa
+Limit pressure differential:      9.292 MPa
+Ultimate pressure differential:   13.938 MPa
+Mechanical and maximum-pressure screens are conservatively treated as simultaneous.
+
+AXIAL GEOMETRY
+----------------------------------------------------------------------------------------------------------------------------
+Preferred lower guide hL:         250.0 mm above A
+Preferred upper guide hU:         400.0 mm above A
+Equivalent datum U:               475.0 mm above A
+E2 closure outer face:            498.780357 mm above U
+Closure outer face above A:       973.780357 mm
+Working shaft-hole bottom:        508.780357 mm above U
+Working shaft centerline:         526.780357 mm above U
+
+ANNULAR 64-mm-ID BARREL — REQUIRED OD PROFILE SUMMARY
+----------------------------------------------------------------------------------------------------------------------------
+    Kt   74 fails @A   74 fails @U     OD@hU      OD@U     OD@E2    Max OD
+--------------------------------------------------------------------------
+   1.0           440           -35      74.0      74.5      80.0      80.0
+   1.5           250          -225      78.0      79.0      86.5      86.5
+   2.0           250          -225      81.5      83.0      92.0      92.0
+   2.5           250          -225      85.0      87.0      97.0      97.0
+   3.0           250          -225      88.5      90.5     101.5     101.5
+
+SOLID HEAD-NECK SCREEN — 10 mm BELOW SHAFT HOLE
+----------------------------------------------------------------------------------------------------------------------------
+    Kt   Station>U      OD     VMlim     MSlim     VMult     MSult    PASS
+--------------------------------------------------------------------------------
+   1.0       508.8      74     279.0     0.803     418.4     0.367    True
+   1.0       508.8      80     221.0     1.277     331.4     0.726    True
+   1.0       508.8      85     184.3     1.729     276.5     1.069    True
+   1.0       508.8      90     155.4     2.237     233.1     1.454    True
+   1.0       508.8      96     128.1     2.926     192.2     1.976    True
+   1.5       508.8      74     417.2     0.206     625.7    -0.086   False
+   1.5       508.8      80     330.3     0.523     495.5     0.154    True
+   1.5       508.8      85     275.5     0.826     413.3     0.384    True
+   1.5       508.8      90     232.2     1.166     348.3     0.642    True
+   1.5       508.8      96     191.4     1.628     287.1     0.992    True
+   2.0       508.8      74     555.3    -0.094     833.0    -0.313   False
+   2.0       508.8      80     439.7     0.144     659.5    -0.133   False
+   2.0       508.8      85     366.7     0.372     550.0     0.040    True
+   2.0       508.8      90     309.0     0.628     463.5     0.234    True
+   2.0       508.8      96     254.7     0.975     382.1     0.497    True
+   2.5       508.8      74     693.5    -0.275    1040.3    -0.450   False
+   2.5       508.8      80     549.1    -0.084     823.6    -0.305   False
+   2.5       508.8      85     457.9     0.099     686.8    -0.167   False
+   2.5       508.8      90     385.8     0.304     578.7    -0.012   False
+   2.5       508.8      96     318.0     0.582     477.0     0.199    True
+   3.0       508.8      74     831.7    -0.395    1247.6    -0.542   False
+   3.0       508.8      80     658.4    -0.236     987.7    -0.421   False
+   3.0       508.8      85     549.1    -0.084     823.6    -0.305   False
+   3.0       508.8      90     462.6     0.087     694.0    -0.176   False
+   3.0       508.8      96     381.3     0.319     571.9     0.000    True
+
+B5B DISPOSITION
+----------------------------------------------------------------------------------------------------------------------------
+The old 74/64 barrel may remain only where the corrected 7075 + pressure screen passes.
+Above the first failing station, carry a locally reinforced external OD while retaining the 64 mm internal bore.
+Retaining the 64 mm ID preserves the frozen E2 gas/oil cavity geometry; only the external structural envelope changes.
+Do NOT freeze a taper or shoulder yet. The next step is to select a practical reinforced OD profile and screen its transition Kt / fillet sensitivity before updating the E2/E3 geometry baseline.
+
+OUTPUT FILES
+----------------------------------------------------------------------------------------------------------------------------
+Full annular profile:             C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b5b_annular_profile.csv
+Profile summary:                  C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b5b_profile_summary.csv
+Solid head-neck screen:           C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b5b_solid_neck_screen.csv
+Summary:                          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b5b_summary.txt
+============================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------------
+
+
+======================================================================================================================

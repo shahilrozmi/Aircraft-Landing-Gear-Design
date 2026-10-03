@@ -1,0 +1,2 @@
+governing_case,brace_support_name,combined_Mx_kNm,combined_abs_Mx_kNm,force_only_Mx_kNm,moment_only_Mx_kNm,pressure_only_Mx_kNm,reconstructed_Mx_kNm,superposition_residual_kNm,superposition_residual_fraction,pressure_fraction_of_combined,superposition_pass,raw_source_csv
+LC4+_ULT,SUP_BRACE_RX,-16.856,16.856,-3.9128,-12.943,1.2312e-05,-16.855787688,-0.00021231200000215722,1.2595633602406099e-05,7.30422401518747e-07,True,phase2e3b14a_ansys_reactions_raw.csv

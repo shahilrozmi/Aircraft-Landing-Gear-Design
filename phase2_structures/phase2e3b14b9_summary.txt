@@ -1,0 +1,81 @@
+================================================================================================================================================
+ PHASE 2E3-B14B-9 V0.1 — PHYSICAL HORN / CLEVIS CAD BUILD
+================================================================================================================================================
+
+SOURCE CONNECTION
+------------------------------------------------------------------------------------------------------------------------------------------------
+validated_current_parent_record   : C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_b13f3c_current_parent_record.csv
+validated_current_parent_STEP     : C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_b13f_3c_d44_r1p5_t3p5_left_collar_partial_relief.step
+B14B7_geometry_handoff            : C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b7_geometry_handoff.csv
+B14B7_reference_candidate         : C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b7_reference_candidate.csv
+B14B8_CAD_handoff                 : C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b8_cad_handoff.csv
+B14B8_joint_frame                 : C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b8_joint_frame.csv
+B14B8_reference_geometry          : C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b8_reference_geometry.csv
+
+CURRENT PARENT
+------------------------------------------------------------------------------------------------------------------------------------------------
+Parent STEP:                         C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_b13f_3c_d44_r1p5_t3p5_left_collar_partial_relief.step
+Parent gate:                         PASS_CURRENT_PARENT_VALIDATED_FOR_B14B9
+Trunnion center O_global:            [0.000, 0.000, 1012.780] mm
+
+B14B-7 SADDLE / ROOT INPUT
+------------------------------------------------------------------------------------------------------------------------------------------------
+Equivalent root section:             85.000 x 95.000 mm
+Root center global:                  [0.000, 31.666, 1012.780] mm
+Embed depth from Ø106 tangent:       21.333772 mm
+Source passage clearance:            6.666228 mm
+Added root height envelope:          17.000 mm
+
+B14B-8 CLEVIS INPUT
+------------------------------------------------------------------------------------------------------------------------------------------------
+Throat center global:                [0.000, 235.000, 1012.780] mm
+Plate width along brace axis u_b:    60.000 mm
+Total structural grip along e_p:     42.000 mm
+Ear thickness:                       10.000 mm each
+Central slot width:                  22.000 mm
+Fork free end y:                     290.000 mm global
+Pin center global:                   [0.000, 260.000, 1012.780] mm
+Pin bore:                            Ø18.000 mm
+Brace eye reference envelope:        Ø44.000 x 20.000 mm [NOT BUILT HERE]
+
+LOCAL FRAME
+------------------------------------------------------------------------------------------------------------------------------------------------
+e_h = [+0.000000000, +1.000000000, +0.000000000]
+u_b = [+0.274670324, +0.000000000, +0.961538462]
+e_p = [+0.961538462, +0.000000000, -0.274670324]
+
+B14B-9 CAD CHOICES
+------------------------------------------------------------------------------------------------------------------------------------------------
+Saddle-to-throat transition:         LINEAR RULED LOFT
+U-slot root radius:                  11.000 mm = slot_width/2 [WORKING, NOT FROZEN]
+External saddle-root fillet:         NOT ADDED / OPEN FOR LOCAL FEA
+Physical brace eye/tube:             NOT ADDED IN B14B-9
+
+GEOMETRY RESULT
+------------------------------------------------------------------------------------------------------------------------------------------------
+Parent 7075 head volume:             1847106.768 mm^3
+Standalone horn after cuts:          1078336.305 mm^3
+Head/horn embed overlap:             108638.447 mm^3
+Final fused 7075 head volume:        2816804.625 mm^3
+Exported/re-imported solid count:    6
+
+VALIDATION
+------------------------------------------------------------------------------------------------------------------------------------------------
+PASS checks:                         62
+FAIL checks:                         0
+
+GATE
+------------------------------------------------------------------------------------------------------------------------------------------------
+PASS_B14B9_GEOMETRY_FOR_LOCAL_FEA
+The current B13F-3C geometry has been retained and the source-connected B14B-9 horn/clevis has been added.
+The result is suitable for the first local physical-brace / horn FEA handoff, not final detail-design freeze.
+
+OUTPUTS
+------------------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b9_head_horn_clevis_v01.step
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b9_source_manifest.csv
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b9_geometry_definition.csv
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b9_geometry_validation.csv
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b9_open_items.csv
+C:\Users\Shahi\Documents\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b9_summary.txt
+================================================================================================================================================

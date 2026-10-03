@@ -1,0 +1,182 @@
+============================================================================================================================
+ LANDING GEAR PROJECT — PYTHON CALCULATION / DOCUMENTATION AUDIT V0.1
+============================================================================================================================
+
+Audit root: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures
+Engineering Python scripts audited: 48
+
+PROJECT DOCUMENTATION RULE
+----------------------------------------------------------------------------------------------------------------------------
+Every engineering calculation step should retain:
+  1) Python source
+  2) machine-readable results (CSV/JSON/XLSX/NPZ/NPY)
+  3) human-readable summary (TXT/MD)
+Console-only calculations are NOT treated as fully documented.
+
+STATUS COUNTS
+----------------------------------------------------------------------------------------------------------------------------
+FULL                  :   28
+STRUCTURED_ONLY       :   15
+NARRATIVE_ONLY        :    2
+CONSOLE_ONLY          :    0
+CODE_ONLY             :    0
+DECLARED_MISSING      :    3
+
+PER-SCRIPT AUDIT
+----------------------------------------------------------------------------------------------------------------------------
+STATUS               PHASE              SCRIPT
+----------------------------------------------------------------------------------------------------------------------------
+FULL                 PHASE2E3B13B       current_design\phase2e3b13b_bushing_interface_sizing.py
+FULL                 PHASE2E3B13B       current_design\phase2e3b13b_v02r1_interference_fit_min_ligament_correction.py
+FULL                 PHASE2E3B13B       current_design\phase2e3b13b_v03_axial_thrust_flange_sizing.py
+FULL                 PHASE2E3B13B       current_design\phase2e3b13b_v04_central_relief_trade.py
+NARRATIVE_ONLY       PHASE2E3B13C       current_design\phase2e3b13c_build_geometry_portable_v2.py
+    -> Narrative summary exists, but no machine-readable result artifact was found.
+       nearby artifacts: current_design\phase2e3b13c_geometry_validation.txt
+FULL                 PHASE2             phase2_axle_regression_resolution_v01.py
+FULL                 PHASE2             phase2_axle_sizing.py
+STRUCTURED_ONLY      PHASE2             phase2_barrel_sizing.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2_axle_sizing.csv | phase2_barrel_sizing.csv | phase2_gland_retainer_sizing.csv | phase2_lower_barrel_boss_sizing.csv | phase2_piston_sizing.csv | phase2_upper_brace_sizing.csv | phase2_upper_trunnion_sizing.csv | phase2e2b_barrel_candidate_diagnostic.csv | phase2e2b_barrel_source_audit.csv | phase2e3b5a_barrel_material_audit.csv
+FULL                 PHASE2             phase2_bushing_load_transfer.py
+STRUCTURED_ONLY      PHASE2             phase2_bushing_material_gland.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2_bushing_load_transfer.csv | phase2_bushing_material_gland_requirements.csv | phase2_gland_retainer_sizing.csv | phase2e3b3_material_interface_audit.csv | phase2e3b5a_barrel_material_audit.csv
+STRUCTURED_ONLY      PHASE2             phase2_gland_retainer_sizing.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2_axle_sizing.csv | phase2_barrel_sizing.csv | phase2_bushing_material_gland_requirements.csv | phase2_gland_retainer_sizing.csv | phase2_lower_barrel_boss_sizing.csv | phase2_piston_sizing.csv | phase2_upper_brace_sizing.csv | phase2_upper_trunnion_sizing.csv
+STRUCTURED_ONLY      PHASE2             phase2_internal_loads.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2_internal_loads.csv | phase2e3b12_lc5_ultimate_loads.csv
+STRUCTURED_ONLY      PHASE2             phase2_lower_barrel_boss_sizing.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2_axle_sizing.csv | phase2_barrel_sizing.csv | phase2_gland_retainer_sizing.csv | phase2_lower_barrel_boss_sizing.csv | phase2_piston_sizing.csv | phase2_upper_brace_sizing.csv | phase2_upper_trunnion_sizing.csv | phase2e2b_barrel_candidate_diagnostic.csv | phase2e2b_barrel_source_audit.csv | phase2e3b5a_barrel_material_audit.csv
+STRUCTURED_ONLY      PHASE2             phase2_packaging_overlap.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2_packaging_overlap.csv
+STRUCTURED_ONLY      PHASE2             phase2_piston_sizing.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2_axle_sizing.csv | phase2_barrel_sizing.csv | phase2_gland_retainer_sizing.csv | phase2_lower_barrel_boss_sizing.csv | phase2_piston_sizing.csv | phase2_upper_brace_sizing.csv | phase2_upper_trunnion_sizing.csv
+DECLARED_MISSING     PHASE2             phase2_traceability_audit_v04.py
+    -> At least one source-declared output file is missing.
+       missing: phase2_open_validation_items.csv | phase2_structures\phase2_axle_regression_audit.csv | phase2_structures\phase2_open_validation_items.csv | phase2_structures\phase2_traceability_register.csv | phase2_structures\phase2_traceability_source_manifest.csv | phase2_traceability_register.csv | phase2_traceability_summary.txt
+       nearby artifacts: phase2_460mm_semantics_audit.txt | phase2_axle_regression_audit.csv | phase2_axle_regression_audit.txt | phase2_preE3_audit_closure.csv | phase2_traceability_register_v1.csv | phase2_traceability_source_manifest.csv | phase2_traceability_v1_summary.txt | phase2e2b_barrel_source_audit.csv | phase2e3a_load_path_audit.txt | phase2e3b3_material_interface_audit.csv | phase2e3b5a_barrel_material_audit.csv | phase2e3b6a_v02_contact_model_audit.csv | phase2e3b9a_solver_audit.csv
+FULL                 PHASE2             phase2_traceability_v1_freeze_update.py
+STRUCTURED_ONLY      PHASE2             phase2_upper_brace_sizing.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2_axle_sizing.csv | phase2_barrel_sizing.csv | phase2_gland_retainer_sizing.csv | phase2_lower_barrel_boss_sizing.csv | phase2_piston_sizing.csv | phase2_upper_brace_sizing.csv | phase2_upper_trunnion_sizing.csv | phase2e2_e3_upper_head_interface.csv | phase2e3a2_brace_force_sensitivity.csv | phase2e3b1_brace_force_trade.csv | phase2e3b5a_current_upper_neck_screen.csv | phase2e3b7_upper_OD_boundary_checks.csv
+STRUCTURED_ONLY      PHASE2             phase2_upper_trunnion_sizing.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2_axle_sizing.csv | phase2_barrel_sizing.csv | phase2_gland_retainer_sizing.csv | phase2_lower_barrel_boss_sizing.csv | phase2_piston_sizing.csv | phase2_upper_brace_sizing.csv | phase2_upper_trunnion_sizing.csv | phase2e2_e3_upper_head_interface.csv | phase2e3a2_trunnion_reaction_sensitivity.csv | phase2e3b1_trunnion_reaction_trade.csv | phase2e3b2_trunnion_design_sweep.csv | phase2e3b5a_current_upper_neck_screen.csv | phase2e3b7_upper_OD_boundary_checks.csv
+STRUCTURED_ONLY      PHASE2E1           phase2e1_lower_end_architecture_v04.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2e1_lower_end_checks.csv | phase2e1_lower_end_geometry.csv
+FULL                 PHASE2E2           phase2e2_metering_law_comparison_v03.py
+STRUCTURED_ONLY      PHASE2E2           phase2e2_metering_upper_head_layout_v04.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2e2_e3_upper_head_interface.csv | phase2e2_metering_axial_layout_sweep.csv
+STRUCTURED_ONLY      PHASE2E2           phase2e2_oleo_cavity_packaging_v03.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2e2_stroke_cavity_states.csv
+FULL                 PHASE2E2           phase2e2_v1_release_audit.py
+STRUCTURED_ONLY      PHASE2E2           phase2e2b_upper_head_closure_audit_v03.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2_preE3_audit_closure.csv | phase2e2b_barrel_source_audit.csv | phase2e2b_closure_thickness_sweep.csv
+STRUCTURED_ONLY      PHASE2E2           phase2e2c_fluid_continuity_closure_finalize_v01.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2e2c_closure_structural_screen.csv
+FULL                 PHASE2E3           phase2e3a2_upper_attachment_fbd_transport_v01.py
+FULL                 PHASE2E3           phase2e3a_upper_attachment_source_audit_v01.py
+DECLARED_MISSING     PHASE2E3B10        phase2e3b10_upper_head_trunnion_integration.py
+    -> At least one source-declared output file is missing.
+       missing: phase2e2*interface*.csv | phase2e2*summary*.txt | phase2e3a*.csv | phase2e3b2_trunnion_summary.txt
+FULL                 PHASE2E3B10A       phase2e3b10a_retention_architecture_closeout.py
+FULL                 PHASE2E3B11        phase2e3b11_upper_head_local_screens.py
+NARRATIVE_ONLY       PHASE2E3B12        phase2e3b12_generate_integrated_model.py
+    -> Narrative summary exists, but no machine-readable result artifact was found.
+FULL                 PHASE2E3B1         phase2e3b1_trunnion_centerline_trade_v01.py
+FULL                 PHASE2E3B2         phase2e3b2_trunnion_coupled_sizing_v01.py
+FULL                 PHASE2E3B3         phase2e3b3_trunnion_shortlist_head_integration_v01.py
+FULL                 PHASE2E3B4         phase2e3b4_cross_trunnion_head_interface_v01.py
+FULL                 PHASE2E3B5         phase2e3b5_local_head_interface_screen_v01.py
+FULL                 PHASE2E3B5A        phase2e3b5a_barrel_material_upper_neck_audit_v01.py
+FULL                 PHASE2E3B5B        phase2e3b5b_upper_barrel_reinforcement_profile_v01.py
+FULL                 PHASE2E3B6         phase2e3b6_head_span_recoupling_v01.py
+FULL                 PHASE2E3B6A        phase2e3b6a_working_candidate_local_refresh_v02.py
+FULL                 PHASE2E3B7         phase2e3b7_transition_kt_budget_trade_v02.py
+DECLARED_MISSING     PHASE2E3B7A        phase2e3b7a_expanded_transition_robustness_trade_v01.py
+    -> At least one source-declared output file is missing.
+       missing: phase2e3b7a_working_profile.csv
+       nearby artifacts: phase2e3b7a_expanded_trade.csv
+FULL                 PHASE2E3B7B        phase2e3b7b_transition_fea_handoff_v01.py
+FULL                 PHASE2E3B8         phase2e3b8_transition_fea_load_package_v01.py
+FULL                 PHASE2E3B9         phase2e3b9_fea_convergence_closeout_v01.py
+STRUCTURED_ONLY      PHASE2E3B9         phase2e3b9_generate_primary106_submodel.py
+    -> Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+       nearby artifacts: phase2e3b9_primary106_profile.csv
+FULL                 PHASE2E3B9A        phase2e3b9a_large_deflection_closeout_v01.py
+
+B14A SOURCE / DOCUMENTATION GATE
+----------------------------------------------------------------------------------------------------------------------------
+B14A Python source found:          NO
+B14A structured result found:      NO
+B14A narrative summary found:      NO
+
+Frozen-marker trace:
+  SUP_BRACE_RX (brace support identifier): NOT FOUND
+  16.856       (governing combined ultimate Mx [kN*m]): NOT FOUND
+  3.9128       (force-only contribution [kN*m]): NOT FOUND
+  12.943       (moment-only contribution [kN*m]): NOT FOUND
+
+B14A DOCUMENTATION GATE: REVIEW REQUIRED
+Do NOT make B14B source-connected by copying B14A result numbers from chat.
+First identify/restore the missing B14A source/result/summary artifact(s).
+
+RECOMMENDED CLEANUP ORDER
+----------------------------------------------------------------------------------------------------------------------------
+  1. [NARRATIVE_ONLY] current_design\phase2e3b13c_build_geometry_portable_v2.py
+     Narrative summary exists, but no machine-readable result artifact was found.
+  2. [STRUCTURED_ONLY] phase2_barrel_sizing.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+  3. [STRUCTURED_ONLY] phase2_bushing_material_gland.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+  4. [STRUCTURED_ONLY] phase2_gland_retainer_sizing.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+  5. [STRUCTURED_ONLY] phase2_internal_loads.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+  6. [STRUCTURED_ONLY] phase2_lower_barrel_boss_sizing.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+  7. [STRUCTURED_ONLY] phase2_packaging_overlap.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+  8. [STRUCTURED_ONLY] phase2_piston_sizing.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+  9. [DECLARED_MISSING] phase2_traceability_audit_v04.py
+     At least one source-declared output file is missing.
+ 10. [STRUCTURED_ONLY] phase2_upper_brace_sizing.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+ 11. [STRUCTURED_ONLY] phase2_upper_trunnion_sizing.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+ 12. [STRUCTURED_ONLY] phase2e1_lower_end_architecture_v04.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+ 13. [STRUCTURED_ONLY] phase2e2_metering_upper_head_layout_v04.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+ 14. [STRUCTURED_ONLY] phase2e2_oleo_cavity_packaging_v03.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+ 15. [STRUCTURED_ONLY] phase2e2b_upper_head_closure_audit_v03.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+ 16. [STRUCTURED_ONLY] phase2e2c_fluid_continuity_closure_finalize_v01.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+ 17. [DECLARED_MISSING] phase2e3b10_upper_head_trunnion_integration.py
+     At least one source-declared output file is missing.
+ 18. [NARRATIVE_ONLY] phase2e3b12_generate_integrated_model.py
+     Narrative summary exists, but no machine-readable result artifact was found.
+ 19. [DECLARED_MISSING] phase2e3b7a_expanded_transition_robustness_trade_v01.py
+     At least one source-declared output file is missing.
+ 20. [STRUCTURED_ONLY] phase2e3b9_generate_primary106_submodel.py
+     Structured results exist, but no persisted TXT/MD summary was found. Script prints results; console output may never have been saved.
+
+NOTE
+----------------------------------------------------------------------------------------------------------------------------
+This is a filesystem/documentation audit only. A FULL status means the calculation
+has source + persisted result artifacts; it does not independently certify the math.
+============================================================================================================================

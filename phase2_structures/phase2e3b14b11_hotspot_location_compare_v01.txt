@@ -1,0 +1,24 @@
+PHASE 2E3-B14B-11 — HOTSPOT LOCATION COMPARISON V0.1
+
+Old B14B-10 sharp-root peak:
+  stress = 415.490 MPa
+  xyz    = (-5.025296, 53.190953, 965.183876) mm
+
+R6 first-screen peak:
+  stress = 433.410 MPa
+  xyz    = (-9.542205, 52.530840, 967.788613) mm
+
+Coordinate shift:
+  dx = -4.516909 mm
+  dy = -0.660113 mm
+  dz = +2.604737 mm
+  3-D distance = 5.255746 mm
+
+Stress change:
+  +4.312980 %
+
+Interpretation:
+The R6 first-screen maximum remains in the same local front/root-junction neighborhood
+as the old sharp-root hotspot, shifted only a few millimetres. Therefore the first R6
+screen has not eliminated the governing local stress concentration. A controlled local
+mesh study on the R6 blend is required before comparing fillet candidates.

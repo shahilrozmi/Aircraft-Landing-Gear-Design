@@ -1,0 +1,7 @@
+parameter,value,units
+current_local_peak,732.45,MPa
+generic_7075_yield_screen,505.0,MPa
+stress_reduction_to_yield,31.053314219400644,%
+target_yield_margin,0.1,-
+stress_target_for_ms_y_plus_0p10,459.09090909090907,MPa
+stress_reduction_to_ms_y_plus_0p10,37.32119474490968,%

@@ -1,0 +1,9 @@
+item,status,reason
+GEAR_SIDE_HORN_ROOT,OPEN,"The 260 mm physical radial arm implies a substantial torque arm/horn. Root thickness, width, fillet and local 7075 load path are not yet defined."
+CLEVIS_EAR_BENDING,OPEN,"Ear root stand-off / root section is not frozen, so clevis-ear bending cannot yet be calculated honestly."
+7075_LUG_ALLOWABLES,OPEN,"Product form, temper-specific bearing/net/shear-out allowables are not frozen; tensile yield is not substituted as a bearing allowable."
+AIRFRAME_SIDE_FITTING,OPEN,"Airframe clevis material, thickness, root geometry and attachment to primary structure are not yet defined."
+BRACE_END_FITTING_TO_TUBE,OPEN,The 44 x 20 mm eye cannot simply be assumed to merge into a 25 x 3 mm tube; machined/forged end fitting and joining method must be defined.
+FIT_WEAR_FRETTING,OPEN,"Pin/bushing fit, lubrication, fretting and wear are detail-design items."
+FATIGUE_FRACTURE,OPEN,Static screens do not close fatigue or fracture mechanics.
+PHYSICAL_FEA_REPLACEMENT,OPEN,SUP_BRACE_RX must later be removed and replaced by a pin-ended axial brace at the actual B/A pin centers. Journal reactions must then be re-solved.

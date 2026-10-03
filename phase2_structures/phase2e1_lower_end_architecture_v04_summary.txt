@@ -1,0 +1,127 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e1_lower_end_architecture_v04.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+PHASE 1 SOURCE RESOLVED
+--------------------------------------------------------------------------------------------------------------
+File: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_loads\phase1_load_envelope.csv
+Columns: Case, Fx_lim, Fy_lim, Fz_lim, Fx_ult, Fy_ult, Fz_ult
+
+PHASE 2D PACKAGING SOURCE RESOLVED
+--------------------------------------------------------------------------------------------------------------
+File: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_packaging_overlap.csv
+hL column:                  hL_mm
+Spacing column:             spacing_mm
+hU column:                  hU_mm
+Physical reserve column:    physical_lower_surface_reserve_mm
+Virtual reserve column:     virtual_lower_surface_reserve_mm
+==============================================================================================================
+ PHASE 2E1 — AXLE-TO-PISTON LOWER-END ARCHITECTURE V0.4
+==============================================================================================================
+
+SOURCE FILES
+--------------------------------------------------------------------------------------------------------------
+Phase 1 loads:              C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_loads\phase1_load_envelope.csv
+Phase 2D packaging:         C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_packaging_overlap.csv
+
+LOCKED BASELINE PRESERVED
+--------------------------------------------------------------------------------------------------------------
+Piston:                     58.0 x 4.0 mm
+Axle root:                  50.0 x 8.0 mm
+Wheel offset e:             120.0 mm
+Material:                   300M steel
+
+PHASE 2E1 WORKING ARCHITECTURE
+--------------------------------------------------------------------------------------------------------------
+Integral knuckle envelope:  80.0 mm max
+Full-size node upper extent: 30.0 mm above A
+58 mm piston restored by:   50.0 mm above A
+Exposed axle to wheel ctr:  80.0 mm
+Piston bore blind end:      40.0 mm above A
+Axle bore blind end:        12.0 mm outboard of A
+Local Kt screening factor:  1.50
+
+PACKAGING CHECK
+--------------------------------------------------------------------------------------------------------------
+Physical guide reserve read from D4 CSV: 60.000 mm
+Transition ends above A at:             50.000 mm
+Physical clearance remaining:           +10.000 mm
+Physical-stroke knuckle/bushing clearance: PASS
+Virtual-stroke diagnostic clearance:     -0.779 mm
+NOTE: virtual-stroke clearance is diagnostic only; the physical design stroke remains authoritative.
+
+GOVERNING STRESS CHECKS
+--------------------------------------------------------------------------------------------------------------
+                      check load_level case vm_MPa allowable_MPa      MS status
+ AXLE_A_BASELINE_REGRESSION      limit LC2A  320.8        1517.0  +3.729   PASS
+ AXLE_A_BASELINE_REGRESSION   ultimate LC2A  481.2        1862.0  +2.870   PASS
+AXLE_KNUCKLE_FACE_KT_SCREEN      limit LC4+  372.8        1517.0  +3.069   PASS
+AXLE_KNUCKLE_FACE_KT_SCREEN   ultimate LC4+  559.2        1862.0  +2.330   PASS
+  KNUCKLE_BIG_END_KT_SCREEN      limit LC2A  125.2        1517.0 +11.112   PASS
+  KNUCKLE_BIG_END_KT_SCREEN   ultimate LC2B  187.9        1862.0  +8.911   PASS
+ PISTON_SMALL_END_KT_SCREEN      limit LC2A  627.2        1517.0  +1.419   PASS
+ PISTON_SMALL_END_KT_SCREEN   ultimate LC2B  940.9        1862.0  +0.979   PASS
+
+GEOMETRIC NON-INTERSECTION / LIGAMENT CHECKS
+--------------------------------------------------------------------------------------------------------------
+                                     check value_mm criterion         status
+                PHYSICAL_BUSHING_CLEARANCE   10.000    > 0 mm PASS_GEOMETRIC
+          PISTON_BORE_TO_AXLE_OD_AXIAL_WEB   15.000    > 0 mm PASS_GEOMETRIC
+AXLE_BORE_TO_STRUT_CENTERLINE_SOLID_BRIDGE   12.000    > 0 mm PASS_GEOMETRIC
+      RADIAL_WALL_AT_PISTON_BORE_BLIND_END    9.500    > 0 mm PASS_GEOMETRIC
+          MIN_BORED_TRANSITION_RADIAL_WALL    4.000    > 0 mm PASS_GEOMETRIC
+
+Kt ROBUSTNESS — GOVERNING CAPACITY
+--------------------------------------------------------------------------------------------------------------
+            check load_level case Kt_to_allowable Kt_capacity_ratio_vs_screen
+AXLE_KNUCKLE_FACE      limit LC4+           6.204                       4.136
+AXLE_KNUCKLE_FACE   ultimate LC4+           5.071                       3.380
+  KNUCKLE_BIG_END      limit LC2A          19.309                      12.873
+  KNUCKLE_BIG_END   ultimate LC2B          15.781                      10.521
+ PISTON_SMALL_END      limit LC2B           3.758                       2.506
+ PISTON_SMALL_END   ultimate LC2B           3.059                       2.039
+
+Kt SWEEP — PISTON SMALL END (GOVERNING SECTION CANDIDATE)
+--------------------------------------------------------------------------------------------------------------
+load_level   Kt case vm_MPa allowable_MPa     MS status
+     limit 1.00 LC2B  430.3        1517.0 +2.526   PASS
+     limit 1.25 LC2B  528.7        1517.0 +1.869   PASS
+     limit 1.50 LC2B  627.2        1517.0 +1.419   PASS
+     limit 1.75 LC2B  725.7        1517.0 +1.090   PASS
+     limit 2.00 LC2B  824.2        1517.0 +0.840   PASS
+     limit 2.25 LC2A  922.7        1517.0 +0.644   PASS
+     limit 2.50 LC2B 1021.2        1517.0 +0.485   PASS
+     limit 3.00 LC2B 1218.2        1517.0 +0.245   PASS
+  ultimate 1.00 LC2A  645.4        1862.0 +1.885   PASS
+  ultimate 1.25 LC2B  793.1        1862.0 +1.348   PASS
+  ultimate 1.50 LC2B  940.9        1862.0 +0.979   PASS
+  ultimate 1.75 LC2B 1088.6        1862.0 +0.710   PASS
+  ultimate 2.00 LC2A 1236.4        1862.0 +0.506   PASS
+  ultimate 2.25 LC2B 1384.1        1862.0 +0.345   PASS
+  ultimate 2.50 LC2A 1531.9        1862.0 +0.216   PASS
+  ultimate 3.00 LC2A 1827.4        1862.0 +0.019   PASS
+
+OUTPUT FILES
+--------------------------------------------------------------------------------------------------------------
+Detailed checks:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e1_lower_end_checks.csv
+Geometry / packaging:       C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e1_lower_end_geometry.csv
+Geometry checks:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e1_geometry_checks.csv
+Kt sweep:                   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e1_kt_sweep.csv
+Kt capacity:                C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e1_kt_capacity.csv
+
+INTERPRETATION
+--------------------------------------------------------------------------------------------------------------
+Phase 2E1 V0.4 now checks both nominal structural response and robustness to assumed local stress concentration. Geometric PASS means the blind bores / transition do not intersect and retain positive material; it is not a local 3D strength certification. The forged branch intersection, blind-bore ends, and fillets still require detailed CAD + ANSYS validation later.
+==============================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

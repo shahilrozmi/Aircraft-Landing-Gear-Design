@@ -1,0 +1,7 @@
+check,level,demand_MPa,screen_allowable_MPa,margin,status,note
+net_section_nominal,limit,93.64444444444445,505.0,4.392738490745135,PASS_MATERIAL_SCREEN,Generic 7075-T6 tensile-yield screen only. Hole Kt and formal lug allowable treatment remain open.
+net_section_nominal,ultimate,140.46666666666667,570.0,3.057902230659706,PASS_MATERIAL_SCREEN,Generic 7075-T6 tensile-strength screen only. Hole Kt and formal lug allowable treatment remain open.
+shear_out_nominal,limit,53.51111111111111,291.56188594076104,4.448623283776681,PASS_ISOTROPIC_VM_SCREEN,"Sy/sqrt(3) is an isotropic material screen, NOT a product-form empirical lug shear-out allowable."
+shear_out_nominal,ultimate,80.26666666666667,329.0896534380867,3.0999541541289872,PASS_ISOTROPIC_VM_SCREEN,"Su/sqrt(3) is an isotropic material screen, NOT a product-form empirical lug shear-out allowable."
+projected_bearing,limit,124.85925925925926,,,OPEN_ALLOWABLE,Do not compare lug bearing stress with tensile yield.
+projected_bearing,ultimate,187.2888888888889,,,OPEN_ALLOWABLE,Product-form/temper-specific bearing allowable is still required.

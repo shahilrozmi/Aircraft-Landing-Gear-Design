@@ -1,0 +1,33 @@
+PHASE 2E3-B14B-11E — R8 FILLET CONVERGENCE BASELINE V0.1
+
+Model
+  Single-body 7075 local submodel
+  Imported displacement boundary condition on all artificial cut faces
+  Quadratic elements
+  R8 fillet scoped result: 4 physical fillet/root faces
+
+Baseline mesh
+  R8 local size:                 1.500 mm
+  Nodes:                         12090
+  Elements:                      6796
+
+ANSYS results
+  R8 fillet VM minimum:          6.9896 MPa
+  R8 fillet VM maximum:          442.62 MPa
+  R8 fillet VM average:          95.227 MPa
+  Maximum node:                  575
+  Maximum location X/Y/Z:        39.974671, 41.798669, 994.421519 mm
+  Total deformation maximum:     0.73252 mm
+
+Preliminary generic 7075 screening only
+  Yield screen:                  505.0 MPa
+  Ultimate screen:               572.0 MPa
+  Yield margin:                  +0.1409
+  Ultimate margin:               +0.2923
+
+DISPOSITION
+  This is the first usable R8 FILLET-SCOPED convergence point.
+  Do not freeze the stress or margins yet.
+  Next run: change ONLY the R8 local fillet/root sizing from 1.5 mm to 1.0 mm.
+  Keep geometry, parent mapping, material, global mesh settings and result scoping unchanged.
+  A 0.75 mm run is required only if the 1.0 mm result has not stabilized adequately.

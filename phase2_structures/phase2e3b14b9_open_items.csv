@@ -1,0 +1,8 @@
+item,status,reason
+SADDLE_ROOT_EXTERNAL_FILLET,OPEN_NOT_FROZEN,V0.1 uses an embedded linear ruled loft without a separately selected external root fillet. The B14B-7 Kt=3 screen remains the conservative pre-FEA basis. Local FEA must establish a practical blend/fillet.
+CLEVIS_SLOT_ROOT_DETAIL,WORKING_NOT_FROZEN,"V0.1 uses a U-slot root radius equal to half the source slot width (R=11.000 mm). This is a clean first-pass CAD/FEA choice, not a final manufacturing detail."
+LUG_BEARING_ALLOWABLE,OPEN,B14B-8 reports projected bearing demand but no valid product-form-specific 7075 lug bearing allowable is frozen.
+BRACE_EYE_END_FITTING,OPEN,"The gear-side clevis is now modeled, but the 44 mm brace eye, 25x3 tube and joining method are not added in B14B-9."
+AIRFRAME_SIDE_JOINT,OPEN,The opposite brace-end fitting and airframe structural attachment remain outside the landing-gear head CAD.
+PHYSICAL_BRACE_ANSYS_REPLACEMENT,NEXT,"After accepting B14B-9 geometry, remove SUP_BRACE_RX and replace it with the actual pin-ended axial brace. Recompute journal reactions and local head/horn stresses."
+FATIGUE_FRETTING_WEAR_FRACTURE,OPEN,The present work is static preliminary geometry and strength screening only.

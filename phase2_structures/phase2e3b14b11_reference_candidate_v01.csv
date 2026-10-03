@@ -1,0 +1,2 @@
+working_radius_mm,selection_status,selection_rule,root_width_mm,root_height_mm,available_symmetric_extension_each_side_mm,nominal_radius_budget_reserve_mm,source_passage_clearance_mm,baseline_brace_force_N,baseline_max_deformation_mm,baseline_sharp_root_vm_MPa
+6.0,FIRST_CAD_FEA_BUILD_NOT_FROZEN,Largest initial radius candidate retaining at least 2.0 mm nominal reserve within the B14B-7 symmetric added-height budget. FEA decides final radius.,85.0,95.0,8.5,2.5,6.666228067138025,-67231.0,5.122,415.55

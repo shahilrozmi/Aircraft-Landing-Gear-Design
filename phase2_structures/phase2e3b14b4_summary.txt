@@ -1,0 +1,70 @@
+==============================================================================================================================
+ PHASE 2E3-B14B-4 V0.1 — HORN ROOT / CLEVIS / END-FITTING DETAIL TRADE
+==============================================================================================================================
+
+SOURCE CONNECTION
+------------------------------------------------------------------------------------------------------------------------------
+B14A freeze:      C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14a_freeze_record.csv
+B14B geometry:    C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b_working_geometry.csv
+Frozen B14A Mx:   -16.856000000 kN*m
+B14B a_perp:      250.000000 mm
+
+PHYSICAL BRACE / HORN INTERFACE DEMAND
+------------------------------------------------------------------------------------------------------------------------------
+Ultimate brace axial force: -67.424000 kN
+Gear-pin force [Fx,Fy,Fz]:  [-18.519372, -0.000000, -64.830769] kN
+Moment at trunnion center:   [Mx,My,Mz] = [-16.856000, +0.000000, +4.815037] kN*m
+
+The root trade uses these FULL interface moments and therefore does not require an invented y-direction head radius.
+
+7075-T6 GROSS-SECTION SCREEN
+------------------------------------------------------------------------------------------------------------------------------
+Generic screen properties: Sy=505.0 MPa, Su=570.0 MPa
+These are tensile material screens only; they are NOT lug bearing/certification allowables.
+
+Reference Kt:                 2.50
+Reference reserve rule:       MS_limit >= 0.20, MS_ultimate >= 0.10
+Reference equivalent section: bx=65.0 mm x hz=105.0 mm
+Reference area:               6825.0 mm^2
+Reference VM, limit:          344.178 MPa
+Reference yield MS:           +0.467
+Reference VM, ultimate:       516.267 MPa
+Reference ultimate MS:        +0.104
+STATUS: REFERENCE_FOR_CAD_FEA_NOT_FROZEN
+
+GEAR-SIDE CLEVIS NOMINAL SCREENS
+------------------------------------------------------------------------------------------------------------------------------
+Ear thickness:                10.0 mm
+Lug width:                    42.0 mm
+Pin-center to free edge:      30.0 mm
+Net-section ultimate demand:  140.467 MPa
+Shear-out ultimate demand:    80.267 MPa
+Bearing ultimate demand:      187.289 MPa  [ALLOWABLE OPEN]
+
+300M EYE-TO-TUBE SPIGOT SCREEN
+------------------------------------------------------------------------------------------------------------------------------
+Tube ID:                      19.000 mm
+Working spigot:               18.000 mm solid
+Radial insertion clearance:   0.500 mm
+Axial Kt screen:              2.50
+Limit stress:                 441.599 MPa
+Yield MS:                     +2.435
+Ultimate stress:              662.399 MPa
+Ultimate MS:                  +1.811
+The load-transfer/joining method remains OPEN.
+
+DISPOSITION
+------------------------------------------------------------------------------------------------------------------------------
+B14B-4 provides a CAD envelope and closes several nominal strength screens without inventing unsupported lug allowables.
+The equivalent horn section and 18 mm spigot are WORKING/REFERENCE geometry only, not a final freeze.
+Next: convert the reference envelope into an actual horn/clevis CAD definition, then build the physical-brace ANSYS model.
+
+OUTPUTS
+------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b4_horn_root_trade.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b4_horn_reference_candidate.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b4_clevis_nominal_screens.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b4_end_fitting_spigot_trade.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b4_open_items.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b4_summary.txt
+==============================================================================================================================

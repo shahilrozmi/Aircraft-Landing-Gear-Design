@@ -1,0 +1,78 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2_piston_sizing.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+==========================================================================================
+ PHASE 2D1 — LOWER PISTON PRELIMINARY STRUCTURAL SIZING
+==========================================================================================
+
+--- INPUT CONNECTION ---
+Phase 2C result file:             C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_internal_loads.csv
+
+--- MATERIAL BASELINE: 300M STEEL ---
+E:                               205.0 GPa
+G:                               80.0 GPa
+Poisson ratio:                    0.28
+Density:                          7870 kg/m^3
+Yield screening strength:         1517 MPa
+Ultimate screening strength:      1862 MPa
+
+--- GEOMETRY SCREEN ---
+Baseline OD:                      58.0 mm
+Critical-section h sweep:         200, 250, 300, 350 mm
+Wall sweep:                       1.50 to 8.00 mm
+Buckling K:                       2.0 (cantilever screening)
+
+--- MINIMUM PASSING WALL AT EACH h ---
+  h (mm)  t_min (mm)    Limit VM      Ult VM      Pcr kN    Gov LC
+------------------------------------------------------------------
+     200        1.75      1092.0      1638.0       433.6      LC4+
+     250        1.75      1190.7      1786.1       413.6      LC4+
+     300        2.00      1142.9      1714.3       442.0      LC4+
+     350        2.00      1230.5      1845.7       408.9      LC4+
+
+--- WORKING CANDIDATE: 58 mm OD x 4 mm WALL ---
+Critical-section distance h:      350 mm
+Inner diameter:                   50.0 mm
+Area:                             678.6 mm^2
+I:                                248701 mm^4
+J:                                497402 mm^4
+Mass per metre:                   5.340 kg/m
+
+Limit governing case:             LC4+
+Limit von Mises stress:           682.1 MPa
+Limit yield margin:               +1.224
+
+Ultimate governing case:          LC4+
+Ultimate VM screening stress:     1023.2 MPa
+Ultimate strength margin:         +0.820
+
+Transverse shear screen, limit:   26.2 MPa
+Transverse shear screen, ult:     39.2 MPa
+
+Buckling method:                  JOHNSON
+Slenderness KL/r:                 36.56
+Transition Cc:                    51.65
+Critical buckling load:           771.4 kN
+Buckling margin:                  +19.555
+
+Preliminary screen:               PASS
+
+NOTE: 4 mm is a working preliminary wall, not a frozen final thickness.
+Local bushing loads, stress concentrations, fatigue, and fracture checks come later.
+
+Regression checks:                PASS
+CSV written to:                   phase2_piston_sizing.csv
+==========================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

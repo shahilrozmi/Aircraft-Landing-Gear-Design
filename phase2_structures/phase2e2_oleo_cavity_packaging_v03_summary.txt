@@ -1,0 +1,134 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e2_oleo_cavity_packaging_v03.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+PHASE 1 OLEO INPUT SOURCE RESOLVED
+--------------------------------------------------------------------------------------------------------------
+File: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_model_development\landing_dynamic_v04_2dof.py
+
+PHASE 2D PACKAGING SOURCE RESOLVED
+--------------------------------------------------------------------------------------------------------------
+File: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_packaging_overlap.csv
+Preferred row: hL=250 mm, spacing=150 mm, hU=400 mm
+
+PHASE 2E1 GEOMETRY SOURCE RESOLVED
+--------------------------------------------------------------------------------------------------------------
+File: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e1_lower_end_geometry.csv
+
+PHASE 1 LOAD ENVELOPE SOURCE RESOLVED
+--------------------------------------------------------------------------------------------------------------
+File: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_loads\phase1_load_envelope.csv
+==============================================================================================================
+ PHASE 2E2 — UPPER BARREL / INTERNAL CAVITY PACKAGING V0.3
+==============================================================================================================
+
+SOURCE CONNECTION
+--------------------------------------------------------------------------------------------------------------
+Phase 1 oleo source:        C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_model_development\landing_dynamic_v04_2dof.py
+Phase 2D packaging CSV:     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_packaging_overlap.csv
+Phase 2E1 geometry CSV:     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e1_lower_end_geometry.csv
+
+WORKING PHYSICAL ARCHITECTURE
+--------------------------------------------------------------------------------------------------------------
+Gas system:                  upper nitrogen/oil chamber; lower hydraulic chamber (no separator piston in V0.3)
+Moving member:               hollow 58 x 4 mm piston tube
+Metering concept:            relative metering-pin/orifice motion between telescoping members
+Lower piston cavity:         hydraulic chamber / reservoir; E1 blind lower end retained
+Outer working cavity:        64 mm ID upper barrel
+
+LOCKED / SOURCE GEOMETRY
+--------------------------------------------------------------------------------------------------------------
+Smooth barrel:               64.0 mm ID / 74.0 mm OD
+Piston:                      58.0 mm OD / 50.0 mm ID
+Radial running clearance:    3.000 mm / side
+Bronze guide length:         20.0 mm
+A -> piston top length:      460.000 mm
+E1 bore blind end:           40.000 mm above A
+Usable internal bore length: 420.000 mm
+Internal piston volume:      824.7 cm^3
+
+RECONSTRUCTED STROKE STATES
+--------------------------------------------------------------------------------------------------------------
+                    state compression_mm piston_top_intrusion_above_U_mm axle_A_above_U_mm piston_bore_blind_end_above_U_mm gas_model_length_mm gas_volume_cm3 gas_equivalent_height_in_64mm_barrel_mm gas_pressure_abs_MPa gas_only_min_closure_above_U_mm
+           FULL_EXTENSION          0.000                         -65.000          -525.000                         -485.000             350.000          924.7                                 287.451                2.336                         222.451
+   LC0_STATIC_EQUILIBRIUM         55.368                          -9.632          -469.632                         -429.632             294.632          778.4                                 241.978                2.922                         232.346
+PHASE2D_NOMINAL_REFERENCE        206.338                         141.338          -318.662                         -278.662             143.662          379.6                                 117.988                7.434                         259.326
+     FULL_PHYSICAL_STROKE        230.000                         165.000          -295.000                         -255.000             120.000          317.0                                  98.555                9.393                         263.555
+       VIRTUAL_DIAGNOSTIC        240.779                         175.779          -284.221                         -244.221             109.221          288.6                                  89.702               10.616                         265.481
+
+GEOMETRY / MODEL CONSISTENCY CHECKS
+--------------------------------------------------------------------------------------------------------------
+                                    check   value         units               criterion          status
+             PHASE1_VS_E1_PISTON_DIAMETER   0.000 mm difference |difference| <= 0.10 mm            PASS
+BARREL_TO_PISTON_RADIAL_RUNNING_CLEARANCE   3.000   mm per side                  > 0 mm            PASS
+              PISTON_INTERNAL_BORE_LENGTH 420.000            mm                  > 0 mm            PASS
+            PHYSICAL_GAS_LENGTH_REMAINING 120.000            mm                  > 0 mm            PASS
+             VIRTUAL_GAS_LENGTH_REMAINING 109.221            mm       > 0 mm diagnostic PASS_DIAGNOSTIC
+     PHYSICAL_LOWER_GUIDE_SURFACE_RESERVE  60.000            mm                  > 0 mm            PASS
+            FULL_EXTENSION_RECONSTRUCTION   0.000     mm spread              <= 0.50 mm            PASS
+
+STATIC-POSITION DIAGNOSTIC
+--------------------------------------------------------------------------------------------------------------
+Phase 2D nominal compression:         206.338 mm
+Physical stroke:                      230.000 mm
+Remaining stroke at Phase 2D nominal: 23.662 mm
+Nominal stroke utilization:           89.71%
+LC0 vertical load from Phase 1 CSV:   7.453 kN
+Gas-only static equilibrium stroke:   55.368 mm
+Phase2D nominal - gas static:          +150.970 mm
+Disposition:                          Phase 2D nominal is retained as a PACKAGING REFERENCE ONLY; LC0 gas equilibrium is used as the physical zero-velocity static state in E2.
+
+PHYSICAL VOLUME-BOUND AUDIT
+--------------------------------------------------------------------------------------------------------------
+Gas-only closure = lower bound. Gas + full Phase-1-equivalent swept-volume closure = conservative upper packaging bound.
+                    state phase1_equivalent_swept_volume_cm3 conservative_reservoir_remaining_cm3 conservative_reservoir_capacity_status gas_only_lower_bound_closure_above_U_mm gas_plus_equiv_transfer_upper_bound_closure_above_U_mm
+           FULL_EXTENSION                                0.0                                824.7                          PASS_CAPACITY                                   222.5                                                  222.5
+   LC0_STATIC_EQUILIBRIUM                              146.3                                678.4                          PASS_CAPACITY                                   232.3                                                  277.8
+PHASE2D_NOMINAL_REFERENCE                              545.2                                279.5                          PASS_CAPACITY                                   259.3                                                  428.8
+     FULL_PHYSICAL_STROKE                              607.7                                217.0                          PASS_CAPACITY                                   263.6                                                  452.5
+       VIRTUAL_DIAGNOSTIC                              636.2                                188.5                          PASS_CAPACITY                                   265.5                                                  463.2
+
+PHASE 2E2 CONSERVATIVE INTERNAL AXIAL ENVELOPE
+--------------------------------------------------------------------------------------------------------------
+                                     quantity value_mm      governing_state                classification
+   gas_only_minimum_internal_envelope_above_U  263.555 FULL_PHYSICAL_STROKE LOWER_BOUND_NOT_FINAL_CLOSURE
+conservative_volume_internal_envelope_above_U  452.451 FULL_PHYSICAL_STROKE     PHASE2E2_WORKING_ENVELOPE
+
+NOTE: the conservative envelope is NOT yet the final upper-closure station. It is the minimum axial volume envelope before closure thickness, detailed metering hardware, manufacturing clearance and E3 trunnion packaging are added.
+
+UPPER-CLOSURE ENVELOPE SWEEP
+--------------------------------------------------------------------------------------------------------------
+The reserve below is NOT a locked oil height. It is a transparent axial allowance added above the gas-only minimum for oil, metering hardware and closure clearance.
+non_gas_axial_reserve_mm governing_physical_state required_physical_closure_above_U_mm required_virtual_closure_above_U_mm virtual_minus_physical_mm                    classification
+                     0.0     FULL_PHYSICAL_STROKE                                263.6                               265.5                      +1.9 WORKING_ENVELOPE_SWEEP_NOT_LOCKED
+                    25.0     FULL_PHYSICAL_STROKE                                288.6                               290.5                      +1.9 WORKING_ENVELOPE_SWEEP_NOT_LOCKED
+                    50.0     FULL_PHYSICAL_STROKE                                313.6                               315.5                      +1.9 WORKING_ENVELOPE_SWEEP_NOT_LOCKED
+                    75.0     FULL_PHYSICAL_STROKE                                338.6                               340.5                      +1.9 WORKING_ENVELOPE_SWEEP_NOT_LOCKED
+                   100.0     FULL_PHYSICAL_STROKE                                363.6                               365.5                      +1.9 WORKING_ENVELOPE_SWEEP_NOT_LOCKED
+
+OUTPUT FILES
+--------------------------------------------------------------------------------------------------------------
+Stroke / cavity states:     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_stroke_cavity_states.csv
+Closure reserve sweep:      C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_closure_reserve_sweep.csv
+Geometry checks:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_geometry_checks.csv
+Architecture inputs:        C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_architecture_inputs.csv
+Physical volume bounds:     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_volume_bounds.csv
+Static equilibrium diag.:   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_static_equilibrium_diagnostic.csv
+E2 design envelope:         C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_design_envelope.csv
+
+INTERPRETATION BOUNDARY
+--------------------------------------------------------------------------------------------------------------
+V0.3 resolves the Phase 2D nominal-state ambiguity: it remains a packaging reference only, while LC0 gas-only equilibrium is the E2 zero-velocity static state. The Phase 1 gas model remains an EFFECTIVE pneumatic model. The gas-only result is a lower axial bound and the gas-plus-equivalent-transfer result is a conservative upper bound. The conservative physical envelope may now be carried forward as an E2 working requirement, but the final closure station still requires closure thickness, detailed metering hardware, manufacturing clearance and E3 trunnion packaging.
+==============================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

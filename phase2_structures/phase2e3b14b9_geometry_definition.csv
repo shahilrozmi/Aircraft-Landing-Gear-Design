@@ -1,0 +1,26 @@
+feature,parameter,value,units,classification,source
+current_parent,parent_STEP,phase2e3_b13f_3c_d44_r1p5_t3p5_left_collar_partial_relief.step,-,VALIDATED_B13F3C_PARENT,phase2e3_b13f3c_current_parent_record.csv
+coordinate_frame,trunnion_center_global,"0.000000000,0.000000000,1012.780000000",mm,SOURCE_CURRENT_PARENT_RECORD,phase2e3_b13f3c_current_parent_record.csv
+saddle_root,center_global,"0.000000000,31.666228067,1012.780000000",mm,SOURCE_B14B7_PLUS_PARENT_TRANSFORM,phase2e3b14b7_geometry_handoff.csv
+saddle_root,equivalent_width_x,85.0,mm,WORKING_NOT_FROZEN,phase2e3b14b7_geometry_handoff.csv
+saddle_root,equivalent_height_z,95.0,mm,WORKING_NOT_FROZEN,phase2e3b14b7_geometry_handoff.csv
+saddle_root,embed_depth_from_boss_tangent,21.333771932861975,mm,SOURCE_B14B7,phase2e3b14b7_geometry_handoff.csv
+saddle_root,source_min_passage_clearance,6.666228067138025,mm,SOURCE_B14B7,phase2e3b14b7_geometry_handoff.csv
+horn_taper,type,LINEAR_RULED_LOFT,-,WORKING_CAD_FEA_ASSUMPTION,B14B9
+horn_taper,length,203.33377193286196,mm,DERIVED_SOURCE_CONNECTED,phase2e3b14b8_cad_handoff.csv
+clevis_throat,center_global,"0.000000000,235.000000000,1012.780000000",mm,SOURCE_B14B8_PLUS_PARENT_TRANSFORM,phase2e3b14b8_cad_handoff.csv
+clevis,plate_width_along_brace_axis,60.0,mm,WORKING_NOT_FROZEN,phase2e3b14b8_cad_handoff.csv
+clevis,structural_grip_along_pin_axis,42.0,mm,WORKING_NOT_FROZEN,phase2e3b14b8_cad_handoff.csv
+clevis,ear_thickness,10.0,mm,WORKING_NOT_FROZEN,phase2e3b14b8_cad_handoff.csv
+clevis,slot_width_along_pin_axis,22.0,mm,WORKING_NOT_FROZEN,phase2e3b14b8_cad_handoff.csv
+clevis,slot_root_radius,11.0,mm,WORKING_CAD_FEA_DERIVED_NOT_FROZEN,B14B9 = slot_width/2
+clevis,free_end_y_global,290.0,mm,SOURCE_B14B8_PLUS_PARENT_TRANSFORM,phase2e3b14b8_cad_handoff.csv
+pin_bore,center_global,"0.000000000,260.000000000,1012.780000000",mm,SOURCE_B14B8_PLUS_PARENT_TRANSFORM,phase2e3b14b8_cad_handoff.csv
+pin_bore,diameter,18.0,mm,WORKING_NOT_FROZEN,phase2e3b14b8_cad_handoff.csv
+joint_frame,horn_radial_e_h,"0.000000000000,1.000000000000,0.000000000000",-,SOURCE_B14B8,phase2e3b14b8_joint_frame.csv
+joint_frame,brace_axis_u_b,"0.274670324175,0.000000000000,0.961538461538",-,SOURCE_B14B8,phase2e3b14b8_joint_frame.csv
+joint_frame,pin_axis_e_p,"0.961538461538,0.000000000000,-0.274670324175",-,SOURCE_B14B8,phase2e3b14b8_joint_frame.csv
+mass_geometry,parent_head_volume,1847106.7677434036,mm^3,GEOMETRY_MEASURED,phase2e3_b13f_3c_d44_r1p5_t3p5_left_collar_partial_relief.step
+mass_geometry,standalone_horn_after_slot_and_pin_bore_volume,1078336.305109896,mm^3,GEOMETRY_MEASURED,B14B9
+mass_geometry,head_horn_embed_overlap_volume,108638.44745058799,mm^3,GEOMETRY_MEASURED,B14B9
+mass_geometry,final_modified_head_volume,2816804.625402712,mm^3,GEOMETRY_MEASURED,phase2e3b14b9_head_horn_clevis_v01.step

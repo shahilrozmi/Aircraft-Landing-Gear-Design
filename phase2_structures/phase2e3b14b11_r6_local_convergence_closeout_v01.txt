@@ -1,0 +1,52 @@
+PHASE 2E3-B14B-11 — R6 LOCAL ROOT CONVERGENCE CLOSEOUT V0.1
+
+LOCAL ROOT-MESH SEQUENCE
+------------------------
+3.0 mm : 411.230 MPa
+2.5 mm : 408.460 MPa
+2.0 mm : 407.520 MPa
+
+Successive stress changes:
+3.0 -> 2.5 mm : -0.673589 %
+2.5 -> 2.0 mm : -0.230133 %
+3.0 -> 2.0 mm : -0.902172 %
+
+2.0 mm vs sharp-root B14B-10 reference:
+407.520 MPa vs 415.550 MPa
+change = -1.932379 %
+
+GLOBAL RESPONSE AT 2.0 mm
+-------------------------
+Brace force        = -67.348000 kN
+Brace elongation   = -0.568420 mm
+Max deformation    = 5.147800 mm
+
+2.5 -> 2.0 mm:
+Brace force change = +0.000000 %
+Deformation change = +0.036923 %
+
+HOTSPOT
+-------
+2.0 mm hotspot:
+x = 4.756123 mm
+y = 53.219397 mm
+z = 965.195576 mm
+
+2.5 -> 2.0 mm hotspot-node shift = 9.785812 mm
+
+DISPOSITION
+-----------
+Successive 2.5 -> 2.0 mm stress change is 0.230133 %.
+PASS <2% criterion: True
+PASS <1% criterion: True
+
+R6 local root stress is CONVERGED ENOUGH FOR THIS DESIGN STAGE.
+Use 407.52 MPa as the current converged-design-stage R6 root stress result,
+not as a final certification value.
+
+The hotspot remains on the same smooth root-junction stress band, while the
+global brace force and deformation are stable.
+
+R6 currently reduces the reported root stress by 1.932% relative
+to the old sharp-root B14B-10 reference, but final fillet-radius selection still
+requires the planned radius trade (e.g. R4/R6/R8) under the same converged mesh method.

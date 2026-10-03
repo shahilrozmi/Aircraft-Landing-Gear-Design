@@ -1,0 +1,57 @@
+================================================================================================================================
+ PHASE 2E3-B14B-7 V0.1 — CURVED-BOSS SADDLE-ROOT REINFORCEMENT TRADE
+================================================================================================================================
+
+SOURCE CONNECTION
+--------------------------------------------------------------------------------------------------------------------------------
+B14A freeze:       C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14a_freeze_record.csv
+B14B geometry:     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b_working_geometry.csv
+B13C validation:   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\current_design\phase2e3b13c_geometry_validation.txt
+
+B13C HEAD GEOMETRY
+--------------------------------------------------------------------------------------------------------------------------------
+Outer boss:        Ø106.000 mm x 78.000 mm high
+Head passage:      Ø50.000 mm through
+
+PHYSICAL BRACE LOAD
+--------------------------------------------------------------------------------------------------------------------------------
+Ultimate brace force: -67.424000 kN
+Fx=-18.519372 kN, Fz=-64.830769 kN
+
+WORKING SADDLE-ROOT REFERENCE — NOT FROZEN
+--------------------------------------------------------------------------------------------------------------------------------
+Equivalent root section: 85.0 mm x 95.0 mm
+Root chord plane y:       31.666 mm
+Embed below y=+53 tangent: 21.334 mm
+Clearance to Ø50 passage: 6.666 mm
+Root-to-pin lever:         228.334 mm
+Added root height total:   17.000 mm
+If centered:               8.500 mm each side
+
+ROOT RESULTANTS
+--------------------------------------------------------------------------------------------------------------------------------
+Mx root ultimate: -14.803054 kN*m
+Mz root ultimate: +4.228598 kN*m
+
+7075-T6 GROSS-SECTION SCREEN
+--------------------------------------------------------------------------------------------------------------------------------
+Kt:                   3.00
+VM limit:             305.833 MPa
+MS limit:             +0.651
+VM ultimate:          458.749 MPa
+MS ultimate:          +0.243
+
+DISPOSITION
+--------------------------------------------------------------------------------------------------------------------------------
+A local reinforced saddle-root concept is geometrically and statically plausible under the current conservative screen.
+The selected section is a WORKING CAD/FEA reference only. It is not a final structural freeze.
+Next step: create the actual blended horn/clevis geometry from this handoff and then replace SUP_BRACE_RX with the physical brace in ANSYS.
+
+OUTPUTS
+--------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b7_saddle_root_trade.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b7_reference_candidate.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b7_geometry_handoff.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b7_open_items.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b14b7_summary.txt
+================================================================================================================================

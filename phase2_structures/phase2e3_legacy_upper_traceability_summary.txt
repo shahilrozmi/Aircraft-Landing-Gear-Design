@@ -1,0 +1,75 @@
+====================================================================================================================================
+ PHASE 2E3 — LEGACY UPPER-ATTACHMENT GEOMETRY / TRACEABILITY AUDIT V0.1
+====================================================================================================================================
+
+PRIMARY SOURCES
+------------------------------------------------------------------------------------------------------------------------------------
+B13C geometry validation: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\current_design\phase2e3b13c_geometry_validation.txt
+B13B V0.3 summary:        C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\current_design\phase2e3b13b_v03_summary.txt
+B13B V0.3 Python:         C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\current_design\phase2e3b13b_v03_axial_thrust_flange_sizing.py
+B10A retention Python:    C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b10a_retention_architecture_closeout.py
+B11 local-screen Python:  C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b11_upper_head_local_screens.py
+B2 trunnion Python:       C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b2_trunnion_coupled_sizing_v01.py
+
+B13C ACTUAL GEOMETRY
+------------------------------------------------------------------------------------------------------------------------------------
+Upper-head boss:          Ø106.000 x 78.000 mm high
+Head passage:             Ø50.000 mm through
+Continuous shaft:         Ø38.000 x 175.000 mm
+Bronze sleeve, each side: Ø50.000/Ø38.000 x 30.000 mm
+Bronze flange, each side: Ø60.000/Ø38.000 x 3.000 mm
+
+DIMENSIONAL CONSISTENCY
+------------------------------------------------------------------------------------------------------------------------------------
+PASS                 shaft_diameter_source_vs_B13C              actual=   38.000000 expected=   38.000000 mm
+PASS                 sleeve_OD_source_vs_B13C                   actual=   50.000000 expected=   50.000000 mm
+PASS                 sleeve_length_source_vs_B13C               actual=   30.000000 expected=   30.000000 mm
+PASS                 flange_OD_source_vs_B13C                   actual=   60.000000 expected=   60.000000 mm
+PASS                 flange_thickness_source_vs_B13C            actual=    3.000000 expected=    3.000000 mm
+PASS                 sleeve_ID_matches_shaft_diameter           actual=   38.000000 expected=   38.000000 mm
+PASS                 flange_ID_matches_shaft_diameter           actual=   38.000000 expected=   38.000000 mm
+PASS                 passage_diameter_matches_sleeve_OD         actual=   50.000000 expected=   50.000000 mm
+PASS                 spotface_plane_geometry                    actual=   43.692105 expected=   43.692105 mm
+PASS                 spotface_depth_geometry                    actual=    9.307895 expected=    9.307895 mm
+PASS                 sleeve_inner_end_geometry                  actual=   13.692105 expected=   13.692105 mm
+PASS                 central_unoccupied_gap_geometry            actual=   27.384209 expected=   27.384209 mm
+PASS                 shaft_to_head_radial_clearance             actual=    6.000000 expected=    6.000000 mm
+PASS                 shaft_length_from_validation_bbox          actual=  175.000000 expected=  175.000000 mm
+
+PASS checks:              14
+FAIL checks:              0
+Source-review checks:     0
+
+FEATURE TRACEABILITY
+------------------------------------------------------------------------------------------------------------------------------------
+CALC_AND_GEOMETRY_VERIFIED           upper_head_outer_boss_106x78
+CALC_AND_GEOMETRY_VERIFIED           continuous_300M_trunnion_shaft_38x175
+CALC_AND_GEOMETRY_VERIFIED           bronze_sleeves_50_38x30
+CALC_AND_GEOMETRY_VERIFIED           bronze_flanges_60_38x3
+CALC_AND_GEOMETRY_VERIFIED           central_relief_passage_50
+CALC_AND_GEOMETRY_VERIFIED           curved_head_spotfaces_for_flange
+OPEN_NOT_FROZEN                      shaft_axial_retention_shoulder_washer_collar_hardware
+OPEN_NOT_FROZEN                      airframe_bearings_and_external_retention_package
+OPEN_NOT_FROZEN                      spotface_root_edge_fillet
+
+RETENTION / COLLAR-TYPE HARDWARE INTERPRETATION
+------------------------------------------------------------------------------------------------------------------------------------
+Retention architecture source exists.
+Retention-source terms found: thrust washer, retention
+B13C validation verifies only four bodies: head, shaft, left bushing, right bushing.
+Therefore shoulder / thrust-washer / collar / positive-retention hardware must remain OPEN, not silently frozen.
+
+GATE
+------------------------------------------------------------------------------------------------------------------------------------
+PASS_WITH_EXPLICIT_OPEN_DETAILS
+No contradictory legacy dimensions were found in the checks that could be resolved.
+The modeled shaft/bushing/flange/relief geometry is acceptable to carry forward.
+Unmodeled retention and airframe-side hardware is explicitly OPEN and must be closed before final assembly freeze.
+
+OUTPUTS
+------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_legacy_upper_traceability_matrix.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_legacy_upper_dimension_checks.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_legacy_upper_open_items.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_legacy_upper_traceability_summary.txt
+====================================================================================================================================

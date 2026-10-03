@@ -1,0 +1,54 @@
+PHASE 2E3-B14B-11E — R8 SINGLE-BODY ROOT SUBMODEL CAD V0.1
+
+PURPOSE
+-------
+Final clean R8 local-stress path: one 7075 solid only; no shaft, bushings,
+collars, contacts, journal supports, brace spring, remote force/moment, or
+internal-pressure loads in the local model. Their effect is inherited through
+parent-model displacement mapping on every artificial cut face.
+
+SOURCE
+------
+Exact source-connected B14B-9 head/horn rebuilt in Python.
+R8 fillet = 8.000 mm using the same construction as B14B-11C/B14B-11D.
+
+LOCAL ENVELOPE
+--------------
+x box = [-60.0, 60.0] mm; no artificial x cut occurs.
+y cuts = 25.0, 120.0 mm.
+z cuts = 920.0, 992.0 mm.
+
+Reference R8 hotspot = (18.702387, 49.818011, 964.937219) mm.
+Minimum hotspot-to-cut distance = 24.818011 mm = 3.102 R.
+Nearest crop point to trunnion passage center = 32.508590 mm.
+Governing passage radius = 25.000 mm.
+Passage/contact-surface clearance margin = 7.508590 mm.
+
+ARTIFICIAL CUT BOUNDARIES — CREATE FOUR NAMED SELECTIONS IN ANSYS
+-----------------------------------------------------------------
+1) NS_B14B11E_CUT_YMIN_25  : y = 25.0 mm, area 4569.924 mm^2
+2) NS_B14B11E_CUT_YMAX_120 : y = 120.0 mm, area 1230.036 mm^2
+3) NS_B14B11E_CUT_ZMIN_920 : z = 920.0 mm, area 1642.493 mm^2
+4) NS_B14B11E_CUT_ZMAX_992 : z = 992.0 mm, area 7246.669 mm^2
+
+All four get Imported Displacement from the solved full-R8 parent at End Time.
+No other structural BC/load/contact is to be applied to this one-body submodel.
+Physical exterior surfaces remain free, exactly as they are in the parent.
+
+VALIDATION
+----------
+PASS checks: 19
+FAIL checks: 0
+Gate: PASS_B14B11E_R8_SINGLE_BODY_SUBMODEL_GEOMETRY
+
+OUTPUT
+------
+phase2e3b14b11e_r8_root_local_solid_v01.step
+phase2e3b14b11e_r8_root_local_solid_geometry_v01.csv
+phase2e3b14b11e_r8_root_local_solid_validation_v01.csv
+phase2e3b14b11e_r8_root_local_solid_summary_v01.txt
+
+STATUS
+------
+Working local-FEA geometry only. R8 design is not frozen until the quadratic
+submodel stress converges through the planned short refinement sequence.

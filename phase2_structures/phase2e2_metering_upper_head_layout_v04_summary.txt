@@ -1,0 +1,120 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e2_metering_upper_head_layout_v04.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+PHASE 1 METERING SOURCE RESOLVED
+----------------------------------------------------------------------------------------------------------------
+File: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_model_development\landing_dynamic_v04_2dof.py
+Function: orifice_diameter
+Schedule type: CLAMPED_LINEAR
+Extraction method: AST_MODULE_CONSTANTS_PLUS_FUNCTION_REFERENCE
+================================================================================================================
+ PHASE 2E2 — METERING / UPPER-HEAD LAYOUT V0.4
+================================================================================================================
+
+SOURCE CONNECTION
+----------------------------------------------------------------------------------------------------------------
+E2 stroke states:           C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_stroke_cavity_states.csv
+E2 architecture inputs:     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_architecture_inputs.csv
+E2 design envelope:         C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_design_envelope.csv
+Phase 1 metering source:    C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_model_development\landing_dynamic_v04_2dof.py
+
+PHYSICAL ARCHITECTURE
+----------------------------------------------------------------------------------------------------------------
+Moving inner member:         hollow 58 mm piston / lower hydraulic chamber
+Metering element:            pin attached to moving piston
+Flow restriction:            fixed central orifice/support plane in outer barrel
+Upper chamber:               nitrogen + hydraulic fluid above fixed orifice plane
+Upper structural strategy:   pressure closure first; E3 attachment in solid head above it
+
+PHASE 1 METERING SCHEDULE — SOURCE EXTRACTED
+----------------------------------------------------------------------------------------------------------------
+Schedule:                    smooth linear, clamped after design stroke
+Design metering stroke:      205.000 mm
+Equivalent orifice start:    10.301 mm (83.339 mm^2)
+Equivalent orifice end:      9.742 mm (74.539 mm^2)
+Physical stroke beyond map:  25.000 mm at clamped endpoint
+
+ANNULAR METERING-PIN PROFILE MAP
+----------------------------------------------------------------------------------------------------------------
+fixed_orifice_bore_mm compression_mm pin_profile_station_from_full_extension_intercept_mm schedule_region phase1_equivalent_diameter_mm phase1_equivalent_area_mm2 required_pin_diameter_mm area_error_pct area_map_status
+                 14.0          0.000                                                0.000          LINEAR                       10.3010                     83.339                   9.4810     +0.000e+00   PASS_AREA_MAP
+                 14.0         10.250                                               10.250          LINEAR                       10.2730                     82.887                   9.5113     +0.000e+00   PASS_AREA_MAP
+                 14.0         20.500                                               20.500          LINEAR                       10.2451                     82.437                   9.5414     -1.724e-14   PASS_AREA_MAP
+                 14.0         30.750                                               30.750          LINEAR                       10.2172                     81.988                   9.5713     +0.000e+00   PASS_AREA_MAP
+                 14.0         41.000                                               41.000          LINEAR                       10.1892                     81.540                   9.6011     -1.743e-14   PASS_AREA_MAP
+                 14.0         51.250                                               51.250          LINEAR                       10.1613                     81.093                   9.6306     +0.000e+00   PASS_AREA_MAP
+                 14.0         61.500                                               61.500          LINEAR                       10.1333                     80.648                   9.6600     +1.762e-14   PASS_AREA_MAP
+                 14.0         71.750                                               71.750          LINEAR                       10.1053                     80.203                   9.6893     +0.000e+00   PASS_AREA_MAP
+                 14.0         82.000                                               82.000          LINEAR                       10.0774                     79.760                   9.7183     +0.000e+00   PASS_AREA_MAP
+                 14.0         92.250                                               92.250          LINEAR                       10.0495                     79.318                   9.7472     +1.792e-14   PASS_AREA_MAP
+                 14.0        102.500                                              102.500          LINEAR                       10.0215                     78.878                   9.7760     +0.000e+00   PASS_AREA_MAP
+                 14.0        112.750                                              112.750          LINEAR                        9.9936                     78.439                   9.8045     +0.000e+00   PASS_AREA_MAP
+                 14.0        123.000                                              123.000          LINEAR                        9.9656                     78.000                   9.8329     +0.000e+00   PASS_AREA_MAP
+                 14.0        133.250                                              133.250          LINEAR                        9.9377                     77.563                   9.8612     +0.000e+00   PASS_AREA_MAP
+                 14.0        143.500                                              143.500          LINEAR                        9.9097                     77.128                   9.8893     +0.000e+00   PASS_AREA_MAP
+                 14.0        153.750                                              153.750          LINEAR                        9.8818                     76.693                   9.9172     -1.853e-14   PASS_AREA_MAP
+                 14.0        164.000                                              164.000          LINEAR                        9.8538                     76.260                   9.9450     +0.000e+00   PASS_AREA_MAP
+                 14.0        174.250                                              174.250          LINEAR                        9.8259                     75.828                   9.9726     +0.000e+00   PASS_AREA_MAP
+                 14.0        184.500                                              184.500          LINEAR                        9.7979                     75.397                  10.0001     -1.885e-14   PASS_AREA_MAP
+                 14.0        194.750                                              194.750          LINEAR                        9.7700                     74.968                  10.0274     -1.896e-14   PASS_AREA_MAP
+                 14.0        205.000                                              205.000          LINEAR                        9.7420                     74.539                  10.0545     +0.000e+00   PASS_AREA_MAP
+                 14.0        230.000                                              230.000     CLAMPED_END                        9.7420                     74.539                  10.0545     +0.000e+00   PASS_AREA_MAP
+
+AXIAL PACKAGING RANGE
+----------------------------------------------------------------------------------------------------------------
+orifice_plane_clearance_at_full_stroke_mm min_closure_mm max_closure_mm min_pin_length_mm max_pin_length_mm
+                                     10.0          481.9          522.3             250.0             260.0
+                                     15.0          486.9          527.3             255.0             265.0
+                                     20.0          491.9          532.3             260.0             270.0
+                                     25.0          496.9          537.3             265.0             275.0
+
+WORKING V0.4 CANDIDATE — NOT LOCKED
+----------------------------------------------------------------------------------------------------------------
+                               parameter                                                                                                                            value          units                       classification
+                            architecture moving metering pin on inner piston; fixed orifice/support plane in outer barrel; upper nitrogen/oil chamber above orifice plane              -          PHASE2E2_WORKING_NOT_LOCKED
+  orifice_plane_clearance_at_full_stroke                                                                                                                             15.0             mm         WORKING_SELECTION_NOT_LOCKED
+                   orifice_plane_above_U                                                                                                                            180.0             mm       DERIVED_FROM_WORKING_SELECTION
+                  initial_upper_oil_head                                                                                                                             25.0             mm         WORKING_SELECTION_NOT_LOCKED
+                      fixed_orifice_bore                                                                                                                             14.0             mm         WORKING_SELECTION_NOT_LOCKED
+           phase1_metering_design_stroke                                                                                                                            205.0 mm compression                     SOURCE_PHASE1_PY
+         phase1_equivalent_orifice_start                                                                                                                           10.301             mm                     SOURCE_PHASE1_PY
+           phase1_equivalent_orifice_end                                                                                                                            9.742             mm                     SOURCE_PHASE1_PY
+        pin_diameter_at_zero_compression                                                                                                                         9.481002             mm  DERIVED_FROM_PHASE1_EQUIVALENT_AREA
+  pin_diameter_at_metering_design_stroke                                                                                                                        10.054523             mm  DERIVED_FROM_PHASE1_EQUIVALENT_AREA
+    pin_diameter_at_full_physical_stroke                                                                                                                        10.054523             mm DERIVED_FROM_CLAMPED_PHASE1_SCHEDULE
+pin_diameter_change_over_metering_stroke                                                                                                                         0.573521             mm  DERIVED_FROM_PHASE1_EQUIVALENT_AREA
+    pin_tip_projection_at_full_extension                                                                                                                             15.0             mm         WORKING_SELECTION_NOT_LOCKED
+             minimum_metering_pin_length                                                                                                                            260.0             mm       DERIVED_FROM_WORKING_SELECTION
+      approx_pin_length_to_mean_diameter                                                                                                                        26.569223              -                          REPORT_ONLY
+     pressure_closure_inner_face_above_U                                                                                                                       502.086888             mm         WORKING_SELECTION_NOT_LOCKED
+    max_pin_hardware_displacement_volume                                                                                                                         30.99801           cm^3       CONSERVATIVE_PACKAGING_RESERVE
+      piston_internal_reservoir_capacity                                                                                                                       824.668072           cm^3                  SOURCE_PHASE2E2_V03
+
+E3 INTERFACE RULE
+----------------------------------------------------------------------------------------------------------------
+Treat the calculated pressure-closure inner face as the start of a solid upper-head region. Do not place the future upper trunnion through the live pressure chamber unless a pressure-penetrating boss is deliberately designed and checked.
+
+OUTPUT FILES
+----------------------------------------------------------------------------------------------------------------
+Axial layout sweep:          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_metering_axial_layout_sweep.csv
+Pin/orifice profile map:    C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_metering_pin_profile_map.csv
+Working candidate:           C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_metering_working_candidate.csv
+E3 interface:                C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_e3_upper_head_interface.csv
+
+INTERPRETATION
+----------------------------------------------------------------------------------------------------------------
+This step turns the effective Phase 1 hydraulic restriction into a candidate annular pin/orifice geometry while preserving the full 230 mm physical stroke. The fixed-orifice bore, piston-top clearance, initial upper-oil head and pin projection remain working selections. The final CAD geometry must be fed back into the Phase 1 gas/hydraulic model because metering-pin/support hardware displaces nonzero volume.
+================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

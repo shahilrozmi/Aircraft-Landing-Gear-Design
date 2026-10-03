@@ -1,0 +1,58 @@
+PHASE 2E3-B14B-11C — R6 LOCAL STRESS CONVERGENCE V0.1
+
+RESULTS
+-------
+2.0 mm local transition mesh:
+  nodes            = 38424
+  elements         = 87564
+  max VM stress    = 412.240 MPa
+  max deformation  = 5.143900 mm
+  brace force      = -67.348000 kN
+  elongation       = -0.568420 mm
+
+1.5 mm local transition mesh:
+  nodes            = 39467
+  elements         = 92160
+  max VM stress    = 428.840 MPa
+  max deformation  = 5.157800 mm
+  brace force      = -67.348000 kN
+  elongation       = -0.568420 mm
+  hotspot xyz      = (4.756711, 53.219215, 965.196488) mm
+
+1.25 mm local transition mesh:
+  nodes            = 40186
+  elements         = 95144
+  max VM stress    = 427.810 MPa
+  max deformation  = 5.162400 mm
+  brace force      = -67.348000 kN
+  elongation       = -0.568420 mm
+  hotspot xyz      = (4.757493, 53.219731, 965.197498) mm
+  hotspot node     = 1971
+
+CONVERGENCE CHECK
+-----------------
+1.5 -> 1.25 mm:
+  max VM stress change   = -0.240183 %
+  max deformation change = +0.089185 %
+  brace |F| change       = +0.000000 %
+  hotspot shift          = 0.001378 mm
+
+2.0 -> 1.25 mm:
+  max VM stress change   = +3.776441 %
+
+DISPOSITION
+-----------
+PASS_R6_LOCAL_STRESS_CONVERGENCE
+
+The 1.5 mm and 1.25 mm local-transition meshes differ in maximum von Mises stress
+by only 0.240 %, with essentially unchanged brace force and only a small deformation
+change. The hotspot remains at the same root-transition location.
+
+The R6 local stress solution is therefore considered converged for this preliminary
+design stage.
+
+Recommended retained R6 result:
+  local transition mesh = 1.25 mm
+  max VM stress         = 427.81 MPa
+  max deformation       = 5.1624 mm
+  brace force           = -67.348 kN

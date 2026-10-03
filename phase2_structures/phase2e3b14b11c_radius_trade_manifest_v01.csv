@@ -1,0 +1,3 @@
+radius_mm,nominal_radius_budget_reserve_mm,build_status,validation_fail_count,step_file,summary_file,horn_volume_mm3,horn_material_removed_mm3,fused_head_volume_mm3,head_horn_overlap_mm3,reimported_solid_count,error
+4.0,4.5,PASS,0,phase2e3b14b11c_r4_root_fillet_candidate_v01.step,phase2e3b14b11c_r4_summary_v01.txt,1076815.0787173593,1521.226392536657,2816064.765695185,107857.08076557796,6,
+8.0,0.5,PASS,0,phase2e3b14b11c_r8_root_fillet_candidate_v01.step,phase2e3b14b11c_r8_summary_v01.txt,1072407.0292158183,5929.275894077728,2813907.0582250976,105606.73873412423,6,

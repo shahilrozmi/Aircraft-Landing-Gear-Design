@@ -1,0 +1,29 @@
+PHASE 2E3-B14B-10 — LARGE-DEFLECTION SENSITIVITY V0.1
+
+Comparison basis:
+Cleaned linear baseline (shared remote point + cylindrical contact smoothing)
+versus converged Large Deflection = On solution.
+
+brace_force_N: linear=-67231, large-def=-67212, delta=19, magnitude_change=-0.028261%
+brace_elongation_mm: linear=-0.56743, large-def=-0.56727, delta=0.00016, magnitude_change=-0.028197%
+left_Rx_N: linear=18466, large-def=18752, delta=286, magnitude_change=1.548792%
+left_Ry_N: linear=35836, large-def=36907, delta=1071, magnitude_change=2.988615%
+left_Rz_N: linear=1811.7, large-def=2587.7, delta=776, magnitude_change=42.832699%
+left_total_N: linear=40355, large-def=41478, delta=1123, magnitude_change=2.782803%
+right_Rx_N: linear=2.5487e-12, large-def=2.6566e-12, delta=1.079e-13, magnitude_change=nan%
+right_Ry_N: linear=-47256, large-def=-47324, delta=-68, magnitude_change=0.143897%
+right_Rz_N: linear=2047.2, large-def=1155.3, delta=-891.9, magnitude_change=-43.566823%
+right_total_N: linear=47301, large-def=47338, delta=37, magnitude_change=0.078222%
+max_deformation_mm: linear=5.122, large-def=5.1296, delta=0.0076, magnitude_change=0.148380%
+max_vm_MPa: linear=415.55, large-def=415.61, delta=0.06, magnitude_change=0.014439%
+
+Largest component-level magnitude change: right_Rz_N = -43.566823%
+
+Engineering interpretation:
+- Brace force and elongation change by far less than 0.1%.
+- Maximum total deformation changes by far less than 1%.
+- Maximum von Mises stress changes by far less than 1%.
+- Journal load redistribution is more sensitive component-wise, especially Z,
+  but the right-journal total is essentially unchanged and the left-journal total changes only a few percent.
+- Geometric nonlinearity is therefore small for the global brace/load-path and peak-response metrics.
+- Remaining solver warnings should be documented and the support/contact architecture retained under review.

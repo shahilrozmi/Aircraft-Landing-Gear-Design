@@ -1,0 +1,20 @@
+check,actual,expected,units,tolerance,status,note
+r8_root_edge_count,4,4,-,0.0,PASS,
+full_r8_head_single_solid,1,1,-,0.0,PASS,
+local_single_solid,1,1,-,0.0,PASS,
+hotspot_inside_local_box,True,True,-,0.0,PASS,
+hotspot_min_cut_distance_gt_3R,True,True,-,0.0,PASS,min=24.818011 mm; 3R=24.000 mm
+passage_clearance_positive,True,True,-,0.0,PASS,nearest yz radius=32.508590 mm; passage R=25.000 mm; margin=7.508590 mm
+cut_face_ymin_count,1,1,-,0.0,PASS,
+cut_face_ymax_count,1,1,-,0.0,PASS,
+cut_face_zmin_count,1,1,-,0.0,PASS,
+cut_face_zmax_count,1,1,-,0.0,PASS,
+no_artificial_xmin_cut,True,True,-,0.0,PASS,local xmin=-46.733286 mm vs box xmin=-60.000
+no_artificial_xmax_cut,True,True,-,0.0,PASS,local xmax=46.733286 mm vs box xmax=60.000
+no_intersection__SHAFT_300M_CONTINUOUS,0.0,0.0,mm^3,1e-06,PASS,
+no_intersection__BUSHING_LEFT_AMS4640,0.0,0.0,mm^3,1e-06,PASS,
+no_intersection__BUSHING_RIGHT_AMS4640,0.0,0.0,mm^3,1e-06,PASS,
+no_intersection__THRUST_COLLAR_LEFT_300M,0.0,0.0,mm^3,1e-06,PASS,
+no_intersection__THRUST_COLLAR_RIGHT_300M,0.0,0.0,mm^3,1e-06,PASS,
+step_reimport_solid_count,1,1,-,0.0,PASS,
+step_label_present,True,True,-,0.0,PASS,

@@ -1,0 +1,78 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2_internal_loads.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+============================================================================================
+ PHASE 2B–2C — STRUCTURAL GEOMETRY + INTERNAL LOAD RESULTANTS
+============================================================================================
+
+--- INPUT CONNECTION ---
+Phase 1 load envelope:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_loads\phase1_load_envelope.csv
+
+--- LOCKED PHASE 2B GEOMETRY ---
+Track:                            3.200 m
+Right contact-patch y:            1.600 m
+Right strut-axis y:               1.480 m
+Wheel offset e:                   0.120 m
+Free tire radius:                 0.222 m
+Static loaded tire radius:        0.175 m
+Full-extension U->A length:       0.525 m
+Static oleo sag:                  0.050 m
+Static U->A length:               0.475 m
+Static U->contact height H:       0.650 m
+
+--- UPPER INTERFACE, LIMIT LOADS ---
+Case       Nc kN    Vx kN    Vy kN    Mx kNm    My kNm    Tz kNm    Mb kNm
+--------------------------------------------------------------------------
+LC0         7.45     0.00     0.00     0.894    -0.000    -0.000     0.894
+LC1        25.02     0.00     0.00     3.002    -0.000    -0.000     3.002
+LC2A       25.02    -6.25     0.00     3.002     4.066     0.751     5.054
+LC2B       25.02     6.25     0.00     3.002    -4.066    -0.751     5.054
+LC3        25.02     0.00     0.00     3.002    -0.000    -0.000     3.002
+LC4+       11.09     0.00     8.34     6.752    -0.000    -0.000     6.752
+LC4-       11.09     0.00    -8.34    -4.090    -0.000    -0.000     4.090
+LC5        11.09    -8.87     0.00     1.331     5.768     1.065     5.920
+
+--- AXLE, LIMIT LOADS ---
+Case       Ny kN    Vx kN    Vz kN    Mx kNm    Mz kNm   Ty* kNm    Mb kNm
+--------------------------------------------------------------------------
+LC0         0.00     0.00     7.45     0.894    -0.000    -0.000     0.894
+LC1         0.00     0.00    25.02     3.002    -0.000    -0.000     3.002
+LC2A        0.00    -6.25    25.02     3.002     0.751     1.095     3.095
+LC2B        0.00     6.25    25.02     3.002    -0.751    -1.095     3.095
+LC3         0.00     0.00    25.02     3.002    -0.000    -0.000     3.002
+LC4+        8.34     0.00    11.09     2.791    -0.000    -0.000     2.791
+LC4-       -8.34     0.00    11.09    -0.128    -0.000    -0.000     0.128
+LC5         0.00    -8.87    11.09     1.331     1.065     1.553     1.705
+
+* LC5 Ty is confirmed brake-path torque. LC2 Ty is wheel spin-up moment only.
+
+--- GOVERNING ULTIMATE RESULTANTS ---
+Upper axial compression        LC1         37.530 kN
+Upper longitudinal shear       LC5         13.311 kN
+Upper lateral shear            LC4+        12.510 kN
+Upper resultant bending        LC4+        10.128 kN·m
+Upper torsion                  LC5          1.597 kN·m
+Axle vertical shear            LC1         37.530 kN
+Axle axial load                LC4+        12.510 kN
+Axle resultant bending         LC2A         4.642 kN·m
+Confirmed axle brake torque    LC5          2.329 kN·m
+
+--- DYNAMIC-GEOMETRY SANITY CHECK ---
+H(x=50 mm, delta=47 mm):         0.650 m
+
+Regression checks:                PASS
+CSV written to:                   phase2_internal_loads.csv
+============================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

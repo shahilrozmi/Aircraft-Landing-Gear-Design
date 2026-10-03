@@ -1,0 +1,73 @@
+============================================================================================================================================
+ PHASE 2E3 — B13F-3C CURRENT-PARENT GEOMETRY / TRACEABILITY VALIDATION V0.1
+============================================================================================================================================
+
+CURRENT PARENT
+--------------------------------------------------------------------------------------------------------------------------------------------
+STEP:                 C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_b13f_3c_d44_r1p5_t3p5_left_collar_partial_relief.step
+Top-level product:    B13F_3C_PARTIAL_COLLAR_RELIEF
+Solid count:          6
+
+BODY INVENTORY
+--------------------------------------------------------------------------------------------------------------------------------------------
+HEAD_BARREL_7075               V= 1847106.768 mm^3  X[  -53.000,   53.000] Y[ -53.000,  53.000] Z[  700.000, 1051.780]
+SHAFT_300M_CONTINUOUS          V=  198470.116 mm^3  X[  -87.500,   87.500] Y[ -19.000,  19.000] Z[  993.780, 1031.780]
+BUSHING_LEFT_AMS4640           V=   30733.198 mm^3  X[  -47.192,  -13.692] Y[ -30.000,  30.000] Z[  982.780, 1042.780]
+BUSHING_RIGHT_AMS4640          V=   29961.369 mm^3  X[   13.692,   46.692] Y[ -30.000,  30.000] Z[  982.780, 1042.780]
+THRUST_COLLAR_LEFT_300M        V=    4469.104 mm^3  X[  -50.192,  -47.192] Y[ -29.000,  29.000] Z[  983.780, 1041.780]
+THRUST_COLLAR_RIGHT_300M       V=    4523.893 mm^3  X[   46.692,   49.692] Y[ -29.000,  29.000] Z[  983.780, 1041.780]
+
+CURRENT TRUNNION / HEAD GEOMETRY
+--------------------------------------------------------------------------------------------------------------------------------------------
+Trunnion center O_global:        [0.000, 0.000, 1012.780] mm
+Upper-head boss:                 Ø106.000 x 78.000 mm high
+Continuous shaft:                Ø38.000 x 175.000 mm
+Head side passage:               Ø50.000 mm
+Head central passage:            Ø44.000 mm x 17.384209 mm straight
+Current minimum shaft/head gap:  3.000 mm radial
+Left passage transition:         4.000 mm axial
+Right passage transition:        4.000 mm axial
+
+BUSHINGS
+--------------------------------------------------------------------------------------------------------------------------------------------
+Right sleeve:                    Ø50/Ø38 x 30.000 mm
+Right flange:                    Ø60/Ø38 x 3.000 mm
+Left axial spotface->inner end:  30.000 mm
+Left flange:                     Ø60/Ø38 x 3.500 mm
+Left inner-end torus:            major R=23.500 mm, minor R=1.500 mm
+
+THRUST COLLARS
+--------------------------------------------------------------------------------------------------------------------------------------------
+Right collar:                    Ø58/Ø38 x 3.000 mm, full annulus
+Left collar overall:             Ø58 x 3.000 mm
+Left collar partial relief:      Ø44.000 -> Ø46.000 over 0.120 mm axial
+Right collar volume:             4523.893421 mm^3
+Left collar volume:              4469.104045 mm^3
+
+CHECK RESULTS
+--------------------------------------------------------------------------------------------------------------------------------------------
+PASS: 54
+FAIL: 0
+
+SUPERSESSION / TRACEABILITY
+--------------------------------------------------------------------------------------------------------------------------------------------
+The old B13C four-body model is NOT the current CAD parent.
+This B13F-3C six-body STEP is the current parent for B14B-9 if the gate passes.
+Likely local B13F source/summary files found by scan: 41
+Use the source-scan CSV to identify the exact later calculation that selected D44/R1.5/T3.5.
+
+GATE
+--------------------------------------------------------------------------------------------------------------------------------------------
+PASS_CURRENT_PARENT_VALIDATED_FOR_B14B9
+This STEP is approved as the geometry parent for the B14B-9 physical horn/clevis CAD build.
+This is NOT a final full-assembly freeze; external retention and airframe-side bearing/fitting details remain open.
+
+OUTPUTS
+--------------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_b13f3c_current_parent_inventory.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_b13f3c_current_parent_checks.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_b13f3c_current_parent_source_scan.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_b13f3c_current_parent_open_items.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_b13f3c_current_parent_record.csv
+C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3_b13f3c_current_parent_summary.txt
+============================================================================================================================================

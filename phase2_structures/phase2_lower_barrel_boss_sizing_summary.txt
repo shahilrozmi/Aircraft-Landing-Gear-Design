@@ -1,0 +1,76 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2_lower_barrel_boss_sizing.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+============================================================================================================
+ PHASE 2D7 — LOWER BARREL BOSS / SHOULDER LOCAL RADIAL-LOAD SIZING
+============================================================================================================
+
+--- INPUT CONNECTION ---
+Phase 2D5 result file:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_bushing_material_gland_requirements.csv
+Phase 2C result file:             C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_internal_loads.csv
+
+--- WORKING LOCAL GEOMETRY ---
+Smooth barrel ID / OD:            64.0 / 74.0 mm
+Local boss OD:                    84.0 mm
+Boss-to-barrel OD step:           84.0 -> 74.0 mm
+Bushing length:                   30.0 mm
+Transition land sweep:            5, 10, 15, 20, 30, 40 mm
+
+--- CALCULATED LOAD REQUIREMENTS ---
+Lower radial reaction, limit:     40.844 kN
+Lower radial reaction, ultimate:  61.266 kN
+LC4+ axial compression, limit:    11.092 kN
+LC4+ axial compression, ultimate: 16.638 kN
+Conservative pressure combination: 9.292 MPa
+Housing projected pressure, ult:  31.909 MPa
+
+--- WORKING TRANSITION: 15 mm LAND ---
+Reaction-centroid lever arm:      30.0 mm
+Local ultimate bending moment:    1.838 kN*m
+Separate transverse-shear screen: 113.1 MPa
+
+--- STRESS-CONCENTRATION SENSITIVITY ---
+    Kt    Limit VM MPa    MS_yield      Ult VM MPa      MS_ult
+--------------------------------------------------------------
+   1.0            95.3      14.922           129.4      13.393
+   1.5           124.6      11.172           179.2       9.393
+   2.0           157.5       8.632           230.1       7.091
+   2.5           191.1       6.938           281.6       5.612
+   3.0           225.1       5.739           333.4       4.584
+
+--- ALLOWABLE Kt BEFORE SCREENING FAILURE ---
+Limit/yield allowable Kt:         21.54
+Ultimate-strength allowable Kt:   17.60
+
+--- LAND-LENGTH EFFECT AT Kt = 2.0 ---
+   Land mm    Lever mm     M_ult kNm    VM_ult MPa      MS_ult
+------------------------------------------------------------------
+         5        20.0         1.225         162.4      10.467
+        10        25.0         1.532         196.1       8.497
+        15        30.0         1.838         230.1       7.091
+        20        35.0         2.144         264.4       6.042
+        30        45.0         2.757         333.4       4.584
+        40        55.0         3.370         402.8       3.623
+
+--- INTERPRETATION ---
+The 84 -> 74 mm lower-barrel transition is screened using the smaller 74 mm OD section, which is conservative for nominal bending.
+No actual fillet Kt has been invented.  The Kt sensitivity shows how much geometric stress concentration the working section can tolerate.
+The ~61 kN radial reaction is NOT added to the Phase 2C upper-interface bending moment; doing so would double-count the same load path.
+Local shell ovalization, detailed bushing-contact load spreading, and the actual fillet/root stress field remain FEA/detail-design tasks.
+
+Consistency checks:               PASS
+CSV written to:                   phase2_lower_barrel_boss_sizing.csv
+============================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

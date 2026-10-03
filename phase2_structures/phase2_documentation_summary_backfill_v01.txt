@@ -1,0 +1,40 @@
+================================================================================================================
+ LANDING GEAR PROJECT — DOCUMENTATION SUMMARY BACKFILL V0.1
+================================================================================================================
+
+PASS                             phase2_barrel_sizing.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2_bushing_material_gland.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2_gland_retainer_sizing.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2_internal_loads.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2_lower_barrel_boss_sizing.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2_packaging_overlap.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2_piston_sizing.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2_upper_brace_sizing.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2_upper_trunnion_sizing.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2e1_lower_end_architecture_v04.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2e2_metering_upper_head_layout_v04.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2e2_oleo_cavity_packaging_v03.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2e2b_upper_head_closure_audit_v03.py
+    Existing script rerun; own console report captured to TXT.
+PASS                             phase2e2c_fluid_continuity_closure_finalize_v01.py
+    Existing script rerun; own console report captured to TXT.
+PASS_B7A_ARTIFACT_RESTORED       phase2e3b7a_expanded_transition_robustness_trade_v01.py
+    Rerun succeeded and phase2e3b7a_working_profile.csv exists.
+
+Important:
+- This script only backfills documentation from each calculation script's own rerun.
+- It does not create B14A data and does not copy B14A values from chat.
+- Rerun phase2e3_documentation_audit_v02.py after this cleanup.
+================================================================================================================

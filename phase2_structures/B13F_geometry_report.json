@@ -1,0 +1,106 @@
+{
+  "source": "phase2e3b13g1_bushed_head_trunnion_with_thrust_collars.step",
+  "baseline_head_volume_mm3": 1837596.5687045674,
+  "baseline_head_valid": true,
+  "variants": [
+    {
+      "tag": "B13F_1A_D46",
+      "central_relief_diameter_mm": 46.0,
+      "shaft_radial_clearance_mm": 4.0,
+      "transition_taper_each_side_mm": 4.0,
+      "clearance_to_bushing_end_each_side_mm": 1.0,
+      "reinforcement_x_range_mm": [
+        -12.6921045499,
+        12.692104549907
+      ],
+      "head_volume_mm3": 1844062.702456191,
+      "added_head_volume_mm3": 6466.133751623565,
+      "head_valid": true,
+      "head_bbox_mm": [
+        -53.0000001,
+        53.0000001,
+        -53.0000001,
+        53.0000001,
+        700.0,
+        1051.7800001
+      ],
+      "head_overlap_volume_mm3": {
+        "SHAFT_300M_CONTINUOUS": 0.0,
+        "BUSHING_LEFT_AMS4640": 0.0,
+        "BUSHING_RIGHT_AMS4640": 0.0,
+        "THRUST_COLLAR_LEFT_300M": 0.0,
+        "THRUST_COLLAR_RIGHT_300M": 0.0
+      },
+      "reimport_solid_count": 6,
+      "reimport_all_solids_valid": true,
+      "file": "phase2e3_b13f_1a_d46_bushed_head_trunnion.step",
+      "file_size_bytes": 409724
+    },
+    {
+      "tag": "B13F_1B_D44",
+      "central_relief_diameter_mm": 44.0,
+      "shaft_radial_clearance_mm": 3.0,
+      "transition_taper_each_side_mm": 4.0,
+      "clearance_to_bushing_end_each_side_mm": 1.0,
+      "reinforcement_x_range_mm": [
+        -12.6921045499,
+        12.692104549907
+      ],
+      "head_volume_mm3": 1847106.7677429586,
+      "added_head_volume_mm3": 9510.199038391234,
+      "head_valid": true,
+      "head_bbox_mm": [
+        -53.0000001,
+        53.0000001,
+        -53.0000001,
+        53.0000001,
+        700.0,
+        1051.7800001
+      ],
+      "head_overlap_volume_mm3": {
+        "SHAFT_300M_CONTINUOUS": 0.0,
+        "BUSHING_LEFT_AMS4640": 0.0,
+        "BUSHING_RIGHT_AMS4640": 0.0,
+        "THRUST_COLLAR_LEFT_300M": 0.0,
+        "THRUST_COLLAR_RIGHT_300M": 0.0
+      },
+      "reimport_solid_count": 6,
+      "reimport_all_solids_valid": true,
+      "file": "phase2e3_b13f_1b_d44_bushed_head_trunnion.step",
+      "file_size_bytes": 409693
+    },
+    {
+      "tag": "B13F_1C_D42",
+      "central_relief_diameter_mm": 42.0,
+      "shaft_radial_clearance_mm": 2.0,
+      "transition_taper_each_side_mm": 4.0,
+      "clearance_to_bushing_end_each_side_mm": 1.0,
+      "reinforcement_x_range_mm": [
+        -12.6921045499,
+        12.692104549907
+      ],
+      "head_volume_mm3": 1850024.849661714,
+      "added_head_volume_mm3": 12428.280957146548,
+      "head_valid": true,
+      "head_bbox_mm": [
+        -53.0000001,
+        53.0000001,
+        -53.0000001,
+        53.0000001,
+        700.0,
+        1051.7800001
+      ],
+      "head_overlap_volume_mm3": {
+        "SHAFT_300M_CONTINUOUS": 0.0,
+        "BUSHING_LEFT_AMS4640": 0.0,
+        "BUSHING_RIGHT_AMS4640": 0.0,
+        "THRUST_COLLAR_LEFT_300M": 0.0,
+        "THRUST_COLLAR_RIGHT_300M": 0.0
+      },
+      "reimport_solid_count": 6,
+      "reimport_all_solids_valid": true,
+      "file": "phase2e3_b13f_1c_d42_bushed_head_trunnion.step",
+      "file_size_bytes": 409748
+    }
+  ]
+}

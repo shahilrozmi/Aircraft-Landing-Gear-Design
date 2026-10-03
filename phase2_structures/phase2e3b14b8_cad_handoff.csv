@@ -1,0 +1,21 @@
+parameter,x,y,z,value,units,classification
+horn_axis_e_h,0.0,1.0,0.0,,-,DERIVED_LOCAL_FRAME
+brace_axis_u_b,0.274670324174725,0.0,0.9615384615384616,,-,SOURCE_B14B
+pin_axis_e_p,0.9615384615384616,0.0,-0.274670324174725,,-,DERIVED_LOCAL_FRAME
+saddle_root_center,0.0,31.666228067138025,0.0,,mm,SOURCE_B14B7
+saddle_root_section,,,,85.000 x 95.000,mm,SOURCE_B14B7
+clevis_throat_center,0.0,235.0,0.0,,mm,WORKING_NOT_FROZEN
+clevis_base_local_width_along_brace,,,,60.0,mm,WORKING_NOT_FROZEN
+clevis_base_total_grip_along_pin_axis,,,,42.0,mm,WORKING_NOT_FROZEN
+ear_thickness,,,,10.0,mm,WORKING_NOT_FROZEN
+central_slot_width_along_pin_axis,,,,22.0,mm,WORKING_NOT_FROZEN
+pin_center,0.0,260.0,0.0,,mm,SOURCE_B14B
+pin_axis_minus_endpoint,-20.192307692307693,260.0,5.768076807669225,,mm,DERIVED
+pin_axis_plus_endpoint,20.192307692307693,260.0,-5.768076807669225,,mm,DERIVED
+pin_diameter,,,,18.0,mm,WORKING_NOT_FROZEN
+brace_eye_OD,,,,44.0,mm,WORKING_NOT_FROZEN
+brace_eye_width_along_pin_axis,,,,20.0,mm,WORKING_NOT_FROZEN
+fork_free_end_y,,,,290.0,mm,WORKING_NOT_FROZEN
+taper_length_saddle_to_clevis_throat,,,,203.33377193286196,mm,DERIVED
+negative_ear_pin_axis_offsets,,,,-21.000 to -11.000,mm along e_p,WORKING_NOT_FROZEN
+positive_ear_pin_axis_offsets,,,,11.000 to 21.000,mm along e_p,WORKING_NOT_FROZEN

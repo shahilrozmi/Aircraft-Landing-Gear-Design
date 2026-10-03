@@ -1,0 +1,16 @@
+parameter,value,units,status/note
+root_local_size,1.5,mm,baseline convergence point
+mesh_nodes,12090,-,quadratic submodel
+mesh_elements,6796,-,quadratic submodel
+fillet_vm_min,6.9896,MPa,R8 fillet 4-face scoped result
+fillet_vm_max,442.62,MPa,R8 fillet 4-face scoped result
+fillet_vm_average,95.227,MPa,R8 fillet 4-face scoped result
+vm_max_x,39.974671,mm,ANSYS graphics annotation
+vm_max_y,41.798669,mm,ANSYS graphics annotation
+vm_max_z,994.421519,mm,ANSYS graphics annotation
+vm_max_node,575,-,ANSYS node
+total_deformation_max,0.73252,mm,single-body submodel
+7075_screen_yield,505.0,MPa,generic project screen
+7075_screen_ultimate,572.0,MPa,generic project screen
+yield_margin_screen,0.14093353214947357,-,preliminary only; convergence not complete
+ultimate_margin_screen,0.29230491166237393,-,preliminary only; convergence not complete

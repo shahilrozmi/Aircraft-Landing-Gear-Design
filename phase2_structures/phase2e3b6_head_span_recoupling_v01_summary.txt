@@ -1,0 +1,74 @@
+======================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e3b6_head_span_recoupling_v01.py
+======================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Working directory: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------------
+============================================================================================================================
+ PHASE 2E3-B6 — TRUNNION SPAN / SOLID-HEAD ENVELOPE RE-COUPLING V0.1
+============================================================================================================================
+
+CORRECTED HEAD REQUIREMENT
+----------------------------------------------------------------------------------------------------------------------------
+Working lower ligament:           10.0 mm
+Shaft-hole bottom:                508.780357 mm above U
+7075 screen:                      503.0 / 572.0 MPa
+
+MINIMUM SOLID-NECK OD AT SHAFT-HOLE BOTTOM
+----------------------------------------------------------------------------------------------------------------------------
+      Kt      Min OD       Limit     MSlim    Ultimate     MSult
+--------------------------------------------------------------------
+     1.0        74.0       279.0     0.803       418.4     0.367
+     1.5        76.5       377.7     0.332       566.5     0.010
+     2.0        84.0       379.9     0.324       569.9     0.004
+     2.5        90.5       379.5     0.326       569.2     0.005
+     3.0        96.0       381.3     0.319       571.9     0.000
+
+B3 ROBUST LAYOUTS RE-COUPLED TO Kt=3 HEAD REQUIREMENT
+----------------------------------------------------------------------------------------------------------------------------
+  Span     d    Bw    Head W    Req OD   Reserve  Res/side     J MSu     p_brg   All Kt
+--------------------------------------------------------------------------------------------
+   120    34    20      90.0      96.0      -6.0      -3.0     0.126     206.6    False
+   120    36    25      85.0      96.0     -11.0      -5.5     0.146     156.2    False
+   120    36    30      80.0      96.0     -16.0      -8.0     0.004     130.2    False
+   150    32    20     120.0      96.0      24.0      12.0     0.156     178.1     True
+   150    34    25     115.0      96.0      19.0       9.5     0.189     134.2     True
+   150    34    30     110.0      96.0      14.0       7.0     0.041     111.8     True
+   180    30    20     150.0      96.0      54.0      27.0     0.126     160.4     True
+   180    32    25     145.0      96.0      49.0      24.5     0.172     120.4     True
+   180    32    30     140.0      96.0      44.0      22.0     0.027     100.4     True
+
+B6 DISPOSITION
+----------------------------------------------------------------------------------------------------------------------------
+Support-span families remaining compatible through the full Kt sweep: 150 mm, 180 mm
+
+WORKING CANDIDATE FOR NEXT DETAIL STEP — NOT FROZEN:
+  support span:                  150 mm
+  journal diameter:              34 mm
+  bearing width:                 25 mm
+  head root-to-root width:       115.0 mm
+  Kt=3 solid-neck required OD:   96.0 mm
+  head reserve each side:        9.5 mm
+  B3 worst journal ultimate MS:  +0.189
+  B3 worst bearing pressure:     134.2 MPa
+
+The 120-mm family must not be retained merely because its journal itself passes; the head envelope must also fit between journal roots.
+Next: select the reinforced annular-barrel -> solid-head transition around the surviving working family and screen transition radius / Kt sensitivity.
+
+OUTPUT FILES
+----------------------------------------------------------------------------------------------------------------------------
+Compatibility matrix:             C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b6_head_span_compatibility.csv
+Family summary:                   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b6_family_summary.csv
+Working candidate record:         C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b6_working_candidate_record.csv
+Summary:                          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b6_summary.txt
+============================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------------
+
+
+======================================================================================================================

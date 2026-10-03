@@ -1,0 +1,15 @@
+PHASE 2E3-B14B-11C — R8 ROOT-FILLET CAD VARIANT V0.1
+
+Radius:                          R8.000 mm
+Nominal radius-budget reserve:  0.500 mm
+Source passage clearance:       6.666228 mm
+Standalone horn volume:         1072407.029 mm^3
+Horn material removed vs B14B9: 5929.276 mm^3
+Fused head volume:              2813907.058 mm^3
+Head/horn overlap:              105606.739 mm^3
+Reimported STEP solids:         6
+Validation:                     PASS
+
+Disposition:
+WORKING CAD/FEA TRADE VARIANT — NOT DETAIL-DESIGN FREEZE.
+Use the same cleaned B14B-11 ANSYS load path and 2.0 mm root-local mesh method used for R6.

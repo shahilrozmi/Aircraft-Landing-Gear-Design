@@ -1,0 +1,77 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2_barrel_sizing.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+==============================================================================================
+ PHASE 2D2 — OUTER OLEO BARREL PRELIMINARY STRUCTURAL + PRESSURE SIZING
+==============================================================================================
+
+--- INPUT CONNECTION ---
+Phase 2C result file:             C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_internal_loads.csv
+
+--- PRESSURE BASIS ---
+Physical stroke:                  230.000 mm
+Gauge pressure at physical stroke: 9.292 MPa
+V0.5b virtual stroke:             240.779 mm
+Gauge pressure at virtual stroke: 10.515 MPa
+Corresponding virtual strut force: 27.781 kN
+
+--- BARREL DESIGN SWEEP ---
+ID values:                        62, 64, 66, 68, 70 mm
+Wall sweep:                       2.00 to 8.00 mm
+Physical-stroke pressure is combined conservatively with every structural LC.
+
+--- MINIMUM PASSING WALL BY ID ---
+   ID mm   wall mm     OD mm    Limit VM      Ult VM     Virt VM    Gov LC
+----------------------------------------------------------------------------
+      62      2.00      66.0      1115.3      1667.5       169.6      LC4+
+      64      2.00      68.0      1050.0      1568.8       173.0      LC4+
+      66      2.00      70.0       990.5      1478.7       176.5      LC4+
+      68      2.00      72.0       936.3      1396.5       180.0      LC4+
+      70      2.00      74.0       886.7      1321.2       183.7      LC4+
+
+--- WORKING CANDIDATE: 64 mm ID x 5 mm WALL ---
+Outer diameter:                   74.0 mm
+Metal area:                       1083.8 mm^2
+I:                                648413 mm^4
+J:                                1296826 mm^4
+Mass per metre:                   8.530 kg/m
+
+Limit governing case:             LC4+
+Limit governing surface:          outer
+Limit VM stress:                  398.4 MPa
+Limit yield margin:               +2.808
+
+Ultimate governing case:          LC4+
+Ultimate governing surface:       outer
+Ultimate VM screening stress:     595.2 MPa
+Ultimate strength margin:         +2.128
+
+Limit transverse shear screen:    16.4 MPa
+Ultimate transverse shear screen: 24.6 MPa
+
+--- V0.5b PRESSURE DIAGNOSTIC ---
+Virtual diagnostic VM stress:     76.7 MPa
+Virtual governing surface:        inner
+Margin vs yield:                  +18.784
+
+Preliminary screen:               PASS
+
+NOTE: The 64 mm barrel ID is a provisional packaging assumption, not a frozen interface dimension.
+Local gland/bushing/trunnion geometry is expected to be more critical than the smooth barrel wall.
+
+Regression checks:                PASS
+CSV written to:                   phase2_barrel_sizing.csv
+==============================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

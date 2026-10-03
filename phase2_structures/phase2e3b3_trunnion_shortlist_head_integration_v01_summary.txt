@@ -1,0 +1,79 @@
+======================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e3b3_trunnion_shortlist_head_integration_v01.py
+======================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Working directory: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------------
+============================================================================================================================
+ PHASE 2E3-B3 — PRACTICAL TRUNNION SHORTLIST / HEAD-INTEGRATION AUDIT V0.1
+============================================================================================================================
+
+B2 ROBUSTNESS REQUIREMENT
+----------------------------------------------------------------------------------------------------------------------------
+Kt values required:               1.0, 1.5, 2.0, 2.5, 3.0
+Ligament sensitivities required:  5, 10, 15, 20 mm
+A geometry is carried forward only if it passes the FULL Kt sweep at EVERY ligament sensitivity.
+
+SOURCE / PACKAGING GEOMETRY
+----------------------------------------------------------------------------------------------------------------------------
+Frozen barrel OD:                 74.000 mm  (phase2e2_v1_baseline.csv)
+D9 root clearance:                5.000 mm
+
+MINIMUM ROBUST DIAMETER BY SUPPORT SPAN / BEARING WIDTH
+----------------------------------------------------------------------------------------------------------------------------
+  Span    Bw   d_min    Head W   Boss/side   worst MSu       p_ult       MSp
+----------------------------------------------------------------------------------
+   120    20      34      90.0         8.0       0.126       206.6     1.002
+   120    25      36      85.0         5.5       0.146       156.2     1.648
+   120    30      36      80.0         3.0       0.004       130.2     2.178
+   150    20      32     120.0        23.0       0.156       178.1     1.323
+   150    25      34     115.0        20.5       0.189       134.2     2.083
+   150    30      34     110.0        18.0       0.041       111.8     2.700
+   180    20      30     150.0        38.0       0.126       160.4     1.578
+   180    25      32     145.0        35.5       0.172       120.4     2.435
+   180    30      32     140.0        33.0       0.027       100.4     3.122
+
+SPAN ANCHOR SHORTLIST
+----------------------------------------------------------------------------------------------------------------------------
+Rule: minimum robust diameter for the span; then most compact root-to-root head width. ANCHOR ONLY — not final.
+  Span     d    Bw    Head W   Boss/side   Side lig*   worst MSu       p_ult
+----------------------------------------------------------------------------------
+   120    34    20      90.0         8.0        20.0       0.126       206.6
+   150    32    20     120.0        23.0        21.0       0.156       178.1
+   180    30    20     150.0        38.0        22.0       0.126       160.4
+
+*Side lig = purely geometric (74 mm envelope - journal diameter)/2; NOT a validated 7075-T6 local ligament.
+
+MATERIAL / INTERFACE AUDIT
+----------------------------------------------------------------------------------------------------------------------------
+                           audit_item                      status                                                                                                                           finding
+            Trunnion journal material            SOURCE_CONFIRMED                                                          D9 explicitly models each journal as a solid 300M-steel cantilever root.
+Barrel / upper-head material baseline            PROJECT_BASELINE                                                 7075-T6 PROJECT FROZEN BASELINE (traceability text token not automatically found)
+Steel-to-head load-transfer interface  OPEN_BLOCKING_FINAL_FREEZE No frozen E2/D9 definition of how the 300M trunnion journal is structurally fixed to the upper head was identified by this audit.
+               Working architecture A                   CANDIDATE                               300M through-trunnion / cross-shaft rigidly captured by a locally enlarged 7075-T6 solid head boss.
+               Working architecture B                   CANDIDATE                          Separate 300M trunnion/head module joined structurally to the 7075-T6 barrel above the pressure closure.
+               Working architecture C CANDIDATE_REQUIRES_RESIZING                                                                    Integral 7075-T6 trunnion journals formed with the upper head.
+
+B3 DISPOSITION
+----------------------------------------------------------------------------------------------------------------------------
+PASS FOR SHORTLISTING — the B2 sweep can now be reduced to a few practical support-span families.
+HOLD FINAL FREEZE — D9 sizes a 300M journal while the frozen E2 barrel/head baseline is 7075-T6.
+Next step must define and screen the journal-to-solid-head interface before a final trunnion candidate is frozen.
+
+OUTPUT FILES
+----------------------------------------------------------------------------------------------------------------------------
+Layout shortlist:                 C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b3_layout_shortlist.csv
+Span anchors:                     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b3_span_anchor_candidates.csv
+Material/interface audit:         C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b3_material_interface_audit.csv
+Summary:                          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b3_summary.txt
+============================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------------
+
+
+======================================================================================================================

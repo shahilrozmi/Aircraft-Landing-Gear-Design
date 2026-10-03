@@ -1,0 +1,22 @@
+component,check,level,demand,units,allowable_or_capacity,margin,status,note
+300M tube,axial yield,limit,216.78510874803942,MPa,1517.0,5.997713121352573,PASS,
+300M tube,axial ultimate,ultimate,325.17766312205913,MPa,1862.0,4.72610056337442,PASS,
+300M tube,column buckling (JOHNSON_PARABOLIC),ultimate,67.424,kN,194.411732853393,1.883420337763897,PASS,
+300M pin,double-shear,limit,88.31985911957163,MPa,875.84,8.916682484901228,PASS,
+300M pin,double-shear,ultimate,132.47978867935743,MPa,1075.026,7.1146415669630905,PASS,
+300M pin,distributed-bearing bending + nominal shear VM,limit,458.0833147706049,MPa,1517.0,2.3116246566624468,PASS,Exact symmetric uniform-bearing half-pin free body for working stack.
+300M pin,distributed-bearing bending + nominal shear VM,ultimate,687.1249721559074,MPa,1862.0,1.7098418416635797,PASS,Exact symmetric uniform-bearing half-pin free body for working stack.
+300M pin,concentrated-contact conservative bound VM,limit,646.4138950150938,MPa,1517.0,1.3467936127279225,PASS,
+300M pin,concentrated-contact conservative bound VM,ultimate,969.6208425226406,MPa,1862.0,0.9203382583605326,PASS,
+C63000 bronze bushing,projected pin bearing,limit,124.85925925925926,MPa,413.685,2.3132104295206455,PASS,Preliminary project static bearing screen only.
+C63000 bronze bushing,projected pin bearing,ultimate,187.2888888888889,MPa,413.685,1.2088069530137635,PASS,Preliminary project static bearing screen only.
+300M brace eye,net section,limit,112.37333333333333,MPa,1517.0,12.499644043663977,PASS,Simplified annular-eye net-section screen; transition/fillet still open.
+300M brace eye,net section,ultimate,168.56,MPa,1862.0,10.046511627906977,PASS,Simplified annular-eye net-section screen; transition/fillet still open.
+300M brace eye,radial shear-out,limit,112.37333333333333,MPa,875.84,6.794019933554817,PASS,Simplified two-plane eye-ligament screen.
+300M brace eye,radial shear-out,ultimate,168.56,MPa,1075.026,5.377705268153774,PASS,Simplified two-plane eye-ligament screen.
+clevis ears,projected bearing,limit,124.85925925925926,MPa,,,OPEN_ALLOWABLE,Gear-side 7075 product form/temper-specific lug bearing allowable is not frozen.
+clevis ears,projected bearing,ultimate,187.2888888888889,MPa,,,OPEN_ALLOWABLE,Gear-side 7075 product form/temper-specific lug bearing allowable is not frozen.
+clevis ears,net-section demand,limit,93.64444444444445,MPa,,,DEMAND_ONLY,Final lug allowable and stress-concentration treatment remain open.
+clevis ears,net-section demand,ultimate,140.46666666666667,MPa,,,DEMAND_ONLY,Final lug allowable and stress-concentration treatment remain open.
+clevis ears,shear-out demand,limit,53.51111111111111,MPa,,,DEMAND_ONLY,Final lug allowable and edge/fillet geometry remain open.
+clevis ears,shear-out demand,ultimate,80.26666666666667,MPa,,,DEMAND_ONLY,Final lug allowable and edge/fillet geometry remain open.

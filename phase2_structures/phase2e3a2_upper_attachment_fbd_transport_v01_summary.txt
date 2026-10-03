@@ -1,0 +1,87 @@
+======================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e3a2_upper_attachment_fbd_transport_v01.py
+======================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Working directory: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------------
+============================================================================================================================
+ PHASE 2E3-A2 — UPPER ATTACHMENT FBD TRANSPORT / STATION SENSITIVITY V0.1
+============================================================================================================================
+
+SOURCE CONNECTION
+----------------------------------------------------------------------------------------------------------------------------
+Current Phase 1 loads:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_loads\phase1_load_envelope.csv
+Phase 2D9 trunnion source:        C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_upper_trunnion_sizing.py
+Phase 2D10 brace source:          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_upper_brace_sizing.py
+Phase 2E2 frozen baseline:        C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_v1_baseline.csv
+
+SOURCE GEOMETRY
+----------------------------------------------------------------------------------------------------------------------------
+Wheel/strut offset e:             120.000 mm
+Loaded tire radius r_t:           175.000 mm
+Equivalent datum U above A:       475.000 mm
+E2 minimum solid-head boundary:   498.780357 mm above U
+Boundary above A (static ref):    973.780357 mm
+
+FROZEN CONCEPTUAL LOAD PATH
+----------------------------------------------------------------------------------------------------------------------------
+Trunnion pair (+x axis):          Fx thrust; Fy/Fz radial; My/Mz via differential reactions.
+Separate brace / anti-rotation:   Mx.
+Guide bushings:                   internal piston-to-barrel reactions only.
+E2 +498.780... mm boundary:       packaging minimum only, not a trunnion centerline.
+
+IMPORTANT RECONCILIATION
+----------------------------------------------------------------------------------------------------------------------------
+Phase 2D9/D10 calculated loads at datum U.
+Phase 2E2 moved the physical attachment region hundreds of millimetres above U.
+Therefore D9/D10 architecture can be retained, but their numerical sizing must be updated.
+
+LIMIT GOVERNING MOMENTS — U VS E2 MINIMUM BOUNDARY
+----------------------------------------------------------------------------------------------------------------------------
+Mx_kNm    U:    +6.752064 kN*m (LC4+ )   E2 boundary:   +10.911892 kN*m (LC4+)
+My_kNm    U:    +5.767944 kN*m (LC5  )   E2 boundary:   +10.194001 kN*m (LC5)
+Mz_kNm    U:    +1.064851 kN*m (LC5  )   E2 boundary:    +1.064851 kN*m (LC5)
+
+ULTIMATE GOVERNING MOMENTS — U VS E2 MINIMUM BOUNDARY
+----------------------------------------------------------------------------------------------------------------------------
+Mx_kNm    U:   +10.128096 kN*m (LC4+ )   E2 boundary:   +16.367838 kN*m (LC4+)
+My_kNm    U:    +8.651916 kN*m (LC5  )   E2 boundary:   +15.291002 kN*m (LC5)
+Mz_kNm    U:    +1.597277 kN*m (LC5  )   E2 boundary:    +1.597277 kN*m (LC5)
+
+ULTIMATE TRUNNION REACTION — E2 BOUNDARY
+----------------------------------------------------------------------------------------------------------------------------
+Old D9 span sensitivity    120 mm: Rmax =   136.3952 kN (LC5)
+Old D9 span sensitivity    150 mm: Rmax =   110.7722 kN (LC5)
+Old D9 span sensitivity    180 mm: Rmax =    93.6903 kN (LC5)
+
+ULTIMATE BRACE FORCE — E2 BOUNDARY
+----------------------------------------------------------------------------------------------------------------------------
+Old D9/D10 arm sensitivity    150 mm: |F| =   109.1189 kN (LC4+)
+Old D9/D10 arm sensitivity    200 mm: |F| =    81.8392 kN (LC4+)
+Old D9/D10 arm sensitivity    250 mm: |F| =    65.4714 kN (LC4+)
+Old D9/D10 arm sensitivity    300 mm: |F| =    54.5595 kN (LC4+)
+
+E3-A2 DISPOSITION
+----------------------------------------------------------------------------------------------------------------------------
+PASS — retain the D9/D10 conceptual trunnion + brace load path.
+SUPERSEDE the old numerical sizing performed at equivalent datum U.
+Next: choose a physically realizable trunnion centerline in the solid head, then re-size journals, brace, lugs and airframe fittings at that station.
+
+OUTPUT FILES
+----------------------------------------------------------------------------------------------------------------------------
+Station resultants:               C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3a2_station_resultants.csv
+Trunnion reaction sensitivity:    C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3a2_trunnion_reaction_sensitivity.csv
+Brace-force sensitivity:          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3a2_brace_force_sensitivity.csv
+FBD definition:                   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3a2_fbd_definition.csv
+Summary:                          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3a2_summary.txt
+============================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------------
+
+
+======================================================================================================================

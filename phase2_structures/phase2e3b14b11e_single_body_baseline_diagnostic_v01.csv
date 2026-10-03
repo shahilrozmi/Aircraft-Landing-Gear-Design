@@ -1,0 +1,13 @@
+parameter,value,units,note
+nodes,12090,-,ANSYS baseline mesh
+elements,6796,-,ANSYS baseline mesh
+vm_max,1847.5,MPa,global single-body result; not design-usable yet
+vm_max_x,45.532908,mm,ANSYS reported result location
+vm_max_y,26.964134,mm,ANSYS reported result location
+vm_max_z,993.636235,mm,ANSYS reported result location
+total_deformation_max,0.73252,mm,baseline single-body result
+distance_vmmax_to_r8_reference,45.451183377672656,mm,3D distance
+distance_vmmax_to_Y25,1.9641340000000014,mm,artificial cut
+distance_vmmax_to_Y120,93.035866,mm,artificial cut
+distance_vmmax_to_Z920,73.63623500000006,mm,artificial cut
+distance_vmmax_to_Z992,1.636235000000056,mm,artificial cut

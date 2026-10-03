@@ -1,0 +1,78 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2_bushing_material_gland.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+======================================================================================================
+ PHASE 2D5 — BUSHING MATERIAL SCREEN + LOWER GLAND / BARREL-END LOAD REQUIREMENTS
+======================================================================================================
+
+--- INPUT CONNECTION ---
+Phase 2D3 result file:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_bushing_load_transfer.csv
+
+--- PREFERRED WORKING LAYOUT ---
+h_L / spacing / h_U:              250 / 150 / 400 mm
+Bushing axial length:             30.0 mm
+Piston OD:                        58.0 mm
+Bushing OD / barrel bore:         64.0 mm
+Bronze radial wall:               3.0 mm
+
+--- CALCULATED D3 LOWER-BUSHING DEMAND ---
+Limit governing case:             LC4+
+Limit radial reaction:            40.844 kN
+Limit projected pressure:         23.473 MPa
+
+Ultimate governing case:          LC4+
+Ultimate radial reaction:         61.266 kN
+Ultimate projected pressure:      35.210 MPa
+
+--- PRIMARY MATERIAL: C63000 / AMS 4640 Ni-Al BRONZE ---
+Preliminary static capacity:      413.7 MPa
+Margin at limit demand:           +16.624
+Margin at ultimate demand:        +10.749
+Length required by static-capacity screen at ultimate: 2.55 mm
+Interpretation: static bearing capacity is NOT the driver of the 30 mm length.
+
+--- PTFE-COMPOSITE TECHNOLOGY COMPARISON ---
+Catalog static specific load:     250.0 MPa
+Catalog dynamic specific load:    80.0 MPa
+Ultimate margin vs static value:  +6.100
+Ultimate margin vs dynamic value: +1.272
+Length required vs dynamic value: 13.20 mm
+PTFE option still requires p-v / life / temperature / surface-finish checks.
+
+--- LOWER GLAND / BARREL-END RADIAL REQUIREMENTS ---
+Housing-side average pressure, limit:    21.273 MPa
+Housing-side average pressure, ultimate: 31.909 MPa
+Radial line load into barrel, limit:     1361.5 N/mm
+Radial line load into barrel, ultimate:  2042.2 N/mm
+
+--- PRESSURE-THRUST REQUIREMENTS ---
+Physical-stroke gas pressure:     9.292 MPa
+58 mm effective-piston thrust:    24.551 kN
+64 mm full-bore closure thrust:   29.893 kN
+
+V0.5b virtual gas pressure:       10.515 MPa
+58 mm effective-piston thrust:    27.781 kN
+64 mm full-bore closure thrust:   33.826 kN
+
+--- PHASE 2D5 INTERPRETATION ---
+AMS 4640 nickel-aluminum bronze is retained as the primary preliminary guide-bushing material.
+The 30 mm bushing length is NOT strength-driven by static projected pressure; it is being retained for load distribution, wear, stiffness, and packaging.
+The gland/barrel-end region must later carry BOTH the calculated radial bushing load and an axial pressure-thrust requirement.
+A groove / thread / shoulder stress calculation is NOT performed yet because the actual retainer geometry has not been defined.
+
+Consistency checks:               PASS
+CSV written to:                   phase2_bushing_material_gland_requirements.csv
+======================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

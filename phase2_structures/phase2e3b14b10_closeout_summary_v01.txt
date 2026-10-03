@@ -1,0 +1,34 @@
+PHASE 2E3-B14B-10 — PHYSICAL BRACE FEA CLOSEOUT SUMMARY V0.1
+
+ANSYS RUN COMPLETION
+--------------------
+Run completed:                 True
+Errors:                        0
+Warnings:                      5
+End time reached:              1.000000
+Nodes:                         38327
+Total elements:                105318
+DOF:                           112461
+MAPDL solve time:              284.627 s
+MAPDL elapsed time:            311.635 s
+
+CLEANED LINEAR -> LARGE-DEFLECTION SENSITIVITY
+----------------------------------------------
+Brace force magnitude change:      -0.028261 %
+Brace elongation magnitude change: -0.028197 %
+Left journal total change:          +2.782803 %
+Right journal total change:         +0.078222 %
+Max deformation change:             +0.148380 %
+Max von-Mises change:               +0.014439 %
+
+DISPOSITION
+-----------
+B14B-10 is CLOSED for global physical-brace load-path validation and large-deflection sensitivity.
+
+This closeout is NOT a final local-stress convergence approval:
+- linear tetrahedral mesh warning remains,
+- rigid-body/support caution remains,
+- contact/BC overlap information remains,
+- the sharp horn/head root remains the governing local hotspot and still requires physical fillet/transition refinement and local convergence work.
+
+Next phase: B14B-11 horn-root fillet / transition refinement.

@@ -1,0 +1,44 @@
+PHASE 2E3-B14B-11A — HORN/HEAD ROOT TRANSITION TRADE V0.1
+
+SOURCE-CONNECTED BASELINE
+-------------------------
+B14B-7 root section:              85.000 x 95.000 mm
+Added root height total:          17.000 mm
+Symmetric extension each side:    8.500 mm
+Source passage clearance:         6.666228 mm
+Root-to-pin lever:                228.333772 mm
+B14B-8 taper length:              203.333772 mm
+
+B14B-10 cleaned linear baseline
+Brace force:                      -67.231000 kN
+Max deformation:                  5.122000 mm
+Sharp-root global VM peak:        415.550000 MPa
+NOTE: the sharp-root VM peak is NOT a final converged local stress.
+
+FIRST ROOT-RADIUS SWEEP
+-----------------------
+Candidates: R2, R4, R6, R8 mm
+All are WORKING CAD/FEA candidates, not frozen.
+
+First CAD build candidate:        R6 mm
+Nominal radius-budget reserve:    2.500 mm
+
+Selection rule:
+Use the largest first-build radius that retains >=2 mm nominal reserve within the
+B14B-7 symmetric added-height budget. This is only a CAD starting point.
+Final radius is selected by geometry validation + FEA + local mesh convergence.
+
+FEA PLAN
+--------
+1. Build a smooth, symmetric upper/lower root transition.
+2. Preserve the current B14B-10 load path and cleaned contact/remote-point setup.
+3. Linear-screen candidate radii under the same LC4 ultimate case.
+4. Reject any candidate that changes the global load path materially or violates packaging.
+5. Rank valid candidates by lower/stabler root stress and physically sensible hotspot location.
+6. Run focused local mesh convergence on the winning geometry.
+7. Large-deflection sensitivity only needs repeating on the final winner if geometry changes materially.
+
+STATUS
+------
+B14B-11A trade definition: COMPLETE.
+Next: B14B-11B CAD build of the R6 working candidate.

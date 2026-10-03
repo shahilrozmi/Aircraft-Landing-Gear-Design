@@ -1,0 +1,3 @@
+side,bushing_od_mm,head_passage_id_mm,diameter_difference_mm,bushing_axis_y_mm,bushing_axis_z_mm,head_axis_y_mm,head_axis_z_mm,axis_offset_mm,bushing_axis_dir_x,bushing_axis_dir_y,bushing_axis_dir_z,head_axis_dir_x,head_axis_dir_y,head_axis_dir_z,bushing_cyl_xmin_mm,bushing_cyl_xmax_mm,head_cyl_xmin_mm,head_cyl_xmax_mm,axial_overlap_mm,cad_kernel_min_distance_mm,bushing_face_index,head_face_index
+LEFT,50.0,50.0,0.0,0.0,1012.78,0.0,1012.78,0.0,1.0,0.0,0.0,1.0,0.0,0.0,-43.6921045499,-15.1921045499,-43.6921045499,-12.692104549899994,28.5,0.0,1,97
+RIGHT,50.0,50.0,0.0,0.0,1012.78,0.0,1012.78,0.0,1.0,0.0,0.0,1.0,0.0,0.0,13.692104549907,43.692104549907,12.692104549907,43.692104549907015,30.0,0.0,1,96

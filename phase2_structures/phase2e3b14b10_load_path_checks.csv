@@ -1,0 +1,27 @@
+check,actual,expected,units,tolerance,status,note
+B14A_superposition_gate,True,True,-,-,PASS,B14A must remain source-connected and superposition-validated.
+B14B9_validation_fail_count,0,0,-,0,PASS,
+brace_axis_B14B_vs_B14B8_x,0.274670324174725,0.274670324174725,-,1e-09,PASS,
+B_local_B14B_vs_B14B8_x,0.0,0.0,mm,0.001,PASS,
+brace_axis_B14B_vs_B14B8_y,0.0,0.0,-,1e-09,PASS,
+B_local_B14B_vs_B14B8_y,260.0,260.0,mm,0.001,PASS,
+brace_axis_B14B_vs_B14B8_z,0.9615384615384616,0.9615384615384616,-,1e-09,PASS,
+B_local_B14B_vs_B14B8_z,0.0,0.0,mm,0.001,PASS,
+B_global_transform_x,0.0,0.0,mm,0.001,PASS,
+B_global_transform_y,260.0,260.0,mm,0.001,PASS,
+B_global_transform_z,1012.78,1012.78,mm,0.001,PASS,
+brace_axis_norm,1.0,1.0,-,1e-09,PASS,
+pin_axis_norm,1.0,1.0,-,1e-09,PASS,
+brace_pin_axis_orthogonality,0.0,0.0,-,1e-09,PASS,
+effective_arm_reconstruction,250.0,250.0,mm,0.001,PASS,
+physical_brace_reproduces_B14A_Mx,-16.856,-16.856,kN*m,1e-09,PASS,
+B14B_tube_OD_cross_source,25.0,25.0,mm,1e-12,PASS,B14B physicalization vs B14B-4 working tube.
+B14B_tube_wall_cross_source,3.0,3.0,mm,1e-12,PASS,B14B physicalization vs B14B-4 working tube.
+resolved_tube_OD_vs_B14B4,25.0,25.0,mm,1e-12,PASS,
+resolved_tube_wall_vs_B14B4,3.0,3.0,mm,1e-12,PASS,
+resolved_E_vs_B14B_physicalization,200000.0,200000.0,MPa,1e-12,PASS,Current physicalization-stage material model controls.
+airframe_point_A_resolved,True,True,-,-,PASS,
+brace_length_resolved,True,True,-,-,PASS,
+brace_tube_OD_resolved,True,True,-,-,PASS,
+brace_tube_wall_resolved,True,True,-,-,PASS,
+brace_E_resolved,True,True,-,-,PASS,

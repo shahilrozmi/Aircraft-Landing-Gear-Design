@@ -1,0 +1,3 @@
+3-D hotspot shift = 0.001305 mm
+Stress change = -1.025295%
+The refined R6 hotspot is effectively the same physical root-junction location as the old B14B-10 hotspot. The 411.23 MPa value is not yet frozen because local mesh convergence has not yet been demonstrated.

@@ -1,0 +1,37 @@
+{
+  "tag": "B13F_3B_D44_R1P5_LEFT_FLANGE_T3P5",
+  "source": "phase2e3_b13f_2b_d44_left_bushing_r1p5.step",
+  "design_intent": "Reject B13F-3A annular-only collar loading because the collar/flange contact unloaded during solution. Preserve the validated full annular thrust contact and reduce bronze flange bending by increasing left thrust-flange thickness from 3.0 to 3.5 mm, with a matching 0.5 mm outward shift of the left collar.",
+  "left_bushing_relief_radius_mm": 1.5,
+  "bronze_flange_thickness_old_mm": 3.0,
+  "bronze_flange_thickness_new_mm": 3.5,
+  "bronze_flange_extension_outboard_mm": 0.5,
+  "bronze_flange_outer_diameter_mm": 60.0,
+  "bronze_flange_bore_diameter_mm": 38.0,
+  "left_collar_axial_shift_mm": -0.5,
+  "left_collar_contact_face": "original full annulus retained",
+  "left_collar_contact_radii_mm": [
+    19.0,
+    29.0
+  ],
+  "left_collar_contact_face_area_mm2": 1507.9644737231006,
+  "Fx_ultimate_N": 13310.64,
+  "ideal_uniform_collar_flange_pressure_MPa": 8.826892298819608,
+  "left_bushing_volume_before_mm3": 29886.539088787955,
+  "left_bushing_volume_after_mm3": 30733.198308930663,
+  "bronze_added_mm3": 846.6592201427084,
+  "left_collar_bbox_x_mm": [
+    -50.1921045499,
+    -47.1921045499
+  ],
+  "head_unchanged": true,
+  "shaft_unchanged": true,
+  "right_bushing_unchanged": true,
+  "right_collar_unchanged": true,
+  "nonzero_solid_overlap_volumes_mm3": {},
+  "all_generated_solids_valid": true,
+  "reimport_solid_count": 6,
+  "reimport_all_solids_valid": true,
+  "output_file": "phase2e3_b13f_3b_d44_r1p5_left_flange_t3p5.step",
+  "output_size_bytes": 420722
+}

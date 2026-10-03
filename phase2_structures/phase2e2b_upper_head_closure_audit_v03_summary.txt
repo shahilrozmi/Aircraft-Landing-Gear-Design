@@ -1,0 +1,123 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e2b_upper_head_closure_audit_v03.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+======================================================================================================================
+ PHASE 2E2-B — UPPER-HEAD / PRESSURE-CLOSURE AUDIT V0.3
+======================================================================================================================
+
+SOURCE CONNECTION
+----------------------------------------------------------------------------------------------------------------------
+Barrel sizing CSV:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_barrel_sizing.csv
+Barrel sizing Python:         C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_barrel_sizing.py
+E2 architecture inputs:       C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_architecture_inputs.csv
+E2 stroke states:             C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_stroke_cavity_states.csv
+E2 design envelope:           C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_design_envelope.csv
+E2 metering candidate:        C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_metering_working_candidate.csv
+Phase 1 pressure source:      C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_model_development\landing_dynamic_v04_2dof.py
+
+BARREL SOURCE RECONCILIATION — HARD GATE
+----------------------------------------------------------------------------------------------------------------------
+Selection method:             PRIOR_PHASE2D_WORKING_BASELINE_EXACT_MATCH
+Selection basis:              prior Phase 2D WORKING barrel baseline; not inferred from CSV PASS alone
+Phase 2 barrel source:        64.000 mm ID / 74.000 mm OD / 5.000 mm wall
+Current E2 carried geometry:  64.000 mm ID / 74.000 mm OD / 5.000 mm wall
+ID difference E2-source:      +0.000 mm
+OD difference E2-source:      +0.000 mm
+Source radial piston gap:     3.000 mm / side
+
+MATCHED PHASE 2D WORKING ROW
+----------------------------------------------------------------------------------------------------------------------
+ID_mm                            64.0
+wall_mm                          5.0
+OD_mm                            74.0
+mass_per_m_kg                    8.529895293394322
+limit_governing_case             LC4+
+limit_governing_surface          outer
+limit_vm_MPa                     398.3974019357084
+MS_limit_yield                   2.807755755005668
+ultimate_governing_case          LC4+
+ultimate_governing_surface       outer
+ultimate_vm_MPa                  595.2046806278013
+MS_ultimate                      2.128335613953887
+PASS                             True
+
+BARREL GEOMETRY GATE
+----------------------------------------------------------------------------------------------------------------------
+Status:                       PASS — source barrel and E2 geometry agree.
+
+MATERIAL PROPERTIES
+----------------------------------------------------------------------------------------------------------------------
+7075-T6 E:                    71.700 GPa [PROJECT_LOCKED_7075_T6_BASELINE]
+7075-T6 nu:                   0.2800 [SOURCE_PY:phase2_barrel_sizing.py:nu]
+7075-T6 yield:                503.0 MPa [PROJECT_LOCKED_7075_T6_BASELINE]
+7075-T6 ultimate:             572.0 MPa [PROJECT_LOCKED_7075_T6_BASELINE]
+
+PRESSURE ENVELOPE
+----------------------------------------------------------------------------------------------------------------------
+Atmospheric pressure:         0.101325 MPa
+Full-stroke absolute gas P:   9.393 MPa
+Limit differential pressure:  9.292 MPa
+Ultimate differential P:      13.938 MPa (x1.50)
+Virtual diagnostic delta P:   10.515 MPa
+Closure pressure load limit:  29.893 kN
+Closure pressure load ult.:   44.839 kN
+
+BARREL THICK-WALL PRESSURE SCREEN
+----------------------------------------------------------------------------------------------------------------------
+Limit inner hoop stress:      64.452 MPa
+Limit inner axial stress:     27.580 MPa
+Limit von Mises:              63.865 MPa
+Limit margin to yield:        +6.876
+Ultimate von Mises:           95.797 MPa
+Ultimate margin to tensile:   +4.971
+
+PRESSURE-CLOSURE FLAT-PLATE SCREEN
+----------------------------------------------------------------------------------------------------------------------
+Pressure radius:              32.000 mm
+Required thickness — limit:   4.824 mm
+Required thickness — ult.:    5.540 mm
+Governing theoretical min.:   5.540 mm
+First 0.5-mm sweep PASS:      6.000 mm
+Boundary model:               simply-supported circular plate (conservative preliminary screen)
+
+UPPER-CAVITY / AXIAL PACKAGING CHECK
+----------------------------------------------------------------------------------------------------------------------
+Fixed orifice plane:          180.000 mm above U
+Closure inner face:           502.087 mm above U
+E2 conservative envelope:     452.451 mm above U
+Axial reserve over envelope:  +49.636 mm
+Initial upper-oil head:        25.000 mm
+Upper cavity volume:          1036.151 cm^3
+Reconstructed required vol.:  1036.151 cm^3
+Volume residual:              +0.000000 cm^3
+
+PRELIMINARY E2 -> E3 INTERFACE
+----------------------------------------------------------------------------------------------------------------------
+Closure inner face:           502.087 mm above U
+Structural min. outer face:   507.627 mm above U
+0.5-mm-grid PASS outer face:  508.087 mm above U
+E3 rule:                      future trunnion / upper attachment goes in solid head at or above the FINAL closure outer face.
+
+LOCK BOUNDARY
+----------------------------------------------------------------------------------------------------------------------
+The pressure-vessel screening and axial-volume reconstruction may be used to establish the E2 structural minimum. The 64/5/74 mm barrel is the retained Phase 2D WORKING baseline, not a new minimum-mass selection. Do NOT yet interpret the theoretical plate thickness as the final CAD closure thickness: sealing grooves, retainer/thread geometry, ports, manufacturing allowance and local stress concentration still require explicit geometry.
+
+OUTPUT FILES
+----------------------------------------------------------------------------------------------------------------------
+Barrel source audit:          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2b_barrel_source_audit.csv
+Pressure checks:              C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2b_pressure_structure_checks.csv
+Closure thickness sweep:      C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2b_closure_thickness_sweep.csv
+E3 interface:                 C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2b_e3_interface.csv
+======================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

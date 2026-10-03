@@ -1,0 +1,21 @@
+PHASE 2E3-B14B-10 — CONTACT SMOOTHING DIAGNOSTIC V0.1
+
+ANSYS Initial Information comparison
+
+CT_BUSH_HEAD_L
+  before geometric penetration : 1.2895000 mm
+  after geometric penetration  : 1.0414000e-04 mm
+  reduction factor             : 12382.4 x
+  reduction percent            : 99.991924 %
+
+CT_BUSH_HEAD_R
+  before geometric penetration : 1.6130000 mm
+  after geometric penetration  : 2.0258000e-04 mm
+  reduction factor             : 7962.3 x
+  reduction percent            : 99.987441 %
+
+Disposition:
+The reported geometric penetration collapses by >4 orders of magnitude after
+cylindrical contact smoothing. This supports the interpretation that the prior
+1.29–1.61 mm values were contact-geometry/faceting artifacts rather than real CAD interference.
+Re-run the linear baseline before retrying large-deflection sensitivity.

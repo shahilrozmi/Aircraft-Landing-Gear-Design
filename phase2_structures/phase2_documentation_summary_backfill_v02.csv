@@ -1,0 +1,11 @@
+script,returncode,summary,status,note
+current_design\phase2e3b13b_bushing_interface_sizing.py,0,current_design\phase2e3b13b_bushing_interface_sizing_summary.txt,PASS,Existing calculation rerun; its own console report was captured to TXT.
+current_design\phase2e3b13b_v02r1_interference_fit_min_ligament_correction.py,0,current_design\phase2e3b13b_v02r1_interference_fit_min_ligament_correction_summary.txt,PASS,Existing calculation rerun; its own console report was captured to TXT.
+current_design\phase2e3b13b_v03_axial_thrust_flange_sizing.py,0,current_design\phase2e3b13b_v03_axial_thrust_flange_sizing_summary.txt,PASS,Existing calculation rerun; its own console report was captured to TXT.
+phase2e3a2_upper_attachment_fbd_transport_v01.py,0,phase2e3a2_upper_attachment_fbd_transport_v01_summary.txt,PASS,Existing calculation rerun; its own console report was captured to TXT.
+phase2e3b3_trunnion_shortlist_head_integration_v01.py,0,phase2e3b3_trunnion_shortlist_head_integration_v01_summary.txt,PASS,Existing calculation rerun; its own console report was captured to TXT.
+phase2e3b4_cross_trunnion_head_interface_v01.py,0,phase2e3b4_cross_trunnion_head_interface_v01_summary.txt,PASS,Existing calculation rerun; its own console report was captured to TXT.
+phase2e3b5_local_head_interface_screen_v01.py,0,phase2e3b5_local_head_interface_screen_v01_summary.txt,PASS,Existing calculation rerun; its own console report was captured to TXT.
+phase2e3b5b_upper_barrel_reinforcement_profile_v01.py,0,phase2e3b5b_upper_barrel_reinforcement_profile_v01_summary.txt,PASS,Existing calculation rerun; its own console report was captured to TXT.
+phase2e3b6_head_span_recoupling_v01.py,0,phase2e3b6_head_span_recoupling_v01_summary.txt,PASS,Existing calculation rerun; its own console report was captured to TXT.
+phase2e3b8_transition_fea_load_package_v01.py,0,phase2e3b8_transition_fea_load_package_v01_summary.txt,PASS,Existing calculation rerun; its own console report was captured to TXT.

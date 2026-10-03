@@ -1,0 +1,5 @@
+item,status,reason
+OLD_B13C_GEOMETRY_AS_CURRENT_PARENT,SUPERSEDED,"The latest B13F-3C geometry contains six bodies, two thrust collars, a revised left bushing and a central Ø44 passage segment. The old four-body B13C STEP must remain historical/reference only."
+COMPLETE_EXTERNAL_SHAFT_RETENTION,OPEN_NOT_FROZEN,"Two thrust collars are now geometry-verified, but the complete external positive-retention hardware / airframe-side retention stack is not represented as separate bodies in this STEP."
+AIRFRAME_BEARING_BODIES,OPEN_NOT_FROZEN,"The current parent contains head, shaft, two bushings and two collars only. Airframe bearing/fitting geometry remains external to this STEP."
+B13F_SOURCE_LINK,CHECK_SOURCE_SCAN,Use phase2e3_b13f3c_current_parent_source_scan.csv to confirm the exact later B13F Python/CSV/TXT source files that selected D44/R1.5/T3.5.

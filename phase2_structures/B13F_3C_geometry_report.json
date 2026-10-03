@@ -1,0 +1,46 @@
+{
+  "tag": "B13F_3C_D44_R1P5_T3P5_LEFT_COLLAR_PARTIAL_RELIEF",
+  "source": "phase2e3_b13f_3b_d44_r1p5_left_flange_t3p5.step",
+  "design_intent": "Retain the validated B13F-3B 3.5 mm bronze flange and broad collar thrust path, but mildly bias axial thrust outward to reduce the bronze flange/bore hotspot near r\u224820.5 mm. Avoid the B13F-3A failure mode by using only a 0.12 mm inner recess and retaining a broad flat r=23..29 mm thrust-contact annulus at the original axial datum.",
+  "head_geometry": "B13F-1B D44 reinforced head unchanged",
+  "left_bushing_geometry": "B13F-2B R1.5 OD relief + B13F-3B 3.5 mm thrust flange unchanged",
+  "left_collar_original_contact_face_x_mm": -47.1921045499,
+  "left_collar_recess_depth_mm": 0.12,
+  "left_collar_flat_recess_radii_mm": [
+    19.0,
+    22.0
+  ],
+  "left_collar_transition_radii_mm": [
+    22.0,
+    23.0
+  ],
+  "left_collar_retained_flat_contact_radii_mm": [
+    23.0,
+    29.0
+  ],
+  "left_collar_retained_flat_contact_area_mm2": 980.1769079200154,
+  "Fx_ultimate_N": 13310.64,
+  "ideal_uniform_pressure_on_retained_ring_MPa": 13.57983430587632,
+  "left_collar_volume_before_mm3": 4523.893421169301,
+  "left_collar_volume_after_mm3": 4469.104045290693,
+  "left_collar_material_removed_mm3": 54.78937587860855,
+  "contact_datum_planar_faces_detected": [
+    {
+      "face_index": 2,
+      "center_x": -47.1921045499,
+      "area_mm2": 980.1769079200167,
+      "normal_x": 1.0
+    }
+  ],
+  "head_unchanged": true,
+  "shaft_unchanged": true,
+  "left_bushing_unchanged_from_3B": true,
+  "right_bushing_unchanged": true,
+  "right_collar_unchanged": true,
+  "nonzero_solid_overlap_volumes_mm3": {},
+  "all_generated_solids_valid": true,
+  "reimport_solid_count": 6,
+  "reimport_all_solids_valid": true,
+  "output_file": "phase2e3_b13f_3c_d44_r1p5_t3p5_left_collar_partial_relief.step",
+  "output_size_bytes": 426306
+}

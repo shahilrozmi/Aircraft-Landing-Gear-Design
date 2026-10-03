@@ -1,0 +1,74 @@
+======================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e3b5_local_head_interface_screen_v01.py
+======================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Working directory: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------------
+============================================================================================================================
+ PHASE 2E3-B5 — 7075 SOLID-HEAD / 300M CROSS-TRUNNION LOCAL SCREEN V0.1
+============================================================================================================================
+
+WORKING INTERFACE-STUDY CANDIDATE
+----------------------------------------------------------------------------------------------------------------------------
+Support span:                     120.0 mm
+300M journal diameter:            36.0 mm
+Airframe bearing width:           25.0 mm
+Head root-to-root width:          85.0 mm
+Half-head engagement length:      42.5 mm
+Minimum transverse envelope:      74.0 mm
+
+7075-T6 PROJECT SCREEN VALUES
+----------------------------------------------------------------------------------------------------------------------------
+Yield screen:                     503.0 MPa
+Ultimate screen:                  572.0 MPa
+These remain preliminary project material screens, NOT certification/bearing allowables.
+
+LOCAL HEAD SCREEN BY LOWER LIGAMENT
+----------------------------------------------------------------------------------------------------------------------------
+  Lvl    Lig         R     Mroot    p_peak    MS_p*     VM_so    MS_so   lig_req    PASS
+------------------------------------------------------------------------------------------------
+limit      5     92.62     1.621      92.6    4.433     377.5    0.333      3.75    True
+limit     10     92.99     1.627      93.0    4.411     189.5    1.655      3.77    True
+limit     15     93.36     1.634      93.3    4.390     126.8    2.966      3.78    True
+limit     20     93.73     1.640      93.7    4.369      95.5    4.267      3.80    True
+ultimate      5    138.93     2.431     138.9    3.119     566.2    0.010      4.95    True
+ultimate     10    139.49     2.441     139.4    3.102     284.2    1.012      4.97    True
+ultimate     15    140.04     2.451     140.0    3.086     190.2    2.007      4.99    True
+ultimate     20    140.59     2.460     140.5    3.070     143.2    2.993      5.01    True
+
+*MS_p compares projected contact-pressure proxy to project yield/UTS. It is not a true bearing/contact allowable margin.
+
+TRANSVERSE SIDE-LIGAMENT DIAGNOSTIC
+----------------------------------------------------------------------------------------------------------------------------
+Limit      side ligament = 19.00 mm, VM shear-out proxy = 100.5 MPa, MS = +4.004
+Ultimate   side ligament = 19.00 mm, VM shear-out proxy = 150.8 MPa, MS = +2.794
+
+AXIAL THRUST-SHOULDER REQUIREMENT
+----------------------------------------------------------------------------------------------------------------------------
+Limit      Fx = 8.874 kN, A_req = 17.64 mm^2, equiv shoulder OD >= 36.311 mm
+Ultimate   Fx = 13.311 kN, A_req = 23.27 mm^2, equiv shoulder OD >= 36.409 mm
+
+B5 DISPOSITION
+----------------------------------------------------------------------------------------------------------------------------
+First tested ligament passing ALL simple limit/ultimate local screens: 5 mm
+Do NOT freeze that ligament yet. This is only a first-order local screen.
+If 5 mm fails or is near-zero-margin while 10+ mm passes, carry 10 mm as the next practical head-geometry candidate and retain 15/20 mm for FEA sensitivity.
+Next structural step: size the 7075 head/boss transition into the 74-mm barrel and then define the positive shaft-lock / retention detail.
+
+OUTPUT FILES
+----------------------------------------------------------------------------------------------------------------------------
+Local head screen:                C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b5_local_head_screen.csv
+Contact distribution:             C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b5_contact_distribution.csv
+Thrust requirement:               C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b5_thrust_requirement.csv
+Summary:                          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b5_summary.txt
+============================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------------
+
+
+======================================================================================================================

@@ -1,0 +1,70 @@
+======================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e3b4_cross_trunnion_head_interface_v01.py
+======================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Working directory: C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------------
+============================================================================================================================
+ PHASE 2E3-B4 — 300M CROSS-TRUNNION / 7075 HEAD INTERFACE REQUIREMENTS V0.1
+============================================================================================================================
+
+ARCHITECTURE STUDY DECISION
+----------------------------------------------------------------------------------------------------------------------------
+Architecture A selected FOR DETAILED SCREENING ONLY:
+300M cross-trunnion / through-shaft rigidly captured by a locally enlarged 7075-T6 solid head.
+No friction-only load transfer is credited and no shaft/head fit is frozen.
+
+120-mm ROBUST FAMILY — INTERFACE COMPARISON
+----------------------------------------------------------------------------------------------------------------------------
+     d    Bw    Head W   Boss/side    B3 MSu      Rult     Mroot    Couple     pavg*
+------------------------------------------------------------------------------------
+    34    20      90.0         8.0     0.126     140.5     2.107      46.8      91.8
+    36    25      85.0         5.5     0.146     140.6     2.460      57.9      91.9  <-- WORKING
+    36    30      80.0         3.0     0.004     140.6     2.812      70.3      97.6
+
+*pavg is FORCE-ONLY average projected pressure over half the head width. It is a LOWER BOUND and is NOT a local contact allowable check.
+
+WORKING INTERFACE-STUDY CANDIDATE
+----------------------------------------------------------------------------------------------------------------------------
+Support span:                     120 mm
+300M journal diameter:            36 mm
+Airframe bearing width:           25 mm
+Implied root-to-root head width:  85.0 mm
+Boss growth vs 74-mm barrel:      5.5 mm / side
+B3 worst ultimate journal MS:     +0.146
+B3 ultimate bronze-bearing p:     156.2 MPa
+B3 bronze-bearing MS:             +1.648
+
+ULTIMATE INTERFACE REQUIREMENTS — HIGHEST B1 STATION SENSITIVITY
+----------------------------------------------------------------------------------------------------------------------------
+Per-journal radial reaction:      140.591 kN
+Journal-root bending moment:      2.460 kN*m
+Moment-transfer couple requirement:    57.890 kN
+Full locating-journal thrust:     13.311 kN
+Brace force @ 250 mm effective arm: 67.373 kN
+
+INTERPRETATION
+----------------------------------------------------------------------------------------------------------------------------
+1. The 7075 head must transfer BOTH radial force and the journal-root bending moment; force-only bearing pressure is insufficient as a design proof.
+2. The reported moment-transfer couple is a pure statics requirement, not a contact-pressure solution.
+3. Architecture A therefore requires a positive, moment-capable shaft/head capture; a loose pin-in-hole or friction-only assumption is not acceptable.
+4. 36 mm journal / 25 mm bearing / 120 mm span is carried as the WORKING INTERFACE-STUDY candidate, not yet the final frozen trunnion.
+5. Next step: preliminary 7075 solid-head boss sizing and load-transfer checks around this candidate, with 34/20 and 36/30 retained as local comparators.
+
+OUTPUT FILES
+----------------------------------------------------------------------------------------------------------------------------
+Interface load envelope:          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b4_interface_load_envelope.csv
+120-mm family comparison:         C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b4_120mm_family_comparison.csv
+Architecture decision record:     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b4_architecture_decision.csv
+Summary:                          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e3b4_summary.txt
+============================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------------
+
+
+======================================================================================================================

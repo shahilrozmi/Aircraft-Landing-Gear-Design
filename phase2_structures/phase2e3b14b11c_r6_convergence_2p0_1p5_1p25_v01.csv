@@ -1,0 +1,12 @@
+mesh_mm,nodes,elements,max_vm_MPa,max_deformation_mm,brace_force_N,elongation_mm,hotspot_x_mm,hotspot_y_mm,hotspot_z_mm,hotspot_node
+2.0,38424,87564,412.24,5.1439,-67348.0,-0.56842,,,,
+1.5,39467,92160,428.84,5.1578,-67348.0,-0.56842,4.756711,53.219215,965.196488,1971
+1.25,40186,95144,427.81,5.1624,-67348.0,-0.56842,4.757493,53.219731,965.197498,1971
+
+stress_change_1p5_to_1p25_pct,-0.24018281876689973
+deformation_change_1p5_to_1p25_pct,0.08918531156694594
+brace_force_mag_change_1p5_to_1p25_pct,0.0
+nodes_change_1p5_to_1p25_pct,1.8217751539260647
+elements_change_1p5_to_1p25_pct,3.2378472222222223
+hotspot_shift_1p5_to_1p25_mm,0.0013776356557181945
+stress_change_2p0_to_1p25_pct,3.7769260624878696

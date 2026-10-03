@@ -1,0 +1,48 @@
+PHASE 2E3-B14B-11E — R8 FILLET CONVERGENCE FINAL ASSESSMENT V0.3
+
+Convergence points
+  h = 1.50 mm:  sigma_vm,max = 442.62 MPa,
+                nodes/elements = 12090/6796
+  h = 1.00 mm:  sigma_vm,max = 697.48 MPa,
+                nodes/elements = 15362/8784
+  h = 0.75 mm:  sigma_vm,max = 732.45 MPa,
+                nodes/elements = 19081/11045
+
+0.75 mm hotspot
+  Node:                         609
+  XYZ:                          (39.934226, 40.941526, 994.342929) mm
+  Fillet-average VM:            91.817 MPa
+  Maximum total deformation:    0.73252 mm
+
+Convergence metrics
+  Peak VM change 1.5 -> 1.0:    +57.580 %
+  Peak VM change 1.0 -> 0.75:   +5.014 %
+  Fillet-average change:        +0.909 %
+  Hotspot shift 1.0 -> 0.75:    3.199 mm
+  Maximum-deformation change:   +0.000000 %
+
+Generic 7075 screening at 0.75 mm only
+  Sy =                          505.0 MPa
+  Su =                          572.0 MPa
+  Yield margin =                -0.3105
+  Ultimate margin =             -0.2191
+
+DISPOSITION
+  The R8 local stress solution has substantially stabilized relative to the
+  prior refinement: the peak changed by only 5.014% from 1.0 to
+  0.75 mm, compared with 57.580% from 1.5 to 1.0 mm. The overall
+  displacement field is unchanged and the fillet-average stress changes by
+  less than 1%.
+
+  The peak has NOT met a strict <5.0% mesh-change criterion by a tiny margin
+  (5.014%). Treat 732.45 MPa as the current conservative local
+  finite-element peak, but do not claim strict mathematical convergence.
+
+  Recommended project closure:
+  - Freeze the 0.75 mm result as the governing R8 local-FEA design screen.
+  - Document it as near-converged / mesh-stabilized, not fully converged.
+  - Do not spend more project time on another refinement unless a formal
+    <5% convergence rule is mandatory.
+  - The generic 7075 static screen is exceeded at this local peak, so the
+    R8 geometry still requires a design-response decision (geometry/material
+    improvement or allowable-based justification) before final design freeze.

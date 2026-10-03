@@ -1,0 +1,29 @@
+PHASE 2E3-B14B-11C — R4 VS R6 FEA RADIUS TRADE V0.1
+
+R6 reference:
+  max VM stress    = 407.520 MPa
+  brace force      = -67.348000 kN
+  elongation       = -0.568420 mm
+  max deformation  = 5.147800 mm
+  hotspot xyz      = (4.756123, 53.219397, 965.195576) mm
+
+R4 result:
+  max VM stress    = 430.710 MPa
+  brace force      = -67.310000 kN
+  elongation       = -0.568100 mm
+  max deformation  = 5.134300 mm
+  hotspot xyz      = (-0.136580, 53.429862, 965.192475) mm
+
+R4 relative to R6:
+  stress change      = +5.690518 %
+  brace |F| change   = -0.056423 %
+  elongation change  = -0.056296 %
+  deformation change = -0.262248 %
+  hotspot shift      = 4.897229 mm
+
+Interpretation:
+- Global brace force, elongation, and deformation are essentially unchanged.
+- R4 produces a materially higher local root stress than R6 under the same 2.0 mm local-root mesh method.
+- The hotspot remains in the same root-junction neighborhood.
+- R4 is worse than R6 for local root stress in this design-stage trade.
+- Final radius selection remains open until R8 is solved under the same setup.

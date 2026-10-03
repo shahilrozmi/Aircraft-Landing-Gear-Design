@@ -1,0 +1,125 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2e2c_fluid_continuity_closure_finalize_v01.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+==========================================================================================================================
+ PHASE 2E2-C — FLUID-CONTINUITY / FINAL CLOSURE AUDIT V0.1
+==========================================================================================================================
+
+SOURCE / GEOMETRY CONNECTION
+--------------------------------------------------------------------------------------------------------------------------
+Architecture inputs:           C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_architecture_inputs.csv
+Stroke states:                 C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_stroke_cavity_states.csv
+Metering candidate:            C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_metering_working_candidate.csv
+Pin profile:                   C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2_metering_pin_profile_map.csv
+Phase 1 source:                C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase1_model_development\landing_dynamic_v04_2dof.py
+Barrel:                        64.000 mm ID / 74.000 mm OD
+Piston:                        58.000 mm OD
+
+MATERIAL SOURCE HYGIENE
+--------------------------------------------------------------------------------------------------------------------------
+7075-T6 E:                     71.700 GPa
+7075-T6 Poisson ratio used:    0.330
+Disposition:                   use the project 7075-T6 material baseline for the closure plate; do not inherit a generic nu from the earlier barrel-sizing Python source.
+
+METERING-PIN PROFILE VERIFICATION
+--------------------------------------------------------------------------------------------------------------------------
+Fixed bore:                    14.000 mm
+Equivalent orifice:            10.3010 -> 9.7420 mm
+Metering design stroke:        205.000 mm
+Tip projection at extension:   15.000 mm
+Max profile reproduction err.: 0.000000 mm
+Pin volume at extension:       1.059 cm^3
+Pin volume at physical stroke: 18.427 cm^3
+Old conservative pin reserve:  30.998 cm^3
+
+FIXED UPPER-CAVITY DEFINITION — FULL EXTENSION
+--------------------------------------------------------------------------------------------------------------------------
+Initial gas volume:             924.728 cm^3
+Initial upper-oil head:         25.000 mm
+Initial upper-oil volume:       80.425 cm^3
+Initial pin displacement:       1.059 cm^3
+Required fixed cavity volume:   1006.212 cm^3
+Required cavity height:         312.780 mm
+Fixed orifice plane:            180.000 mm above U
+Continuity closure inner face:  492.780 mm above U
+
+FLUID-CONTINUITY STATES
+--------------------------------------------------------------------------------------------------------------------------
+                    state compression_mm gas_volume_cm3 pin_volume_above_orifice_cm3 upper_oil_volume_cm3 oil_transfer_from_lower_to_upper_cm3 lower_reservoir_remaining_cm3 gas_pressure_abs_MPa
+           FULL_EXTENSION          0.000        924.728                        1.059               80.425                                0.000                       824.668                2.336
+   LC0_STATIC_EQUILIBRIUM         55.368        778.440                        5.035              222.736                              142.311                       682.357                2.922
+PHASE2D_NOMINAL_REFERENCE        206.338        379.566                       16.548              610.097                              529.672                       294.996                7.434
+     FULL_PHYSICAL_STROKE        230.000        317.050                       18.427              670.735                              590.310                       234.358                9.393
+       VIRTUAL_DIAGNOSTIC        240.779        288.571                       19.283              698.358                              617.933                       206.735               10.616
+
+PHYSICAL-STROKE CONTINUITY RESULT
+--------------------------------------------------------------------------------------------------------------------------
+Oil transferred to upper:      590.310 cm^3
+Lower reservoir remaining:     234.358 cm^3
+Minimum reservoir in states:   206.735 cm^3
+Max cavity residual:            0.000000e+00 cm^3
+Max swept-volume identity err.: 7.860379e-14 cm^3
+
+CLOSURE LOCATION RECONCILIATION
+--------------------------------------------------------------------------------------------------------------------------
+Old conservative working face: 502.087 mm above U
+Continuity-derived inner face:  492.780 mm above U
+Change vs old working face:     -9.307 mm
+Old E2 conservative envelope:   452.451 mm above U
+Reserve over old envelope:      +40.329 mm
+
+UPDATED 7075-T6 PRESSURE-CLOSURE SCREEN
+--------------------------------------------------------------------------------------------------------------------------
+Full-stroke delta pressure:     9.292 MPa
+Ultimate delta pressure:        13.938 MPa
+Poisson ratio:                  0.330
+Required thickness — limit:     4.860 mm
+Required thickness — ultimate:  5.582 mm
+Governing theoretical minimum:  5.582 mm
+First 0.5-mm grid PASS:         6.000 mm
+
+PRELIMINARY E2 -> E3 INTERFACE
+--------------------------------------------------------------------------------------------------------------------------
+Closure inner face:             492.780 mm above U
+Theoretical min outer face:     498.362 mm above U
+6-mm screen outer face:         498.780 mm above U
+E3 rule:                        put the trunnion / airframe attachment in solid head at or above the FINAL closure outer face.
+
+CHECK SUMMARY
+--------------------------------------------------------------------------------------------------------------------------
+                                 check        value                           criterion status
+                       BARREL_ID_64_MM 6.400000e+01              |value-64.0| <= 0.1 mm   PASS
+                       BARREL_OD_74_MM 7.400000e+01              |value-74.0| <= 0.1 mm   PASS
+              PIN_PROFILE_REPRODUCTION 1.776357e-15               max error <= 0.002 mm   PASS
+               FIXED_CAVITY_CONTINUITY 0.000000e+00             |residual| <= 0.05 cm^3   PASS
+                 SWEPT_VOLUME_IDENTITY 7.860379e-14 |swept-transfer-dVpin| <= 0.05 cm^3   PASS
+             UPPER_OIL_VOLUME_POSITIVE 8.042477e+01                   minimum >= 0 cm^3   PASS
+    LOWER_RESERVOIR_REMAINING_POSITIVE 2.067348e+02                   minimum >= 0 cm^3   PASS
+CLOSURE_AXIAL_RESERVE_OVER_E2_ENVELOPE 4.032918e+01                             >= 0 mm   PASS
+        CLOSURE_6MM_LIMIT_AND_ULTIMATE 6.000000e+00    first 0.5-mm grid PASS <= 6.0 mm   PASS
+
+Disposition: PASS — the selected E2 fluid topology is volume-consistent through the physical stroke and the preliminary 6 mm closure screen passes limit and ultimate pressure loading.
+
+LOCK BOUNDARY
+--------------------------------------------------------------------------------------------------------------------------
+The continuity-based closure station supersedes the earlier conservative 502 mm working face for this 14 mm candidate. The 6 mm closure remains a PRELIMINARY structural screen, not final detailed CAD thickness. Seal/retainer/port geometry and local stress concentrations remain to be developed with the upper solid head / E3 attachment.
+
+OUTPUT FILES
+--------------------------------------------------------------------------------------------------------------------------
+Fluid continuity states:       C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2c_fluid_continuity_states.csv
+Continuity checks:             C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2c_continuity_checks.csv
+Closure structural screen:     C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2c_closure_structural_screen.csv
+E3 interface:                  C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2e2c_e3_interface.csv
+==========================================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================

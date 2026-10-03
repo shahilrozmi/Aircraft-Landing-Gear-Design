@@ -1,0 +1,45 @@
+PHASE 2E3-B14B-11C — R8 LOCAL STRESS CONVERGENCE CHECK: 1.5 mm -> 1.25 mm
+
+1.5 mm:
+  nodes            = 39709
+  elements         = 93229
+  head max VM      = 254.420 MPa
+  max deformation  = 3.497700 mm
+  brace force      = -67.391000 kN
+  elongation       = -0.568780 mm
+  hotspot xyz      = (31.832506, 42.589256, 964.904460) mm
+  hotspot node     = 1964
+
+1.25 mm:
+  nodes            = 40815
+  elements         = 97824
+  head max VM      = 294.960 MPa
+  max deformation  = 3.502200 mm
+  brace force      = -67.391000 kN
+  elongation       = -0.568780 mm
+  hotspot xyz      = (23.502701, 47.727015, 964.925536) mm
+  hotspot node     = 1965
+
+Changes, 1.5 -> 1.25 mm:
+  head max VM      = +15.934282 %
+  max deformation  = +0.128656 %
+  brace |F|        = +0.000000 %
+  nodes            = +2.785263 %
+  elements         = +4.928724 %
+  hotspot shift    = 9.786862 mm
+
+Disposition:
+FAIL_R8_LOCAL_STRESS_CONVERGENCE_AT_1P25MM
+
+The global response remains stable, but the head-local maximum von Mises stress rises
+substantially and the controlling hotspot migrates by several millimetres along the
+root transition. This indicates that the current single-face-size convergence sequence
+is not yet sampling a stable local peak.
+
+Recommended next action:
+Do NOT immediately refine the same sizing to 1.0 mm. First verify that the 1.25 mm
+maximum from the all-body result is also the maximum in RES_VM_HEAD_7075, and inspect
+whether the controlling point is on the intended R8 root fillet/transition surface
+rather than an edge/contact/geometry discontinuity. If confirmed as a legitimate
+root hotspot, use a more targeted local refinement patch around BOTH the prior
+1.5 mm hotspot region and the new 1.25 mm hotspot region before the next solve.

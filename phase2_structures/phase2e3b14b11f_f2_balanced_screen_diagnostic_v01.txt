@@ -1,0 +1,31 @@
+PHASE 2E3-B14B-11F — F2 BALANCED LOCAL SCREEN DIAGNOSTIC V0.1
+
+F2 local model
+  Mesh:                           24801 nodes / 14487 elements
+  Global VM max:                  2144.2 MPa
+  Fillet-scoped VM max:           1995.7 MPa
+  Fillet-scoped VM average:       77.072 MPa
+  Max total deformation:          0.73252 mm
+  Fillet hotspot node:            580
+  Fillet hotspot XYZ:             (40.752712, 37.333527, 994.065585) mm
+
+Comparison with retained R8 0.75 mm result
+  R8 fillet peak:                 732.45 MPa
+  R8 fillet average:              91.817 MPa
+  F2 peak change:                 +172.47 %
+  F2 average change:              -16.06 %
+  Hotspot shift:                  3.710 mm
+  Deformation change:             +0.000000 %
+  F2 peak / average ratio:        25.89
+
+INTERPRETATION
+  The F2 average fillet stress decreased while the local peak increased drastically.
+  The displacement maximum is unchanged. This is characteristic of a highly localized
+  geometric-edge / termination concentration rather than a global section-load increase.
+
+DISPOSITION
+  F2 is NOT accepted as-is.
+  Do not proceed directly to 0.75 mm refinement because the peak is already dominated
+  by a local edge at/near the end of the redesigned blend.
+  First inspect the CAD transition at the reported hotspot and replace the abrupt blend
+  termination with a smoother/tangent transition before repeating the 1.0 mm screen.

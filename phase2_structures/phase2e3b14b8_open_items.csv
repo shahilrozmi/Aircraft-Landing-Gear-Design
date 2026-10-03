@@ -1,0 +1,7 @@
+item,status,reason
+LUG_BEARING_ALLOWABLE,OPEN,"Projected bearing demand is computed, but no valid product-form-specific 7075 lug bearing allowable has been frozen."
+CLEVIS_SLOT_ROOT_FILLET,OPEN,The 22 mm central slot must terminate with a generous radiused root. Final radius/shape should be set in CAD and checked by local FEA.
+SADDLE_TO_CLEVIS_TAPER,OPEN,B14B-8 defines the two end sections and their separation. Actual loft/taper contour and fillets remain CAD/FEA variables.
+BRACE_EYE_END_FITTING,OPEN,"Gear-side joint geometry is now explicit, but the 44 mm eye to 25x3 tube joining method remains to be detailed."
+AIRFRAME_SIDE_JOINT,OPEN,The opposite brace-end fitting and aircraft structural attachment are not defined by the landing-gear head geometry.
+PHYSICAL_ANSYS_REPLACEMENT,OPEN,"After CAD geometry exists, remove SUP_BRACE_RX and model the actual pin-ended brace. Re-solve journal reactions and local head stresses."

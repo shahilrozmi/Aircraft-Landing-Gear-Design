@@ -1,0 +1,64 @@
+PHASE 2E3-B14B-11D — R8 ROOT LOCAL SUBMODEL CAD V0.1
+
+SOURCE
+------
+Exact B14B-9 source-connected geometry rebuilt from project artifacts.
+R8 root fillet: 8.000 mm, reproduced using the B14B-11C construction method.
+
+LOCAL ENVELOPE
+--------------
+7075 local head crop:
+  x = [-60.0, 60.0] mm (no physical x cut)
+  y = [-60.0, 180.0] mm (artificial cut at y=180.0)
+  z = [850.0, 1070.0] mm (artificial cut at z=850.0)
+
+Latest R8 hotspot:
+  (18.702387, 49.818011, 964.937219) mm
+Minimum hotspot distance to an artificial cut:
+  114.937219 mm
+
+BODY CONTENTS
+-------------
+- HEAD_BARREL_7075_R8_LOCAL: cropped local 7075 head/horn, R8 preserved
+- SHAFT_300M_CONTINUOUS: unchanged
+- BUSHING_LEFT_AMS4640: unchanged
+- BUSHING_RIGHT_AMS4640: unchanged
+- THRUST_COLLAR_LEFT_300M: unchanged
+- THRUST_COLLAR_RIGHT_300M: unchanged
+
+Artificial 7075 cut faces:
+  horn/taper boundary y=180.0: count=1, area=3656.615 mm^2
+  barrel boundary z=850.0: count=1, area=5170.914 mm^2
+
+VOLUME
+------
+Full R8 7075 head:  2813907.058 mm^3
+Local R8 7075 head: 1895723.796 mm^3
+Local/full fraction: 0.673698
+
+EXPORTS
+-------
+Main six-body local assembly:
+  phase2e3b14b11d_r8_root_submodel_v01.step
+Optional head-only local body:
+  phase2e3b14b11d_r8_root_submodel_head_only_v01.step
+
+VALIDATION
+----------
+Checks: 26
+Failures: 0
+Gate: PASS_B14B11D_R8_LOCAL_SUBMODEL_GEOMETRY
+
+ANSYS INTENT
+------------
+Use this as a local submodel geometry. The two planar 7075 artificial cut faces at
+z=850.0 mm and y=180.0 mm are the intended parent-to-submodel displacement
+mapping boundaries. Preserve the physical journal contacts/support architecture if the
+six-body assembly is used. Do not reapply the parent remote force/moment or brace spring
+on portions removed by the crop; their effect should enter through imported parent
+boundary displacements. Retain physical loads that act on surfaces still inside the
+local domain only if they were present in the parent analysis.
+
+STATUS
+------
+WORKING LOCAL-FEA SUBMODEL GEOMETRY — NOT DETAIL-DESIGN FREEZE.

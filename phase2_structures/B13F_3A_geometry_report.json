@@ -1,0 +1,45 @@
+{
+  "tag": "B13F_3A_D44_R1P5_COLLAR_ANNULAR_SEAT",
+  "source": "phase2e3_b13f_2b_d44_left_bushing_r1p5.step",
+  "design_intent": "Keep best simple bushing relief R1.5 and align the left axial-thrust entry with the head-supported outer flange annulus by recessing the inner portion of the 300M thrust-collar face.",
+  "diagnostic_basis": {
+    "R2_bushing_VM_hotspot_xyz_mm": [
+      -45.595315,
+      5.530394,
+      993.707803
+    ],
+    "bushing_flange_x_range_mm": [
+      -46.6921045499,
+      -43.6921045499
+    ],
+    "hotspot_radius_from_bushing_axis_mm": 19.8578436947,
+    "bushing_bore_radius_mm": 19.0,
+    "interpretation": "Hotspot lies inside the 3 mm bronze thrust flange and within ~0.86 mm radially of the \u00d838 bore, not at the inboard OD relief."
+  },
+  "left_bushing_relief_radius_mm": 1.5,
+  "left_collar_recess_depth_mm": 0.5,
+  "left_collar_recess_full_depth_outer_radius_mm": 24.5,
+  "left_collar_taper_end_radius_mm": 25.5,
+  "left_collar_remaining_flat_contact_ring_radii_mm": [
+    25.5,
+    29.0
+  ],
+  "old_collar_face_area_mm2": 1507.9644737231006,
+  "new_flat_contact_ring_area_mm2": 599.2587986722531,
+  "Fx_ultimate_N": 13310.64,
+  "ideal_uniform_pressure_old_face_MPa": 8.826892298819608,
+  "ideal_uniform_pressure_new_ring_MPa": 22.21183907435602,
+  "left_collar_volume_before_mm3": 4523.893421169301,
+  "left_collar_volume_after_mm3": 4109.072291201549,
+  "steel_removed_mm3": 414.8211299677523,
+  "head_unchanged": true,
+  "left_bushing_R1p5_unchanged": true,
+  "right_bushing_unchanged": true,
+  "shaft_unchanged": true,
+  "right_collar_unchanged": true,
+  "nonzero_solid_overlap_volumes_mm3": {},
+  "reimport_solid_count": 6,
+  "reimport_all_solids_valid": true,
+  "output_file": "phase2e3_b13f_3a_d44_r1p5_left_collar_annular_seat.step",
+  "output_size_bytes": 418171
+}

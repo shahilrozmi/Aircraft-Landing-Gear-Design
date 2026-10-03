@@ -1,0 +1,93 @@
+================================================================================================================
+ DOCUMENTATION BACKFILL — phase2_upper_trunnion_sizing.py
+================================================================================================================
+
+Python executable: C:\Users\Shahi\AppData\Local\Python\pythoncore-3.14-64\python.exe
+Return code: 0
+
+STDOUT
+----------------------------------------------------------------------------------------------------------------
+
+==============================================================================================================
+ PHASE 2D9 — UPPER TRUNNION / ATTACHMENT PRELIMINARY SIZING
+==============================================================================================================
+
+--- INPUT CONNECTION ---
+Phase 2C result file:             C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_internal_loads.csv
+Phase 2D5 material file:          C:\Users\Shahi\OneDrive\Documents\Python\Landing_Gear_Project_UPLOAD_v2\phase2_structures\phase2_bushing_material_gland_requirements.csv
+
+--- SELECTED UPPER-ATTACHMENT ARCHITECTURE ---
+Trunnion axis: +x (aircraft longitudinal).
+Two radial trunnion bearings react Fy, Fz, My, and Mz.
+Full |Fx| is conservatively treated as a thrust load on one locating journal.
+Mx about the trunnion axis is NOT assigned to the journals; it becomes a brace/lock-link moment requirement.
+
+--- FROZEN UPPER GEOMETRY ---
+Upper resultant arm r_t+h:        650.0 mm
+Wheel/strut lateral offset e:     120.0 mm
+
+--- DESIGN SWEEP ---
+Trunnion support spans:           120, 150, 180 mm
+Bearing widths:                   20, 25, 30 mm
+Journal diameters:                22 to 40 mm
+Root-to-bearing-edge clearance:   5.0 mm (working assumption)
+
+--- MINIMUM NOMINAL PASSING DIAMETER ---
+    Span      Lb     d_min       Ult R      Ult VM       p_brg    Gov LC
+----------------------------------------------------------------------------
+     120      20        22       81.51      1204.6       185.3       LC5
+     120      25        22       81.51      1399.6       148.2       LC5
+     120      30        22       81.51      1594.5       123.5       LC5
+     150      20        22       66.85       994.3       151.9       LC5
+     150      25        22       66.85      1154.2       121.5       LC5
+     150      30        22       66.85      1314.0       101.3       LC5
+     180      20        22       57.08       854.1       129.7       LC5
+     180      25        22       57.08       990.6       103.8       LC5
+     180      30        22       57.08      1127.1        86.5       LC5
+
+--- WORKING CANDIDATE: 120 mm SPAN / 32 mm JOURNAL / 25 mm BEARING ---
+Journal-root lever arm:           17.5 mm
+Ultimate governing case:          LC5
+Ultimate governing side:          LEFT
+Ultimate radial reaction:         81.513 kN
+Nominal ultimate VM stress:       460.0 MPa
+Nominal ultimate strength margin: +3.048
+Ultimate bearing pressure:        101.9 MPa
+Bronze static-capacity margin:    +3.060
+Ultimate transverse shear screen: 135.1 MPa
+
+--- JOURNAL-SHOULDER Kt SENSITIVITY ---
+    Kt      Limit VM    MS_yield        Ult VM      MS_ult    Gov LC
+----------------------------------------------------------------------
+   1.0         306.6       3.947         460.0       3.048       LC5
+   1.5         454.5       2.338         681.7       1.732       LC5
+   2.0         602.3       1.519         903.4       1.061       LC5
+   2.5         750.1       1.022        1125.1       0.655       LC5
+   3.0         897.9       0.690        1346.8       0.383       LC5
+
+--- BRACE / LOCK-LINK REQUIREMENT FOR Mx ---
+Governing limit Mx:               6.752 kN*m (LC4+)
+Governing ultimate Mx:            10.128 kN*m (LC4+)
+
+  Moment arm    F_limit kN      F_ult kN
+------------------------------------------
+       150 mm         45.01         67.52
+       200 mm         33.76         50.64
+       250 mm         27.01         40.51
+       300 mm         22.51         33.76
+
+--- INTERPRETATION ---
+The trunnion pair reacts forces and the moments perpendicular to its axis.
+The Mx component requires an independent brace/lock path; omitting that path would make the upper attachment statically incomplete.
+The working 32 mm journal is a preliminary root/bearing diameter only.
+Final lugs, thrust faces, fillets, bearing fits, brace pins, fatigue, fretting, and airframe fitting geometry remain open.
+
+Equilibrium / consistency checks: PASS
+CSV written to:                   phase2_upper_trunnion_sizing.csv
+==============================================================================================================
+
+STDERR
+----------------------------------------------------------------------------------------------------------------
+
+
+================================================================================================================
